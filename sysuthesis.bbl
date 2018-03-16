@@ -249,4 +249,10 @@ Kivinen J, Smola A~J, Williamson R~C.
 \newblock  113--127
 \thudot
 
+\bibitem{goyal2017graph}
+Goyal P, Ferrara E.
+\newblock Graph embedding techniques, applications, and performance: A survey.
+\newblock arXiv preprint arXiv:1705.02801, 2017.
+\thudot
+
 \end{thebibliography}

@@ -9,29 +9,15 @@ A level-1 auxiliary file: chapters/chap4.aux
 A level-1 auxiliary file: chapters/chap5.aux
 A level-1 auxiliary file: chapters/chap6.aux
 Database file #1: refs.bib
-Warning--I didn't find a database entry for "karatzoglou2012climbing"
-Warning--I didn't find a database entry for "enck2011study"
-Warning--I didn't find a database entry for "crussell2012attack"
-Warning--I didn't find a database entry for "thung2013automated"
-Warning--I didn't find a database entry for "piatetsky1991discovery"
-Warning--I didn't find a database entry for "su2009survey"
-Warning--I didn't find a database entry for "chan2012searching"
-Warning--I didn't find a database entry for "thung2013automatic"
-Warning--I didn't find a database entry for "sparck1972statistical"
-Warning--I didn't find a database entry for "zheng2011cross"
-Warning--I didn't find a database entry for "thummalapenta2007parseweb"
-Warning--I didn't find a database entry for "gcse"
-Warning--I didn't find a database entry for "bruch2009learning"
-Warning--I didn't find a database entry for "cover1967nearest"
-Warning--I didn't find a database entry for "hou2010towards"
-Warning--I didn't find a database entry for "zhang2012automatic"
 Warning--I didn't find a database entry for "huang2014asdroid"
 Warning--I didn't find a database entry for "myles2004detecting"
 Warning--I didn't find a database entry for "jhi2011value"
 Warning--I didn't find a database entry for "mcmillan2012detecting"
+Warning--I didn't find a database entry for "crussell2012attack"
 Warning--I didn't find a database entry for "chen2015simapp"
 Warning--I didn't find a database entry for "spall2005introduction"
 Warning--I didn't find a database entry for "bhandari2013serendipitous"
+Warning--I didn't find a database entry for "sparck1972statistical"
 Warning--I didn't find a database entry for "chu2017construction"
 Warning--I didn't find a database entry for "blei2003latent"
 Warning--I didn't find a database entry for "yin2013app"
@@ -74,45 +60,45 @@ Warning--I didn't find a database entry for "yang2014survey"
 Warning--there's a publisher but no address in bellman2015adaptive
 Warning--empty journal in zhong2017survey
 Warning--empty journal in syed1999incremental
-You've used 34 entries,
+You've used 35 entries,
             2299 wiz_defined-function locations,
-            811 strings with 11566 characters,
-and the built_in function-call counts, 18401 in all, are:
-= -- 1964
-> -- 414
+            801 strings with 11480 characters,
+and the built_in function-call counts, 18713 in all, are:
+= -- 1994
+> -- 423
 < -- 21
-+ -- 192
-- -- 96
-* -- 1298
-:= -- 2351
-add.period$ -- 107
-call.type$ -- 34
-change.case$ -- 33
++ -- 196
+- -- 98
+* -- 1317
+:= -- 2396
+add.period$ -- 110
+call.type$ -- 35
+change.case$ -- 34
 chr.to.int$ -- 0
-cite$ -- 37
-duplicate$ -- 1267
-empty$ -- 1843
-format.name$ -- 126
-if$ -- 4330
+cite$ -- 38
+duplicate$ -- 1291
+empty$ -- 1876
+format.name$ -- 129
+if$ -- 4400
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 35
-newline$ -- 228
-num.names$ -- 34
-pop$ -- 180
+int.to.str$ -- 35
+missing$ -- 36
+newline$ -- 234
+num.names$ -- 35
+pop$ -- 185
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 450
+skip$ -- 456
 stack$ -- 0
-substring$ -- 2396
+substring$ -- 2428
 swap$ -- 220
 text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 210
-width$ -- 36
-write$ -- 440
-(There were 65 warnings)
+while$ -- 213
+width$ -- 37
+write$ -- 451
+(There were 51 warnings)

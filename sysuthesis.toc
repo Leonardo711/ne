@@ -10,43 +10,43 @@
 \contentsline {subsection}{\numberline {1.3.2}主要创新点}{7}{subsection.1.3.2}
 \contentsline {section}{\numberline {1.4}本文组织结构}{8}{section.1.4}
 \contentsline {chapter}{\numberline {2}相关工作}{9}{chapter.2}
-\contentsline {section}{\numberline {2.1}函数与程序库推荐}{9}{section.2.1}
-\contentsline {section}{\numberline {2.2}相似移动应用检测}{11}{section.2.2}
-\contentsline {subsection}{\numberline {2.2.1}动态检测}{11}{subsection.2.2.1}
-\contentsline {subsection}{\numberline {2.2.2}静态检测}{12}{subsection.2.2.2}
-\contentsline {section}{\numberline {2.3}本章小结}{14}{section.2.3}
-\contentsline {chapter}{\numberline {3}统计检验}{17}{chapter.3}
-\contentsline {section}{\numberline {3.1}个体量检验}{18}{section.3.1}
-\contentsline {section}{\numberline {3.2}均值量检验}{20}{section.3.2}
-\contentsline {section}{\numberline {3.3}本章小结}{22}{section.3.3}
-\contentsline {chapter}{\numberline {4}算法}{23}{chapter.4}
-\contentsline {section}{\numberline {4.1}问题定义}{24}{section.4.1}
-\contentsline {section}{\numberline {4.2}算法框架}{26}{section.4.2}
-\contentsline {section}{\numberline {4.3}文本相似性}{26}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}数据清洗}{27}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}特征抽取}{28}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}相似性计算}{32}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}视图相似性}{33}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}逆向工程}{33}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}特征抽取}{34}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}相似性计算}{38}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}移动应用聚类}{39}{section.4.5}
-\contentsline {section}{\numberline {4.6}第三方库推荐}{43}{section.4.6}
-\contentsline {section}{\numberline {4.7}本章小结}{45}{section.4.7}
-\contentsline {chapter}{\numberline {5}实验分析与讨论}{47}{chapter.5}
-\contentsline {section}{\numberline {5.1}数据介绍}{47}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}元数据}{48}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}程序包}{49}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}评价标准}{49}{section.5.2}
-\contentsline {section}{\numberline {5.3}参数设定}{50}{section.5.3}
-\contentsline {section}{\numberline {5.4}实验对比}{53}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}基准算法}{53}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}对比结果与分析}{54}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}本章小结}{57}{section.5.5}
-\contentsline {chapter}{\numberline {6}总结与展望}{59}{chapter.6}
-\contentsline {section}{\numberline {6.1}工作总结}{59}{section.6.1}
-\contentsline {section}{\numberline {6.2}展望}{60}{section.6.2}
-\contentsline {chapter}{参考文献}{61}{chapter*.33}
-\contentsline {chapter}{研究成果}{65}{section*.34}
-\contentsline {chapter}{致谢}{67}{section*.36}
+\contentsline {section}{\numberline {2.1}图表征算法 }{9}{section.2.1}
+\contentsline {section}{\numberline {2.2}相似移动应用检测}{10}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}动态检测}{10}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}静态检测}{11}{subsection.2.2.2}
+\contentsline {section}{\numberline {2.3}本章小结}{13}{section.2.3}
+\contentsline {chapter}{\numberline {3}统计检验}{15}{chapter.3}
+\contentsline {section}{\numberline {3.1}个体量检验}{16}{section.3.1}
+\contentsline {section}{\numberline {3.2}均值量检验}{18}{section.3.2}
+\contentsline {section}{\numberline {3.3}本章小结}{20}{section.3.3}
+\contentsline {chapter}{\numberline {4}算法}{21}{chapter.4}
+\contentsline {section}{\numberline {4.1}问题定义}{22}{section.4.1}
+\contentsline {section}{\numberline {4.2}算法框架}{24}{section.4.2}
+\contentsline {section}{\numberline {4.3}文本相似性}{24}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}数据清洗}{25}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}特征抽取}{26}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}相似性计算}{30}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}视图相似性}{31}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}逆向工程}{31}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}特征抽取}{32}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}相似性计算}{36}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}移动应用聚类}{37}{section.4.5}
+\contentsline {section}{\numberline {4.6}第三方库推荐}{41}{section.4.6}
+\contentsline {section}{\numberline {4.7}本章小结}{43}{section.4.7}
+\contentsline {chapter}{\numberline {5}实验分析与讨论}{45}{chapter.5}
+\contentsline {section}{\numberline {5.1}数据介绍}{45}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}元数据}{46}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}程序包}{47}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}评价标准}{47}{section.5.2}
+\contentsline {section}{\numberline {5.3}参数设定}{48}{section.5.3}
+\contentsline {section}{\numberline {5.4}实验对比}{51}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}基准算法}{51}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}对比结果与分析}{52}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}本章小结}{55}{section.5.5}
+\contentsline {chapter}{\numberline {6}总结与展望}{57}{chapter.6}
+\contentsline {section}{\numberline {6.1}工作总结}{57}{section.6.1}
+\contentsline {section}{\numberline {6.2}展望}{58}{section.6.2}
+\contentsline {chapter}{参考文献}{59}{chapter*.33}
+\contentsline {chapter}{研究成果}{63}{section*.34}
+\contentsline {chapter}{致谢}{65}{section*.36}
 \contentsfinish 

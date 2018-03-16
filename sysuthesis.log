@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2016.4.12)  15 MAR 2018 16:48
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2016.4.12)  16 MAR 2018 15:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2071,65 +2071,6 @@ File: figures/social_media_stat.png Graphic file (type QTm)
 
 (./chapters/chap2.tex
 第\CJKnumber {2}章 2.
-
-Package natbib Warning: Citation `karatzoglou2012climbing' on page 9 undefined 
-on input line 2.
-
-
-Package natbib Warning: Citation `enck2011study' on page 9 undefined on input l
-ine 2.
-
-
-Package natbib Warning: Citation `crussell2012attack' on page 9 undefined on in
-put line 2.
-
-
-Package natbib Warning: Citation `thung2013automated' on page 9 undefined on in
-put line 12.
-
-
-Package natbib Warning: Citation `piatetsky1991discovery' on page 9 undefined o
-n input line 12.
-
-
-Package natbib Warning: Citation `su2009survey' on page 9 undefined on input li
-ne 12.
-
-
-Package natbib Warning: Citation `thung2013automated' on page 9 undefined on in
-put line 12.
-
-
-Package natbib Warning: Citation `chan2012searching' on page 9 undefined on inp
-ut line 14.
-
-
-Package natbib Warning: Citation `thung2013automatic' on page 9 undefined on in
-put line 14.
-
-
-Package natbib Warning: Citation `chan2012searching' on page 9 undefined on inp
-ut line 14.
-
-
-Package natbib Warning: Citation `thung2013automatic' on page 9 undefined on in
-put line 14.
-
-
-Package natbib Warning: Citation `sparck1972statistical' on page 9 undefined on
- input line 14.
-
-
-Package natbib Warning: Citation `zheng2011cross' on page 9 undefined on input 
-line 14.
-
-
-Package natbib Warning: Citation `thummalapenta2007parseweb' on page 9 undefine
-d on input line 14.
-
-
-Package natbib Warning: Citation `gcse' on page 9 undefined on input line 14.
-
 [9
 
 
@@ -2137,134 +2078,117 @@ Package natbib Warning: Citation `gcse' on page 9 undefined on input line 14.
 
 ]
 
-Package natbib Warning: Citation `bruch2009learning' on page 10 undefined on in
-put line 16.
+Package natbib Warning: Citation `huang2014asdroid' on page 10 undefined on inp
+ut line 32.
 
 
-Package natbib Warning: Citation `cover1967nearest' on page 10 undefined on inp
-ut line 16.
+Package natbib Warning: Citation `myles2004detecting' on page 10 undefined on i
+nput line 35.
 
 
-Package natbib Warning: Citation `hou2010towards' on page 10 undefined on input
- line 16.
+Package natbib Warning: Citation `jhi2011value' on page 10 undefined on input l
+ine 35.
 
 
-Package natbib Warning: Citation `zhang2012automatic' on page 10 undefined on i
-nput line 16.
+Package natbib Warning: Citation `mcmillan2012detecting' on page 10 undefined o
+n input line 35.
+
+
+Package natbib Warning: Citation `crussell2012attack' on page 10 undefined on i
+nput line 35.
 
 [10]
 
-Package natbib Warning: Citation `huang2014asdroid' on page 11 undefined on inp
-ut line 26.
+Package natbib Warning: Citation `chen2015simapp' on page 11 undefined on input
+ line 41.
 
 
-Package natbib Warning: Citation `myles2004detecting' on page 11 undefined on i
-nput line 29.
+Package natbib Warning: Citation `spall2005introduction' on page 11 undefined o
+n input line 45.
 
 
-Package natbib Warning: Citation `jhi2011value' on page 11 undefined on input l
-ine 29.
+Package natbib Warning: Citation `bhandari2013serendipitous' on page 11 undefin
+ed on input line 45.
 
 
-Package natbib Warning: Citation `mcmillan2012detecting' on page 11 undefined o
-n input line 29.
+Package natbib Warning: Citation `sparck1972statistical' on page 11 undefined o
+n input line 45.
 
 
-Package natbib Warning: Citation `crussell2012attack' on page 11 undefined on i
-nput line 29.
+Package natbib Warning: Citation `chu2017construction' on page 11 undefined on 
+input line 52.
+
+
+Package natbib Warning: Citation `blei2003latent' on page 11 undefined on input
+ line 52.
 
 [11]
 
-Package natbib Warning: Citation `chen2015simapp' on page 12 undefined on input
- line 35.
-
-
-Package natbib Warning: Citation `spall2005introduction' on page 12 undefined o
-n input line 39.
-
-
-Package natbib Warning: Citation `bhandari2013serendipitous' on page 12 undefin
-ed on input line 39.
-
-
-Package natbib Warning: Citation `sparck1972statistical' on page 12 undefined o
-n input line 39.
-
-
-Package natbib Warning: Citation `chu2017construction' on page 12 undefined on 
-input line 46.
+Package natbib Warning: Citation `yin2013app' on page 12 undefined on input lin
+e 54.
 
 
 Package natbib Warning: Citation `blei2003latent' on page 12 undefined on input
- line 46.
+ line 54.
+
+
+Package natbib Warning: Citation `yin2013app' on page 12 undefined on input lin
+e 58.
+
+
+Package natbib Warning: Citation `le2014distributed' on page 12 undefined on in
+put line 58.
+
+
+Package natbib Warning: Citation `cheng2014class' on page 12 undefined on input
+ line 60.
+
+
+Package natbib Warning: Citation `wang2014detecting' on page 12 undefined on in
+put line 60.
+
+
+Package natbib Warning: Citation `crussell2015andarwin' on page 12 undefined on
+ input line 60.
+
+
+Package natbib Warning: Citation `wala' on page 12 undefined on input line 60.
+
+
+Package natbib Warning: Citation `andoni2006near' on page 12 undefined on input
+ line 60.
 
 [12]
 
-Package natbib Warning: Citation `yin2013app' on page 13 undefined on input lin
-e 48.
+Package natbib Warning: Citation `crussell2012attack' on page 13 undefined on i
+nput line 65.
 
 
-Package natbib Warning: Citation `blei2003latent' on page 13 undefined on input
- line 48.
+Package natbib Warning: Citation `yan2014graph' on page 13 undefined on input l
+ine 69.
 
-
-Package natbib Warning: Citation `yin2013app' on page 13 undefined on input lin
-e 52.
-
-
-Package natbib Warning: Citation `le2014distributed' on page 13 undefined on in
-put line 52.
-
-
-Package natbib Warning: Citation `cheng2014class' on page 13 undefined on input
- line 54.
-
-
-Package natbib Warning: Citation `wang2014detecting' on page 13 undefined on in
-put line 54.
-
-
-Package natbib Warning: Citation `crussell2015andarwin' on page 13 undefined on
- input line 54.
-
-
-Package natbib Warning: Citation `wala' on page 13 undefined on input line 54.
-
-
-Package natbib Warning: Citation `andoni2006near' on page 13 undefined on input
- line 54.
-
-[13]
-
-Package natbib Warning: Citation `crussell2012attack' on page 14 undefined on i
-nput line 59.
-
-
-Package natbib Warning: Citation `yan2014graph' on page 14 undefined on input l
-ine 63.
-
-[14]) [15]
+[13]) [14]
 \openout2 = `chapters/chap3.aux'.
 
- (./chapters/chap3.tex [16
+ (./chapters/chap3.tex
+第\CJKnumber {3}章 3.
+
+Package natbib Warning: Citation `conover1998practical' on page 15 undefined on
+ input line 10.
+
+
+Package natbib Warning: Citation `ttest' on page 15 undefined on input line 10.
+
+
+File: figures/app_rating.png Graphic file (type QTm)
+<use  "figures/app_rating.png" > [15
 
 
 
 
 ]
-第\CJKnumber {3}章 3.
 
-Package natbib Warning: Citation `conover1998practical' on page 17 undefined on
- input line 10.
-
-
-Package natbib Warning: Citation `ttest' on page 17 undefined on input line 10.
-
-
-File: figures/app_rating.png Graphic file (type QTm)
-<use  "figures/app_rating.png" > [17]
-
-Package natbib Warning: Citation `holm1979simple' on page 18 undefined on input
+Package natbib Warning: Citation `holm1979simple' on page 16 undefined on input
  line 34.
 
 File: figures/r4_r3.png Graphic file (type QTm)
@@ -2295,24 +2219,24 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
 (Font)              size <10.95> substituted on input line 65.
 
-[18] [19] [20] [21]) [22]
+[16] [17] [18] [19]) [20]
 \openout2 = `chapters/chap4.aux'.
 
  (./chapters/chap4.tex
 第\CJKnumber {4}章 4.
-[23
+[21
 
 
 
 
 ]
 File: figures/architecture.pdf Graphic file (type QTm)
- <use  "figures/architecture.pdf" > [24] [25] [26]
+ <use  "figures/architecture.pdf" > [22] [23] [24]
 File: figures/fb_desc.png Graphic file (type QTm)
 
 <use  "figures/fb_desc.png" >
 
-Package natbib Warning: Citation `nltk' on page 27 undefined on input line 64.
+Package natbib Warning: Citation `nltk' on page 25 undefined on input line 64.
 
 \g__fontspec_family_FangSong_int=\count273
 LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 64.
@@ -2364,151 +2288,151 @@ File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 .................................................
 File: figures/desc_filter.png Graphic file (type QTm)
 
-<use  "figures/desc_filter.png" > [27]
+<use  "figures/desc_filter.png" > [25]
 File: figures/desc_stem.png Graphic file (type QTm)
  <use  "figures/desc_stem.png" >
 
-Package natbib Warning: Citation `le2014distributed' on page 28 undefined on in
+Package natbib Warning: Citation `le2014distributed' on page 26 undefined on in
 put line 84.
 
 
-Package natbib Warning: Citation `mikolov2013efficient' on page 28 undefined on
+Package natbib Warning: Citation `mikolov2013efficient' on page 26 undefined on
  input line 84.
 
 
-Package natbib Warning: Citation `mikolov2013efficient' on page 28 undefined on
+Package natbib Warning: Citation `mikolov2013efficient' on page 26 undefined on
  input line 86.
 
-[28]
+[26]
 
-Package natbib Warning: Citation `bengio2003neural' on page 29 undefined on inp
+Package natbib Warning: Citation `bengio2003neural' on page 27 undefined on inp
 ut line 88.
 
 File: figures/word2vec.pdf Graphic file (type QTm)
-<use  "figures/word2vec.pdf" > [29]
+<use  "figures/word2vec.pdf" > [27]
 
-Package natbib Warning: Citation `christopher2006pattern' on page 30 undefined 
+Package natbib Warning: Citation `christopher2006pattern' on page 28 undefined 
 on input line 105.
 
 
-Package natbib Warning: Citation `morin2005hierarchical' on page 30 undefined o
+Package natbib Warning: Citation `morin2005hierarchical' on page 28 undefined o
 n input line 113.
 
 
-Package natbib Warning: Citation `huffman1952method' on page 30 undefined on in
+Package natbib Warning: Citation `huffman1952method' on page 28 undefined on in
 put line 113.
 
 
-Package natbib Warning: Citation `rumerhart1986learning' on page 30 undefined o
+Package natbib Warning: Citation `rumerhart1986learning' on page 28 undefined o
 n input line 113.
 
 File: figures/doc2vec.pdf Graphic file (type QTm)
-<use  "figures/doc2vec.pdf" > [30] [31]
+<use  "figures/doc2vec.pdf" > [28] [29]
 
-Package natbib Warning: Citation `pearson1895note' on page 32 undefined on inpu
+Package natbib Warning: Citation `pearson1895note' on page 30 undefined on inpu
 t line 127.
 
 
-Package natbib Warning: Citation `gibler2013adrob' on page 32 undefined on inpu
+Package natbib Warning: Citation `gibler2013adrob' on page 30 undefined on inpu
 t line 152.
 
 
-Package natbib Warning: Citation `zhou2012dissecting' on page 32 undefined on i
+Package natbib Warning: Citation `zhou2012dissecting' on page 30 undefined on i
 nput line 152.
 
 
-Package natbib Warning: Citation `chen2015simapp' on page 32 undefined on input
+Package natbib Warning: Citation `chen2015simapp' on page 30 undefined on input
  line 152.
 
-[32]
+[30]
 File: figures/sogou.pdf Graphic file (type QTm)
  <use  "figures/sogou.pdf" >
 File: figures/smali.png Graphic file (type QTm)
  <use  "figures/smali.png" >
 
-Package natbib Warning: Citation `chikofsky1990reverse' on page 33 undefined on
+Package natbib Warning: Citation `chikofsky1990reverse' on page 31 undefined on
  input line 167.
 
 
-Package natbib Warning: Citation `apktool' on page 33 undefined on input line 1
+Package natbib Warning: Citation `apktool' on page 31 undefined on input line 1
 67.
 
-[33]
+[31]
 
-Package natbib Warning: Citation `viennot2014measurement' on page 34 undefined 
+Package natbib Warning: Citation `viennot2014measurement' on page 32 undefined 
 on input line 171.
 
 File: figures/screenshot.png Graphic file (type QTm)
-<use  "figures/screenshot.png" > [34]
+<use  "figures/screenshot.png" > [32]
 
-Package natbib Warning: Citation `r' on page 35 undefined on input line 181.
+Package natbib Warning: Citation `r' on page 33 undefined on input line 181.
 
 File: figures/R.pdf Graphic file (type QTm)
-<use  "figures/R.pdf" > [35]
+<use  "figures/R.pdf" > [33]
 File: figures/assets.pdf Graphic file (type QTm)
  <use  "figures/assets.pdf" >
 
-Package natbib Warning: Citation `permission' on page 36 undefined on input lin
+Package natbib Warning: Citation `permission' on page 34 undefined on input lin
 e 200.
 
 
-Package natbib Warning: Citation `permission' on page 36 undefined on input lin
+Package natbib Warning: Citation `permission' on page 34 undefined on input lin
 e 200.
 
-[36]
+[34]
 File: figures/permissions.pdf Graphic file (type QTm)
- <use  "figures/permissions.pdf" > [37] [38]
+ <use  "figures/permissions.pdf" > [35] [36]
 
-Package natbib Warning: Citation `hartigan1979algorithm' on page 39 undefined o
+Package natbib Warning: Citation `hartigan1979algorithm' on page 37 undefined o
 n input line 239.
 
 
-Package natbib Warning: Citation `ray1999determination' on page 39 undefined on
+Package natbib Warning: Citation `ray1999determination' on page 37 undefined on
  input line 239.
 
 
-Package natbib Warning: Citation `lin2009phrase' on page 39 undefined on input 
+Package natbib Warning: Citation `lin2009phrase' on page 37 undefined on input 
 line 239.
 
 
-Package natbib Warning: Citation `honarkhah2010stochastic' on page 39 undefined
+Package natbib Warning: Citation `honarkhah2010stochastic' on page 37 undefined
  on input line 239.
 
-[39]
+[37]
 File: figures/clustering.png Graphic file (type QTm)
- <use  "figures/clustering.png" > [40]
+ <use  "figures/clustering.png" > [38]
 
-Package natbib Warning: Citation `hierarchical' on page 41 undefined on input l
+Package natbib Warning: Citation `hierarchical' on page 39 undefined on input l
 ine 257.
 
-[41]
+[39]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 282.
- [42] [43] [44] [45]) [46]
+ [40] [41] [42] [43]) [44]
 \openout2 = `chapters/chap5.aux'.
 
  (./chapters/chap5.tex
 第\CJKnumber {5}章 5.
 File: figures/metadata.png Graphic file (type QTm)
-<use  "figures/metadata.png" > [47
+<use  "figures/metadata.png" > [45
 
 
 
 
-] [48]
+] [46]
 
-Package natbib Warning: Citation `yin2013app' on page 49 undefined on input lin
+Package natbib Warning: Citation `yin2013app' on page 47 undefined on input lin
 e 60.
 
 
-Package natbib Warning: Citation `runeson2007detection' on page 49 undefined on
+Package natbib Warning: Citation `runeson2007detection' on page 47 undefined on
  input line 60.
 
 
-Package natbib Warning: Citation `rijsbergen1979information' on page 49 undefin
+Package natbib Warning: Citation `rijsbergen1979information' on page 47 undefin
 ed on input line 60.
 
-[49] [50]
+[47] [48]
 File: figures/para_mu.png Graphic file (type QTm)
  <use  "figures/para_mu.png" >
 File: figures/para_k.png Graphic file (type QTm)
@@ -2520,31 +2444,31 @@ File: figures/para_z.png Graphic file (type QTm)
  <use  "figures/para_z.png" >
 File: figures/para_alpha.png Graphic file (type QTm)
 
-<use  "figures/para_alpha.png" > [51] [52]
+<use  "figures/para_alpha.png" > [49] [50]
 
-Package natbib Warning: Citation `salakhutdinov2011probabilistic' on page 53 un
+Package natbib Warning: Citation `salakhutdinov2011probabilistic' on page 51 un
 defined on input line 161.
 
 
-Package natbib Warning: Citation `liu2013bayesian' on page 53 undefined on inpu
+Package natbib Warning: Citation `liu2013bayesian' on page 51 undefined on inpu
 t line 161.
 
 
-Package natbib Warning: Citation `luo2014efficient' on page 53 undefined on inp
+Package natbib Warning: Citation `luo2014efficient' on page 51 undefined on inp
 ut line 161.
 
 
-Package natbib Warning: Citation `yang2014survey' on page 53 undefined on input
+Package natbib Warning: Citation `yang2014survey' on page 51 undefined on input
  line 161.
 
-[53]
+[51]
 File: figures/feature_comp_p.png Graphic file (type QTm)
  <use  "figures/feature_comp_p.png" >
 File: figures/feature_comp_r.png Graphic file (type QTm)
  <use  "figures/feature_comp_r.png" >
 File: figures/feature_comp_f.png Graphic file (type QTm)
 
-<use  "figures/feature_comp_f.png" > [54]
+<use  "figures/feature_comp_f.png" > [52]
 File: figures/cluster_comp_p.png Graphic file (type QTm)
  <use  "figures/cluster_comp_p.png" >
 File: figures/cluster_comp_r.png Graphic file (type QTm)
@@ -2552,31 +2476,31 @@ File: figures/cluster_comp_r.png Graphic file (type QTm)
 <use  "figures/cluster_comp_r.png" >
 File: figures/cluster_comp_f.png Graphic file (type QTm)
  <use  "figures/cluster_comp_f.png" >
-[55] [56]) [57]
+[53] [54]) [55]
 \openout2 = `chapters/chap6.aux'.
 
- (./chapters/chap6.tex [58
+ (./chapters/chap6.tex [56
 
 
 
 
 ]
 第\CJKnumber {6}章 6.
-[59]) [60] (./sysuthesis.bbl [61
+[57]) [58] (./sysuthesis.bbl [59
 
 
 
 
 
-] [62]) [63]
+] [60]) [61]
 No file sysuthesis.ind.
-[64
+[62
 
 
-] [65
+] [63
 
 
-] [66
+] [64
 
 
 ]
@@ -2584,7 +2508,7 @@ No file sysuthesis.ind.
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
-[67
+[65
 
 
 ]
@@ -2602,12 +2526,12 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
  ) 
 Here is how much of TeX's memory you used:
- 34058 strings out of 493706
- 631778 string characters out of 6143411
- 786737 words of memory out of 5000000
- 36865 multiletter control sequences out of 15000+600000
+ 34047 strings out of 493706
+ 631585 string characters out of 6143411
+ 786753 words of memory out of 5000000
+ 36854 multiletter control sequences out of 15000+600000
  16560 words of font info for 136 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  73i,14n,74p,10432b,1042s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sysuthesis.pdf (77 pages).
+Output written on sysuthesis.pdf (75 pages).
