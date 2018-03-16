@@ -1,0 +1,191 @@
+\documentclass{sysuthesis} % xiaosi == 12pt
+%---- whether double spacing
+%\usepackage{setspace}
+%----
+
+%\usepackage{scrhack} %消除listings包产生的警告信息
+%----展现代码
+%\usepackage{listings}
+%\lstset{language=C}
+%----
+%----Set the theorems 定理环境
+
+
+\usepackage{color}
+\usepackage{amsmath}
+\usepackage{amssymb} %for $\diagdown \llap{a}$
+\usepackage{amsthm}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+%\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{setspace}
+\numberwithin{algorithm}{chapter}
+\floatname{algorithm}{算法}
+\renewcommand{\algorithmicforall}{\textbf{for each}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\renewcommand{\arraystretch}{1.3}
+
+%\usepackage{footmisc}
+
+
+\usepackage{threeparttable}
+
+%得益于amsthm，我们可以定义不同环境的样式
+\theoremstyle{plain}
+\newtheorem{assumption}{假设}[chapter]
+\newtheorem{proposition}{命题}[chapter]
+\newtheorem{lemma}{引理}[chapter]
+\newtheorem{theorem}{定理}[chapter] %按章编号
+\newtheorem{axiom}{公理}[chapter]
+\newtheorem{corollary}{推论}[chapter]
+
+\theoremstyle{definition}
+\newtheorem{definition}{定义}[chapter]
+\newtheorem{exercise}{练习}[chapter]
+\newtheorem{example}{例}[chapter]
+
+\theoremstyle{definition}
+\newtheorem{remark}{注释}[chapter]
+\newtheorem{problem}{问题}[chapter]
+\newtheorem{conjecture}{猜想}[chapter]
+
+
+
+
+\setlength{\footskip}{25pt}
+
+%\newtheorem{exercise}{Exercise}
+%\newtheorem{suppexercise}[exercise]{Supplementary Exercise}%编号依赖前一个环境，与环境exercise共用一个计数器
+
+%得益于amsthm，所以
+%\newtheorem*{note}{Note} %不参与计数
+%----ff
+
+%----Algorithm
+%\usepackage[algo2e]{algorithm2e}
+%----
+
+%----打印数字和一些符号的包
+%\usepackage{siunitx}
+%----
+
+\usepackage{fancyvrb} % 带框的Verbatim，不是verbatim
+
+%----back reference the citation
+%    最好放在所以包的最后
+%\usepackage[]{hyperref}
+%\usepackage[backref]{hyperref}
+%----
+%\includeonly{method,results} % only work one these two chapter
+
+% 定义所有的eps文件在 figures 子目录下
+\graphicspath{{figures/}}
+
+\newcommand{\ignore}[1]{{}}
+\newcommand{\mylist}[1]{
+	\begin{spacing}{2.5}
+	\noindent\textbf{* {#1}}
+	\end{spacing}
+}
+
+%\newcommand{\f}[1]{{\color{red}#1}}
+
+
+
+\begin{document}
+\title{基于增量图表征的属性网络研究}{}{Attributed Network Analysis via Incremental Network Embedding}{}
+
+\author{李友}{You Li}
+\advisor{郑子彬}{副教授}{Zibin Zheng}{Associate Professor}
+\major{计算机技术}{Computer Technology}
+\school{数据科学与计算机学院}
+
+
+\finishdate{二零一八 \hspace{1mm}年\hspace{3mm}五\hspace{3mm}月} %答辩日期
+
+%\thanks{感谢国家自然科学基金 (编号为xxxxx)的支持。}
+
+\maketitle
+
+\begin{abstract}{移动应用，第三方库，相似性计算，自然语言处理，程序分析}
+  \input{chapters/cabstract}
+\end{abstract}
+
+\begin{englishabstract}{Mobile Application, Third-Party Library, Similarity Computation, Natural Language Processing, Program Analysis}
+  \input{chapters/engabstract}
+\end{englishabstract}
+
+\tableofcontents
+%\listoffigures
+%\listoftables
+
+%\begin{terminology}
+%  本论文专用术语的注释表
+%\end{terminology}
+
+\begin{Main} % 开始正文
+\include{chapters/chap1}
+\include{chapters/chap2}
+\include{chapters/chap3}
+\include{chapters/chap4}
+\include{chapters/chap5}
+\include{chapters/chap6}
+
+
+
+
+%\include{data/results}
+
+%\include{data/conc}
+
+\end{Main} % 结束正文
+
+
+\bibliography{refs}
+
+
+
+\newpage
+\printindex % 索引
+
+\begin{Resume}
+\begin{itemize}
+\item [1.] \textbf{Guanhong Tao}, Zibin Zheng. Network Service Discovery, Selection, and Brokerage (Chapter 5) [M]. 1st Edition. Stevenage: IET, 2017.（已录用，待发表）
+\item [2.] Zibin Zheng, Jingke Meng, \textbf{Guanhong Tao}, Michael R. Lyu. Reliability Prediction for Internetware Applications: A Research Framework and Its Practical Use [J]. China Communications, 2015, 12(12):13-20.
+\item [3.] Jingke Meng, Zibin Zheng, \textbf{Guanhong Tao}, Xuanzhe Liu. User-Specific Rating Prediction for Mobile Applications via Weight-based Matrix Factorization [C]. //Proc 23rd International Conference on Web Services (ICWS). San Francisco: IEEE Computer Society, 2016. 728-731.
+\item [4.] 郑子彬, \textbf{陶冠宏}, 周晓聪, 吴嘉婧. 一种基于移动应用界面元素的相似性计算方法 [P]. 中国发明专利. CN106445513. 2017-02-22.
+\end{itemize}
+\end{Resume}
+
+
+
+
+
+\begin{Acknowledgement}
+每每此刻，才会想起为自己付出最多的父母。本该是为家分忧的年纪，却依旧享受着家带来的温馨和呵护，难免自责。不过，也正因如此，他们的无条件支持，让我走得更远，走得更坦然。因为深谙身后的稳固港湾，才能不畏狂风巨浪毅然决然踏上出航之路。未来的路途中，每一天日出，每一次成长，每一缕阳光，每一分欣喜，都唯与他们讲述，唯以他们前行。虽无以报，却永铭心。再过华丽的词藻都难抒感恩之情，也只能在这一页半纸中写下单薄的话语。感谢父母在我前四分之一的人生中养育我、陪伴我、鼓励我，让我不被生活琐事所羁绊，享受属于我最好的时光。“既然选择了远方，便只顾风雨兼程”，有他们的陪伴，便风雨无阻。
+
+在实验室的两年多来，见证了实验室的快速扩张和壮大。曾亲自参与实验室的命名、网站建设、环境布置，过往的点点滴滴也在此刻涌现脑海。特别要感谢导师郑子彬副教授的谆谆教诲，让茫然无知、不知去向的我渐渐有了清晰的定位和认知。从寻找研究问题，到动手实验，再到撰写论文，都不乏导师的引导和协助。最终决定走上深造之路也要归导师所赐。所有的感激难以一言以概。亦要向同届的实验室同学表谢意，同样的起点、同样的奋斗，一起成长，在对未来的未知与茫然中，逐渐明晰了自己的方向。虽将踏上各异的旅程，但定会有似锦的前程。
+
+相遇便是缘分。在最茫然的时期遇见了最坚定的他们——我的挚友们，是我的福分。日出而作，日落而息，是他们给的榜样。着眼当下，追求卓越，是他们给的信念。在最焦躁、最忧郁的时期，都能以最平静的心对待，是他们赐予我的力量。感谢他们的一路陪伴、宽心包容，在最黑暗的夜晚陪我找到了北极星。
+
+%最后，怎能忘了感谢曾经嘲笑、蔑视我和我梦想的人。没有他们，我从来都不会像这样如此坚定地走下去。他们让我看到了最真实的自己，让我学会了轻装前行，让我不再踌躇不前。感谢他们出现在最好的时期，让我看淡世事、幡然醒悟。
+
+\vspace{6pt}
+
+\begin{center}
+三年时光，恍惚而过。
+
+过往世事，滴滴入心。
+
+似怅然，亦欣然。
+
+若慨光阴如梭，仅可郁郁度日。
+
+若叹出关无故人，只怕难遇知音者。
+
+直把回忆作驿庭，方备砥砺以笃行。
+\end{center}
+\end{Acknowledgement}
+
+\end{document}

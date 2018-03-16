@@ -1,0 +1,252 @@
+\begin{thebibliography}{10}
+
+\bibitem{bellman2015adaptive}
+Bellman R~E.
+\newblock Adaptive control processes: a guided tour.
+\newblock Princeton university press, 2015
+\thudot
+
+\bibitem{chang2015heterogeneous}
+Chang S, Han W, Tang J, et~al.
+\newblock Heterogeneous network embedding via deep architectures.
+\newblock  Proceedings of the 21th ACM SIGKDD International Conference on
+  Knowledge Discovery and Data Mining. ACM, 2015.
+\newblock  119--128
+\thudot
+
+\bibitem{weiss2009spectral}
+Weiss Y, Torralba A, Fergus R.
+\newblock Spectral hashing.
+\newblock  Advances in neural information processing systems, 2009.
+\newblock  1753--1760
+\thudot
+
+\bibitem{krizhevsky2012imagenet}
+Krizhevsky A, Sutskever I, Hinton G~E.
+\newblock Imagenet classification with deep convolutional neural networks.
+\newblock  Advances in neural information processing systems, 2012.
+\newblock  1097--1105
+\thudot
+
+\bibitem{ng2002spectral}
+Ng A~Y, Jordan M~I, Weiss Y.
+\newblock On spectral clustering: Analysis and an algorithm.
+\newblock  Advances in neural information processing systems, 2002.
+\newblock  849--856
+\thudot
+
+\bibitem{aggarwal2014evolutionary}
+Aggarwal C, Subbian K.
+\newblock Evolutionary network analysis: A survey.
+\newblock ACM Computing Surveys (CSUR), 2014, 47(1):10
+\thudot
+
+\bibitem{zhao2011gsketch}
+Zhao P, Aggarwal C~C, Wang M.
+\newblock gsketch: on query estimation in graph streams.
+\newblock Proceedings of the VLDB Endowment, 2011, 5(3):193--204
+\thudot
+
+\bibitem{le2012linked}
+Le-Phuoc D, Parreira J~X, Hauswirth M.
+\newblock Linked stream data processing.
+\newblock  Reasoning Web International Summer School. Springer, 2012.
+\newblock  245--289
+\thudot
+
+\bibitem{leskovec2010empirical}
+Leskovec J, Lang K~J, Mahoney M.
+\newblock Empirical comparison of algorithms for network community detection.
+\newblock  Proceedings of the 19th international conference on World wide web.
+  ACM, 2010.
+\newblock  631--640
+\thudot
+
+\bibitem{shi2000normalized}
+Shi J, Malik J.
+\newblock Normalized cuts and image segmentation.
+\newblock IEEE Transactions on pattern analysis and machine intelligence, 2000,
+  22(8):888--905
+\thudot
+
+\bibitem{roweis2000nonlinear}
+Roweis S~T, Saul L~K.
+\newblock Nonlinear dimensionality reduction by locally linear embedding.
+\newblock science, 2000, 290(5500):2323--2326
+\thudot
+
+\bibitem{tenenbaum2000global}
+Tenenbaum J~B, De~Silva V, Langford J~C.
+\newblock A global geometric framework for nonlinear dimensionality reduction.
+\newblock science, 2000, 290(5500):2319--2323
+\thudot
+
+\bibitem{belkin2002laplacian}
+Belkin M, Niyogi P.
+\newblock Laplacian eigenmaps and spectral techniques for embedding and
+  clustering.
+\newblock  Advances in neural information processing systems, 2002.
+\newblock  585--591
+\thudot
+
+\bibitem{perozzi2014deepwalk}
+Perozzi B, Al-Rfou R, Skiena S.
+\newblock Deepwalk: Online learning of social representations.
+\newblock  Proceedings of the 20th ACM SIGKDD international conference on
+  Knowledge discovery and data mining. ACM, 2014.
+\newblock  701--710
+\thudot
+
+\bibitem{tang2015line}
+Tang J, Qu M, Wang M, et~al.
+\newblock Line: Large-scale information network embedding.
+\newblock  Proceedings of the 24th International Conference on World Wide Web.
+  International World Wide Web Conferences Steering Committee, 2015.
+\newblock  1067--1077
+\thudot
+
+\bibitem{grover2016node2vec}
+Grover A, Leskovec J.
+\newblock node2vec: Scalable feature learning for networks.
+\newblock  Proceedings of the 22nd ACM SIGKDD international conference on
+  Knowledge discovery and data mining. ACM, 2016.
+\newblock  855--864
+\thudot
+
+\bibitem{ahmed2013distributed}
+Ahmed A, Shervashidze N, Narayanamurthy S, et~al.
+\newblock Distributed large-scale natural graph factorization.
+\newblock  Proceedings of the 22nd international conference on World Wide Web.
+  ACM, 2013.
+\newblock  37--48
+\thudot
+
+\bibitem{singh2008relational}
+Singh A~P, Gordon G~J.
+\newblock Relational learning via collective matrix factorization.
+\newblock  Proceedings of the 14th ACM SIGKDD international conference on
+  Knowledge discovery and data mining. ACM, 2008.
+\newblock  650--658
+\thudot
+
+\bibitem{zhu2007combining}
+Zhu S, Yu K, Chi Y, et~al.
+\newblock Combining content and link for classification using matrix
+  factorization.
+\newblock  Proceedings of the 30th annual international ACM SIGIR conference on
+  Research and development in information retrieval. ACM, 2007.
+\newblock  487--494
+\thudot
+
+\bibitem{qiu2017network}
+Qiu J, Dong Y, Ma H, et~al.
+\newblock Network embedding as matrix factorization: Unifyingdeepwalk, line,
+  pte, and node2vec.
+\newblock arXiv preprint arXiv:1710.02971, 2017.
+\thudot
+
+\bibitem{tang2015pte}
+Tang J, Qu M, Mei Q.
+\newblock Pte: Predictive text embedding through large-scale heterogeneous text
+  networks.
+\newblock  Proceedings of the 21th ACM SIGKDD International Conference on
+  Knowledge Discovery and Data Mining. ACM, 2015.
+\newblock  1165--1174
+\thudot
+
+\bibitem{yang2015network}
+Yang C, Liu Z, Zhao D, et~al.
+\newblock Network representation learning with rich text information.
+\newblock  IJCAI, 2015.
+\newblock  2111--2117
+\thudot
+
+\bibitem{huang2017accelerated}
+Huang X, Li J, Hu X.
+\newblock Accelerated attributed network embedding.
+\newblock  Proceedings of the 2017 SIAM International Conference on Data
+  Mining. SIAM, 2017.
+\newblock  633--641
+\thudot
+
+\bibitem{zhang2016collective}
+Zhang D, Yin J, Zhu X, et~al.
+\newblock Collective classification via discriminative matrix factorization on
+  sparsely labeled networks.
+\newblock  Proceedings of the 25th ACM International on Conference on
+  Information and Knowledge Management. ACM, 2016.
+\newblock  1563--1572
+\thudot
+
+\bibitem{li2017attributed}
+Li J, Dani H, Hu X, et~al.
+\newblock Attributed network embedding for learning in a dynamic environment.
+\newblock  Proceedings of the 2017 ACM on Conference on Information and
+  Knowledge Management. ACM, 2017.
+\newblock  387--396
+\thudot
+
+\bibitem{coppock1962all}
+Coppock H, Freund J.
+\newblock All-or-none versus incremental learning of errorless shock escapes by
+  the rat.
+\newblock Science, 1962, 135(3500):318--319
+\thudot
+
+\bibitem{zhong2017survey}
+ZHONG J, LIU Z, ZENG Y, et~al.
+\newblock A survey on incremental learning.
+\newblock 2017.
+\thudot
+
+\bibitem{hazan2007logarithmic}
+Hazan E, Agarwal A, Kale S.
+\newblock Logarithmic regret algorithms for online convex optimization.
+\newblock Machine Learning, 2007, 69(2-3):169--192
+\thudot
+
+\bibitem{xiao2010dual}
+Xiao L.
+\newblock Dual averaging methods for regularized stochastic learning and online
+  optimization.
+\newblock Journal of Machine Learning Research, 2010, 11(Oct):2543--2596
+\thudot
+
+\bibitem{mcmahan2011follow}
+McMahan B.
+\newblock Follow-the-regularized-leader and mirror descent: Equivalence
+  theorems and l1 regularization.
+\newblock  Proceedings of the Fourteenth International Conference on Artificial
+  Intelligence and Statistics, 2011.
+\newblock  525--533
+\thudot
+
+\bibitem{duchi2009efficient}
+Duchi J, Singer Y.
+\newblock Efficient online and batch learning using forward backward splitting.
+\newblock Journal of Machine Learning Research, 2009, 10(Dec):2899--2934
+\thudot
+
+\bibitem{syed1999incremental}
+Syed N~A, Huan S, Kah L, et~al.
+\newblock Incremental learning with support vector machines.
+\newblock 1999.
+\thudot
+
+\bibitem{ruping2001incremental}
+Ruping S.
+\newblock Incremental learning with support vector machines.
+\newblock  Data Mining, 2001. ICDM 2001, Proceedings IEEE International
+  Conference on. IEEE, 2001.
+\newblock  641--642
+\thudot
+
+\bibitem{kivinen2002large}
+Kivinen J, Smola A~J, Williamson R~C.
+\newblock Large margin classification for moving targets.
+\newblock  International Conference on Algorithmic Learning Theory. Springer,
+  2002.
+\newblock  113--127
+\thudot
+
+\end{thebibliography}
