@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2016.4.12)  19 MAR 2018 11:24
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2016.4.12)  19 MAR 2018 13:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2077,136 +2077,144 @@ File: figures/social_media_stat.png Graphic file (type QTm)
 
 
 ]
-
-Package natbib Warning: Citation `huang2014asdroid' on page 10 undefined on inp
-ut line 34.
-
-
-Package natbib Warning: Citation `myles2004detecting' on page 10 undefined on i
-nput line 37.
-
-
-Package natbib Warning: Citation `jhi2011value' on page 10 undefined on input l
-ine 37.
-
-
-Package natbib Warning: Citation `mcmillan2012detecting' on page 10 undefined o
-n input line 37.
-
-
-Package natbib Warning: Citation `crussell2012attack' on page 10 undefined on i
-nput line 37.
-
-[10]
-
-Package natbib Warning: Citation `chen2015simapp' on page 11 undefined on input
- line 43.
-
-
-Package natbib Warning: Citation `spall2005introduction' on page 11 undefined o
-n input line 47.
-
-
-Package natbib Warning: Citation `bhandari2013serendipitous' on page 11 undefin
-ed on input line 47.
-
-
-Package natbib Warning: Citation `sparck1972statistical' on page 11 undefined o
-n input line 47.
-
-[11]
-
-Package natbib Warning: Citation `chu2017construction' on page 12 undefined on 
-input line 54.
-
-
-Package natbib Warning: Citation `blei2003latent' on page 12 undefined on input
- line 54.
-
-
-Package natbib Warning: Citation `yin2013app' on page 12 undefined on input lin
-e 56.
-
-
-Package natbib Warning: Citation `blei2003latent' on page 12 undefined on input
- line 56.
-
-
-Package natbib Warning: Citation `yin2013app' on page 12 undefined on input lin
-e 60.
-
-
-Package natbib Warning: Citation `le2014distributed' on page 12 undefined on in
-put line 60.
-
-
-Package natbib Warning: Citation `cheng2014class' on page 12 undefined on input
- line 62.
-
-
-Package natbib Warning: Citation `wang2014detecting' on page 12 undefined on in
-put line 62.
-
-
-Package natbib Warning: Citation `crussell2015andarwin' on page 12 undefined on
- input line 62.
-
-
-Package natbib Warning: Citation `wala' on page 12 undefined on input line 62.
-
-
-Package natbib Warning: Citation `andoni2006near' on page 12 undefined on input
- line 62.
-
-[12]
-
-Package natbib Warning: Citation `crussell2012attack' on page 13 undefined on i
-nput line 67.
-
-
-Package natbib Warning: Citation `yan2014graph' on page 13 undefined on input l
-ine 71.
-
-[13]) [14]
+File: figures/network_embedding.png Graphic file (type QTm)
+ <use  "figures/network_embedding.png" > [10]) [11]
 \openout2 = `chapters/chap3.aux'.
 
  (./chapters/chap3.tex
-第\CJKnumber {3}章 3.
-
-Package natbib Warning: Citation `conover1998practical' on page 15 undefined on
- input line 10.
-
-
-Package natbib Warning: Citation `ttest' on page 15 undefined on input line 10.
-
-
-File: figures/app_rating.png Graphic file (type QTm)
-<use  "figures/app_rating.png" > [15
+[12
 
 
 
 
 ]
+第\CJKnumber {3}章 3.
 
-Package natbib Warning: Citation `holm1979simple' on page 16 undefined on input
+Package natbib Warning: Citation `conover1998practical' on page 13 undefined on
+ input line 10.
+
+
+Package natbib Warning: Citation `ttest' on page 13 undefined on input line 10.
+
+
+
+! LaTeX Error: File `figures/app_rating' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.15 ...egraphics[width=5.3in]{figures/app_rating}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[13]
+
+Package natbib Warning: Citation `holm1979simple' on page 14 undefined on input
  line 34.
 
-File: figures/r4_r3.png Graphic file (type QTm)
-<use  "figures/r4_r3.png" >
-File: figures/r4_r2.png Graphic file (type QTm)
- <use  "figures/r4_r2.png" >
-File: figures/r4_r0.png Graphic file (type QTm)
 
-<use  "figures/r4_r0.png" >
-File: figures/r3_r2.png Graphic file (type QTm)
- <use  "figures/r3_r2.png" >
-File: figures/r3_r2.png Graphic file (type QTm)
+! LaTeX Error: File `figures/r4_r3' not found.
 
-<use  "figures/r3_r2.png" >
-File: figures/r2_r0.png Graphic file (type QTm)
- <use  "figures/r2_r0.png" >
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ...egraphics[width=\textwidth]{figures/r4_r3}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `figures/r4_r2' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.46 ...egraphics[width=\textwidth]{figures/r4_r2}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `figures/r4_r0' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.50 ...egraphics[width=\textwidth]{figures/r4_r0}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `figures/r3_r2' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.54 ...egraphics[width=\textwidth]{figures/r3_r2}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `figures/r3_r2' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 ...egraphics[width=\textwidth]{figures/r3_r2}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `figures/r2_r0' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.62 ...egraphics[width=\textwidth]{figures/r2_r0}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
 LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 65.
-
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
 (Font)              size <10.95> substituted on input line 65.
@@ -2219,24 +2227,52 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
 (Font)              size <10.95> substituted on input line 65.
 
-[16] [17] [18] [19]) [20]
+[14] [15] [16]) [17]
 \openout2 = `chapters/chap4.aux'.
 
- (./chapters/chap4.tex
-第\CJKnumber {4}章 4.
-[21
+ (./chapters/chap4.tex [18
 
 
 
 
 ]
-File: figures/architecture.pdf Graphic file (type QTm)
- <use  "figures/architecture.pdf" > [22] [23] [24]
-File: figures/fb_desc.png Graphic file (type QTm)
+第\CJKnumber {4}章 4.
+[19]
 
-<use  "figures/fb_desc.png" >
+! LaTeX Error: File `figures/architecture' not found.
 
-Package natbib Warning: Citation `nltk' on page 25 undefined on input line 64.
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.32 ...raphics[width=5.7in]{figures/architecture}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[20] [21]
+
+! LaTeX Error: File `figures/fb_desc' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.60 ...ludegraphics[width=4.7in]{figures/fb_desc}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package natbib Warning: Citation `nltk' on page 22 undefined on input line 64.
 
 \g__fontspec_family_FangSong_int=\count273
 LaTeX Font Info:    Try loading font information for EU1+lmtt on input line 64.
@@ -2286,213 +2322,537 @@ File: eu1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 . and font adjustment code:
 . 
 .................................................
-File: figures/desc_filter.png Graphic file (type QTm)
 
-<use  "figures/desc_filter.png" > [25]
-File: figures/desc_stem.png Graphic file (type QTm)
- <use  "figures/desc_stem.png" >
 
-Package natbib Warning: Citation `le2014distributed' on page 26 undefined on in
+! LaTeX Error: File `figures/desc_filter' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.68 ...graphics[width=4.7in]{figures/desc_filter}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[22]
+
+! LaTeX Error: File `figures/desc_stem' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.76 ...degraphics[width=4.7in]{figures/desc_stem}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package natbib Warning: Citation `le2014distributed' on page 23 undefined on in
 put line 84.
 
-[26]
 
-Package natbib Warning: Citation `bengio2003neural' on page 27 undefined on inp
+Package natbib Warning: Citation `bengio2003neural' on page 23 undefined on inp
 ut line 88.
 
-File: figures/word2vec.pdf Graphic file (type QTm)
-<use  "figures/word2vec.pdf" > [27]
 
-Package natbib Warning: Citation `christopher2006pattern' on page 28 undefined 
+! LaTeX Error: File `figures/word2vec' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.91 ...udegraphics[width=5.5in]{figures/word2vec}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[23]
+
+Package natbib Warning: Citation `christopher2006pattern' on page 24 undefined 
 on input line 105.
 
+[24]
 
-Package natbib Warning: Citation `morin2005hierarchical' on page 28 undefined o
+Package natbib Warning: Citation `morin2005hierarchical' on page 25 undefined o
 n input line 113.
 
 
-Package natbib Warning: Citation `huffman1952method' on page 28 undefined on in
+Package natbib Warning: Citation `huffman1952method' on page 25 undefined on in
 put line 113.
 
 
-Package natbib Warning: Citation `rumerhart1986learning' on page 28 undefined o
+Package natbib Warning: Citation `rumerhart1986learning' on page 25 undefined o
 n input line 113.
 
-File: figures/doc2vec.pdf Graphic file (type QTm)
-<use  "figures/doc2vec.pdf" > [28] [29]
 
-Package natbib Warning: Citation `pearson1895note' on page 30 undefined on inpu
+! LaTeX Error: File `figures/doc2vec' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.117 ...udegraphics[width=5.5in]{figures/doc2vec}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package natbib Warning: Citation `pearson1895note' on page 25 undefined on inpu
 t line 127.
 
+[25]
 
-Package natbib Warning: Citation `gibler2013adrob' on page 30 undefined on inpu
+Package natbib Warning: Citation `gibler2013adrob' on page 26 undefined on inpu
 t line 152.
 
 
-Package natbib Warning: Citation `zhou2012dissecting' on page 30 undefined on i
+Package natbib Warning: Citation `zhou2012dissecting' on page 26 undefined on i
 nput line 152.
 
 
-Package natbib Warning: Citation `chen2015simapp' on page 30 undefined on input
+Package natbib Warning: Citation `chen2015simapp' on page 26 undefined on input
  line 152.
 
-[30]
-File: figures/sogou.pdf Graphic file (type QTm)
- <use  "figures/sogou.pdf" >
-File: figures/smali.png Graphic file (type QTm)
- <use  "figures/smali.png" >
+[26]
 
-Package natbib Warning: Citation `chikofsky1990reverse' on page 31 undefined on
+! LaTeX Error: File `figures/sogou' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.159 ...includegraphics[width=6in]{figures/sogou}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `figures/smali' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.164 ...includegraphics[width=5in]{figures/smali}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package natbib Warning: Citation `chikofsky1990reverse' on page 27 undefined on
  input line 167.
 
 
-Package natbib Warning: Citation `apktool' on page 31 undefined on input line 1
+Package natbib Warning: Citation `apktool' on page 27 undefined on input line 1
 67.
 
-[31]
+[27]
 
-Package natbib Warning: Citation `viennot2014measurement' on page 32 undefined 
+Package natbib Warning: Citation `viennot2014measurement' on page 28 undefined 
 on input line 171.
 
-File: figures/screenshot.png Graphic file (type QTm)
-<use  "figures/screenshot.png" > [32]
 
-Package natbib Warning: Citation `r' on page 33 undefined on input line 181.
+! LaTeX Error: File `figures/screenshot' not found.
 
-File: figures/R.pdf Graphic file (type QTm)
-<use  "figures/R.pdf" > [33]
-File: figures/assets.pdf Graphic file (type QTm)
- <use  "figures/assets.pdf" >
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.175 ...degraphics[width=5in]{figures/screenshot}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-Package natbib Warning: Citation `permission' on page 34 undefined on input lin
+
+Package natbib Warning: Citation `r' on page 28 undefined on input line 181.
+
+
+! LaTeX Error: File `figures/R' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.187 ^^I\includegraphics[width=6.2in]{figures/R}
+                                                 
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[28]
+
+! LaTeX Error: File `figures/assets' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.194 ...ludegraphics[width=3.2in]{figures/assets}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+Package natbib Warning: Citation `permission' on page 29 undefined on input lin
 e 200.
 
 
-Package natbib Warning: Citation `permission' on page 34 undefined on input lin
+Package natbib Warning: Citation `permission' on page 29 undefined on input lin
 e 200.
 
-[34]
-File: figures/permissions.pdf Graphic file (type QTm)
- <use  "figures/permissions.pdf" > [35] [36]
 
-Package natbib Warning: Citation `hartigan1979algorithm' on page 37 undefined o
+! LaTeX Error: File `figures/permissions' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.206 ...egraphics[width=6in]{figures/permissions}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[29] [30]
+
+Package natbib Warning: Citation `hartigan1979algorithm' on page 31 undefined o
 n input line 239.
 
 
-Package natbib Warning: Citation `ray1999determination' on page 37 undefined on
+Package natbib Warning: Citation `ray1999determination' on page 31 undefined on
  input line 239.
 
 
-Package natbib Warning: Citation `lin2009phrase' on page 37 undefined on input 
+Package natbib Warning: Citation `lin2009phrase' on page 31 undefined on input 
 line 239.
 
 
-Package natbib Warning: Citation `honarkhah2010stochastic' on page 37 undefined
+Package natbib Warning: Citation `honarkhah2010stochastic' on page 31 undefined
  on input line 239.
 
-[37]
-File: figures/clustering.png Graphic file (type QTm)
- <use  "figures/clustering.png" > [38]
 
-Package natbib Warning: Citation `hierarchical' on page 39 undefined on input l
+! LaTeX Error: File `figures/clustering' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.252 ...graphics[width=4.8in]{figures/clustering}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[31]
+
+Package natbib Warning: Citation `hierarchical' on page 32 undefined on input l
 ine 257.
 
-[39]
+[32]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 282.
- [40] [41] [42] [43]) [44]
+ [33] [34] [35] [36] [37]) [38]
 \openout2 = `chapters/chap5.aux'.
 
  (./chapters/chap5.tex
 第\CJKnumber {5}章 5.
-File: figures/metadata.png Graphic file (type QTm)
-<use  "figures/metadata.png" > [45
+
+! LaTeX Error: File `figures/metadata' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.42 ...udegraphics[width=5.8in]{figures/metadata}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[39
 
 
 
 
-] [46]
+]
 
-Package natbib Warning: Citation `yin2013app' on page 47 undefined on input lin
+Package natbib Warning: Citation `yin2013app' on page 40 undefined on input lin
 e 60.
 
 
-Package natbib Warning: Citation `runeson2007detection' on page 47 undefined on
+Package natbib Warning: Citation `runeson2007detection' on page 40 undefined on
  input line 60.
 
 
-Package natbib Warning: Citation `rijsbergen1979information' on page 47 undefin
+Package natbib Warning: Citation `rijsbergen1979information' on page 40 undefin
 ed on input line 60.
 
-[47] [48]
-File: figures/para_mu.png Graphic file (type QTm)
- <use  "figures/para_mu.png" >
-File: figures/para_k.png Graphic file (type QTm)
- <use  "figures/para_k.png" >
-File: figures/para_theta.png Graphic file (type QTm)
+[40] [41]
 
-<use  "figures/para_theta.png" >
-File: figures/para_z.png Graphic file (type QTm)
- <use  "figures/para_z.png" >
-File: figures/para_alpha.png Graphic file (type QTm)
+! LaTeX Error: File `figures/para_mu' not found.
 
-<use  "figures/para_alpha.png" > [49] [50]
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.107 ...aphics[width=\textwidth]{figures/para_mu}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-Package natbib Warning: Citation `salakhutdinov2011probabilistic' on page 51 un
+
+! LaTeX Error: File `figures/para_k' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.111 ...raphics[width=\textwidth]{figures/para_k}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `figures/para_theta' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.115 ...ics[width=\textwidth]{figures/para_theta}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `figures/para_z' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.119 ...raphics[width=\textwidth]{figures/para_z}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `figures/para_alpha' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.123 ...ics[width=\textwidth]{figures/para_alpha}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[42] [43]
+
+Package natbib Warning: Citation `salakhutdinov2011probabilistic' on page 44 un
 defined on input line 161.
 
 
-Package natbib Warning: Citation `liu2013bayesian' on page 51 undefined on inpu
+Package natbib Warning: Citation `liu2013bayesian' on page 44 undefined on inpu
 t line 161.
 
 
-Package natbib Warning: Citation `luo2014efficient' on page 51 undefined on inp
+Package natbib Warning: Citation `luo2014efficient' on page 44 undefined on inp
 ut line 161.
 
 
-Package natbib Warning: Citation `yang2014survey' on page 51 undefined on input
+Package natbib Warning: Citation `yang2014survey' on page 44 undefined on input
  line 161.
 
-[51]
-File: figures/feature_comp_p.png Graphic file (type QTm)
- <use  "figures/feature_comp_p.png" >
-File: figures/feature_comp_r.png Graphic file (type QTm)
- <use  "figures/feature_comp_r.png" >
-File: figures/feature_comp_f.png Graphic file (type QTm)
+[44]
 
-<use  "figures/feature_comp_f.png" > [52]
-File: figures/cluster_comp_p.png Graphic file (type QTm)
- <use  "figures/cluster_comp_p.png" >
-File: figures/cluster_comp_r.png Graphic file (type QTm)
+! LaTeX Error: File `figures/feature_comp_p' not found.
 
-<use  "figures/cluster_comp_r.png" >
-File: figures/cluster_comp_f.png Graphic file (type QTm)
- <use  "figures/cluster_comp_f.png" >
-[53] [54]) [55]
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.170 ...width=\textwidth]{figures/feature_comp_p}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `figures/feature_comp_r' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.174 ...width=\textwidth]{figures/feature_comp_r}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `figures/feature_comp_f' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.178 ...width=\textwidth]{figures/feature_comp_f}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `figures/cluster_comp_p' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.189 ...width=\textwidth]{figures/cluster_comp_p}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `figures/cluster_comp_r' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.193 ...width=\textwidth]{figures/cluster_comp_r}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+
+! LaTeX Error: File `figures/cluster_comp_f' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.197 ...width=\textwidth]{figures/cluster_comp_f}
+                                                  
+I could not locate the file with any of these extensions:
+.pdf,.PDF,.eps,.EPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2,.jpf,.JPF
+,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.TIF,.tiff,
+.TIFF,
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
+
+[45] [46]) [47]
 \openout2 = `chapters/chap6.aux'.
 
- (./chapters/chap6.tex [56
+ (./chapters/chap6.tex [48
 
 
 
 
 ]
 第\CJKnumber {6}章 6.
-[57]) [58] (./sysuthesis.bbl [59
+[49]) [50] (./sysuthesis.bbl [51
 
 
 
 
 
-] [60]) [61]
+] [52]) [53]
 No file sysuthesis.ind.
-[62
+[54
 
 
-] [63
+] [55
 
 
-] [64
+] [56
 
 
 ]
@@ -2500,7 +2860,7 @@ No file sysuthesis.ind.
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
-[65
+[57
 
 
 ]
@@ -2518,12 +2878,12 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
  ) 
 Here is how much of TeX's memory you used:
- 34050 strings out of 493706
- 631693 string characters out of 6143411
+ 34026 strings out of 493706
+ 630556 string characters out of 6143411
  800769 words of memory out of 5000000
- 36857 multiletter control sequences out of 15000+600000
- 16560 words of font info for 136 fonts, out of 8000000 for 9000
+ 36809 multiletter control sequences out of 15000+600000
+ 16544 words of font info for 134 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
- 73i,14n,74p,10432b,1042s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 73i,14n,74p,10432b,1038s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on sysuthesis.pdf (75 pages).
+Output written on sysuthesis.pdf (67 pages).
