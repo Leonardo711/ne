@@ -268,4 +268,26 @@ Liben-Nowell D, Kleinberg J.
   2007, 58(7):1019--1031
 \thudot
 
+\bibitem{mikolov2013distributed}
+Mikolov T, Sutskever I, Chen K, et~al.
+\newblock Distributed representations of words and phrases and their
+  compositionality.
+\newblock  Advances in neural information processing systems, 2013.
+\newblock  3111--3119
+\thudot
+
+\bibitem{ou2016asymmetric}
+Ou M, Cui P, Pei J, et~al.
+\newblock Asymmetric transitivity preserving graph embedding.
+\newblock  Proceedings of the 22nd ACM SIGKDD international conference on
+  Knowledge discovery and data mining. ACM, 2016.
+\newblock  1105--1114
+\thudot
+
+\bibitem{page1999pagerank}
+Page L, Brin S, Motwani R, et~al.
+\newblock The pagerank citation ranking: Bringing order to the web.
+\newblock Technical report, Stanford InfoLab, 1999
+\thudot
+
 \end{thebibliography}

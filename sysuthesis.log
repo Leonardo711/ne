@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  19 MAR 2018 16:43
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  19 MAR 2018 22:36
 entering extended mode
 **./sysuthesis.tex
 (sysuthesis.tex
@@ -2005,30 +2005,30 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 7.
 Package tocbasic Info: Using my definition of `\numberline' on input line 8.
 Package tocbasic Info: Using my definition of `\numberline' on input line 11.
 Package tocbasic Info: Using my definition of `\numberline' on input line 13.
-Package tocbasic Info: Using my definition of `\numberline' on input line 15.
 Package tocbasic Info: Using my definition of `\numberline' on input line 17.
-Package tocbasic Info: Using my definition of `\numberline' on input line 18.
 Package tocbasic Info: Using my definition of `\numberline' on input line 19.
+Package tocbasic Info: Using my definition of `\numberline' on input line 20.
 Package tocbasic Info: Using my definition of `\numberline' on input line 21.
-Package tocbasic Info: Using my definition of `\numberline' on input line 22.
 Package tocbasic Info: Using my definition of `\numberline' on input line 23.
-Package tocbasic Info: Using my definition of `\numberline' on input line 27.
-Package tocbasic Info: Using my definition of `\numberline' on input line 31.
-Package tocbasic Info: Using my definition of `\numberline' on input line 32.
+Package tocbasic Info: Using my definition of `\numberline' on input line 24.
+Package tocbasic Info: Using my definition of `\numberline' on input line 25.
+Package tocbasic Info: Using my definition of `\numberline' on input line 29.
 Package tocbasic Info: Using my definition of `\numberline' on input line 33.
+Package tocbasic Info: Using my definition of `\numberline' on input line 34.
 Package tocbasic Info: Using my definition of `\numberline' on input line 35.
-Package tocbasic Info: Using my definition of `\numberline' on input line 38.
-Package tocbasic Info: Using my definition of `\numberline' on input line 39.
+Package tocbasic Info: Using my definition of `\numberline' on input line 37.
 Package tocbasic Info: Using my definition of `\numberline' on input line 40.
+Package tocbasic Info: Using my definition of `\numberline' on input line 41.
+Package tocbasic Info: Using my definition of `\numberline' on input line 42.
  [5
 
 
 
 
 ]
-Package tocbasic Info: Using my definition of `\numberline' on input line 43.
 Package tocbasic Info: Using my definition of `\numberline' on input line 45.
-Package tocbasic Info: Using my definition of `\numberline' on input line 46.
+Package tocbasic Info: Using my definition of `\numberline' on input line 47.
+Package tocbasic Info: Using my definition of `\numberline' on input line 48.
 )
 \tf@toc=\write6
 \openout6 = `sysuthesis.toc'.
@@ -2088,20 +2088,24 @@ File: figures/network_embedding.png Graphic file (type QTm)
 Underfull \vbox (badness 1817) has occurred while \output is active []
 
  [10]
-Underfull \vbox (badness 1033) has occurred while \output is active []
+Underfull \vbox (badness 3861) has occurred while \output is active []
 
- [11])
+ [11]
 [12]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [13])
+[14]
 \openout2 = `chapters/chap3.aux'.
 
  (chapters/chap3.tex
 chapter 3.
 
-Package natbib Warning: Citation `conover1998practical' on page 13 undefined on
+Package natbib Warning: Citation `conover1998practical' on page 15 undefined on
  input line 10.
 
 
-Package natbib Warning: Citation `ttest' on page 13 undefined on input line 10.
+Package natbib Warning: Citation `ttest' on page 15 undefined on input line 10.
 
 
 
@@ -2120,14 +2124,14 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[13
+[15
 
 
 
 
 ]
 
-Package natbib Warning: Citation `holm1979simple' on page 14 undefined on input
+Package natbib Warning: Citation `holm1979simple' on page 16 undefined on input
  line 34.
 
 
@@ -2239,14 +2243,14 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
 (Font)              size <10.95> substituted on input line 65.
 
-[14]
+[16]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [15]
-[16]) [17]
+ [17]
+[18]) [19]
 \openout2 = `chapters/chap4.aux'.
 
- (chapters/chap4.tex [18
+ (chapters/chap4.tex [20
 
 
 
@@ -2256,7 +2260,7 @@ chapter 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19]
+ [21]
 
 ! LaTeX Error: File `figures/architecture' not found.
 
@@ -2276,10 +2280,10 @@ If that doesn't work, type  X <return>  to quit.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [20]
+ [22]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [21]
+ [23]
 
 ! LaTeX Error: File `figures/fb_desc' not found.
 
@@ -2297,7 +2301,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Package natbib Warning: Citation `nltk' on page 22 undefined on input line 64.
+Package natbib Warning: Citation `nltk' on page 24 undefined on input line 64.
 
 \g__fontspec_family_FangSong_int=\count327
 .................................................
@@ -2338,7 +2342,7 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[22]
+[24]
 
 ! LaTeX Error: File `figures/desc_stem' not found.
 
@@ -2356,11 +2360,11 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Package natbib Warning: Citation `le2014distributed' on page 23 undefined on in
+Package natbib Warning: Citation `le2014distributed' on page 25 undefined on in
 put line 84.
 
 
-Package natbib Warning: Citation `bengio2003neural' on page 23 undefined on inp
+Package natbib Warning: Citation `bengio2003neural' on page 25 undefined on inp
 ut line 88.
 
 
@@ -2379,25 +2383,25 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[23]
+[25]
 
-Package natbib Warning: Citation `christopher2006pattern' on page 24 undefined 
+Package natbib Warning: Citation `christopher2006pattern' on page 26 undefined 
 on input line 105.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [24]
+ [26]
 
-Package natbib Warning: Citation `morin2005hierarchical' on page 25 undefined o
+Package natbib Warning: Citation `morin2005hierarchical' on page 27 undefined o
 n input line 113.
 
 
-Package natbib Warning: Citation `huffman1952method' on page 25 undefined on in
+Package natbib Warning: Citation `huffman1952method' on page 27 undefined on in
 put line 113.
 
 
-Package natbib Warning: Citation `rumerhart1986learning' on page 25 undefined o
+Package natbib Warning: Citation `rumerhart1986learning' on page 27 undefined o
 n input line 113.
 
 
@@ -2417,26 +2421,26 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Package natbib Warning: Citation `pearson1895note' on page 25 undefined on inpu
+Package natbib Warning: Citation `pearson1895note' on page 27 undefined on inpu
 t line 127.
 
-[25]
+[27]
 
-Package natbib Warning: Citation `gibler2013adrob' on page 26 undefined on inpu
+Package natbib Warning: Citation `gibler2013adrob' on page 28 undefined on inpu
 t line 152.
 
 
-Package natbib Warning: Citation `zhou2012dissecting' on page 26 undefined on i
+Package natbib Warning: Citation `zhou2012dissecting' on page 28 undefined on i
 nput line 152.
 
 
-Package natbib Warning: Citation `chen2015simapp' on page 26 undefined on input
+Package natbib Warning: Citation `chen2015simapp' on page 28 undefined on input
  line 152.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [26]
+ [28]
 
 ! LaTeX Error: File `figures/sogou' not found.
 
@@ -2470,16 +2474,16 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Package natbib Warning: Citation `chikofsky1990reverse' on page 27 undefined on
+Package natbib Warning: Citation `chikofsky1990reverse' on page 29 undefined on
  input line 167.
 
 
-Package natbib Warning: Citation `apktool' on page 27 undefined on input line 1
+Package natbib Warning: Citation `apktool' on page 29 undefined on input line 1
 67.
 
-[27]
+[29]
 
-Package natbib Warning: Citation `viennot2014measurement' on page 28 undefined 
+Package natbib Warning: Citation `viennot2014measurement' on page 30 undefined 
 on input line 171.
 
 
@@ -2499,7 +2503,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Package natbib Warning: Citation `r' on page 28 undefined on input line 181.
+Package natbib Warning: Citation `r' on page 30 undefined on input line 181.
 
 
 ! LaTeX Error: File `figures/R' not found.
@@ -2517,7 +2521,7 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[28]
+[30]
 
 ! LaTeX Error: File `figures/assets' not found.
 
@@ -2535,11 +2539,11 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Package natbib Warning: Citation `permission' on page 29 undefined on input lin
+Package natbib Warning: Citation `permission' on page 31 undefined on input lin
 e 200.
 
 
-Package natbib Warning: Citation `permission' on page 29 undefined on input lin
+Package natbib Warning: Citation `permission' on page 31 undefined on input lin
 e 200.
 
 
@@ -2558,21 +2562,21 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[29] [30]
+[31] [32]
 
-Package natbib Warning: Citation `hartigan1979algorithm' on page 31 undefined o
+Package natbib Warning: Citation `hartigan1979algorithm' on page 33 undefined o
 n input line 239.
 
 
-Package natbib Warning: Citation `ray1999determination' on page 31 undefined on
+Package natbib Warning: Citation `ray1999determination' on page 33 undefined on
  input line 239.
 
 
-Package natbib Warning: Citation `lin2009phrase' on page 31 undefined on input 
+Package natbib Warning: Citation `lin2009phrase' on page 33 undefined on input 
 line 239.
 
 
-Package natbib Warning: Citation `honarkhah2010stochastic' on page 31 undefined
+Package natbib Warning: Citation `honarkhah2010stochastic' on page 33 undefined
  on input line 239.
 
 
@@ -2594,25 +2598,25 @@ If that doesn't work, type  X <return>  to quit.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31]
+ [33]
 
-Package natbib Warning: Citation `hierarchical' on page 32 undefined on input l
+Package natbib Warning: Citation `hierarchical' on page 34 undefined on input l
 ine 257.
 
-[32]
+[34]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 282.
- [33] [34]
+ [35] [36]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [35]
+ [37]
 Underfull \vbox (badness 2351) has occurred while \output is active []
 
- [36]
+ [38]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [37])
-[38]
+ [39])
+[40]
 \openout2 = `chapters/chap5.aux'.
 
  (chapters/chap5.tex
@@ -2633,28 +2637,28 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[39
+[41
 
 
 
 
 ]
 
-Package natbib Warning: Citation `yin2013app' on page 40 undefined on input lin
+Package natbib Warning: Citation `yin2013app' on page 42 undefined on input lin
 e 60.
 
 
-Package natbib Warning: Citation `runeson2007detection' on page 40 undefined on
+Package natbib Warning: Citation `runeson2007detection' on page 42 undefined on
  input line 60.
 
 
-Package natbib Warning: Citation `rijsbergen1979information' on page 40 undefin
+Package natbib Warning: Citation `rijsbergen1979information' on page 42 undefin
 ed on input line 60.
 
-[40]
+[42]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41]
+ [43]
 
 ! LaTeX Error: File `figures/para_mu' not found.
 
@@ -2735,27 +2739,27 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[42]
+[44]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
+ [45]
 
-Package natbib Warning: Citation `salakhutdinov2011probabilistic' on page 44 un
+Package natbib Warning: Citation `salakhutdinov2011probabilistic' on page 46 un
 defined on input line 161.
 
 
-Package natbib Warning: Citation `liu2013bayesian' on page 44 undefined on inpu
+Package natbib Warning: Citation `liu2013bayesian' on page 46 undefined on inpu
 t line 161.
 
 
-Package natbib Warning: Citation `luo2014efficient' on page 44 undefined on inp
+Package natbib Warning: Citation `luo2014efficient' on page 46 undefined on inp
 ut line 161.
 
 
-Package natbib Warning: Citation `yang2014survey' on page 44 undefined on input
+Package natbib Warning: Citation `yang2014survey' on page 46 undefined on input
  line 161.
 
-[44]
+[46]
 
 ! LaTeX Error: File `figures/feature_comp_p' not found.
 
@@ -2852,14 +2856,14 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[45]
+[47]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46])
-[47]
+ [48])
+[49]
 \openout2 = `chapters/chap6.aux'.
 
- (chapters/chap6.tex [48
+ (chapters/chap6.tex [50
 
 
 
@@ -2869,22 +2873,21 @@ chapter 6.
 
 Underfull \vbox (badness 4647) has occurred while \output is active []
 
- [49])
-[50] (sysuthesis.bbl [51
+ [51])
+[52] (sysuthesis.bbl [53
 
 
 
 
 
-] [52]) [53]
+] [54] [55]) [56]
 No file sysuthesis.ind.
-[54
+[57
 
 
-] [55
 
 
-] [56
+] [58
 
 
 ]
@@ -2892,7 +2895,7 @@ No file sysuthesis.ind.
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
-[57
+[59
 
 
 ]
@@ -2910,12 +2913,12 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
  ) 
 Here is how much of TeX's memory you used:
- 34400 strings out of 427832
- 623150 string characters out of 3152415
- 848394 words of memory out of 3000000
- 37849 multiletter control sequences out of 15000+200000
+ 34429 strings out of 427832
+ 624592 string characters out of 3152415
+ 848443 words of memory out of 3000000
+ 37878 multiletter control sequences out of 15000+200000
  16552 words of font info for 135 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 58i,14n,75p,10407b,1159s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,14n,75p,10407b,1167s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on sysuthesis.pdf (67 pages).
+Output written on sysuthesis.pdf (69 pages).
