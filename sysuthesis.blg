@@ -1,6 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2015/W32TeX)
-Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
-The top-level auxiliary file: sysuthesis.aux
+This is BibTeX, Version 0.99dThe top-level auxiliary file: sysuthesis.aux
 The style file: sysuthesis.bst
 A level-1 auxiliary file: chapters/chap1.aux
 A level-1 auxiliary file: chapters/chap2.aux
@@ -9,29 +7,11 @@ A level-1 auxiliary file: chapters/chap4.aux
 A level-1 auxiliary file: chapters/chap5.aux
 A level-1 auxiliary file: chapters/chap6.aux
 Database file #1: refs.bib
-Warning--I didn't find a database entry for "huang2014asdroid"
-Warning--I didn't find a database entry for "myles2004detecting"
-Warning--I didn't find a database entry for "jhi2011value"
-Warning--I didn't find a database entry for "mcmillan2012detecting"
-Warning--I didn't find a database entry for "crussell2012attack"
-Warning--I didn't find a database entry for "chen2015simapp"
-Warning--I didn't find a database entry for "spall2005introduction"
-Warning--I didn't find a database entry for "bhandari2013serendipitous"
-Warning--I didn't find a database entry for "sparck1972statistical"
-Warning--I didn't find a database entry for "chu2017construction"
-Warning--I didn't find a database entry for "blei2003latent"
-Warning--I didn't find a database entry for "yin2013app"
-Warning--I didn't find a database entry for "le2014distributed"
-Warning--I didn't find a database entry for "cheng2014class"
-Warning--I didn't find a database entry for "wang2014detecting"
-Warning--I didn't find a database entry for "crussell2015andarwin"
-Warning--I didn't find a database entry for "wala"
-Warning--I didn't find a database entry for "andoni2006near"
-Warning--I didn't find a database entry for "yan2014graph"
 Warning--I didn't find a database entry for "conover1998practical"
 Warning--I didn't find a database entry for "ttest"
 Warning--I didn't find a database entry for "holm1979simple"
 Warning--I didn't find a database entry for "nltk"
+Warning--I didn't find a database entry for "le2014distributed"
 Warning--I didn't find a database entry for "bengio2003neural"
 Warning--I didn't find a database entry for "christopher2006pattern"
 Warning--I didn't find a database entry for "morin2005hierarchical"
@@ -40,6 +20,7 @@ Warning--I didn't find a database entry for "rumerhart1986learning"
 Warning--I didn't find a database entry for "pearson1895note"
 Warning--I didn't find a database entry for "gibler2013adrob"
 Warning--I didn't find a database entry for "zhou2012dissecting"
+Warning--I didn't find a database entry for "chen2015simapp"
 Warning--I didn't find a database entry for "chikofsky1990reverse"
 Warning--I didn't find a database entry for "apktool"
 Warning--I didn't find a database entry for "viennot2014measurement"
@@ -50,6 +31,7 @@ Warning--I didn't find a database entry for "ray1999determination"
 Warning--I didn't find a database entry for "lin2009phrase"
 Warning--I didn't find a database entry for "honarkhah2010stochastic"
 Warning--I didn't find a database entry for "hierarchical"
+Warning--I didn't find a database entry for "yin2013app"
 Warning--I didn't find a database entry for "runeson2007detection"
 Warning--I didn't find a database entry for "rijsbergen1979information"
 Warning--I didn't find a database entry for "salakhutdinov2011probabilistic"
@@ -59,45 +41,4 @@ Warning--I didn't find a database entry for "yang2014survey"
 Warning--there's a publisher but no address in bellman2015adaptive
 Warning--empty journal in zhong2017survey
 Warning--empty journal in syed1999incremental
-You've used 36 entries,
-            2299 wiz_defined-function locations,
-            804 strings with 11634 characters,
-and the built_in function-call counts, 19200 in all, are:
-= -- 2040
-> -- 440
-< -- 21
-+ -- 204
-- -- 102
-* -- 1355
-:= -- 2465
-add.period$ -- 113
-call.type$ -- 36
-change.case$ -- 35
-chr.to.int$ -- 0
-cite$ -- 39
-duplicate$ -- 1329
-empty$ -- 1925
-format.name$ -- 134
-if$ -- 4508
-int.to.chr$ -- 0
-int.to.str$ -- 36
-missing$ -- 37
-newline$ -- 240
-num.names$ -- 36
-pop$ -- 189
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 0
-skip$ -- 465
-stack$ -- 0
-substring$ -- 2488
-swap$ -- 220
-text.length$ -- 21
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 3
-while$ -- 218
-width$ -- 38
-write$ -- 462
-(There were 50 warnings)
+(There were 34 warnings)
