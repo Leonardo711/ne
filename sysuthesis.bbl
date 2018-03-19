@@ -178,14 +178,6 @@ Zhang D, Yin J, Zhu X, et~al.
 \newblock  1563--1572
 \thudot
 
-\bibitem{li2017attributed}
-Li J, Dani H, Hu X, et~al.
-\newblock Attributed network embedding for learning in a dynamic environment.
-\newblock  Proceedings of the 2017 ACM on Conference on Information and
-  Knowledge Management. ACM, 2017.
-\newblock  387--396
-\thudot
-
 \bibitem{coppock1962all}
 Coppock H, Freund J.
 \newblock All-or-none versus incremental learning of errorless shock escapes by
@@ -249,10 +241,24 @@ Kivinen J, Smola A~J, Williamson R~C.
 \newblock  113--127
 \thudot
 
+\bibitem{li2017attributed}
+Li J, Dani H, Hu X, et~al.
+\newblock Attributed network embedding for learning in a dynamic environment.
+\newblock  Proceedings of the 2017 ACM on Conference on Information and
+  Knowledge Management. ACM, 2017.
+\newblock  387--396
+\thudot
+
 \bibitem{goyal2017graph}
 Goyal P, Ferrara E.
 \newblock Graph embedding techniques, applications, and performance: A survey.
 \newblock arXiv preprint arXiv:1705.02801, 2017.
+\thudot
+
+\bibitem{mikolov2013efficient}
+Mikolov T, Chen K, Corrado G, et~al.
+\newblock Efficient estimation of word representations in vector space.
+\newblock arXiv preprint arXiv:1301.3781, 2013.
 \thudot
 
 \end{thebibliography}

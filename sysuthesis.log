@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2016.4.12)  16 MAR 2018 15:44
+This is XeTeX, Version 3.14159265-2.6-0.99992 (TeX Live 2015/W32TeX) (preloaded format=xelatex 2016.4.12)  19 MAR 2018 10:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2079,53 +2079,45 @@ File: figures/social_media_stat.png Graphic file (type QTm)
 ]
 
 Package natbib Warning: Citation `huang2014asdroid' on page 10 undefined on inp
-ut line 32.
+ut line 34.
 
 
 Package natbib Warning: Citation `myles2004detecting' on page 10 undefined on i
-nput line 35.
+nput line 37.
 
 
 Package natbib Warning: Citation `jhi2011value' on page 10 undefined on input l
-ine 35.
+ine 37.
 
 
 Package natbib Warning: Citation `mcmillan2012detecting' on page 10 undefined o
-n input line 35.
+n input line 37.
 
 
 Package natbib Warning: Citation `crussell2012attack' on page 10 undefined on i
-nput line 35.
+nput line 37.
 
 [10]
 
 Package natbib Warning: Citation `chen2015simapp' on page 11 undefined on input
- line 41.
+ line 43.
 
 
 Package natbib Warning: Citation `spall2005introduction' on page 11 undefined o
-n input line 45.
+n input line 47.
 
 
 Package natbib Warning: Citation `bhandari2013serendipitous' on page 11 undefin
-ed on input line 45.
+ed on input line 47.
 
 
 Package natbib Warning: Citation `sparck1972statistical' on page 11 undefined o
-n input line 45.
-
-
-Package natbib Warning: Citation `chu2017construction' on page 11 undefined on 
-input line 52.
-
-
-Package natbib Warning: Citation `blei2003latent' on page 11 undefined on input
- line 52.
+n input line 47.
 
 [11]
 
-Package natbib Warning: Citation `yin2013app' on page 12 undefined on input lin
-e 54.
+Package natbib Warning: Citation `chu2017construction' on page 12 undefined on 
+input line 54.
 
 
 Package natbib Warning: Citation `blei2003latent' on page 12 undefined on input
@@ -2133,39 +2125,47 @@ Package natbib Warning: Citation `blei2003latent' on page 12 undefined on input
 
 
 Package natbib Warning: Citation `yin2013app' on page 12 undefined on input lin
-e 58.
+e 56.
+
+
+Package natbib Warning: Citation `blei2003latent' on page 12 undefined on input
+ line 56.
+
+
+Package natbib Warning: Citation `yin2013app' on page 12 undefined on input lin
+e 60.
 
 
 Package natbib Warning: Citation `le2014distributed' on page 12 undefined on in
-put line 58.
-
-
-Package natbib Warning: Citation `cheng2014class' on page 12 undefined on input
- line 60.
-
-
-Package natbib Warning: Citation `wang2014detecting' on page 12 undefined on in
 put line 60.
 
 
+Package natbib Warning: Citation `cheng2014class' on page 12 undefined on input
+ line 62.
+
+
+Package natbib Warning: Citation `wang2014detecting' on page 12 undefined on in
+put line 62.
+
+
 Package natbib Warning: Citation `crussell2015andarwin' on page 12 undefined on
- input line 60.
+ input line 62.
 
 
-Package natbib Warning: Citation `wala' on page 12 undefined on input line 60.
+Package natbib Warning: Citation `wala' on page 12 undefined on input line 62.
 
 
 Package natbib Warning: Citation `andoni2006near' on page 12 undefined on input
- line 60.
+ line 62.
 
 [12]
 
 Package natbib Warning: Citation `crussell2012attack' on page 13 undefined on i
-nput line 65.
+nput line 67.
 
 
 Package natbib Warning: Citation `yan2014graph' on page 13 undefined on input l
-ine 69.
+ine 71.
 
 [13]) [14]
 \openout2 = `chapters/chap3.aux'.
@@ -2294,14 +2294,6 @@ File: figures/desc_stem.png Graphic file (type QTm)
 
 Package natbib Warning: Citation `le2014distributed' on page 26 undefined on in
 put line 84.
-
-
-Package natbib Warning: Citation `mikolov2013efficient' on page 26 undefined on
- input line 84.
-
-
-Package natbib Warning: Citation `mikolov2013efficient' on page 26 undefined on
- input line 86.
 
 [26]
 
@@ -2526,10 +2518,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
  ) 
 Here is how much of TeX's memory you used:
- 34047 strings out of 493706
- 631585 string characters out of 6143411
- 786753 words of memory out of 5000000
- 36854 multiletter control sequences out of 15000+600000
+ 34050 strings out of 493706
+ 631693 string characters out of 6143411
+ 799769 words of memory out of 5000000
+ 36857 multiletter control sequences out of 15000+600000
  16560 words of font info for 136 fonts, out of 8000000 for 9000
  1328 hyphenation exceptions out of 8191
  73i,14n,74p,10432b,1042s stack positions out of 5000i,500n,10000p,200000b,80000s

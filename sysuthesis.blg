@@ -32,7 +32,6 @@ Warning--I didn't find a database entry for "conover1998practical"
 Warning--I didn't find a database entry for "ttest"
 Warning--I didn't find a database entry for "holm1979simple"
 Warning--I didn't find a database entry for "nltk"
-Warning--I didn't find a database entry for "mikolov2013efficient"
 Warning--I didn't find a database entry for "bengio2003neural"
 Warning--I didn't find a database entry for "christopher2006pattern"
 Warning--I didn't find a database entry for "morin2005hierarchical"
@@ -60,45 +59,45 @@ Warning--I didn't find a database entry for "yang2014survey"
 Warning--there's a publisher but no address in bellman2015adaptive
 Warning--empty journal in zhong2017survey
 Warning--empty journal in syed1999incremental
-You've used 35 entries,
+You've used 36 entries,
             2299 wiz_defined-function locations,
-            801 strings with 11480 characters,
-and the built_in function-call counts, 18713 in all, are:
-= -- 1994
-> -- 423
+            804 strings with 11634 characters,
+and the built_in function-call counts, 19200 in all, are:
+= -- 2040
+> -- 440
 < -- 21
-+ -- 196
-- -- 98
-* -- 1317
-:= -- 2396
-add.period$ -- 110
-call.type$ -- 35
-change.case$ -- 34
++ -- 204
+- -- 102
+* -- 1355
+:= -- 2465
+add.period$ -- 113
+call.type$ -- 36
+change.case$ -- 35
 chr.to.int$ -- 0
-cite$ -- 38
-duplicate$ -- 1291
-empty$ -- 1876
-format.name$ -- 129
-if$ -- 4400
+cite$ -- 39
+duplicate$ -- 1329
+empty$ -- 1925
+format.name$ -- 134
+if$ -- 4508
 int.to.chr$ -- 0
-int.to.str$ -- 35
-missing$ -- 36
-newline$ -- 234
-num.names$ -- 35
-pop$ -- 185
+int.to.str$ -- 36
+missing$ -- 37
+newline$ -- 240
+num.names$ -- 36
+pop$ -- 189
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 456
+skip$ -- 465
 stack$ -- 0
-substring$ -- 2428
+substring$ -- 2488
 swap$ -- 220
 text.length$ -- 21
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 3
-while$ -- 213
-width$ -- 37
-write$ -- 451
-(There were 51 warnings)
+while$ -- 218
+width$ -- 38
+write$ -- 462
+(There were 50 warnings)
