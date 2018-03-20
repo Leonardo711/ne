@@ -213,6 +213,12 @@ McMahan B.
 \newblock  525--533
 \thudot
 
+\bibitem{langford2009sparse}
+Langford J, Li L, Zhang T.
+\newblock Sparse online learning via truncated gradient.
+\newblock Journal of Machine Learning Research, 2009, 10(Mar):777--801
+\thudot
+
 \bibitem{duchi2009efficient}
 Duchi J, Singer Y.
 \newblock Efficient online and batch learning using forward backward splitting.
@@ -288,6 +294,29 @@ Ou M, Cui P, Pei J, et~al.
 Page L, Brin S, Motwani R, et~al.
 \newblock The pagerank citation ranking: Bringing order to the web.
 \newblock Technical report, Stanford InfoLab, 1999
+\thudot
+
+\bibitem{yu2014large}
+Yu H~F, Jain P, Kar P, et~al.
+\newblock Large-scale multi-label learning with missing labels.
+\newblock  International conference on machine learning, 2014.
+\newblock  593--601
+\thudot
+
+\bibitem{natarajan2014inductive}
+Natarajan N, Dhillon I~S.
+\newblock Inductive matrix completion for predicting gene--disease
+  associations.
+\newblock Bioinformatics, 2014, 30(12):i60--i68
+\thudot
+
+\bibitem{zinkevich2003online}
+Zinkevich M.
+\newblock Online convex programming and generalized infinitesimal gradient
+  ascent.
+\newblock  Proceedings of the 20th International Conference on Machine Learning
+  (ICML-03), 2003.
+\newblock  928--936
 \thudot
 
 \end{thebibliography}
