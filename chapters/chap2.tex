@@ -31,15 +31,15 @@ f_G: A \rightarrow R^{|V| \times d} \qquad s.t.\quad d<<|V|
 在2013年，Google的开源工具Word2Vec\cite{mikolov2013efficient}发布之后，借鉴词向量表征的思路，Node2Vec和DeepWalk算法以蒙特卡罗随机游走的方式进行网络路径采样，将采样得到的路径视为词向量表征中的语料库，然后采用类似Word2Vec方法进行学习。在2015年，Jian Tang\cite{tang2015line}在提出LINE算法的同时提出了接近度的概念，根据接近度的概念，可以将不同的图表征算法进行分类。下面主要介绍一下接近度的概念，然后基于接近度的阶数，按从低阶到高阶接近度依次介绍：%局部线性嵌入LLE（Locally Linear Embedding），%
 拉普拉斯映射LE（Laplacian Eignemaps） ， LINE(Large-scale Information Network Embedding)算法,Node2Vec算法。% DeepWalk算法，。
 \subsection{接近度}
-\definition{\textbf{一阶接近度}：}
+\definition{\textbf{一阶接近度}：}\label{first_order}
 网络中的一阶接近度是用来描述节点对的局部接近特性。在网络$G$中，对于有连边的节点对($u$,$v$)
 连边的权重$A_{uv}$则为一阶接近度（first-order proximity)，对于没有连边的节点对，则一阶接近度则为0。
 
-所谓一阶接近度，通常是用来描述网络中节点之间的相似度，直观的理解可以视为一阶接近度用来描述网络的一度邻居结构，也即局部结构，这也是符合常识和具体的应用场景的，例如在社交网络中，有直接联系的节点往往具有更强的亲密度。在获取和交换信息上，用户节点更加倾向于直接作用给一度邻居。基于这一点构想，很多算法基于保留一阶接近度的方法来构造目标函数，然后通过优化目标函数得到所求的表征向量，其中包含IsoMap算法，局部线性嵌入算法，拉普拉斯特征映射算法，图分解GF\cite{ahmed2013distributed}（Graph Factorization）。
+所谓一阶接近度，通常是用来描述网络中直接相连节点对之间的相似度，直观的理解可以视为一阶接近度用来描述网络的一度邻居结构，也即局部结构，这也是符合常识和具体的应用场景的，例如在社交网络中，有直接联系的节点往往具有更强的亲密度。在获取和交换信息上，用户节点更加倾向于直接作用给一度邻居。基于这一点构想，很多算法基于保留一阶接近度的方法来构造目标函数，然后通过优化目标函数得到所求的表征向量，其中包含IsoMap算法，局部线性嵌入算法，拉普拉斯特征映射算法，图分解GF\cite{ahmed2013distributed}（Graph  Factorization）。
 
 但在现实的网络场景中，一阶接近度是存在局限性的。局限性来源于两方面：第一方面来自于数据收集的问题，收集到的网络数据未必能完全体现物理世界中真实的全部连接数据\cite{liben2007link} ,一些存在直接链接的节点可能在数据收集过程丢失，这种缺失情况在只保留一阶接近度的情况下是存在局限的。第二方面，网络本身的特性使得网络存在路径，节点对之间的路径往往不唯一，用来表示非直接连接节点对之间的相似度一般用最短距离来描述，这种情况对于只保留一阶接近度的图表征来说是很难解决的，从而会损失掉一部分网络的信息；因此在图表征算法中只采用保留一阶接近度的方式对于很好地保留网络的信息是不够的，也就是需要引入高阶接近度来描述网络结构本身。保留高阶接近度的含义是保留一些非直接联系但是因为网络连接而具备较大可能产生连接，比如，在社交网络中有较多共同邻居或者同属于一个社区中的节点对更有可能会产生连边。下面介绍一下高阶接近度中的一个特例：二阶接近度。
 
-\definition{\textbf{二阶接近度}:}
+\definition{\textbf{二阶接近度}:}\label{second_order}
 网络中的二阶接近度是用来描述节点对各自周边节点环境的相似度。也就是说，节点$u$和节点$v$的二阶接近度取决于各自的邻居节点集合$N(u)$和$N(v)$，如果$|N(u) \cap N(v)|>0$,也即节点$u$和节点$v$有共同邻居，则二阶接近度大于0；否则，二阶接近度等于0。
 
 二阶接近度相比于一阶接近度保留了节点对之间邻居节点的相似度相似度信息，因此对网络结构本身保留了更多的信息，但是这也带来了复杂度显著提升的效果，在解决复杂度的问题上，一般采用文献\cite{mikolov2013distributed}中提到的负采样方法来进行效率提升。除了二阶接近度以外，DeepWalk和Node2vec采用蒙特卡罗随机游走的方式，保留网络中的路径属性，相当于可以控制游走步长而保留网络中k阶接近度，除此之外还有通过其他相似度而设计的准则来保留网络中的高阶接近度\cite{ou2016asymmetric}。
@@ -72,8 +72,8 @@ f_G: A \rightarrow R^{|V| \times d} \qquad s.t.\quad d<<|V|
 \begin{equation}
 \begin{aligned}
 \phi(X) &= \frac{1}{2}\sum_{i,j}|X_i - X_j|^2A_{ij} \\
-&= \frac{1}{2}(\sum_{i,j}(y_i^2+y_j^2-2y_iy_j) A_{ij}) \\
-&=\frac{1}{2} (\sum_iy_i^2D_{ii} +\sum_j y_j^2 D_{jj} - 2\sum_{i,j}y_i y_j A_{ij}) \\
+&= \frac{1}{2}(\sum_{i,j}(x_i^2+x_j^2-2x_ix_j) A_{ij}) \\
+&=\frac{1}{2} (\sum_ix_i^2D_{ii} +\sum_j x_j^2 D_{jj} - 2\sum_{i,j}x_i x_j A_{ij}) \\
 &= tr(X^TLX)
 \end{aligned}
 \end{equation}
@@ -82,7 +82,7 @@ f_G: A \rightarrow R^{|V| \times d} \qquad s.t.\quad d<<|V|
 \min_{X^TDX} \quad tr(X^TLX)
 \end{equation}
 对约束条件进行利用，优化表达式，令$X=D^{-\frac{1}{2}}U$，代入约束条件中可证明正确性。于是问题原来的优化问题转化成如下的带约束优化的优化问题：
-\begin{equation}
+\begin{equation}\label{laplacian_reduce}
 \begin{aligned}
 \min_{U^TU = I} &\quad tr(U^TD^{-\frac{1}{2}}LD^{-\frac{1}{2}}U) \\
 &= tr(U^T(I-D^{-\frac{1}{2}}AD^{-\frac{1}{2}})U)

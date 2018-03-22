@@ -7,9 +7,6 @@ A level-1 auxiliary file: chapters/chap4.aux
 A level-1 auxiliary file: chapters/chap5.aux
 A level-1 auxiliary file: chapters/chap6.aux
 Database file #1: refs.bib
-Warning--I didn't find a database entry for "conover1998practical"
-Warning--I didn't find a database entry for "ttest"
-Warning--I didn't find a database entry for "holm1979simple"
 Warning--I didn't find a database entry for "nltk"
 Warning--I didn't find a database entry for "le2014distributed"
 Warning--I didn't find a database entry for "bengio2003neural"
@@ -41,4 +38,6 @@ Warning--I didn't find a database entry for "yang2014survey"
 Warning--there's a publisher but no address in bellman2015adaptive
 Warning--empty journal in zhong2017survey
 Warning--empty journal in syed1999incremental
-(There were 34 warnings)
+Warning--there's a number but no series in chung1997spectral
+Warning--there's a publisher but no address in chung1997spectral
+(There were 33 warnings)

@@ -89,6 +89,12 @@ Belkin M, Niyogi P.
 \newblock  585--591
 \thudot
 
+\bibitem{mikolov2013efficient}
+Mikolov T, Chen K, Corrado G, et~al.
+\newblock Efficient estimation of word representations in vector space.
+\newblock arXiv preprint arXiv:1301.3781, 2013.
+\thudot
+
 \bibitem{perozzi2014deepwalk}
 Perozzi B, Al-Rfou R, Skiena S.
 \newblock Deepwalk: Online learning of social representations.
@@ -261,12 +267,6 @@ Goyal P, Ferrara E.
 \newblock arXiv preprint arXiv:1705.02801, 2017.
 \thudot
 
-\bibitem{mikolov2013efficient}
-Mikolov T, Chen K, Corrado G, et~al.
-\newblock Efficient estimation of word representations in vector space.
-\newblock arXiv preprint arXiv:1301.3781, 2013.
-\thudot
-
 \bibitem{liben2007link}
 Liben-Nowell D, Kleinberg J.
 \newblock The link-prediction problem for social networks.
@@ -317,6 +317,36 @@ Zinkevich M.
 \newblock  Proceedings of the 20th International Conference on Machine Learning
   (ICML-03), 2003.
 \newblock  928--936
+\thudot
+
+\bibitem{chung1997spectral}
+Chung F~R.
+\newblock Spectral graph theory.
+\newblock Number~92, American Mathematical Soc., 1997
+\thudot
+
+\bibitem{newman2001clustering}
+Newman M~E.
+\newblock Clustering and preferential attachment in growing networks.
+\newblock Physical review E, 2001, 64(2):025102
+\thudot
+
+\bibitem{adamic2003friends}
+Adamic L~A, Adar E.
+\newblock Friends and neighbors on the web.
+\newblock Social networks, 2003, 25(3):211--230
+\thudot
+
+\bibitem{zhou2009predicting}
+Zhou T, L{\"u} L, Zhang Y~C.
+\newblock Predicting missing links via local information.
+\newblock The European Physical Journal B, 2009, 71(4):623--630
+\thudot
+
+\bibitem{wang2015link}
+Wang P, Xu B, Wu Y, et~al.
+\newblock Link prediction in social networks: the state-of-the-art.
+\newblock Science China Information Sciences, 2015, 58(1):1--38
 \thudot
 
 \end{thebibliography}
