@@ -21,38 +21,40 @@
 \contentsline {chapter}{\numberline {3}网络中的增量图表征算法}{21}{chapter.3}
 \contentsline {section}{\numberline {3.1}引言}{21}{section.3.1}
 \contentsline {section}{\numberline {3.2}问题描述}{21}{section.3.2}
-\contentsline {section}{\numberline {3.3}静态场景下的图表征算法}{21}{section.3.3}
-\contentsline {subsection}{\numberline {3.3.1}基于高阶接近度的拉普拉斯特征映射}{22}{subsection.3.3.1}
-\contentsline {section}{\numberline {3.4}增量场景下的图表征算法}{25}{section.3.4}
-\contentsline {section}{\numberline {3.5}本章小结}{25}{section.3.5}
-\contentsline {chapter}{\numberline {4}算法}{27}{chapter.4}
-\contentsline {section}{\numberline {4.1}问题定义}{28}{section.4.1}
-\contentsline {section}{\numberline {4.2}算法框架}{29}{section.4.2}
-\contentsline {section}{\numberline {4.3}文本相似性}{30}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}数据清洗}{30}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}特征抽取}{31}{subsection.4.3.2}
-\contentsline {subsection}{\numberline {4.3.3}相似性计算}{34}{subsection.4.3.3}
-\contentsline {section}{\numberline {4.4}视图相似性}{35}{section.4.4}
-\contentsline {subsection}{\numberline {4.4.1}逆向工程}{35}{subsection.4.4.1}
-\contentsline {subsection}{\numberline {4.4.2}特征抽取}{36}{subsection.4.4.2}
-\contentsline {subsection}{\numberline {4.4.3}相似性计算}{38}{subsection.4.4.3}
-\contentsline {section}{\numberline {4.5}移动应用聚类}{38}{section.4.5}
-\contentsline {section}{\numberline {4.6}第三方库推荐}{43}{section.4.6}
-\contentsline {section}{\numberline {4.7}本章小结}{45}{section.4.7}
-\contentsline {chapter}{\numberline {5}实验分析与讨论}{47}{chapter.5}
-\contentsline {section}{\numberline {5.1}数据介绍}{47}{section.5.1}
-\contentsline {subsection}{\numberline {5.1.1}元数据}{48}{subsection.5.1.1}
-\contentsline {subsection}{\numberline {5.1.2}程序包}{48}{subsection.5.1.2}
-\contentsline {section}{\numberline {5.2}评价标准}{49}{section.5.2}
-\contentsline {section}{\numberline {5.3}参数设定}{50}{section.5.3}
-\contentsline {section}{\numberline {5.4}实验对比}{52}{section.5.4}
-\contentsline {subsection}{\numberline {5.4.1}基准算法}{52}{subsection.5.4.1}
-\contentsline {subsection}{\numberline {5.4.2}对比结果与分析}{53}{subsection.5.4.2}
-\contentsline {section}{\numberline {5.5}本章小结}{55}{section.5.5}
-\contentsline {chapter}{\numberline {6}总结与展望}{57}{chapter.6}
-\contentsline {section}{\numberline {6.1}工作总结}{57}{section.6.1}
-\contentsline {section}{\numberline {6.2}展望}{58}{section.6.2}
-\contentsline {chapter}{参考文献}{59}{chapter*.36}
-\contentsline {chapter}{研究成果}{63}{section*.37}
-\contentsline {chapter}{致谢}{65}{section*.39}
+\contentsline {section}{\numberline {3.3}静态场景下的图表征算法}{22}{section.3.3}
+\contentsline {subsection}{\numberline {3.3.1}基于高阶接近度的拉普拉斯特征映射}{23}{subsection.3.3.1}
+\contentsline {subsection}{\numberline {3.3.2}HLE算法描述}{26}{subsection.3.3.2}
+\contentsline {section}{\numberline {3.4}增量场景下的图表征算法}{26}{section.3.4}
+\contentsline {subsection}{\numberline {3.4.1}节点数不变}{27}{subsection.3.4.1}
+\contentsline {section}{\numberline {3.5}本章小结}{27}{section.3.5}
+\contentsline {chapter}{\numberline {4}算法}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}问题定义}{30}{section.4.1}
+\contentsline {section}{\numberline {4.2}算法框架}{31}{section.4.2}
+\contentsline {section}{\numberline {4.3}文本相似性}{32}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}数据清洗}{32}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}特征抽取}{33}{subsection.4.3.2}
+\contentsline {subsection}{\numberline {4.3.3}相似性计算}{36}{subsection.4.3.3}
+\contentsline {section}{\numberline {4.4}视图相似性}{37}{section.4.4}
+\contentsline {subsection}{\numberline {4.4.1}逆向工程}{37}{subsection.4.4.1}
+\contentsline {subsection}{\numberline {4.4.2}特征抽取}{38}{subsection.4.4.2}
+\contentsline {subsection}{\numberline {4.4.3}相似性计算}{40}{subsection.4.4.3}
+\contentsline {section}{\numberline {4.5}移动应用聚类}{40}{section.4.5}
+\contentsline {section}{\numberline {4.6}第三方库推荐}{45}{section.4.6}
+\contentsline {section}{\numberline {4.7}本章小结}{47}{section.4.7}
+\contentsline {chapter}{\numberline {5}实验分析与讨论}{49}{chapter.5}
+\contentsline {section}{\numberline {5.1}数据介绍}{49}{section.5.1}
+\contentsline {subsection}{\numberline {5.1.1}元数据}{50}{subsection.5.1.1}
+\contentsline {subsection}{\numberline {5.1.2}程序包}{50}{subsection.5.1.2}
+\contentsline {section}{\numberline {5.2}评价标准}{51}{section.5.2}
+\contentsline {section}{\numberline {5.3}参数设定}{52}{section.5.3}
+\contentsline {section}{\numberline {5.4}实验对比}{54}{section.5.4}
+\contentsline {subsection}{\numberline {5.4.1}基准算法}{54}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.2}对比结果与分析}{55}{subsection.5.4.2}
+\contentsline {section}{\numberline {5.5}本章小结}{57}{section.5.5}
+\contentsline {chapter}{\numberline {6}总结与展望}{59}{chapter.6}
+\contentsline {section}{\numberline {6.1}工作总结}{59}{section.6.1}
+\contentsline {section}{\numberline {6.2}展望}{60}{section.6.2}
+\contentsline {chapter}{参考文献}{61}{chapter*.38}
+\contentsline {chapter}{研究成果}{65}{section*.39}
+\contentsline {chapter}{致谢}{67}{section*.41}
 \contentsfinish 

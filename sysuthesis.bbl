@@ -349,4 +349,19 @@ Wang P, Xu B, Wu Y, et~al.
 \newblock Science China Information Sciences, 2015, 58(1):1--38
 \thudot
 
+\bibitem{chi2007evolutionary}
+Chi Y, Song X, Zhou D, et~al.
+\newblock Evolutionary spectral clustering by incorporating temporal
+  smoothness.
+\newblock  Proceedings of the 13th ACM SIGKDD international conference on
+  Knowledge discovery and data mining. ACM, 2007.
+\newblock  153--162
+\thudot
+
+\bibitem{stewart1990matrix}
+Stewart G~W.
+\newblock Matrix perturbation theory.
+\newblock 1990.
+\thudot
+
 \end{thebibliography}
