@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  23 MAR 2018 21:41
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  25 MAR 2018 00:39
 entering extended mode
 **./sysuthesis.tex
 (sysuthesis.tex
@@ -2150,13 +2150,28 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on in
 put line 161.
  [26]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-LaTeX Warning: Reference `unify' on page 27 undefined on input line 192.
+ [27]
+[28]
+Overfull \hbox (2.43848pt too wide) detected at line 273
+[][]
+ []
 
-) [27]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [29]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [30]
+File: figures/CN_incremental.png Graphic file (type QTm)
+
+<use  "figures/CN_incremental.png" > [31] [32]) [33]
 \openout2 = `chapters/chap4.aux'.
 
- (chapters/chap4.tex [28
+ (chapters/chap4.tex
+[34
 
 
 
@@ -2166,7 +2181,7 @@ chapter 4.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [29]
+ [35]
 
 ! LaTeX Error: File `figures/architecture' not found.
 
@@ -2186,10 +2201,10 @@ If that doesn't work, type  X <return>  to quit.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [30]
+ [36]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [31]
+ [37]
 
 ! LaTeX Error: File `figures/fb_desc' not found.
 
@@ -2207,7 +2222,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Package natbib Warning: Citation `nltk' on page 32 undefined on input line 64.
+Package natbib Warning: Citation `nltk' on page 38 undefined on input line 64.
 
 \g__fontspec_family_FangSong_int=\count327
 .................................................
@@ -2248,7 +2263,7 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[32]
+[38]
 
 ! LaTeX Error: File `figures/desc_stem' not found.
 
@@ -2266,11 +2281,11 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Package natbib Warning: Citation `le2014distributed' on page 33 undefined on in
+Package natbib Warning: Citation `le2014distributed' on page 39 undefined on in
 put line 84.
 
 
-Package natbib Warning: Citation `bengio2003neural' on page 33 undefined on inp
+Package natbib Warning: Citation `bengio2003neural' on page 39 undefined on inp
 ut line 88.
 
 
@@ -2289,25 +2304,25 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[33]
+[39]
 
-Package natbib Warning: Citation `christopher2006pattern' on page 34 undefined 
+Package natbib Warning: Citation `christopher2006pattern' on page 40 undefined 
 on input line 105.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [34]
+ [40]
 
-Package natbib Warning: Citation `morin2005hierarchical' on page 35 undefined o
+Package natbib Warning: Citation `morin2005hierarchical' on page 41 undefined o
 n input line 113.
 
 
-Package natbib Warning: Citation `huffman1952method' on page 35 undefined on in
+Package natbib Warning: Citation `huffman1952method' on page 41 undefined on in
 put line 113.
 
 
-Package natbib Warning: Citation `rumerhart1986learning' on page 35 undefined o
+Package natbib Warning: Citation `rumerhart1986learning' on page 41 undefined o
 n input line 113.
 
 
@@ -2327,26 +2342,26 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Package natbib Warning: Citation `pearson1895note' on page 35 undefined on inpu
+Package natbib Warning: Citation `pearson1895note' on page 41 undefined on inpu
 t line 127.
 
-[35]
+[41]
 
-Package natbib Warning: Citation `gibler2013adrob' on page 36 undefined on inpu
+Package natbib Warning: Citation `gibler2013adrob' on page 42 undefined on inpu
 t line 152.
 
 
-Package natbib Warning: Citation `zhou2012dissecting' on page 36 undefined on i
+Package natbib Warning: Citation `zhou2012dissecting' on page 42 undefined on i
 nput line 152.
 
 
-Package natbib Warning: Citation `chen2015simapp' on page 36 undefined on input
+Package natbib Warning: Citation `chen2015simapp' on page 42 undefined on input
  line 152.
 
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [36]
+ [42]
 
 ! LaTeX Error: File `figures/sogou' not found.
 
@@ -2380,16 +2395,16 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Package natbib Warning: Citation `chikofsky1990reverse' on page 37 undefined on
+Package natbib Warning: Citation `chikofsky1990reverse' on page 43 undefined on
  input line 167.
 
 
-Package natbib Warning: Citation `apktool' on page 37 undefined on input line 1
+Package natbib Warning: Citation `apktool' on page 43 undefined on input line 1
 67.
 
-[37]
+[43]
 
-Package natbib Warning: Citation `viennot2014measurement' on page 38 undefined 
+Package natbib Warning: Citation `viennot2014measurement' on page 44 undefined 
 on input line 171.
 
 
@@ -2409,7 +2424,7 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Package natbib Warning: Citation `r' on page 38 undefined on input line 181.
+Package natbib Warning: Citation `r' on page 44 undefined on input line 181.
 
 
 ! LaTeX Error: File `figures/R' not found.
@@ -2427,7 +2442,7 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[38]
+[44]
 
 ! LaTeX Error: File `figures/assets' not found.
 
@@ -2445,11 +2460,11 @@ Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
 
-Package natbib Warning: Citation `permission' on page 39 undefined on input lin
+Package natbib Warning: Citation `permission' on page 45 undefined on input lin
 e 200.
 
 
-Package natbib Warning: Citation `permission' on page 39 undefined on input lin
+Package natbib Warning: Citation `permission' on page 45 undefined on input lin
 e 200.
 
 
@@ -2468,21 +2483,21 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[39] [40]
+[45] [46]
 
-Package natbib Warning: Citation `hartigan1979algorithm' on page 41 undefined o
+Package natbib Warning: Citation `hartigan1979algorithm' on page 47 undefined o
 n input line 239.
 
 
-Package natbib Warning: Citation `ray1999determination' on page 41 undefined on
+Package natbib Warning: Citation `ray1999determination' on page 47 undefined on
  input line 239.
 
 
-Package natbib Warning: Citation `lin2009phrase' on page 41 undefined on input 
+Package natbib Warning: Citation `lin2009phrase' on page 47 undefined on input 
 line 239.
 
 
-Package natbib Warning: Citation `honarkhah2010stochastic' on page 41 undefined
+Package natbib Warning: Citation `honarkhah2010stochastic' on page 47 undefined
  on input line 239.
 
 
@@ -2504,22 +2519,22 @@ If that doesn't work, type  X <return>  to quit.
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41]
+ [47]
 
-Package natbib Warning: Citation `hierarchical' on page 42 undefined on input l
+Package natbib Warning: Citation `hierarchical' on page 48 undefined on input l
 ine 257.
 
-[42] [43] [44]
+[48] [49] [50]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [45]
+ [51]
 Underfull \vbox (badness 2351) has occurred while \output is active []
 
- [46]
+ [52]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47])
-[48]
+ [53])
+[54]
 \openout2 = `chapters/chap5.aux'.
 
  (chapters/chap5.tex
@@ -2540,28 +2555,28 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[49
+[55
 
 
 
 
 ]
 
-Package natbib Warning: Citation `yin2013app' on page 50 undefined on input lin
+Package natbib Warning: Citation `yin2013app' on page 56 undefined on input lin
 e 60.
 
 
-Package natbib Warning: Citation `runeson2007detection' on page 50 undefined on
+Package natbib Warning: Citation `runeson2007detection' on page 56 undefined on
  input line 60.
 
 
-Package natbib Warning: Citation `rijsbergen1979information' on page 50 undefin
+Package natbib Warning: Citation `rijsbergen1979information' on page 56 undefin
 ed on input line 60.
 
-[50]
+[56]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [51]
+ [57]
 
 ! LaTeX Error: File `figures/para_mu' not found.
 
@@ -2642,27 +2657,27 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[52]
+[58]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53]
+ [59]
 
-Package natbib Warning: Citation `salakhutdinov2011probabilistic' on page 54 un
+Package natbib Warning: Citation `salakhutdinov2011probabilistic' on page 60 un
 defined on input line 161.
 
 
-Package natbib Warning: Citation `liu2013bayesian' on page 54 undefined on inpu
+Package natbib Warning: Citation `liu2013bayesian' on page 60 undefined on inpu
 t line 161.
 
 
-Package natbib Warning: Citation `luo2014efficient' on page 54 undefined on inp
+Package natbib Warning: Citation `luo2014efficient' on page 60 undefined on inp
 ut line 161.
 
 
-Package natbib Warning: Citation `yang2014survey' on page 54 undefined on input
+Package natbib Warning: Citation `yang2014survey' on page 60 undefined on input
  line 161.
 
-[54]
+[60]
 
 ! LaTeX Error: File `figures/feature_comp_p' not found.
 
@@ -2759,14 +2774,14 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[55]
+[61]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [56])
-[57]
+ [62])
+[63]
 \openout2 = `chapters/chap6.aux'.
 
- (chapters/chap6.tex [58
+ (chapters/chap6.tex [64
 
 
 
@@ -2776,21 +2791,21 @@ chapter 6.
 
 Underfull \vbox (badness 4647) has occurred while \output is active []
 
- [59])
-[60] (sysuthesis.bbl [61
+ [65])
+[66] (sysuthesis.bbl [67
 
 
 
 
 
-] [62] [63]) [64]
+] [68] [69]) [70]
 No file sysuthesis.ind.
-[65
+[71
 
 
 
 
-] [66
+] [72
 
 
 ]
@@ -2798,7 +2813,7 @@ No file sysuthesis.ind.
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
-[67
+[73
 
 
 ]
@@ -2808,22 +2823,15 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 191.
 (chapters/chap6.aux))
 Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 191.
 Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 191.
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
  ) 
 Here is how much of TeX's memory you used:
- 34432 strings out of 427832
- 624155 string characters out of 3152415
- 829218 words of memory out of 3000000
- 37889 multiletter control sequences out of 15000+200000
- 14605 words of font info for 123 fonts, out of 3000000 for 9000
+ 34481 strings out of 427832
+ 626580 string characters out of 3152415
+ 829495 words of memory out of 3000000
+ 37931 multiletter control sequences out of 15000+200000
+ 14637 words of font info for 127 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 58i,17n,75p,10407b,1223s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,17n,75p,10407b,1233s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on sysuthesis.pdf (77 pages).
+Output written on sysuthesis.pdf (83 pages).

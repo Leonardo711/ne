@@ -82,14 +82,14 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 \end{equation}
 其中$N(i)$表示节点$i$的邻居节点集合，$|\cdot|$表示对集合计数。将共同邻居这个计算方法推广至矩阵形式，可以得到用来保留高阶接近度的相似度矩阵$S_{CN}$:
 \begin{equation}
-	S_{CN}(A) = A^2
+	S_{CN}(A) = A^2 - D
 \end{equation}
-其中$A$为无向网络的邻接矩阵。
+其中$A$为无向网络的邻接矩阵, $\textbf{D}$为节点度的对角矩阵。
 \definition{\textbf{Adamic-Adar系数}:}Adamic-Adar系数最先是由Adamic和Adar提出来用来计算两个网页之间的相似度的，后来被广泛应用与社交网络分析之中。Adamic-Adar系数的计算方法类似于共同邻居，不同的是对不同的共同邻居采用不同的权重，该系数假定度较高的节点在共同邻居中所占权重较低，权重值为对数节点度的倒数，也即：
 \begin{equation}
 	AA(i,j) = \sum_{u \in N(i)\cap N(j)} \frac{1}{\log(|N(u)|)}
 \end{equation}
-其中$|N(u)|$也称为节点$u$的度。同样地，将Adamic-Adar系数计算方法推广至矩阵形式，可以得到对应用来保留高阶接近度的相似度矩阵$S_{AA}$:
+其中$|N(u)|$也称为节点$u$的度。同样地，将Adamic-Adar系数计算方法推广至矩阵形式，在不考虑对角线元素的情况下，可以得到对应用来保留高阶接近度的相似度矩阵$S_{AA}$:
 \begin{equation}
 	S_{AA}(A) = A \cdot M \cdot A
 \end{equation}
@@ -102,7 +102,7 @@ M_{ii} = 1/\log(\sum_j{A_{ij}})
 \begin{equation}
 	RA(i,j) =  \sum_{u \in N(i)\cap N(j)} \frac{1}{|N(u)|}
 \end{equation}
-同样地，可以将资源分配系数推广至矩阵形式，得到可以用来保留高阶接近度的相似度矩阵$S_{RA}$:
+同样地，在不考虑对角线元素的情况下，可以将资源分配系数推广至矩阵形式，得到矩阵$S_{RA}$:
 \begin{equation}
 	S_{RA}(A) = A\cdot K \cdot A
 \end{equation}
@@ -161,16 +161,17 @@ D'_{ii} = \sum_j{S_{ij}}
 			\caption{HLE算法}
 			\begin{algorithmic}[1]
 				\Require
-				\Statex $\mathcal{A}$ :邻接矩阵
+				\Statex $\textbf{A}$ :邻接矩阵
 				\Statex $k$ : 表征向量维数
 				\Ensure
-				\Statex $\mathcal{X}$ :表征向量矩阵
+				\Statex $\textbf{X}$ :表征向量矩阵
+				\Statex $\Lambda$:特征值对角矩阵
 				\Statex
 				\State $\mathcal{S} \leftarrow S_{CN}(A) /S_{AA}(A) / S_{RA}(A)$
 				\State $D'_{ii} = \sum_j S_{ij}$
 				\State $W \leftarrow  D^{\prime-\frac{1}{2}}SD^{\prime-\frac{1}{2}}$
-				\State 通过特征值分解得到$W$前k个特征向量，组合成矩阵 $\mathcal{X}$
-				\State 返回 $\mathcal{X}$
+				\State 通过特征值分解得到$W$前k个特征向量，组合成矩阵 $\textbf{X}$以及对应特征值组成的对角矩阵$\Lambda$
+				\State 返回 $\textbf{X}$
 			\end{algorithmic}
 		\end{algorithm}
 	\end{minipage}
@@ -182,21 +183,233 @@ D'_{ii} = \sum_j{S_{ij}}
 \section{增量场景下的图表征算法}
 前面一节提出了应用高阶接近度的拉普拉斯特征映射方法来对网络进行表征，对于真实应用中的网络往往是存在动态变化的。比如在社交媒体上，网络中时刻会存在用户进行更新状态、添加好友等操作，这些操作都是会引起社交关系发生变化的，从数学角度看就是网络中的连边会出现增删等情况；除此之外社交媒体中，也会存在有新的用户注册加入的情况，这种情况即对应网络中有新加入的节点。对于传统的图表征算法来说，真实场景下的动态网络会带来很大的挑战，传统算法基本都是离线模型，对于变化后的网络只能进行重新计算或学习，当网络规模很大时，离线模型是不具备伸缩性的，也不适合于在线应用中使用。因此对于大型动态网络需要提出一种增量式的学习方式来实现快速、可扩展的表征学习。
 
-下面将提出一种增量的图表征算法，应用于增量场景下的图表征学习，在这里本文采用文献\cite{chi2007evolutionary}中采用的假设，认为在时刻$t$和时刻$t+1$之间网络的变化是平缓而微小的。如前文中提到的，网络中的变化场景分两类：1. 节点数不变，网络连边的增删；2.节点数的新增；因此下面将分别就这两种情况进行分析和处理。
-
+下面将提出一种增量的图表征算法，应用于增量场景下的图表征学习，在这里本文采用文献\cite{chi2007evolutionary}中采用的假设，认为在时刻$t$和时刻$t+1$之间网络的变化是平缓而微小的，可采用矩阵摄动理论\cite{stewart1990matrix}进行分析和处理。如前文中提到的，网络中的变化场景分两类：1. 节点数不变，网络连边的增删；2.节点数的新增；因此下面将分别就这两种情况进行分析和处理。
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%----------------------------------------     节点数不变    ---------------------------------------%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{节点数不变}
 本文的研究对象是无向网络，根据式(\ref{evol}),在时刻$t$网络表征学习相当对矩阵$\textbf{W}^{(t)}$进行特征值分解，也即：
 \begin{equation}
 	\textbf{W}^{(t)} = \textbf{X}^{(t)T} \Lambda^{(t)} \textbf{X} ^{(t)}
 \end{equation}
-其中$\textbf{X} ^{(t)}$为时刻$t$是网络的表征向量，其中$\textbf{W}^{(t)} = \textbf{D}^{\prime(t)-\frac{1}{2}}\textbf{S}^{(t)}\textbf{D}^{\prime(t)-\frac{1}{2}}$；在网络节点不变的情况下，用$\Delta\textbf{W}$表示随机
+其中$\textbf{X} ^{(t)}$为时刻$t$是网络的表征向量，其中$\textbf{W}^{(t)} = \textbf{D}^{\prime(t)-\frac{1}{2}}\textbf{S}^{(t)}\textbf{D}^{\prime(t)-\frac{1}{2}}$；在网络节点不变的情况下，根据矩阵摄动理论\cite{stewart1990matrix}，用$\Delta\textbf{W}$表示时刻$t$到时刻$t+1$网络变化引起的矩阵$\textbf{W}$的变化，则有
+\begin{equation}
+	\textbf{W}^{(t+1)} = \textbf{W}^{(t)} + \Delta\textbf{W}
+\end{equation}
+对矩阵$\Delta\textbf{W}$进行矩阵分解，则有：
+\begin{equation}
+	\Delta\textbf{W} =  \textbf{Y}^{T} \textbf{Z}  \textbf{Y}
+\end{equation}
+其中矩阵$\textbf{Z}$为对角矩阵，$\textbf{Y}$为$\Delta\textbf{W}$的特征向量矩阵，网络变化的定义，变化后的矩阵等于变化前的矩阵加上变量，即：
+\begin{equation}\label{time_t1}
+\begin{aligned}
+\textbf{W}^{(t+1)} &= \textbf{X}^{(t+1)T} \Lambda^{(t+1)} \textbf{X} ^{(t+1)} \\
+ &= \textbf{W}^{(t)} + \Delta \textbf{W} \\
+&= \textbf{X}^{(t)T} \Lambda^{(t)} \textbf{X} ^{(t)} +  \textbf{Y}^{T} \textbf{Z}  \textbf{Y} \\
+&= \begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix}
+   \begin{bmatrix}  \Lambda^{(t)} & \textbf{0}\\
+   \textbf{0} & \textbf{Z}
+   \end{bmatrix}
+   \begin{bmatrix} \textbf{X}^{(t)} \\ \textbf{Y}\end{bmatrix} \\
+&= \tilde{\textbf{X}}^{(t)T} 
+\begin{bmatrix}  \Lambda^{(t)} & \textbf{0}\\
+\textbf{0} & \textbf{Z}
+\end{bmatrix}
+\tilde{\textbf{X}}^{(t)}
+\end{aligned}
+\end{equation}
+其中为方便表述，记$ \tilde{\textbf{X}}^{(t)T}= \begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix}$。通过矩阵特征值分解的特性可知，矩阵$\textbf{X}^{(t)T}$为正交矩阵，那么对于时刻$t$所对应的表征向量矩阵$\textbf{X}^{(t+1)T}$也应是正交矩阵，为此需引入QR分解。
+\definition{\textbf{QR分解}}：QR分解是线性代数中常用的矩阵分解方法，将矩阵$\textbf{A}$分解成两个矩阵的乘积，一个是正交矩阵$\text{Q}$，也即$\textbf{Q}^T\textbf{Q} = \textbf{I}$，一个是上三角矩阵$\textbf{R}$,也即当$i>j$时，有$\textbf{R}_{ij} =0$，当矩阵$\textbf{A}$为非奇异矩阵时，QR分解是唯一的，也即：
+\begin{equation}
+	\textbf{A} = \textbf{Q} \textbf{R}
+\end{equation}
+关于QR分解有很多计算方法，包括施密特(Gram-Schmidt)正交化过程，Householder变化，以及Givens旋转的方法。下面主要介绍通过施密特正交化过程进行QR分解。
+
+\remark{施密特正交化过程}：
+对于矩阵$\textbf{A}$做施密特正交化过程,其中矩阵$\textbf{A}$原始形式为：
+\begin{equation}
+	\textbf{A} = \begin{bmatrix} \textbf{A}_1 | & \textbf{A}_2 | & \cdots | & \textbf{A}_n \end{bmatrix}
+\end{equation}
+
+通过施密特正交化过程对原有矩阵$\textbf{A}$进行正交化，得到$\textbf{Q} = \begin{bmatrix} \textbf{Q}_1 | & \textbf{Q}_2 | & \cdots | & \textbf{Q}_n \end{bmatrix}$，其中$\textbf{Q}$为正交矩阵，则对应有：
+\begin{equation}\label{Gram}
+	\begin{aligned}
+		\textbf{q}_1 &= \textbf{A}_1,\quad \textbf{Q}_1 = \frac{\textbf{q}_1}{|\textbf{q}_1|} \\
+		\textbf{q}_2 &= \textbf{A}_2-(\textbf{A}_2\cdot\textbf{Q}_1)\textbf{Q}_1,\quad \textbf{Q}_2 = \frac{\textbf{q}_2}{|\textbf{q}_2|} \\
+		\textbf{q}_n &= \textbf{A}_n-(\textbf{A}_{n}\cdot\textbf{Q}_1)\textbf{Q}_1-\cdots-(\textbf{A}_{n}\cdot\textbf{Q}_{n-1})\textbf{Q}_{n-1},  \quad\textbf{Q}_n = \frac{\textbf{q}_n}{|\textbf{q}_n|} \\
+	\end{aligned}
+\end{equation}
+那么通过式(\ref{Gram})，可知QR分解可以通过施密特正交化进行迭代求解，于是进一步地可以推导出矩阵$\textbf{A}$和矩阵$\textbf{Q}$之间的关系如下：
+\begin{equation}
+\begin{aligned}
+\textbf{A} &= \begin{bmatrix} \textbf{A}_1 | & \textbf{A}_2 | & \cdots | & \textbf{A}_n \end{bmatrix} \\
+& = \begin{bmatrix} \textbf{Q}_1 | & \textbf{Q}_2 | & \cdots | & \textbf{Q}_n \end{bmatrix}
+\begin{bmatrix}\textbf{A}_1\cdot\textbf{Q}_1 &  \textbf{A}_2\cdot\textbf{Q}_1 & \cdots & \textbf{A}_n\cdot\textbf{Q}_1 \\
+0 & \textbf{A}_2\cdot\textbf{Q}_2 & \cdots & \textbf{A}_n\cdot\textbf{Q}_2 \\
+\vdots & \vdots & \ddots & \vdots \\
+0& 0 & \cdots &\textbf{A}_n\cdot\textbf{Q}_n
+\end{bmatrix}  \\
+&= \textbf{Q}\textbf{R}
+\end{aligned}
+\end{equation}
 
 
+引入使用施密特正交化进行QR分解后，对式子(\ref{time_t1})中矩阵$\tilde{\textbf{X}}^{(t)T} = \begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix}$进行QR分解。通过前置条件已知$\textbf{X}^{(t)T}$为正交矩阵，对$\tilde{\textbf{X}}^{(t)T}$的分解只需要对矩阵$\textbf{Y}^{T}$进行进一步施密特正交化完成QR分解，记$\textbf{X}^{(t)T}=\begin{bmatrix} \textbf{X}^{(t)T}_1 | & \textbf{X}^{(t)T}_2 | & \cdots | & \textbf{X}^{(t)T}_k \end{bmatrix}$，$\textbf{Y}^{T}=\begin{bmatrix} \textbf{Y}^T_1 | & \textbf{Y}^T_2 | & \cdots | & \textbf{Y}^T_m \end{bmatrix}$，则有：
+\begin{equation}\label{delta}
+\begin{aligned}
+\tilde{\textbf{X}}^{(t)T} &= \begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix} \\
+&=\begin{bmatrix} \textbf{X}^{(t)T}_1 | & \textbf{X}^{(t)T}_2 | & \cdots | & \textbf{X}^{(t)T}_k| \textbf{Y}^T_1 | & \textbf{Y}^T_2 | & \cdots | & \textbf{Y}^T_m \end{bmatrix} \\
+&= \begin{bmatrix} \textbf{X}^{(t)T}_1 | & \cdots | & \textbf{X}^{(t)T}_k| \textbf{X}^{(t)T}_{k+1} | &\cdots|& \textbf{X}^{(t)T}_{k+m} \end{bmatrix}
+\begin{bmatrix}1 &  0 & \cdots & \textbf{Y}^T_1\cdot\textbf{X}^{(t)T}_{1} & \cdots & \textbf{Y}^T_m\cdot\textbf{X}^{(t)T}_{1}\\
+0 & 1  & \cdots & \textbf{Y}^T_1\cdot\textbf{X}^{(t)T}_{2} & \cdots & \textbf{Y}^T_m\cdot\textbf{X}^{(t)T}_{2}\\
+\vdots & \vdots & \ddots & \vdots  & \ddots & \vdots \\
+0& 0 & \cdots & 0 & \cdots &  \textbf{Y}^T_m\cdot\textbf{X}^{(t)T}_{n}
+\end{bmatrix}  \\
+&= \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix}
+ \begin{bmatrix} \textbf{I} & \textbf{R}_1 \\
+ 0 & \textbf{R}_2
+ \end{bmatrix}
+\end{aligned}
+\end{equation}
+其中$\textbf{X}^{(t)T}_{k+i}$可根据式(\ref{Gram})推导出，$\Delta\textbf{Q}^{T} =\begin{bmatrix}  \textbf{X}^{(t)T}_{k+1} | &\cdots|& \textbf{X}^{(t)T}_{k+m} \end{bmatrix}$
+
+进一步地将式(\ref{delta})代入式(\ref{time_t1})中，则原问题转换成：
+\begin{equation}\label{time_t2}
+	\begin{aligned}
+	\textbf{W}^{(t+1)} &= \textbf{X}^{(t+1)T} \Lambda^{(t+1)} \textbf{X} ^{(t+1)} \\
+	&= \tilde{\textbf{X}}^{(t)T} 
+	\begin{bmatrix}  \Lambda^{(t)} & \textbf{0}\\
+	\textbf{0} & \textbf{Z}
+	\end{bmatrix}
+	\tilde{\textbf{X}}^{(t)} \\
+	&= \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix}\begin{bmatrix} \textbf{I} & \textbf{R}_1 \\
+	0 & \textbf{R}_2 \end{bmatrix}
+	\begin{bmatrix}  \Lambda^{(t)} & \textbf{0}\\
+	\textbf{0} & \textbf{Z} \end{bmatrix}
+	\begin{bmatrix} \textbf{I} & \textbf{R}_1 \\
+	0 & \textbf{R}_2 \end{bmatrix} ^T
+	\begin{bmatrix} \textbf{X}^{(t)} \\ \Delta\textbf{Q} \end{bmatrix} \\
+	&= \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix}
+	  \textbf{M} \begin{bmatrix} \textbf{X}^{(t)} \\ \Delta\textbf{Q} \end{bmatrix} 
+	\end{aligned}
+\end{equation}
+其中$\textbf{M}=\begin{bmatrix} \textbf{I} & \textbf{R}_1 \\
+0 & \textbf{R}_2 \end{bmatrix}
+\begin{bmatrix}  \Lambda^{(t)} & \textbf{0}\\
+\textbf{0} & \textbf{Z} \end{bmatrix}
+\begin{bmatrix} \textbf{I} & \textbf{R}_1 \\
+0 & \textbf{R}_2 \end{bmatrix} ^T$。
+
+注意到矩阵$\textbf{M}$不是对角矩阵，对于矩阵$\textbf{W}^{(t+1)}$的特征值分解结果要求对角矩阵，因此对矩阵$\textbf{M}$进行特征值分解，则有：
+\begin{equation}
+	\textbf{M} =\textbf{V}^T \Lambda^{(t+1)} \textbf{V}
+\end{equation}
+则式(\ref{time_t2})进一步转化成：
+\begin{equation}
+\begin{aligned}
+\textbf{W}^{(t+1)} &= \textbf{X}^{(t+1)T} \Lambda^{(t+1)} \textbf{X} ^{(t+1)} \\
+&= \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix}
+\textbf{M} \begin{bmatrix} \textbf{X}^{(t)} \\ \Delta\textbf{Q} \end{bmatrix} \\
+&= \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{V}^T \Lambda^{(t+1)} \textbf{V}
+\begin{bmatrix} \textbf{X}^{(t)} \\ \Delta\textbf{Q} \end{bmatrix}
+\end{aligned}
+\end{equation}
+根据上式可以得出 $\textbf{X}^{(t+1)T} = \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{V}^T$，很容易证明矩阵为$\textbf{X}^{(t+1)T}$为正交矩阵，至此矩阵$\textbf{W}^{(t+1)}$的特征值分解完成。
+
+\textbf{综上所述}，节点数不变的情况下的增量图表征方法\textbf{iHLE-nn}的流程如下：
+
+在离线模型阶段训练HLE模型时选定相似度矩阵$\textbf{S}$的计算方法，并得到$\textbf{W}^{(t)} = \textbf{X}^{(t)T} \Lambda^{(t)} \textbf{X} ^{(t)}$；根据网络变化，计算从时刻$t$到时刻$t+1$之间矩阵$\textbf{W}$的变化量$\Delta\textbf{W}$，对矩阵$\Delta\textbf{W}$进行特征值分解得到$\Delta\textbf{W} =  \textbf{Y}^{T} \textbf{Z}  \textbf{Y}$，进一步对$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix}$进行式(\ref{delta})中所示的QR分解,得到$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix} = \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{R}$，再对矩阵$\textbf{M} = \textbf{R}\begin{bmatrix}  \Lambda^{(t)} & \textbf{0}\\
+\textbf{0} & \textbf{Z} \end{bmatrix}
+\textbf{R}^T$进行特征值分解，得到$\textbf{M} =\textbf{V}^T \Lambda^{(t+1)} \textbf{V}$
+,则得到时刻$t+1$的网络表征向量矩阵为$\begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{V}^T$，具体算法流程见\textbf{算法3.2}。%\ref{iHLE_nn}。
+
+\begin{figure}[htb]
+	\centering
+	\begin{minipage}{.7\linewidth}
+		\begin{algorithm}[H]\label{iHLE_nn}
+			\small
+			\caption{iHLE-nn算法}
+			\begin{algorithmic}[1]
+				\Require
+				\Statex $\textbf{X} ^{(t)},\Lambda^{(t)}$ :网络在时刻$t$的网络表征结果和特征值对角矩阵
+				\Statex $\Delta\textbf{W}$ :网络从时刻$t$到$t+1$的矩阵$\textbf{W}$的变化量
+				\Statex $k$ : 表征向量维数
+				\Ensure
+				\Statex $\textbf{X}^{(t+1)T}$ :时刻$t+1$的网络表征向量矩阵
+				\Statex $\Lambda^{(t+1)}$:时刻$t+1$网络对应的特征值对角矩阵
+				\Statex
+				\State 对$\Delta\textbf{W}$特征值分解，$\Delta\textbf{W} =  \textbf{Y}^{T} \textbf{Z}  \textbf{Y}$
+				\State 对$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix}$进行QR分解，$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix} = \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{R}$
+				\State 令$\textbf{M} = \textbf{R}\begin{bmatrix}  \Lambda^{(t)} & \textbf{0};
+				\textbf{0} & \textbf{Z} \end{bmatrix}
+				\textbf{R}^T$
+				\State 对$\textbf{M}$进行特征值分解，取前k个特征值对应的特征向量;$\textbf{M} =\textbf{V}^T \Lambda^{(t+1)} \textbf{V}$
+				\State $\textbf{X}^{(t+1)T} = \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{V}^T$
+				\State 返回 $\textbf{X}^{(t+1)T}, \Lambda^{(t+1)}$
+			\end{algorithmic}
+		\end{algorithm}
+	\end{minipage}
+\end{figure}
 
 
+\problem 关于$\Delta\textbf{W}$的求解：在\textbf{算法3.2}中，输入之一的$\Delta\textbf{W}$不是直接变量，网络增量的直接变量是$\Delta\textbf{A}$， 也即邻接矩阵$\textbf{A}$的变化量，下面将对$\Delta\textbf{W}$进行求解，且相似度计算法则取为共同邻居，即令$S=S_{CN}$。直观的方法是直接计算时刻$t+1$变化后的矩阵$\textbf{W}^{(t+1)}$再与$\textbf{W}^{(t)}$相减得到变化量，但是直接计算的复杂度比较高，考虑到邻接矩阵的稀疏性，变化量$\Delta\textbf{W}$的计算可以简化为方便表述，下面以$\textbf{W}$代替$\textbf{W}^{(t)}$，且没有上标表明时刻的变量皆为时刻$t$对应的变量。根据式(\ref{decomp})的推论，对于时刻$t$有：
 
-根据式(\ref{unify})对不同个相似度矩阵的统一表示,
+\begin{equation}
+\begin{aligned}
+\textbf{W} &= \textbf{D}^{\prime\frac{1}{2}}\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}} \\
+&=\textbf{D}^{\prime\frac{1}{2}}(\textbf{A}\textbf{A}-\textbf{D})\textbf{D}^{\prime-\frac{1}{2}}
+\end{aligned}
+\end{equation}
+下面考虑共同邻居矩阵$S_{CN}$的变化。
+\begin{lemma}
+	{共同邻居矩阵的变化}：在网络中节点总数不变时，网络中增加或删除一条边$(i,j)$，假设节点$i$与节点$j$的共同邻居个数为$n$,共同邻居矩阵中变化的元素个数为$n\times(n-1)$，也即$\Delta\textbf{S}_{CN}$中非零元素个数为$n\times(n-1)$，且值均为1，非零元素位置对应节点$i$和节点$j$共同邻居集合所组合的所有不重复节点对$(p,q)$。
+\end{lemma}
 
+下面举一个例子进行直观解释:
+\begin{figure}[!ht]
+	\begin{center}
+	{\includegraphics[width=3in]{figures/CN_incremental.png}}
+	\caption{共同邻居矩阵变化的案例}
+	\label{fig:case_for_lemma}
+	\end{center}
+\end{figure}
+如图\ref{fig:case_for_lemma}中所示，图中虚线所示节点1和节点3之间的连边为新增的连边，根据图示可以得到邻接矩阵$\textbf{A}$为：
+\begin{equation}
+\begin{matrix}
+	\textbf{A} = \begin{bmatrix}
+	0&1&0&0&0&1 \\
+	1&0&1&1&1&0\\
+	0&1&0&1&0&1 \\
+	0&1&1&0&1&0\\
+	0&1&0&1&0&1\\
+	1&0&1&0&1&0
+	\end{bmatrix} ,
+	\Delta\textbf{A} = \begin{bmatrix}
+	0&0&\textbf{1}&0&0&0 \\
+	0&0&0&0&0&0\\
+	\textbf{1}&0&0&0&0&0 \\
+	0&0&0&0&0&0\\
+	0&0&0&0&0&0\\
+	0&0&0&0&0&0
+	\end{bmatrix}
+\end{matrix}
+\end{equation}
+根据$\textbf{S}_{CN} = \textbf{A}\textbf{A}-\textbf{D}$，通过计算不同时刻的矩阵$\textbf{S}_{CN}$,可以计算得到$\Delta \textbf{S}_{CN}$的具体矩阵：
+\begin{equation}
+\Delta \textbf{S}_{CN} = \textbf{S}_{CN}^{(t+1)}- \textbf{S}_{CN} = \begin{bmatrix}
+0&0&0&0&0&0 \\
+0&0&0&0&0&\textbf{1}\\
+0&0&0&0&0&0 \\
+0&0&0&0&0&0\\
+0&0&0&0&0&0\\
+0&\textbf{1}&0&0&0&0
+\end{bmatrix}
+\end{equation}
+其中节点1和节点3的共同邻居为节点2和节点6，在$\Delta \textbf{S}_{CN}$中有且仅有第2行第6列和第6行第2列的元素非零，且为1。
+
+\begin{lemma}
+	{对角矩阵$\textbf{D}'$的变化}：在网络中节点总数不变时，网络中增加或删除一条边$(i,j)$，假设节点$i$与节点$j$的共同邻居个数为$n$,对角矩阵$\textbf{D}'$中变化的元素个数为$n$，也即$\Delta\textbf{D}'$中非零元素个数为$n$，且值均为$n-1$，非零对角元素位置对应节点$i$和节点$j$共同邻居集合中的所有节点$p$。
+\end{lemma}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
