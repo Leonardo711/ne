@@ -354,15 +354,15 @@ D'_{ii} = \sum_j{S_{ij}}
 
 \problem 关于$\Delta\textbf{W}$的求解：在\textbf{算法3.2}中，输入之一的$\Delta\textbf{W}$不是直接变量，网络增量的直接变量是$\Delta\textbf{A}$， 也即邻接矩阵$\textbf{A}$的变化量，下面将对$\Delta\textbf{W}$进行求解，且相似度计算法则取为共同邻居，即令$S=S_{CN}$。直观的方法是直接计算时刻$t+1$变化后的矩阵$\textbf{W}^{(t+1)}$再与$\textbf{W}^{(t)}$相减得到变化量，但是直接计算的复杂度比较高，考虑到邻接矩阵的稀疏性，变化量$\Delta\textbf{W}$的计算可以简化为方便表述，下面以$\textbf{W}$代替$\textbf{W}^{(t)}$，且没有上标表明时刻的变量皆为时刻$t$对应的变量。根据式(\ref{decomp})的推论，对于时刻$t$有：
 
-\begin{equation}
+\begin{equation}\label{defin:delta_w}
 \begin{aligned}
 \textbf{W} &= \textbf{D}^{\prime\frac{1}{2}}\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}} \\
-&=\textbf{D}^{\prime\frac{1}{2}}(\textbf{A}\textbf{A}-\textbf{D})\textbf{D}^{\prime-\frac{1}{2}}
+&=\textbf{D}^{\prime-\frac{1}{2}}(\textbf{A}\textbf{A}-\textbf{D})\textbf{D}^{\prime-\frac{1}{2}}
 \end{aligned}
 \end{equation}
-下面考虑共同邻居矩阵$S_{CN}$的变化。
+下面考虑共同邻居矩阵$\textbf{S}_{CN}$的变化。
 \begin{lemma}
-	{共同邻居矩阵的变化}：在网络中节点总数不变时，网络中增加或删除一条边$(i,j)$，假设节点$i$与节点$j$的共同邻居个数为$n$,共同邻居矩阵中变化的元素个数为$n\times(n-1)$，也即$\Delta\textbf{S}_{CN}$中非零元素个数为$n\times(n-1)$，且值均为1，非零元素位置对应节点$i$和节点$j$共同邻居集合所组合的所有不重复节点对$(p,q)$。
+	{共同邻居矩阵的变化}：在网络中节点总数不变时，网络中增加或删除一条边$(i,j)$，假设节点$i,j$的邻居集合分别为$N(i), N(j)$，则共同邻居矩阵变化量$\Delta\textbf{S}_{CN}$中的非零元素个数为$2\times(|N(i)| + |N(j)|)$，且值均为1，非零元素位置对应为所有不重复节点对$(i,q),(q,i), q\in N(j), (j,p),(p,j) ,p\in N(i)$。
 \end{lemma}
 
 下面举一个例子进行直观解释:
@@ -397,21 +397,57 @@ D'_{ii} = \sum_j{S_{ij}}
 根据$\textbf{S}_{CN} = \textbf{A}\textbf{A}-\textbf{D}$，通过计算不同时刻的矩阵$\textbf{S}_{CN}$,可以计算得到$\Delta \textbf{S}_{CN}$的具体矩阵：
 \begin{equation}
 \Delta \textbf{S}_{CN} = \textbf{S}_{CN}^{(t+1)}- \textbf{S}_{CN} = \begin{bmatrix}
-0&0&0&0&0&0 \\
-0&0&0&0&0&\textbf{1}\\
-0&0&0&0&0&0 \\
+0&\textbf{1}&0&\textbf{1}&0&\textbf{1} \\
+\textbf{1}&0&\textbf{1}&0&0&0\\
+0&\textbf{1}&0&0&0&\textbf{1} \\
+\textbf{1}&0&0&0&0&0\\
 0&0&0&0&0&0\\
-0&0&0&0&0&0\\
-0&\textbf{1}&0&0&0&0
+\textbf{1}&0&\textbf{1}&0&0&0
 \end{bmatrix}
 \end{equation}
-其中节点1和节点3的共同邻居为节点2和节点6，在$\Delta \textbf{S}_{CN}$中有且仅有第2行第6列和第6行第2列的元素非零，且为1。
+其中节点1和节点3的邻居集合分别为$N(1) = {2,6}$,$N(3) = {2,4,6}$，则对应地，在$\Delta \textbf{S}_{CN}$中$(1,2),(1,4),(1,6),(3,2),(3,6)$及对应的对称元素为1。
 
 \begin{lemma}
-	{对角矩阵$\textbf{D}'$的变化}：在网络中节点总数不变时，网络中增加或删除一条边$(i,j)$，假设节点$i$与节点$j$的共同邻居个数为$n$,对角矩阵$\textbf{D}'$中变化的元素个数为$n$，也即$\Delta\textbf{D}'$中非零元素个数为$n$，且值均为$n-1$，非零对角元素位置对应节点$i$和节点$j$共同邻居集合中的所有节点$p$。
+	{对角矩阵$\textbf{D}'$的变化}：在网络中节点总数不变时，网络中增加或删除一条边$(i,j)$，假设节点$i,j$的邻居集合分别为$N(i), N(j)$,且有$|N(i) \cup N(j)|=n$， 则对角矩阵$\textbf{D}'$中变化的元素个数为$n+2$，也即$\Delta\textbf{D}'$中非零元素个数为$n+2$，不同位置$k$对应值不同，对于非零元素的具体情况如下：
+	\begin{equation}
+		\Delta\textbf{D}'_{kk}=\left\{
+		\begin{array}{ccl}
+		1       &      & k\in N(i)\setminus N(j)\quad or\quad  k\in N(j)\setminus N(i)\\
+		2     &      & k\in N(j) \cap N(i)\\
+		|N(i)|     &      & k=j\\
+		|N(j)|       &      & k=i 
+		\end{array} \right.
+	\end{equation}
 \end{lemma}
+根据\textbf{算法3.1}中$\textbf{D}'$的定义，得出矩阵$\textbf{D}'$的变化量可以根据$\textbf{S}$推算而来，上述引理的证明就不再赘述。
 
-
+上述两个引理中,分别通过常数复杂度计算出$\Delta\textbf{S}_{CN}$和$\Delta\textbf{D}'$，根据式(\ref{defin:delta_w})，对时刻$t+1$有：
+\begin{equation}
+	\begin{aligned}
+	\textbf{W} + \Delta\textbf{W} &= (\textbf{D}'+\Delta\textbf{D}')^{-\frac{1}{2}}(\textbf{S}_{CN}+\Delta\textbf{S}_{CN})(\textbf{D}'+\Delta\textbf{D}')^{-\frac{1}{2}} \\	
+	\end{aligned}
+\end{equation}
+注意到其中矩阵$\textbf{D}'$为对角矩阵，从$\textbf{D}'$和$\Delta\textbf{D}'$容易推导出$\Delta\textbf{D}^{\prime-\frac{1}{2}}$，因此将上式改写为：
+\begin{equation}
+	\begin{aligned}
+	\textbf{W} + \Delta\textbf{W} &= (\textbf{D}^{\prime-\frac{1}{2}}+\Delta\textbf{D}^{\prime-\frac{1}{2}})(\textbf{S}_{CN}+\Delta\textbf{S}_{CN})(\textbf{D}^{\prime-\frac{1}{2}}+\Delta\textbf{D}^{\prime-\frac{1}{2}}) \\	
+	& = \textbf{D}^{\prime-\frac{1}{2}}\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}}+
+	\textbf{D}^{\prime-\frac{1}{2}}\textbf{S}_{CN}\Delta\textbf{D}^{\prime-\frac{1}{2}}+
+	\textbf{D}^{\prime-\frac{1}{2}}\Delta\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}}+
+	\Delta\textbf{D}^{\prime-\frac{1}{2}}\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}}\\
+	&+\textbf{D}^{\prime-\frac{1}{2}}\Delta\textbf{S}_{CN}\Delta\textbf{D}^{\prime-\frac{1}{2}}+
+	\Delta\textbf{D}^{\prime-\frac{1}{2}}\Delta\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}}+
+	\Delta\textbf{D}^{\prime-\frac{1}{2}}\textbf{S}_{CN}\Delta\textbf{D}^{\prime-\frac{1}{2}}+\\
+	&+\Delta\textbf{D}^{\prime-\frac{1}{2}}\Delta\textbf{S}_{CN}\Delta\textbf{D}^{\prime-\frac{1}{2}}
+	\end{aligned}
+\end{equation}
+根据矩阵计算理论\cite{golub2012matrix}，去掉上式中对实际结果影响较小的高阶增量项，同时考虑到式(\ref{defin:delta_w})中矩阵$\textbf{W}= \textbf{D}^{\prime-\frac{1}{2}}\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}}$，则对于$\Delta\textbf{W}$有：
+\begin{equation}
+	\Delta\textbf{W}= \textbf{D}^{\prime-\frac{1}{2}}\textbf{S}_{CN}\Delta\textbf{D}^{\prime-\frac{1}{2}}+
+	\textbf{D}^{\prime-\frac{1}{2}}\Delta\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}}+
+	\Delta\textbf{D}^{\prime-\frac{1}{2}}\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}}
+\end{equation}
+通过对上式进行分析可以得出：第一项
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %----------------------------------------     本章小结     ---------------------------------------%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

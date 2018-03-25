@@ -364,4 +364,10 @@ Stewart G~W.
 \newblock 1990.
 \thudot
 
+\bibitem{golub2012matrix}
+Golub G~H, Van~Loan C~F.
+\newblock Matrix computations, volume~3.
+\newblock JHU Press, 2012
+\thudot
+
 \end{thebibliography}

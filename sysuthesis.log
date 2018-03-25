@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  25 MAR 2018 00:39
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  25 MAR 2018 12:37
 entering extended mode
 **./sysuthesis.tex
 (sysuthesis.tex
@@ -2167,21 +2167,27 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [30]
 File: figures/CN_incremental.png Graphic file (type QTm)
 
-<use  "figures/CN_incremental.png" > [31] [32]) [33]
+<use  "figures/CN_incremental.png" > [31]
+Underfull \vbox (badness 2486) has occurred while \output is active []
+
+ [32]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [33])
+[34]
 \openout2 = `chapters/chap4.aux'.
 
  (chapters/chap4.tex
-[34
+chapter 4.
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [35
 
 
 
 
 ]
-chapter 4.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [35]
 
 ! LaTeX Error: File `figures/architecture' not found.
 
@@ -2826,10 +2832,10 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 191.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
  ) 
 Here is how much of TeX's memory you used:
- 34481 strings out of 427832
- 626580 string characters out of 3152415
- 829495 words of memory out of 3000000
- 37931 multiletter control sequences out of 15000+200000
+ 34485 strings out of 427832
+ 626664 string characters out of 3152415
+ 829544 words of memory out of 3000000
+ 37935 multiletter control sequences out of 15000+200000
  14637 words of font info for 127 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  58i,17n,75p,10407b,1233s stack positions out of 5000i,500n,10000p,200000b,50000s
