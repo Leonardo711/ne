@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  25 MAR 2018 12:37
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  26 MAR 2018 00:21
 entering extended mode
 **./sysuthesis.tex
 (sysuthesis.tex
@@ -2012,36 +2012,28 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 22.
 Package tocbasic Info: Using my definition of `\numberline' on input line 23.
 Package tocbasic Info: Using my definition of `\numberline' on input line 24.
 Package tocbasic Info: Using my definition of `\numberline' on input line 27.
-Package tocbasic Info: Using my definition of `\numberline' on input line 29.
-Package tocbasic Info: Using my definition of `\numberline' on input line 31.
+Package tocbasic Info: Using my definition of `\numberline' on input line 30.
 Package tocbasic Info: Using my definition of `\numberline' on input line 32.
 Package tocbasic Info: Using my definition of `\numberline' on input line 33.
-Package tocbasic Info: Using my definition of `\numberline' on input line 37.
+Package tocbasic Info: Using my definition of `\numberline' on input line 36.
+Package tocbasic Info: Using my definition of `\numberline' on input line 38.
 Package tocbasic Info: Using my definition of `\numberline' on input line 41.
 Package tocbasic Info: Using my definition of `\numberline' on input line 42.
 Package tocbasic Info: Using my definition of `\numberline' on input line 43.
-
-Underfull \vbox (badness 4859) has occurred while \output is active []
-
  [5
 
 
 
 
 ]
-Package tocbasic Info: Using my definition of `\numberline' on input line 45.
+Package tocbasic Info: Using my definition of `\numberline' on input line 46.
 Package tocbasic Info: Using my definition of `\numberline' on input line 48.
 Package tocbasic Info: Using my definition of `\numberline' on input line 49.
-Package tocbasic Info: Using my definition of `\numberline' on input line 50.
-Package tocbasic Info: Using my definition of `\numberline' on input line 53.
-Package tocbasic Info: Using my definition of `\numberline' on input line 55.
-Package tocbasic Info: Using my definition of `\numberline' on input line 56.
 )
 \tf@toc=\write6
 \openout6 = `sysuthesis.toc'.
 
-
-[6]
+ [6]
 \openout2 = `chapters/chap1.aux'.
 
  (chapters/chap1.tex
@@ -2171,16 +2163,17 @@ File: figures/CN_incremental.png Graphic file (type QTm)
 Underfull \vbox (badness 2486) has occurred while \output is active []
 
  [32]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [33])
-[34]
+[33]) [34]
 \openout2 = `chapters/chap4.aux'.
 
  (chapters/chap4.tex
 chapter 4.
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Package natbib Warning: Citation `huang2017label' on page 35 undefined on input
+ line 8.
+
+
+Underfull \vbox (badness 5533) has occurred while \output is active []
 
  [35
 
@@ -2188,362 +2181,15 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
 ]
-
-! LaTeX Error: File `figures/architecture' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.32 ...raphics[width=5.7in]{figures/architecture}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [36]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [37]
-
-! LaTeX Error: File `figures/fb_desc' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.60 ...ludegraphics[width=4.7in]{figures/fb_desc}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Package natbib Warning: Citation `nltk' on page 38 undefined on input line 64.
-
-\g__fontspec_family_FangSong_int=\count327
-.................................................
-. fontspec info: "defining-font"
-. 
-. Font family 'FangSong(0)' created for font 'FangSong' with options
-. [Mapping=tex-text,Script={CJK},AutoFakeBold={4},AutoFakeSlant={0.167}].
-.  
-.  This font family consists of the following NFSS series/shapes:
-.  
-. - 'normal' (m/n) with NFSS spec.:
-. <->"FangSong/OT:script=hani;language=DFLT;mapping=tex-text;"
-. - 'small caps'  (m/sc) with NFSS spec.: 
-. - 'bold' (bx/n) with NFSS spec.:
-. <->"FangSong/OT:script=hani;language=DFLT;embolden=4;mapping=tex-text;"
-. - 'bold small caps'  (bx/sc) with NFSS spec.: 
-. - 'italic' (m/it) with NFSS spec.:
-. <->"FangSong/OT:script=hani;language=DFLT;slant=0.167;mapping=tex-text;"
-. - 'italic small caps'  (m/itsc) with NFSS spec.: 
-. - 'bold italic' (bx/it) with NFSS spec.:
-. <->"FangSong/OT:script=hani;language=DFLT;embolden=4;slant=0.167;mapping=tex-
-text;"
-. - 'bold italic small caps'  (bx/itsc) with NFSS spec.: 
-.................................................
-
-! LaTeX Error: File `figures/desc_filter' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.68 ...graphics[width=4.7in]{figures/desc_filter}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[38]
-
-! LaTeX Error: File `figures/desc_stem' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.76 ...degraphics[width=4.7in]{figures/desc_stem}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Package natbib Warning: Citation `le2014distributed' on page 39 undefined on in
-put line 84.
-
-
-Package natbib Warning: Citation `bengio2003neural' on page 39 undefined on inp
-ut line 88.
-
-
-! LaTeX Error: File `figures/word2vec' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.91 ...udegraphics[width=5.5in]{figures/word2vec}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[39]
-
-Package natbib Warning: Citation `christopher2006pattern' on page 40 undefined 
-on input line 105.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [40]
-
-Package natbib Warning: Citation `morin2005hierarchical' on page 41 undefined o
-n input line 113.
-
-
-Package natbib Warning: Citation `huffman1952method' on page 41 undefined on in
-put line 113.
-
-
-Package natbib Warning: Citation `rumerhart1986learning' on page 41 undefined o
-n input line 113.
-
-
-! LaTeX Error: File `figures/doc2vec' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.117 ...udegraphics[width=5.5in]{figures/doc2vec}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Package natbib Warning: Citation `pearson1895note' on page 41 undefined on inpu
-t line 127.
-
-[41]
-
-Package natbib Warning: Citation `gibler2013adrob' on page 42 undefined on inpu
-t line 152.
-
-
-Package natbib Warning: Citation `zhou2012dissecting' on page 42 undefined on i
-nput line 152.
-
-
-Package natbib Warning: Citation `chen2015simapp' on page 42 undefined on input
- line 152.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [42]
-
-! LaTeX Error: File `figures/sogou' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.159 ...includegraphics[width=6in]{figures/sogou}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `figures/smali' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.164 ...includegraphics[width=5in]{figures/smali}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Package natbib Warning: Citation `chikofsky1990reverse' on page 43 undefined on
- input line 167.
-
-
-Package natbib Warning: Citation `apktool' on page 43 undefined on input line 1
-67.
-
-[43]
-
-Package natbib Warning: Citation `viennot2014measurement' on page 44 undefined 
-on input line 171.
-
-
-! LaTeX Error: File `figures/screenshot' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.175 ...degraphics[width=5in]{figures/screenshot}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Package natbib Warning: Citation `r' on page 44 undefined on input line 181.
-
-
-! LaTeX Error: File `figures/R' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.187 ^^I\includegraphics[width=6.2in]{figures/R}
-                                                 
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[44]
-
-! LaTeX Error: File `figures/assets' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.194 ...ludegraphics[width=3.2in]{figures/assets}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Package natbib Warning: Citation `permission' on page 45 undefined on input lin
-e 200.
-
-
-Package natbib Warning: Citation `permission' on page 45 undefined on input lin
-e 200.
-
-
-! LaTeX Error: File `figures/permissions' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.206 ...egraphics[width=6in]{figures/permissions}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[45] [46]
-
-Package natbib Warning: Citation `hartigan1979algorithm' on page 47 undefined o
-n input line 239.
-
-
-Package natbib Warning: Citation `ray1999determination' on page 47 undefined on
- input line 239.
-
-
-Package natbib Warning: Citation `lin2009phrase' on page 47 undefined on input 
-line 239.
-
-
-Package natbib Warning: Citation `honarkhah2010stochastic' on page 47 undefined
- on input line 239.
-
-
-! LaTeX Error: File `figures/clustering' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.252 ...graphics[width=4.8in]{figures/clustering}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [47]
-
-Package natbib Warning: Citation `hierarchical' on page 48 undefined on input l
-ine 257.
-
-[48] [49] [50]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [51]
-Underfull \vbox (badness 2351) has occurred while \output is active []
-
- [52]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [53])
-[54]
+[36]) [37]
 \openout2 = `chapters/chap5.aux'.
 
- (chapters/chap5.tex
+ (chapters/chap5.tex [38
+
+
+
+
+]
 chapter 5.
 
 ! LaTeX Error: File `figures/metadata' not found.
@@ -2561,28 +2207,23 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[55
+[39]
 
-
-
-
-]
-
-Package natbib Warning: Citation `yin2013app' on page 56 undefined on input lin
+Package natbib Warning: Citation `yin2013app' on page 40 undefined on input lin
 e 60.
 
 
-Package natbib Warning: Citation `runeson2007detection' on page 56 undefined on
+Package natbib Warning: Citation `runeson2007detection' on page 40 undefined on
  input line 60.
 
 
-Package natbib Warning: Citation `rijsbergen1979information' on page 56 undefin
+Package natbib Warning: Citation `rijsbergen1979information' on page 40 undefin
 ed on input line 60.
 
-[56]
+[40]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [57]
+ [41]
 
 ! LaTeX Error: File `figures/para_mu' not found.
 
@@ -2663,27 +2304,27 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[58]
+[42]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [59]
+ [43]
 
-Package natbib Warning: Citation `salakhutdinov2011probabilistic' on page 60 un
+Package natbib Warning: Citation `salakhutdinov2011probabilistic' on page 44 un
 defined on input line 161.
 
 
-Package natbib Warning: Citation `liu2013bayesian' on page 60 undefined on inpu
+Package natbib Warning: Citation `liu2013bayesian' on page 44 undefined on inpu
 t line 161.
 
 
-Package natbib Warning: Citation `luo2014efficient' on page 60 undefined on inp
+Package natbib Warning: Citation `luo2014efficient' on page 44 undefined on inp
 ut line 161.
 
 
-Package natbib Warning: Citation `yang2014survey' on page 60 undefined on input
+Package natbib Warning: Citation `yang2014survey' on page 44 undefined on input
  line 161.
 
-[60]
+[44]
 
 ! LaTeX Error: File `figures/feature_comp_p' not found.
 
@@ -2780,14 +2421,14 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[61]
+[45]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [62])
-[63]
+ [46])
+[47]
 \openout2 = `chapters/chap6.aux'.
 
- (chapters/chap6.tex [64
+ (chapters/chap6.tex [48
 
 
 
@@ -2797,21 +2438,21 @@ chapter 6.
 
 Underfull \vbox (badness 4647) has occurred while \output is active []
 
- [65])
-[66] (sysuthesis.bbl [67
+ [49])
+[50] (sysuthesis.bbl [51
 
 
 
 
 
-] [68] [69]) [70]
+] [52] [53]) [54]
 No file sysuthesis.ind.
-[71
+[55
 
 
 
 
-] [72
+] [56
 
 
 ]
@@ -2819,7 +2460,7 @@ No file sysuthesis.ind.
 Package natbib Warning: There were undefined citations.
 
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 191.
-[73
+[57
 
 
 ]
@@ -2832,12 +2473,12 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 191.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
  ) 
 Here is how much of TeX's memory you used:
- 34485 strings out of 427832
- 626664 string characters out of 3152415
- 829544 words of memory out of 3000000
- 37935 multiletter control sequences out of 15000+200000
- 14637 words of font info for 127 fonts, out of 3000000 for 9000
+ 34352 strings out of 427832
+ 622442 string characters out of 3152415
+ 829603 words of memory out of 3000000
+ 37829 multiletter control sequences out of 15000+200000
+ 14573 words of font info for 119 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 58i,17n,75p,10407b,1233s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,17n,74p,10407b,1193s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on sysuthesis.pdf (83 pages).
+Output written on sysuthesis.pdf (67 pages).
