@@ -15,23 +15,24 @@
 \BOOKMARK [1][-]{section.3.2}{3.2 问题描述}{chapter.3}% 15
 \BOOKMARK [1][-]{section.3.3}{3.3 静态场景下的图表征算法}{chapter.3}% 16
 \BOOKMARK [1][-]{section.3.4}{3.4 增量场景下的图表征算法}{chapter.3}% 17
-\BOOKMARK [1][-]{section.3.5}{3.5 本章小结}{chapter.3}% 18
-\BOOKMARK [0][-]{chapter.4}{4 属性网络中的增量图表征算法}{}% 19
-\BOOKMARK [1][-]{section.4.1}{4.1 引言}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.2}{4.2 问题描述}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.3}{4.3 静态场景下属性网络表征学习}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.4}{4.4 增量场景下属性网络表征学习}{chapter.4}% 23
-\BOOKMARK [1][-]{section.4.5}{4.5 本章小结}{chapter.4}% 24
-\BOOKMARK [0][-]{chapter.5}{5 实验分析与讨论}{}% 25
-\BOOKMARK [1][-]{section.5.1}{5.1 数据介绍}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.2}{5.2 实验设计}{chapter.5}% 27
-\BOOKMARK [1][-]{section.5.3}{5.3 评价标准}{chapter.5}% 28
-\BOOKMARK [1][-]{section.5.4}{5.4 参数设定}{chapter.5}% 29
-\BOOKMARK [1][-]{section.5.5}{5.5 实验对比}{chapter.5}% 30
-\BOOKMARK [1][-]{section.5.6}{5.6 本章小结}{chapter.5}% 31
-\BOOKMARK [0][-]{chapter.6}{6 总结与展望}{}% 32
-\BOOKMARK [1][-]{section.6.1}{6.1 工作总结}{chapter.6}% 33
-\BOOKMARK [1][-]{section.6.2}{6.2 展望}{chapter.6}% 34
-\BOOKMARK [0][-]{chapter*.28}{参考文献}{}% 35
-\BOOKMARK [0][-]{section*.29}{研究成果}{}% 36
-\BOOKMARK [0][-]{section*.31}{致谢}{}% 37
+\BOOKMARK [1][-]{section.3.5}{3.5 算法分析}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.6}{3.6 本章小结}{chapter.3}% 19
+\BOOKMARK [0][-]{chapter.4}{4 属性网络中的增量图表征算法}{}% 20
+\BOOKMARK [1][-]{section.4.1}{4.1 引言}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.2}{4.2 问题描述}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.3}{4.3 静态场景下属性网络表征学习}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.4}{4.4 增量场景下属性网络表征学习}{chapter.4}% 24
+\BOOKMARK [1][-]{section.4.5}{4.5 本章小结}{chapter.4}% 25
+\BOOKMARK [0][-]{chapter.5}{5 实验分析与讨论}{}% 26
+\BOOKMARK [1][-]{section.5.1}{5.1 数据介绍}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.2}{5.2 实验设计}{chapter.5}% 28
+\BOOKMARK [1][-]{section.5.3}{5.3 评价标准}{chapter.5}% 29
+\BOOKMARK [1][-]{section.5.4}{5.4 参数设定}{chapter.5}% 30
+\BOOKMARK [1][-]{section.5.5}{5.5 实验对比}{chapter.5}% 31
+\BOOKMARK [1][-]{section.5.6}{5.6 本章小结}{chapter.5}% 32
+\BOOKMARK [0][-]{chapter.6}{6 总结与展望}{}% 33
+\BOOKMARK [1][-]{section.6.1}{6.1 工作总结}{chapter.6}% 34
+\BOOKMARK [1][-]{section.6.2}{6.2 展望}{chapter.6}% 35
+\BOOKMARK [0][-]{chapter*.30}{参考文献}{}% 36
+\BOOKMARK [0][-]{section*.31}{研究成果}{}% 37
+\BOOKMARK [0][-]{section*.33}{致谢}{}% 38

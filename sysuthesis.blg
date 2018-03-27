@@ -7,6 +7,10 @@ A level-1 auxiliary file: chapters/chap4.aux
 A level-1 auxiliary file: chapters/chap5.aux
 A level-1 auxiliary file: chapters/chap6.aux
 Database file #1: refs.bib
+Repeated entry---line 511 of file refs.bib
+ : @inproceedings{huang2017label
+ :                              ,
+I'm skipping whatever remains of this entry
 Warning--I didn't find a database entry for "yin2013app"
 Warning--I didn't find a database entry for "runeson2007detection"
 Warning--I didn't find a database entry for "rijsbergen1979information"
@@ -21,4 +25,4 @@ Warning--there's a number but no series in chung1997spectral
 Warning--there's a publisher but no address in chung1997spectral
 Warning--empty journal in stewart1990matrix
 Warning--there's a publisher but no address in golub2012matrix
-(There were 14 warnings)
+(There was 1 error message)
