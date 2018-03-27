@@ -370,4 +370,12 @@ Golub G~H, Van~Loan C~F.
 \newblock JHU Press, 2012
 \thudot
 
+\bibitem{huang2017label}
+Huang X, Li J, Hu X.
+\newblock Label informed attributed network embedding.
+\newblock  Proceedings of the Tenth ACM International Conference on Web Search
+  and Data Mining. ACM, 2017.
+\newblock  731--739
+\thudot
+
 \end{thebibliography}

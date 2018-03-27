@@ -1,50 +1,116 @@
 \chapter{实验分析与讨论}
-本章将详细描述本文所使用的实验数据，以及对实验结果的评价标准。本文在第四章中提出了TV-LibRec的第三方库推荐算法，本章将针对该算法，以及其各个部分的子算法（例如，基于文本的T-LibRec、基于视图的V-LibRec等），在数据集上进行相关实验，并与其他已有的著名推荐算法进行比较和讨论。
-
+本章将详细描述本文所使用的数据集，实验设计以及对于实验结果的评价标准。本文在第三章提出了
+在网络表征算法HLE及其增量表征算法iHLE，第四章中提出了在属性网络中的表征算法SR及其增量网络场景下的表征算法iSR，本章将在数据集上进行相关的实验并与其他著名算法进行对比分析。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %----------------------------------------     数据介绍     ---------------------------------------%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{数据介绍}
-本文从最大的Android移动应用市场——Google Play上自动爬取了28,261个移动应用评分数据和程序包，并将其中描述数据缺失或下载不完整的移动应用删去，剩下23,398个移动应用，该数据集将作为本文的主要实验数据。本文所使用的实验数据包括移动应用元数据和程序包，下文将对这两类数据作详细说明。
-
-
+本文利用的数据集为5个真实数据集，其中真实数据集包括2个社交媒体数据和3个引用网络数据。这5个数据集都是在线公开数据\footnote{https://linqs.soe.ucsc.edu/data}\footnote{people.tamu.edu/~xhuang/Code.html}
+\begin{itemize}
+	\item \textbf{BlogCatalog}: BlogCatalog是一个社交媒体网站，用户在上面发表博客并通过相互关注建立网络，数据集选取了5196个用户节点，包含了171,743条连边。用户节点的属性信息来自用户博客的关键词描述加工处理而成，构建了8189维用户节点的属性特征，用户的分类标签是从用户自定义的兴趣爱好中选择得来的。
+	
+	\item \textbf{Flickr}：Flickr是一个图片分享社区，用户通过图片分享与其他用户交互，数据集以用户间的相互关注组成网络，数据集选取了7575个用户节点，包含了239,728条连边，用户节点的属性信息来源于用户的分享内容的标签(tag)信息，提取了12047维节点属性特征。用户的分类信息来源用用户加入的兴趣社区。
+	
+	\item \textbf{Citeseer}:Citeseer数据集是从挑选Citeseer网站上的一些文献，文献的选择过程保证对于每一篇文献都有至少被一篇文献所引用，总共选取了3312篇文章作为网络中的节点，构建了一个文献引用网络。文献的属性是来自对内容的处理得到，通过去掉停用词和选取词干的方法，剩下的3703个单词组成词库，在对文献进行处理的时候，出现次数小于10的单词去掉，根据文献中是否存在词库对应单词，将对应特征置为0/1，于是文献节点属性特征维数为3703维。根据文献本身所属主题，文献被分为六个类别：Agents，AI，DB，IR，ML和HCI。
+	
+	\item \textbf{Cora}：Cora是另一个论文引用网络，主要是机器学习细分领域的论文之间的引用关系，同样在构造数据集的时候保证最后每一篇论文都有至少有一个被引用量，该数据集包含2708篇论文，在提取论文节点的属性特征时，采用方法跟Citeseer类似，通过对全部文献去掉停用词、处理词干构建词库，去掉每篇文章中的出现少10次的词，得到1433维属性特征。根据论文的内容，将论文节点分成6种：Case Based, Genetic Algorithms, Neural和Networks, Probabilistic Methods, Reinforcement Learning, Rule learning和 Theory。
+	
+	\item \textbf{PubMed}: PubMed是另一个论文引用网络，主要涉及的是生物领域的文献。数据集选取了19717个论文作为网络节点，不同的是，论文节点的属性特征不是0/1型，而是用文档中对应单词TF-IDF加权得到。数据集中论文根据研究主题被分成3类：Diabetes Mellitus Experimental，Diabetes Mellitus Type 1和Diabetes Mellitus Type 2。
+	
+\end{itemize}
+关于上述数据的具体详情，见下表，另给出BlogCatalog数据集中的度分布情况。
 \begin{table}
 \centering
-\caption{移动应用元数据类别及说明}
-\begin{tabular}{|C{1.8in}|C{3.3in}|}
+\caption{使用数据集详细统计信息}
+\begin{tabular}{C{1in}C{1in}C{1in}C{1in}C{1in}}
+\textbf{数据集} & \textbf{节点数} &\textbf{连边数} & \textbf{属性数}&\textbf{类别数}\\ \hline 
+BlogCatalog & 5186  & 171,743 &8189&6\\
+Flickr	& 7575 &239,728 & 12,047 & 9 \\
+Citeseer& 3312 & 4536  &  3703 & 6 \\
+Cora & 2708 &5429 & 1433 &7 \\
+PubMed & 19,717 &44,338&500 &3 \\
 \hline
-\textbf{元数据类别} & \textbf{数据描述} \\ \hline\hline
-fileSize & 程序包的大小 \\ \hline
-datePublished & 发布的时间 \\ \hline
-name & 移动应用的名字 \\ \hline
-author & 开发者名字 \\ \hline
-url & 在Google Play市场上的页面链接 \\ \hline
-price & 价格，免费或具体价格 \\ \hline
-permission & 申请使用的权限 \\ \hline
-contentRating & 内容评级，指适合的年龄段，例如“12+”表示内容适合12岁以上 \\ \hline
-ids & 程序包的包名，唯一标识 \\ \hline
-operatingSystems & 适用的Android操作系统版本 \\ \hline
-softwareVersion & 当前程序包的版本号 \\ \hline
-ratingValue & 用户评分值 \\ \hline
-ratingCount & 评分数量 \\ \hline
-genre & 在Google Play上所属的类别 \\ \hline
-description & 描述内容 \\ \hline
-reviews & 用户评论 \\ \hline
 \end{tabular}
 \end{table}
 
-\subsection{元数据}
-移动应用元数据（metadata）是指移动应用在Google Play市场上其内容页面所展示的基本信息。通常包括16类数据，如表5-1所示。
-
 \begin{figure}
 	\centering
-	\includegraphics[width=5.8in]{figures/metadata}
-	\caption{搜狗输入法在Google Play市场上的元数据。}
+	\includegraphics[width=5in]{figures/blogCatalog_degree}
+	\caption{案例数据：BlogCatalog中的度分布}
 \end{figure}
+\section{实验设计}
+图表征算法是对网络中节点进行向量表征的过程，在这一部分主要从两方面对前面章节提出的算法进行分析评价：
+\begin{itemize}
+	\item \textbf{准确性}：图表征算法学习到的向量表征需要应用于后续的机器学习任务，在不同的机器学习任务中表现出来的分类预测效果如何，跟其他算法的对比效果如何？
+	\item \textbf{运行效率}：基于动态增量场景提出的算法运行效率如何，跟其他离线批量算法在效率上的差异。
+\end{itemize}
+本节将分别从这两方面提出设计的实验过程。
+\subsection{准确性评估}
+在准确性评估这一部分，本章主要针对两个学习任务来进行具体的对比：一个是节点多分类任务，一个是图挖掘中常见的链路预测问题。对于不同的学习任务有不同的实验设计过程和评价准则，下面将分别对这些实验的具体过程进行介绍。
 
-图5-1显示的是从Google Play上爬取的搜狗输入法移动应用的元数据，其中第11行的用户评论过长，故折叠以便查看。本文主要使用的数据是第14行的评分值（\textsf{ratingValue}）和第17行的描述文字（\textsf{description}）。用户对移动应用的评分分为1至5五个等级，评分值则是对所有用户的评分平均之后的结果，其取值范围在$[1,5]$之间，如图5-1中搜狗输入法的评分值是4.31。描述文字是本文提出的基于文本的T-LibRec推荐算法的数据来源，其表征了移动应用在功能上的相似性。从图5-1中可以观察到，搜狗输入法的描述中除了英文单词以为，参杂了较多乱码（其实为中文字符的编码），因此本文在4.3.1节中对描述文本进行了数据清洗，保证在提取文本特征时只包含英文单词。所有从Google Play上爬取的移动应用元数据均以JSON（JavaScript Object Notation）格式存储在实验室服务器上，本文研究所需的评分值和描述文字都通过对JSON文本的分析抽取，其他未使用的元数据类别可以在未来的工作中进行扩充使用。
+\problem{\textbf{节点多分类实验}:}节点多分类问题在一个监督学习任务，在对节点进行向量表征之后需要划分训练集和测试集，通过训练集训练模型，对测试集中的数据进行预测并评估结果的好坏。分类问题的评估方法有很多，不同于普通的二分类问题，节点分类问题是多分类过程，在节点分类任务中一般采用的评测指标有三种：分类准确率(accuracy), F1-Macro和F1-Micro。
 
+{\textbf{衡量指标1：分类准确率}} ：准确率的定义是对于给定的测试样本集，分类模型预测类别正确的样本占总样本的比例，从损失函数的角度来讲，就是模型损失函数为0-1阶梯函数时测试集上的损失值。
+
+{\textbf{衡量指标2：F1-Macro和F1-Micro}}在介绍这两个评价准则之前，需要介绍F1值。在二分类问题中，根据实际的类别标签和预测的类别标签的不同情况可以得到混淆矩阵：
+\begin{table}
+	\centering
+	\caption{混淆矩阵}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		\multirow{2}*{预测标签}& \multicolumn{2}{|c|}{真实标签} \\
+		\cline{2-3}
+		~ & 正例 & 反例 \\ \hline
+		正例 & TP(真正例) & FP(假正例) \\ \hline
+		反例 & FN(假反例) & TN(真反例) \\
+		\hline
+	\end{tabular}
+\end{table}
+
+其中精度P(Precision)和召回率R(Recall)可以根据混淆矩阵定义出来：
+\begin{equation}
+\begin{aligned}
+P &= \frac{\#TP}{\#TP+\#FP} \\
+R &= \frac{\#TP}{\#TP+\#FN}
+\end{aligned}
+\end{equation}
+其中$\#\cdot$表示对应样本的个数，考虑在现实场景中精度和召回率各有不足，召回率偏向于将样本都预测为正样本，精度需要保证预测中真实正样本的比例，会偏向于将预测正样本的个数降低，F1值综合考虑精度和召回率，对两者进行统一：
+\begin{equation}
+	F1 = \frac{2\times P\times R}{P+R}
+\end{equation}
+可以看出$F1$为精度和召回率的调和平均。
+
+在多分类问题中，无法通过二元的混淆矩阵来表示样本预测与真实之间的关系，对于$F1$因此有了在多分类情况的变形F1-macro和F1-micro。在多分类场景下需要将不同类别两两之间计算混淆矩阵，算出对应的精度和召回率，F1-macro的计算方法是：
+\begin{equation}
+	macro\-P = \frac{1}{n}\sum P_i
+\end{equation}
+\begin{equation}
+macroR = \frac{1}{n}\sum R_i
+\end{equation}
+\begin{equation}
+F1macro = \frac{2\times macroP\times macroR}{macroP+macroR}
+\end{equation}
+在计算完混淆矩阵后，对所有矩阵的对应值去平均得到$\overline{TP}, \overline{TN}, \overline{FN},\overline{FP}$,可以得到F1-micro的计算方法：
+\begin{equation}
+microP = \frac{\overline{TP}}{\overline{TP}+\overline{FP}}
+\end{equation}
+\begin{equation}
+microR = \frac{\overline{TP}}{\overline{TP}+\overline{FN}}
+\end{equation}
+\begin{equation}
+F1micro = \frac{2\times microP\times microR}{microP+microR}
+\end{equation}
+对于节点多分类问题，本章对所有数据集进行比例抽样，从10\%到100\%对数据进行抽样，进行embedding后，进行节点多分类任务，并通过准确率，F1-macro，F1-micro三个指标对算法效果进行评估。在对算法进行准确性评判时，分成两个部分：离线模型和在线模型。对于离线模型跟已有的图表征算法的效果进行对比：
+\begin{itemize}
+	\item 拉普拉斯特征映射算法：基于保留一阶接近度的图表征方法，将问题转化为求矩阵特征值的问题
+	\item LINE算法：通过保留一阶接近度和二阶接近度进行图表征的算法，通过负采样优化计算。
+	\item Deepwalk算法：借用自然语言处理中的Word2vec思想，通过随机游走生成节点语料库，从而对图进行表征学习。
+	\item CCA算法\cite{hardoon2004canonical}:将原始网络结构和原始属性特征节点分类任务的输入。
+	\item HLE算法：本文提出的基于高阶接近度的拉普拉斯特征映射算法。
+	\item SR算法：本文提出的基于属性相似度的表征算法。
+	
+\end{itemize}
 
 \subsection{程序包}
 Android移动应用的程序包是以\textsf{APK}（Android Package Kit）的格式打包存储的。本文从Google Play市场上将研究所需的23,398个移动应用程序包都下载至实验室服务器，一共占249.86GB硬盘存储空间，其中最大的移动应用程序包为545.78MB，而最小的为20.42KB。本文对这2万多个移动应用，利用4.4.1节中提出的方法进行逆向工程。通常反编译一个移动应用所需时长为几分钟，为提高逆向工程效率，本文利用并行计算的方法，对数据集中的移动应用进行多线程反编译。最终，完成对数据集中所有移动应用反编译所消耗的计算时长大约为两周。
@@ -103,8 +169,7 @@ $\alpha$ & 第三方库推荐 & 控制第三方库推荐分数的变量 \\
 图5-2显示了5个参数分别对TV-LibRec算法推荐结果的影响。
 \begin{figure}
 	\centering
-	\begin{subfigure}[b]{0.49\textwidth}
-		\includegraphics[width=\textwidth]{figures/para_mu}
+	\begin{subfigure}[b]{0.49\textwidth}		\includegraphics[width=\textwidth]{figures/para_mu}
 		\caption{文本与视图相似性间的比重参数$\mu$}
 	\end{subfigure}
 	\begin{subfigure}[b]{0.49\textwidth}

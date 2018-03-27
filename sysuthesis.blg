@@ -7,27 +7,6 @@ A level-1 auxiliary file: chapters/chap4.aux
 A level-1 auxiliary file: chapters/chap5.aux
 A level-1 auxiliary file: chapters/chap6.aux
 Database file #1: refs.bib
-Warning--I didn't find a database entry for "nltk"
-Warning--I didn't find a database entry for "le2014distributed"
-Warning--I didn't find a database entry for "bengio2003neural"
-Warning--I didn't find a database entry for "christopher2006pattern"
-Warning--I didn't find a database entry for "morin2005hierarchical"
-Warning--I didn't find a database entry for "huffman1952method"
-Warning--I didn't find a database entry for "rumerhart1986learning"
-Warning--I didn't find a database entry for "pearson1895note"
-Warning--I didn't find a database entry for "gibler2013adrob"
-Warning--I didn't find a database entry for "zhou2012dissecting"
-Warning--I didn't find a database entry for "chen2015simapp"
-Warning--I didn't find a database entry for "chikofsky1990reverse"
-Warning--I didn't find a database entry for "apktool"
-Warning--I didn't find a database entry for "viennot2014measurement"
-Warning--I didn't find a database entry for "r"
-Warning--I didn't find a database entry for "permission"
-Warning--I didn't find a database entry for "hartigan1979algorithm"
-Warning--I didn't find a database entry for "ray1999determination"
-Warning--I didn't find a database entry for "lin2009phrase"
-Warning--I didn't find a database entry for "honarkhah2010stochastic"
-Warning--I didn't find a database entry for "hierarchical"
 Warning--I didn't find a database entry for "yin2013app"
 Warning--I didn't find a database entry for "runeson2007detection"
 Warning--I didn't find a database entry for "rijsbergen1979information"
@@ -42,4 +21,4 @@ Warning--there's a number but no series in chung1997spectral
 Warning--there's a publisher but no address in chung1997spectral
 Warning--empty journal in stewart1990matrix
 Warning--there's a publisher but no address in golub2012matrix
-(There were 35 warnings)
+(There were 14 warnings)

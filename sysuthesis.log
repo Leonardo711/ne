@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  26 MAR 2018 00:21
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  27 MAR 2018 00:13
 entering extended mode
 **./sysuthesis.tex
 (sysuthesis.tex
@@ -2015,20 +2015,23 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 27.
 Package tocbasic Info: Using my definition of `\numberline' on input line 30.
 Package tocbasic Info: Using my definition of `\numberline' on input line 32.
 Package tocbasic Info: Using my definition of `\numberline' on input line 33.
+Package tocbasic Info: Using my definition of `\numberline' on input line 34.
 Package tocbasic Info: Using my definition of `\numberline' on input line 36.
-Package tocbasic Info: Using my definition of `\numberline' on input line 38.
-Package tocbasic Info: Using my definition of `\numberline' on input line 41.
-Package tocbasic Info: Using my definition of `\numberline' on input line 42.
-Package tocbasic Info: Using my definition of `\numberline' on input line 43.
+Package tocbasic Info: Using my definition of `\numberline' on input line 37.
+Package tocbasic Info: Using my definition of `\numberline' on input line 39.
+Package tocbasic Info: Using my definition of `\numberline' on input line 40.
  [5
 
 
 
 
 ]
-Package tocbasic Info: Using my definition of `\numberline' on input line 46.
+Package tocbasic Info: Using my definition of `\numberline' on input line 43.
+Package tocbasic Info: Using my definition of `\numberline' on input line 44.
+Package tocbasic Info: Using my definition of `\numberline' on input line 45.
 Package tocbasic Info: Using my definition of `\numberline' on input line 48.
-Package tocbasic Info: Using my definition of `\numberline' on input line 49.
+Package tocbasic Info: Using my definition of `\numberline' on input line 50.
+Package tocbasic Info: Using my definition of `\numberline' on input line 51.
 )
 \tf@toc=\write6
 \openout6 = `sysuthesis.toc'.
@@ -2169,10 +2172,6 @@ Underfull \vbox (badness 2486) has occurred while \output is active []
  (chapters/chap4.tex
 chapter 4.
 
-Package natbib Warning: Citation `huang2017label' on page 35 undefined on input
- line 8.
-
-
 Underfull \vbox (badness 5533) has occurred while \output is active []
 
  [35
@@ -2180,50 +2179,46 @@ Underfull \vbox (badness 5533) has occurred while \output is active []
 
 
 
-]
-[36]) [37]
+])
+[36]
 \openout2 = `chapters/chap5.aux'.
 
- (chapters/chap5.tex [38
+ (chapters/chap5.tex
+chapter 5.
+[37
 
 
 
 
 ]
-chapter 5.
-
-! LaTeX Error: File `figures/metadata' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.42 ...udegraphics[width=5.8in]{figures/metadata}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[39]
-
-Package natbib Warning: Citation `yin2013app' on page 40 undefined on input lin
-e 60.
-
-
-Package natbib Warning: Citation `runeson2007detection' on page 40 undefined on
- input line 60.
-
-
-Package natbib Warning: Citation `rijsbergen1979information' on page 40 undefin
-ed on input line 60.
-
-[40]
+File: figures/blogCatalog_degree.png Graphic file (type QTm)
+ <use  "figures/blogCatalog_degree.png" > [38]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [41]
+ [39]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [40]
+
+Package natbib Warning: Citation `hardoon2004canonical' on page 41 undefined on
+ input line 109.
+
+
+Package natbib Warning: Citation `yin2013app' on page 41 undefined on input lin
+e 126.
+
+
+Package natbib Warning: Citation `runeson2007detection' on page 41 undefined on
+ input line 126.
+
+
+Package natbib Warning: Citation `rijsbergen1979information' on page 41 undefin
+ed on input line 126.
+
+[41]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [42]
 
 ! LaTeX Error: File `figures/para_mu' not found.
 
@@ -2231,7 +2226,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.107 ...aphics[width=\textwidth]{figures/para_mu}
+l.172 ...aphics[width=\textwidth]{figures/para_mu}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2247,7 +2242,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.111 ...raphics[width=\textwidth]{figures/para_k}
+l.176 ...raphics[width=\textwidth]{figures/para_k}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2263,7 +2258,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.115 ...ics[width=\textwidth]{figures/para_theta}
+l.180 ...ics[width=\textwidth]{figures/para_theta}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2279,7 +2274,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.119 ...raphics[width=\textwidth]{figures/para_z}
+l.184 ...raphics[width=\textwidth]{figures/para_z}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2295,7 +2290,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.123 ...ics[width=\textwidth]{figures/para_alpha}
+l.188 ...ics[width=\textwidth]{figures/para_alpha}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2304,27 +2299,26 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[42]
+[43]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [43]
+ [44]
 
-Package natbib Warning: Citation `salakhutdinov2011probabilistic' on page 44 un
-defined on input line 161.
-
-
-Package natbib Warning: Citation `liu2013bayesian' on page 44 undefined on inpu
-t line 161.
+Package natbib Warning: Citation `salakhutdinov2011probabilistic' on page 45 un
+defined on input line 226.
 
 
-Package natbib Warning: Citation `luo2014efficient' on page 44 undefined on inp
-ut line 161.
+Package natbib Warning: Citation `liu2013bayesian' on page 45 undefined on inpu
+t line 226.
 
 
-Package natbib Warning: Citation `yang2014survey' on page 44 undefined on input
- line 161.
+Package natbib Warning: Citation `luo2014efficient' on page 45 undefined on inp
+ut line 226.
 
-[44]
+
+Package natbib Warning: Citation `yang2014survey' on page 45 undefined on input
+ line 226.
+
 
 ! LaTeX Error: File `figures/feature_comp_p' not found.
 
@@ -2332,7 +2326,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.170 ...width=\textwidth]{figures/feature_comp_p}
+l.235 ...width=\textwidth]{figures/feature_comp_p}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2348,7 +2342,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.174 ...width=\textwidth]{figures/feature_comp_r}
+l.239 ...width=\textwidth]{figures/feature_comp_r}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2364,7 +2358,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.178 ...width=\textwidth]{figures/feature_comp_f}
+l.243 ...width=\textwidth]{figures/feature_comp_f}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2373,6 +2367,7 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
+[45]
 
 ! LaTeX Error: File `figures/cluster_comp_p' not found.
 
@@ -2380,7 +2375,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.189 ...width=\textwidth]{figures/cluster_comp_p}
+l.254 ...width=\textwidth]{figures/cluster_comp_p}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2396,7 +2391,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.193 ...width=\textwidth]{figures/cluster_comp_r}
+l.258 ...width=\textwidth]{figures/cluster_comp_r}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2412,7 +2407,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.197 ...width=\textwidth]{figures/cluster_comp_f}
+l.262 ...width=\textwidth]{figures/cluster_comp_f}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2421,24 +2416,24 @@ TIF,.tiff,.TIFF,
 Try typing  <return>  to proceed.
 If that doesn't work, type  X <return>  to quit.
 
-[45]
+[46]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46])
-[47]
+ [47])
+[48]
 \openout2 = `chapters/chap6.aux'.
 
- (chapters/chap6.tex [48
-
-
-
-
-]
+ (chapters/chap6.tex
 chapter 6.
 
 Underfull \vbox (badness 4647) has occurred while \output is active []
 
- [49])
+ [49
+
+
+
+
+])
 [50] (sysuthesis.bbl [51
 
 
@@ -2473,10 +2468,10 @@ Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 191.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 191.
  ) 
 Here is how much of TeX's memory you used:
- 34352 strings out of 427832
- 622442 string characters out of 3152415
- 829603 words of memory out of 3000000
- 37829 multiletter control sequences out of 15000+200000
+ 34376 strings out of 427832
+ 623782 string characters out of 3152415
+ 829620 words of memory out of 3000000
+ 37853 multiletter control sequences out of 15000+200000
  14573 words of font info for 119 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  58i,17n,74p,10407b,1193s stack positions out of 5000i,500n,10000p,200000b,50000s
