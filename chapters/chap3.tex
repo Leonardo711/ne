@@ -143,7 +143,7 @@ D'_{ii} = \sum_j{S_{ij}}
 其中$\Lambda$为对角矩阵，对角线元素为矩阵$W$的特征值，$X$为正交矩阵，也即表征向量矩阵。对于式(\ref{decomp})的最大值问题相当于求解$W$最接近特征值分解形式，也即矩阵$X$为$W$前$k$个特征值对应的特征向量组合而成的矩阵。
 
 \subsection{HLE算法描述}
-	给定图数据$G = (E,v)$和图表征向量维数$k$，其中图$G$以邻接矩阵$A\in R^{|V|\times |V|}$表示，HLE算法将得到图$G$的向量表征$X\in |V|\times k$。
+	给定图数据$G = (E,V)$和图表征向量维数$k$，其中图$G$以邻接矩阵$A\in R^{|V|\times |V|}$表示，HLE算法将得到图$G$的向量表征$X\in |V|\times k$。
 	
 	在算法开始时，根据相似度准则的选择，令相似度矩阵$S$分别为共同邻居$S_{Cn}$、Adamic-Adar系数$S_{AA}$或资源分配系数$S_{RA}$中的一个。根据$S$矩阵计算出对应的对角矩阵$D\prime$,使得$D'_{ii} = \sum_j S_{ij}$。
 
@@ -488,11 +488,12 @@ D'_{ii} = \sum_j{S_{ij}}
 		\end{algorithm}
 	\end{minipage}
 \end{figure}
-在节点出现新增情况时，矩阵\textbf{W}相对上一个时刻进行了增广。在\textbf{算法3.3}中第一行，$\Delta\textbf{W}$在进行特征值分解的时候，应采用取前$m$个特征值对应的特征向量，在保证精度的同时降低计算复杂度，比如只对$\Delta\textbf{W}$只取一维特征向量，也即主特征值对应的特征向量，则可以利用幂法及其加速方法来求解来降低复杂度。
+在节点出现新增情况时，矩阵\textbf{W}相对上一个时刻进行了增广。在\textbf{算法3.3}中第一行，$\Delta\textbf{W}$在进行特征值分解的时候，应采用取前$m$个特征值对应的特征向量，在保证精度的同时降低计算复杂度，比如只对$\Delta\textbf{W}$只取一维特征向量，也即主特征值对应的特征向量，则可以利用幂法及其加速方法来求解来降低复杂度。 
+\remark{\textbf{$\Delta\textbf{W}$}特征分解维度的讨论}
 \section{算法分析}
 这一部分将对上述两个算法的计算复杂度进行分析。
 \begin{itemize}
-	\item HLE算法是离线算法，在计算复杂度方面，通过邻接矩阵\textbf{A}计算得到相似度矩阵\textbf{S}的计算复杂度为$\mathcal{O}(|V|^2)$, 计算矩阵\textbf{W}的计算复杂度为$\mathcal{O}(|V|)$，对矩阵$\textbf{W}$进行特征值分解的复杂度为$\mathcal{O}(|V|k^2)$，其中$k$为表征向量的维数，因此HLE算法的复杂度为$\mathcal{O}(|V|^2)$。
+	\item HLE算法是离线算法，在计算复杂度方面，通过邻接矩阵\textbf{A}计算得到相似度矩阵\textbf{S}的计算复杂度为$\mathcal{O}(|V|^2)$, 计算矩阵\textbf{W}的计算复杂度为$\mathcal{O}(|V|)$，对矩阵$\textbf{W}$进行特征值分解的复杂度为$\mathcal{O}(|E|k^2)$，其中$k$为表征向量的维数，因此HLE算法的复杂度为$\mathcal{O}(|V|^2)$。
 	\item
 	iHLE算法是增量算法，在\textbf{算法3.3}中，计算矩阵$\Delta\textbf{W}$的计算复杂度如前文中所讨论可以降低为$\mathcal{O}(|V|)$，对矩阵$\Delta\textbf{W}$进行特征值分解的复杂度为$\mathcal{O}(|V|)$, 增量QR分解复杂度为$\mathcal{O}(|V|)$，对矩阵\textbf{M}的特征分解的复杂度为$\mathcal{O}(1)$,因此iHLE算法的复杂度为$\mathcal{O}(|V|)$。
 \end{itemize}
