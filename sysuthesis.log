@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  30 MAR 2018 00:38
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  30 MAR 2018 18:22
 entering extended mode
 **./sysuthesis.tex
 (sysuthesis.tex
@@ -2017,21 +2017,21 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 31.
 Package tocbasic Info: Using my definition of `\numberline' on input line 33.
 Package tocbasic Info: Using my definition of `\numberline' on input line 34.
 Package tocbasic Info: Using my definition of `\numberline' on input line 35.
-Package tocbasic Info: Using my definition of `\numberline' on input line 40.
 Package tocbasic Info: Using my definition of `\numberline' on input line 41.
-Package tocbasic Info: Using my definition of `\numberline' on input line 43.
+Package tocbasic Info: Using my definition of `\numberline' on input line 42.
+Package tocbasic Info: Using my definition of `\numberline' on input line 44.
  [5
 
 
 
 
 ]
-Package tocbasic Info: Using my definition of `\numberline' on input line 44.
 Package tocbasic Info: Using my definition of `\numberline' on input line 45.
-Package tocbasic Info: Using my definition of `\numberline' on input line 48.
-Package tocbasic Info: Using my definition of `\numberline' on input line 51.
-Package tocbasic Info: Using my definition of `\numberline' on input line 53.
+Package tocbasic Info: Using my definition of `\numberline' on input line 46.
+Package tocbasic Info: Using my definition of `\numberline' on input line 49.
+Package tocbasic Info: Using my definition of `\numberline' on input line 52.
 Package tocbasic Info: Using my definition of `\numberline' on input line 54.
+Package tocbasic Info: Using my definition of `\numberline' on input line 55.
 )
 \tf@toc=\write6
 \openout6 = `sysuthesis.toc'.
@@ -2191,17 +2191,17 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [40]
 [41]
 File: figures/similar_opt.png Graphic file (type QTm)
- <use  "figures/similar_opt.png" > [42]) [43]
+ <use  "figures/similar_opt.png" > [42] [43]) [44]
 \openout2 = `chapters/chap5.aux'.
 
- (chapters/chap5.tex [44
+ (chapters/chap5.tex
+chapter 5.
+[45
 
 
 
 
 ]
-chapter 5.
-[45]
 File: figures/blogCatalog_degree.png Graphic file (type QTm)
  <use  "figures/blogCatalog_degree.png" > [46]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2238,19 +2238,19 @@ File: figures/sample_split.png Graphic file (type QTm)
  <use  "figures/sample_split.png" > [52]
 
 Package natbib Warning: Citation `salakhutdinov2011probabilistic' on page 53 un
-defined on input line 218.
+defined on input line 221.
 
 
 Package natbib Warning: Citation `liu2013bayesian' on page 53 undefined on inpu
-t line 218.
+t line 221.
 
 
 Package natbib Warning: Citation `luo2014efficient' on page 53 undefined on inp
-ut line 218.
+ut line 221.
 
 
 Package natbib Warning: Citation `yang2014survey' on page 53 undefined on input
- line 218.
+ line 221.
 
 [53]
 
@@ -2260,7 +2260,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.227 ...width=\textwidth]{figures/feature_comp_p}
+l.230 ...width=\textwidth]{figures/feature_comp_p}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2276,7 +2276,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.231 ...width=\textwidth]{figures/feature_comp_r}
+l.234 ...width=\textwidth]{figures/feature_comp_r}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2292,7 +2292,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.235 ...width=\textwidth]{figures/feature_comp_f}
+l.238 ...width=\textwidth]{figures/feature_comp_f}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2308,7 +2308,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.246 ...width=\textwidth]{figures/cluster_comp_p}
+l.249 ...width=\textwidth]{figures/cluster_comp_p}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2324,7 +2324,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.250 ...width=\textwidth]{figures/cluster_comp_r}
+l.253 ...width=\textwidth]{figures/cluster_comp_r}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2340,7 +2340,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.254 ...width=\textwidth]{figures/cluster_comp_f}
+l.257 ...width=\textwidth]{figures/cluster_comp_f}
                                                   
 I could not locate the file with any of these extensions:
 .pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
@@ -2409,10 +2409,10 @@ LaTeX Font Warning: Size substitutions with differences
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
  ) 
 Here is how much of TeX's memory you used:
- 34408 strings out of 427832
- 624623 string characters out of 3152415
- 829595 words of memory out of 3000000
- 37881 multiletter control sequences out of 15000+200000
+ 34439 strings out of 427832
+ 626397 string characters out of 3152415
+ 829725 words of memory out of 3000000
+ 37912 multiletter control sequences out of 15000+200000
  16520 words of font info for 131 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  58i,17n,74p,10407b,1193s stack positions out of 5000i,500n,10000p,200000b,50000s

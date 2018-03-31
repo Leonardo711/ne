@@ -199,7 +199,7 @@ D'_{ii} = \sum_j{S_{ij}}
 \begin{equation}
 	\Delta\textbf{W} =  \textbf{Y}^{T} \textbf{Z}  \textbf{Y}
 \end{equation}
-其中矩阵$\textbf{Z}$为对角矩阵，$\textbf{Y}$为$\Delta\textbf{W}$的特征向量矩阵，网络变化的定义，变化后的矩阵等于变化前的矩阵加上变量，即：
+其中矩阵$\textbf{Z}$为对角矩阵，$\textbf{Y}$为$\Delta\textbf{W}$的特征向量矩阵，根据网络变化的定义，变化后的矩阵等于变化前的矩阵加上变量，即：
 \begin{equation}\label{time_t1}
 \begin{aligned}
 \textbf{W}^{(t+1)} &= \textbf{X}^{(t+1)T} \Lambda^{(t+1)} \textbf{X} ^{(t+1)} \\

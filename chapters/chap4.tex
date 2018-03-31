@@ -119,8 +119,8 @@ Sim_{kl}(H_i, H_j)=\left\{
 				\State $t \leftarrow 1$
 				\State do:
 				\State \quad $\textbf{X}^H\leftarrow\textbf{X}^{H\prime}$
-				\State\quad \textbf{for} i in range(\textbf{H}.shape[0]):
-				\State\qquad \textbf{for} j in range(\textbf{H}.shape[0]) and $i\ne j$:
+				\State\quad \textbf{for} i \textbf{in} range(\textbf{H}.shape[0]):
+				\State\qquad \textbf{for} j \textbf{in} range(\textbf{H}.shape[0]) and $i\ne j$:
 				\State\quad \qquad $\eta \leftarrow \frac{1}{\sqrt{t}}$
 				\State\quad \qquad $t\leftarrow t+1$
 				\State\quad \qquad $\textbf{X}^H_i \leftarrow \textbf{X}^H_i + \eta [(\textbf{S}^H_{ij}-<\textbf{X}^H_i, \textbf{X}^H_j>)\textbf{X}^H_j - \lambda \textbf{X}^H_i]$
@@ -138,26 +138,80 @@ Sim_{kl}(H_i, H_j)=\left\{
 第6-17行:随机初始化表征向量矩阵$\textbf{X}^H$，设置迭代时间步t，用来更改迭代步长$\eta$，其中迭代步长 $\eta = \frac{1}{\sqrt{t}}$，随着迭代次数递减。对相似度矩阵中每一个非零元素(除对角线)进行一个梯度下降过程(Line 14)，按第14行的方式更新节点的属性表征向量。
 
 \subsection{SR1算法分析}
-SR算法以节点特征属性矩阵作为输入，需要计算所有节点对之间的属性相似度，计算复杂度为$\mathcal{O}(|V|^2)$；再以梯度下降方式对目标函数进行优化求解，计算复杂度为$\mathcal{O}(|V|^2)$，可以得出SR算法的复杂度为$\mathcal{O}(|V|^2)$。对于SR算法的优化思路考虑在属性相似度计算是考虑网络节点之间的相互关系，用来简化计算，比如计算共同邻居矩阵$S_{CN}$，对非零元素对应的行列标号所对应的节点计算相似度，从而降低复杂度。
+SR1算法以节点特征属性矩阵作为输入，需要计算所有节点对之间的属性相似度，计算复杂度为$\mathcal{O}(|V|^2)$；再以梯度下降方式对目标函数进行优化求解，计算复杂度为$\mathcal{O}(|V|^2)$，可以得出SR1算法的复杂度为$\mathcal{O}(|V|^2)$。对于SR1算法的优化思路考虑在属性相似度计算是考虑网络节点之间的相互关系，用来简化计算，比如计算共同邻居矩阵$S_{CN}$，对非零元素对应的行列标号所对应的节点计算相似度，从而降低复杂度。
 
 \subsection{优化算法SR}
 从前面的算法流程和算法分析可以看出，上述的SR1算法存在两个问题：
 \begin{itemize}
-	\item 计算复杂度高。从前文的算法复杂度分析，得知计算复杂度为$\mathcal{O}(|V|^2)$，其中$|V|$为网络中节点数，模型在网络节点规模较大时资源消耗较大，
-	\item 没有利用结构信息。前文算法SR1的输入为属性网络矩阵，不包含网络结构信息，属性网络表征学习的特点没有体现，也即没有融合节点属性和网络结构。
+	\item \textbf{计算复杂度高}。从前文的算法复杂度分析，得知计算复杂度为$\mathcal{O}(|V|^2)$，其中$|V|$为网络中节点数，模型在网络节点规模较大时资源消耗较大。
+	\item \textbf{没有利用网络结构信息}。前文算法SR1的输入为属性网络矩阵，不包含网络结构信息，属性网络表征学习的特点没有体现，也即没有融合节点属性和网络结构。
 \end{itemize}
 \begin{figure}[!ht]
 	\begin{center}
 		{\includegraphics[width=5in]{figures/similar_opt.png}}
-		\caption{网络中的属性相似度计算方法}
+		\caption{网络中的属性相似度计算}
+		\label{fig:similar_opt}
 	\end{center}
 \end{figure}
-在实际网络场景中，对网络全体的节点对$(i,j)$计算基于节点属性的相似度是没有必要的。在网络中存在社区效应，节点偏向于连接社区内的节点，同一个社区内节点相互路径很短，反之，如果在网络中节点之间的路径过长则节点对建立关系的可能性也很低，进一步地，对于节点对之间网络路径过长，即使属性相似度非常高，也不会对网络本身产生影响。比如，在社交网络中，不同的人都存在亲友圈，在亲友圈中扮演相同角色的用户节点属性相似度会很高，在不存在间接共同好友的情况下，这些用户节点之间建立连接或社区的可能性较低。
 
+对于第一点，在实际网络场景中，对网络全体的节点对$(i,j)$计算基于节点属性的相似度是没有必要的。在网络中存在社区效应，节点偏向于连接社区内的节点，同一个社区内节点相互路径很短，反之，如果在网络中节点之间的路径过长则节点对建立关系的可能性也很低，进一步地，对于节点对之间网络路径过长，即使属性相似度非常高，也不会对网络本身产生影响。比如，在社交网络中，不同的人都存在亲友圈，在亲友圈中扮演相同角色的用户节点属性相似度会很高，在不存在间接共同好友的情况下，这些用户节点之间建立连接或社区的可能性较低。如图\ref{fig:similar_opt}(a)所示，节点之间连边的权重是根据属性相似度计算得来的，实线表示有直接的网络联系，虚线表示没有直接的网络联系。其中节点1和节点2之间没有共同好友，路径距离较长，根据实际应用，不需要去计算节点对(1,2)之间的属性相似度，在保证了有效性的同时可以降低复杂度。
+
+对于第二点，网络中的结构信息可以辅助于相似度计算。一方面，没有直接联系的用户节点不计算相似度可以降低计算复杂度；另一方面，通过网络结构计算具有较短路径但并不直接相连的用户的相似度，比如有共同邻居但不相邻的节点对，在实际应用也是具有现实意义的。如图\ref{fig:similar_opt}(b)中所示，节点1和节点2并不直接相连，但是有共同邻居3、4、5、6，从接近度的角度，称节点对(1,2)存在二阶接近度。在上一章中提到过用共同邻居、Adamic-Adar系数和资源分配系数对二阶接近度进行保留，在这一节，将提出基于共同邻居的方式的优化算法SR。
+
+\begin{figure}[htb]
+	\centering
+	\begin{minipage}{.7\linewidth}
+		\begin{algorithm}[H]
+			\small
+			\caption{SR算法}
+			\begin{algorithmic}[1]
+				\Require
+				\Statex $\textbf{H}$ :节点属性矩阵$R^{|V|\times d}$
+				\Statex $\textbf{A}$ :网络邻接矩阵$R^{|V|\times |V|}$ 
+				\Statex $\epsilon$:迭代终止误差
+				\Ensure
+				\Statex $\textbf{X}$ :属性网络表征向量矩阵
+				\Statex
+				\State 初始化一阶属性相似度矩阵$\textbf{S}^{H}$，各元素为0
+				\State \textbf{for} (i,j) in \textbf{A} and $A_{ij}\ne 0$:
+				\State \quad $\textbf{S}^H_{ij} =\textbf{S}^H_{ji}=Sim(H_i, H_j)$
+				\State \textbf{end for}
+				\State 计算属性网络节点相似度矩阵$S = S^H\cdot S^H + S^H$
+				\State 随机初始化临时属性表征向量$\textbf{X}'\in R^{|V|\times k}$
+				\State $t \leftarrow 1$
+				\State do:
+				\State \quad $\textbf{X}\leftarrow\textbf{X}'$
+				\State\quad \textbf{for} i in range(\textbf{H}.shape[0]):
+				\State\qquad \textbf{for} j in range(\textbf{H}.shape[0]) and $i\ne j$ and $\textbf{S}_{ij}\ne0$:
+				\State\quad \qquad $\eta \leftarrow \frac{1}{\sqrt{t}}$
+				\State\quad \qquad $t\leftarrow t+1$
+				\State\quad \qquad $\textbf{X}_i \leftarrow \textbf{X}_i + \eta [(\textbf{S}_{ij}-<\textbf{X}_i, \textbf{X}_j>)\textbf{X}_j - \lambda \textbf{X}_i]$
+				\State \qquad \textbf{end for}
+				\State \quad \textbf{end for}
+				\State 当$|\textbf{X}'-\textbf{X}|^2<\epsilon$停止迭代
+				\State 返回 $\textbf{X}$
+			\end{algorithmic}
+		\end{algorithm}
+	\end{minipage}
+\end{figure}
+
+SR算法中，不同与SR1算法的是主要在相似度矩阵上。第1-4行首先计算了初始的节点属性相似度，也即对有直接联系的节点对(i,j)才计算属性相似度。
+
+第5行中计算具有共同邻居的节点对之间的属性相似度，对于有共同好友的节点对(i,j)的相似度值等于共同邻居所包含的属性相似度加上节点对直接联系的属性相似度，也即一阶属性相似度加上二阶属性相似度。如图\ref{fig:similar_opt}(b)中，节点对(1,2)包含四个共同邻居3、4、5、6，通过节点3包含的相似度为累乘的相似度，也即$\textbf{S}^H_{13}\textbf{S}^H_{32}$；节点对(1,2)没有直接联系，则一阶属性相似度为0。综上，节点对(1,2)的相似度等于：
+\begin{equation}
+\begin{aligned}
+\textbf{S}_{12} &= (\textbf{S}^H_{13}\textbf{S}^H_{32}+ \textbf{S}^H_{14}\textbf{S}^H_{42}+ \textbf{S}^H_{15}\textbf{S}^H_{52}+\textbf{S}^H_{16}\textbf{S}^H_{62})+ \textbf{S}^H_{12} \\
+ &=(0.1\times 0.2 + 0.3\times 0.4 +0.5\times 0.6 +0.2\times 0.7) + 0 \\
+ &= 0.58
+\end{aligned} 
+\end{equation}
+
+第6-17行，对相似度矩阵$S$中非零元素对应节点对(i,j)进行遍历，通过梯度下降迭代求解表征向量。
+\subsection{SR算法分析}
+SR算法以节点特征属性矩阵和网络邻接矩阵作为输入，计算相邻的边之间节点对(i,j)属性相似度，计算复杂度为$\mathcal{O}(|E|)$；在通过计算节点共同邻居矩阵得到最终是属性网络相似度的复杂度为$\mathcal{O}(|V|^2)$，考虑到属性相似度矩阵的稀疏性，计算共同邻居矩阵的复杂度是可以优化的，也即SR算法最坏情况的计算复杂度为$\mathcal{O}(|V|^2)$。
 
 \section{增量场景下属性网络表征学习}
-前面一节提出了基于图分解的相似度表征方法来对节点属性特征进行表征学习，同时基于属性表征学习的缺点提出了改进算法SR。值得注意的是，真实应用中的网络往往是存在动态变化的，对于传统的特征降维过程而言，对动态增加的样本进行降维表征具有一定的挑战。
-
+前面一节提出了基于图分解的相似度表征方法来对节点属性特征进行表征学习，同时基于属性表征学习的缺点提出了改进算法SR。值得注意的是，真实应用中的属性网络往往是存在动态变化的，因此需要在大型属性网络中提出一种增量式的学习算法来进行快速可扩展的属性网络表征学习。                                                                                 
 
 
 

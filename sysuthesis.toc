@@ -37,8 +37,9 @@
 \contentsline {subsection}{\numberline {4.3.2}SR1算法描述}{41}{subsection.4.3.2}
 \contentsline {subsection}{\numberline {4.3.3}SR1算法分析}{42}{subsection.4.3.3}
 \contentsline {subsection}{\numberline {4.3.4}优化算法SR}{42}{subsection.4.3.4}
-\contentsline {section}{\numberline {4.4}增量场景下属性网络表征学习}{43}{section.4.4}
-\contentsline {section}{\numberline {4.5}本章小结}{43}{section.4.5}
+\contentsline {subsection}{\numberline {4.3.5}SR算法分析}{44}{subsection.4.3.5}
+\contentsline {section}{\numberline {4.4}增量场景下属性网络表征学习}{44}{section.4.4}
+\contentsline {section}{\numberline {4.5}本章小结}{44}{section.4.5}
 \contentsline {chapter}{\numberline {5}实验分析与讨论}{45}{chapter.5}
 \contentsline {section}{\numberline {5.1}数据介绍}{45}{section.5.1}
 \contentsline {section}{\numberline {5.2}实验环境}{46}{section.5.2}
@@ -52,7 +53,7 @@
 \contentsline {chapter}{\numberline {6}总结与展望}{59}{chapter.6}
 \contentsline {section}{\numberline {6.1}工作总结}{59}{section.6.1}
 \contentsline {section}{\numberline {6.2}展望}{60}{section.6.2}
-\contentsline {chapter}{参考文献}{61}{chapter*.34}
-\contentsline {chapter}{研究成果}{65}{section*.35}
-\contentsline {chapter}{致谢}{67}{section*.37}
+\contentsline {chapter}{参考文献}{61}{chapter*.35}
+\contentsline {chapter}{研究成果}{65}{section*.36}
+\contentsline {chapter}{致谢}{67}{section*.38}
 \contentsfinish 
