@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  30 MAR 2018 18:22
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  2 APR 2018 13:29
 entering extended mode
 **./sysuthesis.tex
 (sysuthesis.tex
@@ -2018,20 +2018,19 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 33.
 Package tocbasic Info: Using my definition of `\numberline' on input line 34.
 Package tocbasic Info: Using my definition of `\numberline' on input line 35.
 Package tocbasic Info: Using my definition of `\numberline' on input line 41.
-Package tocbasic Info: Using my definition of `\numberline' on input line 42.
-Package tocbasic Info: Using my definition of `\numberline' on input line 44.
+Package tocbasic Info: Using my definition of `\numberline' on input line 43.
+Package tocbasic Info: Using my definition of `\numberline' on input line 45.
  [5
 
 
 
 
 ]
-Package tocbasic Info: Using my definition of `\numberline' on input line 45.
 Package tocbasic Info: Using my definition of `\numberline' on input line 46.
-Package tocbasic Info: Using my definition of `\numberline' on input line 49.
+Package tocbasic Info: Using my definition of `\numberline' on input line 47.
+Package tocbasic Info: Using my definition of `\numberline' on input line 50.
 Package tocbasic Info: Using my definition of `\numberline' on input line 52.
-Package tocbasic Info: Using my definition of `\numberline' on input line 54.
-Package tocbasic Info: Using my definition of `\numberline' on input line 55.
+Package tocbasic Info: Using my definition of `\numberline' on input line 53.
 )
 \tf@toc=\write6
 \openout6 = `sysuthesis.toc'.
@@ -2149,7 +2148,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [27]
 [28]
-Overfull \hbox (2.43848pt too wide) detected at line 272
+Overfull \hbox (2.43848pt too wide) detected at line 274
 [][]
  []
 
@@ -2162,7 +2161,10 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [30]
 File: figures/CN_incremental.png Graphic file (type QTm)
 
-<use  "figures/CN_incremental.png" > [31] [32] [33] [34]) [35]
+<use  "figures/CN_incremental.png" > [31] [32]
+File: figures/incremental_network_embedding.png Graphic file (type QTm)
+
+<use  "figures/incremental_network_embedding.png" > [33] [34]) [35]
 \openout2 = `chapters/chap4.aux'.
 
 
@@ -2191,230 +2193,104 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
  [40]
 [41]
 File: figures/similar_opt.png Graphic file (type QTm)
- <use  "figures/similar_opt.png" > [42] [43]) [44]
+ <use  "figures/similar_opt.png" > [42] [43]
+File: figures/incremental_attributed_embedding.png Graphic file (type QTm)
+
+<use  "figures/incremental_attributed_embedding.png" > [44]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [45])
+[46]
 \openout2 = `chapters/chap5.aux'.
 
  (chapters/chap5.tex
 chapter 5.
-[45
+[47
 
 
 
 
 ]
-File: figures/blogCatalog_degree.png Graphic file (type QTm)
- <use  "figures/blogCatalog_degree.png" > [46]
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47]
-[48] [49]
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 45.
+
+[48] [49] [50] [51]
 File: figures/link_prediction_split.png Graphic file (type QTm)
  <use  "figures/link_prediction_split.png" >
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 146.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 163.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 146.
+(Font)              size <10.95> substituted on input line 163.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 146.
+(Font)              size <10.95> substituted on input line 163.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 146.
+(Font)              size <10.95> substituted on input line 163.
 
-
-Underfull \vbox (badness 4660) has occurred while \output is active []
-
- [50]
 File: figures/link_predict_frame.png Graphic file (type QTm)
-
-<use  "figures/link_predict_frame.png" >
+<use  "figures/link_predict_frame.png" > [52]
 File: figures/inc_sample.png Graphic file (type QTm)
  <use  "figures/inc_sample.png" >
-[51]
 File: figures/sample_split.png Graphic file (type QTm)
- <use  "figures/sample_split.png" > [52]
 
-Package natbib Warning: Citation `salakhutdinov2011probabilistic' on page 53 un
-defined on input line 221.
-
-
-Package natbib Warning: Citation `liu2013bayesian' on page 53 undefined on inpu
-t line 221.
-
-
-Package natbib Warning: Citation `luo2014efficient' on page 53 undefined on inp
-ut line 221.
-
-
-Package natbib Warning: Citation `yang2014survey' on page 53 undefined on input
- line 221.
-
-[53]
-
-! LaTeX Error: File `figures/feature_comp_p' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.230 ...width=\textwidth]{figures/feature_comp_p}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `figures/feature_comp_r' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.234 ...width=\textwidth]{figures/feature_comp_r}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `figures/feature_comp_f' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.238 ...width=\textwidth]{figures/feature_comp_f}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `figures/cluster_comp_p' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.249 ...width=\textwidth]{figures/cluster_comp_p}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `figures/cluster_comp_r' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.253 ...width=\textwidth]{figures/cluster_comp_r}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-
-! LaTeX Error: File `figures/cluster_comp_f' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.257 ...width=\textwidth]{figures/cluster_comp_f}
-                                                  
-I could not locate the file with any of these extensions:
-.pdf,.PDF,.eps,.EPS,.mps,.MPS,.ps,.PS,.png,.PNG,.jpg,.JPG,.jpeg,.JPEG,.jp2,.JP2
-,.jpf,.JPF,.bmp,.BMP,.pict,.PICT,.psd,.PSD,.mac,.MAC,.TGA,.tga,.gif,.GIF,.tif,.
-TIF,.tiff,.TIFF,
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[54]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [55])
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [56]
-[57]
+<use  "figures/sample_split.png" > [53]) [54]
 \openout2 = `chapters/chap6.aux'.
 
- (chapters/chap6.tex [58
-
-
-
-
-]
+ (chapters/chap6.tex
 chapter 6.
-
-Underfull \vbox (badness 4647) has occurred while \output is active []
-
- [59])
-[60] (sysuthesis.bbl [61
+) [55
 
 
 
 
+] [56
 
-] [62] [63]) [64]
+
+
+] (sysuthesis.bbl [57
+
+
+] [58] [59]) [60]
 No file sysuthesis.ind.
-[65
+[61
 
 
 
 
-] [66
-
-
-]
-
-Package natbib Warning: There were undefined citations.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 194.
-[67
+] [62
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 194.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 174.
+ [63
+
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 174.
  (sysuthesis.aux (chapters/chap1.aux) (chapters/chap2.aux)
 (chapters/chap3.aux) (chapters/chap4.aux) (chapters/chap5.aux)
 (chapters/chap6.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 194.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 194.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 174.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 174.
 
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 0.45pt have occurred.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 174.
  ) 
 Here is how much of TeX's memory you used:
- 34439 strings out of 427832
- 626397 string characters out of 3152415
- 829725 words of memory out of 3000000
- 37912 multiletter control sequences out of 15000+200000
- 16520 words of font info for 131 fonts, out of 3000000 for 9000
+ 34366 strings out of 427832
+ 624068 string characters out of 3152415
+ 829863 words of memory out of 3000000
+ 37871 multiletter control sequences out of 15000+200000
+ 16504 words of font info for 129 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
- 58i,17n,74p,10407b,1193s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 58i,17n,74p,10407b,1228s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on sysuthesis.pdf (77 pages).
+Output written on sysuthesis.pdf (73 pages).

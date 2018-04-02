@@ -11,10 +11,6 @@ Repeated entry---line 512 of file refs.bib
  : @techreport{page1999pagerank
  :                             ,
 I'm skipping whatever remains of this entry
-Warning--I didn't find a database entry for "salakhutdinov2011probabilistic"
-Warning--I didn't find a database entry for "liu2013bayesian"
-Warning--I didn't find a database entry for "luo2014efficient"
-Warning--I didn't find a database entry for "yang2014survey"
 Warning--there's a publisher but no address in bellman2015adaptive
 Warning--empty journal in zhong2017survey
 Warning--empty journal in syed1999incremental

@@ -211,12 +211,71 @@ SR算法中，不同与SR1算法的是主要在相似度矩阵上。第1-4行首
 SR算法以节点特征属性矩阵和网络邻接矩阵作为输入，计算相邻的边之间节点对(i,j)属性相似度，计算复杂度为$\mathcal{O}(|E|)$；在通过计算节点共同邻居矩阵得到最终是属性网络相似度的复杂度为$\mathcal{O}(|V|^2)$，考虑到属性相似度矩阵的稀疏性，计算共同邻居矩阵的复杂度是可以优化的，也即SR算法最坏情况的计算复杂度为$\mathcal{O}(|V|^2)$。
 
 \section{增量场景下属性网络表征学习}
-前面一节提出了基于图分解的相似度表征方法来对节点属性特征进行表征学习，同时基于属性表征学习的缺点提出了改进算法SR。值得注意的是，真实应用中的属性网络往往是存在动态变化的，因此需要在大型属性网络中提出一种增量式的学习算法来进行快速可扩展的属性网络表征学习。                                                                                 
+前面一节提出了基于图分解的相似度表征方法来对节点属性特征进行表征学习，同时基于属性表征学习的缺点提出了改进算法SR。值得注意的是，真实应用中的属性网络往往是存在动态变化的，因此需要在大型属性网络中提出一种增量式的学习算法来进行快速可扩展的属性网络表征学习。  
 
+下面将提出一种增量的属性图表征算法，应用于增量场景下的属性图表征学习。上一章中通过对网络中不同增量场景的讨论，以节点数增加作为网络增量的统一形式，在本节将只讨论在属性网络中节点数增加的场景。另一方面，对于节点属性的增量场景，在相关技术中提到，现有的增量学习分成3类\cite{zhong2017survey}：样本增量学习，特征增量学习和类别增量学习，特征增量和类别增量不在本节讨论范围，考虑的增量场景样本的属性特征维度不会变化，且类别总数也不会变化，也即只讨论网络中节点数增量场景下的属性表征学习。
+\begin{figure}
+	\centering
+	\includegraphics[width=6in]{figures/incremental_attributed_embedding}
+	\caption{增量属性网络图表征流程框架}
+	\label{fig:incremental_attributed_embedding}
+\end{figure}
 
+前文的讨论中，属性网络表征中采用基于二阶接近度的共同邻居方法设计了节点的属性相似度矩阵，通过图分解方法得到属性网络节点的表征向量。图分解采用梯度下降的方式进行迭代，优化求解目标函数，下面将给出增量场景下基于SR算法的属性网络表征算法iSR(incremental Similarity Representation)。
 
+在这里只对增加一个节点的场景进行讨论，添加多个节点可以推广得到。记网络中时刻$t$属性网络为$G^{(t)} = (V^{(t)}, E^{(t)},\textbf{H}^{(t)})$，节点一阶属性相似度矩阵为$\textbf{S}^{H(t)}$，属性网络表征向量为$\textbf{X}^{(t)}$，时刻$t+1$对应变量则将上标$(t)$更改成$(t+1)$，其中新增节点编号为$n$，节点$n$的邻居集合为$N(n)$，时刻$t+1$属性网络的表征算法过程如\textbf{算法4.3}所述。
 
+第1-4行，计算增量节点属性相似度。计算新增节点与其所有邻居的属性相似度，生成向量$\Delta\textbf{S}^{H}$，表征新增节点与其他节点的相似度向量，其中$\Delta\textbf{S}^{H}_i$表示新增节点与节点$i$的属性相似度，对于任意与新增节点不相邻的节点$k$，有$\Delta\textbf{S}^{H}_i=0$ 。
+
+第5-8行，计算相似度矩阵变化。根据新增节点的相似度向量，对时刻$t$的节点一阶接近度矩阵进行增广得到$\textbf{S}^{H(t+1)}$，并计算出属性网络节点相似度矩阵的变化量$\Delta S$，其中$\Delta S$由一阶接近度的相似度和二阶接近度的相似度组合而成。
+
+第9-19行，梯度下降进行优化求解。对变化量$\Delta S$中每一个非零元素所对应的位置$(i,j)$，进行一次梯度下降迭代优化，直至达到误差限。
+\begin{figure}[htb]
+	\centering
+	\begin{minipage}{.7\linewidth}
+		\begin{algorithm}[H]
+			\small
+			\caption{iSR算法}
+			\begin{algorithmic}[1]
+				\Require
+				\Statex $\textbf{H}$ :节点属性矩阵$R^{|V|\times d}$
+				\Statex$\textbf{S}^{H(t)}$ :时刻$t$节点一阶属性相似度矩阵
+				\Statex $n, N(n), H(n)$:新增节点、节点邻居和节点属性 
+				\Statex $\epsilon$:迭代终止误差
+				\Ensure
+				\Statex $\textbf{X}^{(t+1)}$ :属性网络表征向量矩阵
+				\Statex
+				\State 初始化新增节点一阶属性相似度向量$\Delta\textbf{S}^{H} \in R^{|V|\times 1}$，各元素为0
+				\State \textbf{for} (i) in N(n) :
+				\State \quad $\Delta\textbf{S}^{H}_i =Sim(H_i, H(n))$
+				\State \textbf{end for}
+				\State 更新节点相似度矩阵$\textbf{S}^{H(t+1)} = \begin{bmatrix}  \textbf{S}^{H(t)} & \Delta\textbf{S}^{H}& ;
+				(\Delta\textbf{S}^{H})^T & 0 \end{bmatrix}$ 
+				\State 计算属性网络节点相似度矩阵变化量$\Delta S = (\Delta\textbf{S}^{H})^T\cdot \textbf{S}^{H(t+1)} +\begin{bmatrix}  0 & \Delta\textbf{S}^{H}& ;
+				(\Delta\textbf{S}^{H})^T & 0 \end{bmatrix}$
+				\State 随机初始化属性表征向量$X^{(t+1)}_n$
+				\State $\textbf{X}^{(t+1)} = \begin{bmatrix}
+				\textbf{X}{(t)}; (X^{(t+1)}_n)^T
+				\end{bmatrix}$
+				\State $t \leftarrow 1$
+				\State do:
+				\State \quad $\textbf{X}^{\prime(t+1)}\leftarrow\textbf{X}^{(t+1)} $
+				\State\quad \textbf{for} (i,j) in $\Delta\textbf{S}_{ij}$ and $\Delta\textbf{S}_{ij}\ne 0$ :
+				\State\qquad $\eta \leftarrow \frac{1}{\sqrt{t}}$
+				\State\qquad $t\leftarrow t+1$
+				\State\qquad $\textbf{X}^{(t+1)}_i \leftarrow \textbf{X}^{(t+1)}_i + \eta [(\Delta\textbf{S}_{ij}-<\textbf{X}^{(t+1)}_i, \textbf{X}^{(t+1)}_j>)\textbf{X}^{(t+1)}_j - \lambda \textbf{X}^{(t+1)}_i]$
+				\State \quad \textbf{end for}
+				\State 当$|\textbf{X}^{\prime(t+1)}-\textbf{X}^{(t+1)}|^2<\epsilon$停止迭代
+				\State 返回 $\textbf{X}^{(t+1)}$
+			\end{algorithmic}
+		\end{algorithm}
+	\end{minipage}
+\end{figure}
+
+\subsection{iSR算法分析}
+iSR算法计算与新增节点相邻的点之间的属性相似度，计算复杂度为$\mathcal{O}(1)$；在通过计算节点共同邻居矩阵得到最终是属性网络相似度的复杂度为$\mathcal{O}(|V|)$，考虑到属性相似度矩阵的稀疏性，iSR算法最坏情况的计算复杂度为$\mathcal{O}(|V|)$。
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %----------------------------------------     本章小结     ---------------------------------------%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{本章小结}
+本章通过基于图分解的方式提出了基于相似度的属性表征算法SR1，再从复杂度和结合网络结构信息角度对SR1算法提出改进，提出了基于共同邻居的属性网络表征算法SR，并在增量场景下，提出了对应的增量属性网络表征算法iSR，并对各个算法进行了复杂度分析。
