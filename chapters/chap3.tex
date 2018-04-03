@@ -182,7 +182,7 @@ D'_{ii} = \sum_j{S_{ij}}
 \section{增量场景下的图表征算法}
 前面一节提出了应用高阶接近度的拉普拉斯特征映射方法来对网络进行表征，对于真实应用中的网络往往是存在动态变化的。比如在社交媒体上，网络中时刻会存在用户进行更新状态、添加好友等操作，这些操作都是会引起社交关系发生变化的，从数学角度看就是网络中的连边会出现增删等情况；除此之外社交媒体中，也会存在有新的用户注册加入的情况，这种情况即对应网络中有新加入的节点。对于传统的图表征算法来说，真实场景下的动态网络会带来很大的挑战，传统算法基本都是离线模型，对于变化后的网络只能进行重新计算或学习，当网络规模很大时，离线模型是不具备伸缩性的，也不适合于在线应用中使用。因此对于大型动态网络需要提出一种增量式的学习方式来实现快速、可扩展的表征学习。
 
-下面将提出一种增量的图表征算法，应用于增量场景下的图表征学习，在这里本文采用文献\cite{chi2007evolutionary}中采用的假设，认为在时刻$t$和时刻$t+1$之间网络的变化是平缓而微小的，可采用矩阵摄动理论\cite{stewart1990matrix}进行分析和处理。如前文中提到的，网络中的变化场景分两类：1. 节点数不变，网络连边的增删；2.节点新增；因此下面将分别就这两种情况进行分析和处理,
+下面将提出一种增量的图表征算法，应用于增量场景下的图表征学习，在这里本文采用文献\cite{chi2007evolutionary}中采用的假设，认为在时刻$t$和时刻$t+1$之间网络的变化是平缓而微小的，可采用矩阵摄动理论\cite{stewart1990matrix, asucheetah}进行分析和处理。如前文中提到的，网络中的变化场景分两类：1. 节点数不变，网络连边的增删；2.节点新增；因此下面将分别就这两种情况进行分析和处理,
 图\ref{fig:incremental_network_embedding}中展示了算法的流程框架。
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -358,7 +358,7 @@ D'_{ii} = \sum_j{S_{ij}}
 \begin{equation}\label{defin:delta_w}
 \begin{aligned}
 \textbf{W} &= \textbf{D}^{\prime\frac{1}{2}}\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}} \\
-&=\textbf{D}^{\prime-\frac{1}{2}}(\textbf{A}\textbf{A}-\textbf{D})\textbf{D}^{\prime-\frac{1}{2}}
+&=\textbf{D}^{\prime-\frac{1}{2}}\textbf{A}\textbf{A}\textbf{D}^{\prime-\frac{1}{2}}
 \end{aligned}
 \end{equation}
 下面考虑共同邻居矩阵$\textbf{S}_{CN}$的变化。
@@ -497,7 +497,25 @@ D'_{ii} = \sum_j{S_{ij}}
 	\end{minipage}
 \end{figure}
 在节点出现新增情况时，矩阵\textbf{W}相对上一个时刻进行了增广。在\textbf{算法3.3}中第一行，$\Delta\textbf{W}$在进行特征值分解的时候，应采用取前$m$个特征值对应的特征向量，在保证精度的同时降低计算复杂度，比如只对$\Delta\textbf{W}$只取一维特征向量，也即主特征值对应的特征向量，则可以利用幂法及其加速方法来求解来降低复杂度。 
-\remark{\textbf{$\Delta\textbf{W}$}特征分解维度的讨论}
+\remark{\textbf{$\Delta\textbf{W}$}特征分解维度的讨论}前文的讨论中，通过QR分解进行增量表征的过程中需要假设$\Delta\textbf{W}$与$\textbf{W}$中特征向量线性无关，在实际情况中这一点得不到保证,下面对这一点进行讨论。
+
+假设$\textbf{W}$的特征向量矩阵为$\textbf{X}^{(t)T}=\begin{bmatrix} \textbf{X}^{(t)T}_1 | & \textbf{X}^{(t)T}_2 | & \cdots | & \textbf{X}^{(t)T}_k \end{bmatrix}$,$\Delta\textbf{W}$的特征向量矩阵为$\textbf{Y}^{T}=\begin{bmatrix} \textbf{Y}^T_1 | & \textbf{Y}^T_2 | & \cdots | & \textbf{Y}^T_m \end{bmatrix}$，其中有$\textbf{Y}^T_1 = \sum_{i=1}^{k} \alpha_i \textbf{X}^{(t)T}_i $,则有：
+\begin{equation}\label{time_t1}
+\begin{aligned}
+\textbf{W}^{(t+1)} &= \textbf{X}^{(t+1)T} \Lambda^{(t+1)} \textbf{X} ^{(t+1)} \\
+&= \textbf{W}^{(t)} + \Delta \textbf{W} \\
+&= \textbf{X}^{(t)T} \Lambda^{(t)} \textbf{X} ^{(t)} +  \textbf{Y}^{T} \textbf{Z}  \textbf{Y} \\
+&= \sum_{i=1}^{k}\textbf{X}^{(t)T}_i \Lambda_i  \textbf{X}^{(t)}_i + (\sum_{i=1}^{k} \alpha_i \textbf{X}^{(t)T}_i) Z_1 (\sum_{i=1}^{k} \alpha_i \textbf{X}^{(t)T}_i)^T +\sum_{i=2}^{m}\textbf{Y}^{T}_i Z_i  \textbf{Y}_i \\
+&= \sum_{i=1}^{k}\textbf{X}^{(t)T}_i (\Lambda_i+\alpha_i^2)  \textbf{X}^{(t)}_i +
+\sum_{i=2}^{m}\textbf{Y}^{T}_i Z_i  \textbf{Y}_i \\
+&= \begin{bmatrix} \textbf{X}^{(t)T} & \tilde{\textbf{Y}^{T}}\end{bmatrix}
+\begin{bmatrix}  \tilde{\Lambda^{(t)}} & \textbf{0}\\
+\textbf{0} & \tilde{\textbf{Z}}
+\end{bmatrix}
+\begin{bmatrix} \textbf{X}^{(t)} \\ \tilde{\textbf{Y}}\end{bmatrix}
+\end{aligned}
+\end{equation}
+其中$\tilde{\textbf{Y}} =\begin{bmatrix}  \textbf{Y}^T_2 | & \cdots | & \textbf{Y}^T_m \end{bmatrix}$, $\tilde{\Lambda^{(t)}}_i = \Lambda^{(t)}_i+\alpha_i^2$，于是可以转化为原假设中特征向量非线性相关的情况。
 \section{算法分析}
 这一部分将对上述两个算法的计算复杂度进行分析。
 \begin{itemize}
