@@ -335,11 +335,12 @@ D'_{ii} = \sum_j{S_{ij}}
 				\Statex $\textbf{X} ^{(t)},\Lambda^{(t)}$ :网络在时刻$t$的网络表征结果和特征值对角矩阵
 				\Statex $\Delta\textbf{W}$ :网络从时刻$t$到$t+1$的矩阵$\textbf{W}$的变化量
 				\Statex $k$ : 表征向量维数
+				\Statex $m$ : 变化量$\Delta\textbf{W}$的特征分解维数
 				\Ensure
 				\Statex $\textbf{X}^{(t+1)T}$ :时刻$t+1$的网络表征向量矩阵
 				\Statex $\Lambda^{(t+1)}$:时刻$t+1$网络对应的特征值对角矩阵
 				\Statex
-				\State 对$\Delta\textbf{W}$特征值分解，$\Delta\textbf{W} =  \textbf{Y}^{T} \textbf{Z}  \textbf{Y}$
+				\State 对$\Delta\textbf{W}$特征值分解，$\Delta\textbf{W} =  \textbf{Y}^{T} \textbf{Z}  \textbf{Y}$，取前m个特征向量
 				\State 对$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix}$进行QR分解，$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix} = \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{R}$
 				\State 令$\textbf{M} = \textbf{R}\begin{bmatrix}  \Lambda^{(t)} & \textbf{0};
 				\textbf{0} & \textbf{Z} \end{bmatrix}
@@ -357,7 +358,7 @@ D'_{ii} = \sum_j{S_{ij}}
 
 \begin{equation}\label{defin:delta_w}
 \begin{aligned}
-\textbf{W} &= \textbf{D}^{\prime\frac{1}{2}}\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}} \\
+\textbf{W} &= \textbf{D}^{\prime\frac{1}{2}}\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}} 
 &=\textbf{D}^{\prime-\frac{1}{2}}\textbf{A}\textbf{A}\textbf{D}^{\prime-\frac{1}{2}}
 \end{aligned}
 \end{equation}
@@ -479,11 +480,12 @@ D'_{ii} = \sum_j{S_{ij}}
 				\Statex $\textbf{X} ^{(t)},\Lambda^{(t)}$ :网络在时刻$t$的网络表征结果和特征值对角矩阵
 				\Statex $\Delta\textbf{W}$ :网络从时刻$t$到$t+1$的矩阵$\textbf{W}$的变化量
 				\Statex $k$ : 表征向量维数
+				\Statex $m$ : 变化量$\Delta\textbf{W}$的特征分解维数
 				\Ensure
 				\Statex $\textbf{X}^{(t+1)T}$ :时刻$t+1$的网络表征向量矩阵
 				\Statex $\Lambda^{(t+1)}$:时刻$t+1$网络对应的特征值对角矩阵
 				\Statex
-				\State 对$\Delta\textbf{W}$特征值分解，$\Delta\textbf{W} =  \textbf{Y}^{T} \textbf{Z}  \textbf{Y}$
+				\State 对$\Delta\textbf{W}$特征值分解，$\Delta\textbf{W} =  \textbf{Y}^{T} \textbf{Z}  \textbf{Y}$，取前m个特征向量
 				\State 对$ \textbf{X}^{(t)T}$进行补0增广，增加一行0。
 				\State 对$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix}$进行QR分解，$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix} = \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{R}$
 				\State 令$\textbf{M} = \textbf{R}\begin{bmatrix}  \Lambda^{(t)} & \textbf{0};

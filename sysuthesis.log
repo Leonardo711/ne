@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  2 APR 2018 18:34
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  4 APR 2018 22:32
 entering extended mode
 **./sysuthesis.tex
 (sysuthesis.tex
@@ -2032,9 +2032,9 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 45.
 Package tocbasic Info: Using my definition of `\numberline' on input line 46.
 Package tocbasic Info: Using my definition of `\numberline' on input line 47.
 Package tocbasic Info: Using my definition of `\numberline' on input line 50.
-Package tocbasic Info: Using my definition of `\numberline' on input line 54.
+Package tocbasic Info: Using my definition of `\numberline' on input line 53.
+Package tocbasic Info: Using my definition of `\numberline' on input line 55.
 Package tocbasic Info: Using my definition of `\numberline' on input line 56.
-Package tocbasic Info: Using my definition of `\numberline' on input line 57.
 )
 \tf@toc=\write6
 \openout6 = `sysuthesis.toc'.
@@ -2168,11 +2168,14 @@ File: figures/CN_incremental.png Graphic file (type QTm)
 <use  "figures/CN_incremental.png" > [31] [32]
 File: figures/incremental_network_embedding.png Graphic file (type QTm)
 
-<use  "figures/incremental_network_embedding.png" > [33] [34] [35]) [36]
+<use  "figures/incremental_network_embedding.png" > [33]
+Underfull \vbox (badness 2261) has occurred while \output is active []
+
+ [34]
+[35]) [36]
 \openout2 = `chapters/chap4.aux'.
 
-
-(chapters/chap4.tex
+ (chapters/chap4.tex
 chapter 4.
 
 Underfull \vbox (badness 5533) has occurred while \output is active []
@@ -2217,68 +2220,100 @@ chapter 5.
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 45.
+               Default added (so using `htbp') on input line 49.
 
 [48] [49] [50] [51]
 File: figures/link_prediction_split.png Graphic file (type QTm)
  <use  "figures/link_prediction_split.png" >
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 163.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 172.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 163.
+(Font)              size <10.95> substituted on input line 172.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 163.
+(Font)              size <10.95> substituted on input line 172.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 163.
+(Font)              size <10.95> substituted on input line 172.
 
 File: figures/link_predict_frame.png Graphic file (type QTm)
 <use  "figures/link_predict_frame.png" > [52]
 File: figures/inc_sample.png Graphic file (type QTm)
  <use  "figures/inc_sample.png" >
-[53]) [54]
+[53]
+File: figures/sample_split.png Graphic file (type QTm)
+ <use  "figures/sample_split.png" > [54]
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 226.
+
+
+LaTeX Warning: No positions in optional float specifier.
+               Default added (so using `htbp') on input line 248.
+
+File: figures/off_vs_on.png Graphic file (type QTm)
+<use  "figures/off_vs_on.png" >
+Overfull \hbox (20.2013pt too wide) in paragraph at lines 271--272
+ [][] 
+ []
+
+[55]
+File: figures/parameter_analysis.png Graphic file (type QTm)
+ <use  "figures/parameter_analysis.png" >
+Underfull \vbox (badness 5175) has occurred while \output is active []
+
+ [56]
+File: figures/runtime.png Graphic file (type QTm)
+
+<use  "figures/runtime.png" >
+Overfull \hbox (20.2013pt too wide) in paragraph at lines 289--290
+ [][] 
+ []
+
+File: figures/parameter_analysis.png Graphic file (type QTm)
+<use  "figures/parameter_analysis.png" > [57]) [58] [59]
 \openout2 = `chapters/chap6.aux'.
 
  (chapters/chap6.tex
+[60
+
+
+
+
+]
 chapter 6.
-) [55
+) [61] [62
 
 
 
-
-] [56
-
+] (sysuthesis.bbl [63
 
 
-] (sysuthesis.bbl [57
-
-
-] [58] [59]) [60]
+] [64] [65]) [66]
 No file sysuthesis.ind.
-[61
+[67
 
 
 
 
-] [62
-
-
-]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 178.
- [63
+] [68
 
 
 ]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 178.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 180.
+ [69
+
+
+]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 180.
  (sysuthesis.aux (chapters/chap1.aux) (chapters/chap2.aux)
 (chapters/chap3.aux) (chapters/chap4.aux) (chapters/chap5.aux)
 (chapters/chap6.aux))
-Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 178.
-Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 178.
+Package atveryend Info: Empty hook `AtVeryEndDocument' on input line 180.
+Package atveryend Info: Empty hook `AtEndAfterFileList' on input line 180.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -2287,15 +2322,15 @@ LaTeX Font Warning: Size substitutions with differences
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 178.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 180.
  ) 
 Here is how much of TeX's memory you used:
- 34335 strings out of 427832
- 622136 string characters out of 3152415
- 829914 words of memory out of 3000000
- 37841 multiletter control sequences out of 15000+200000
+ 34356 strings out of 427832
+ 622725 string characters out of 3152415
+ 830262 words of memory out of 3000000
+ 37858 multiletter control sequences out of 15000+200000
  16504 words of font info for 129 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  58i,17n,74p,10407b,1228s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on sysuthesis.pdf (73 pages).
+Output written on sysuthesis.pdf (79 pages).
