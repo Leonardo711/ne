@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  4 APR 2018 22:32
+This is XeTeX, Version 3.14159265-2.6-0.99998 (MiKTeX 2.9.6300 64-bit) (preloaded format=xelatex 2018.3.19)  5 APR 2018 16:06
 entering extended mode
 **./sysuthesis.tex
 (sysuthesis.tex
@@ -2273,8 +2273,8 @@ Overfull \hbox (20.2013pt too wide) in paragraph at lines 289--290
  [][] 
  []
 
-File: figures/parameter_analysis.png Graphic file (type QTm)
-<use  "figures/parameter_analysis.png" > [57]) [58] [59]
+File: figures/demension_speedup.png Graphic file (type QTm)
+<use  "figures/demension_speedup.png" > [57] [58]) [59]
 \openout2 = `chapters/chap6.aux'.
 
  (chapters/chap6.tex
@@ -2285,11 +2285,10 @@ File: figures/parameter_analysis.png Graphic file (type QTm)
 
 ]
 chapter 6.
-) [61] [62
+[61]) [62] (sysuthesis.bbl [63
 
 
 
-] (sysuthesis.bbl [63
 
 
 ] [64] [65]) [66]
@@ -2325,10 +2324,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 180.
  ) 
 Here is how much of TeX's memory you used:
- 34356 strings out of 427832
- 622725 string characters out of 3152415
- 830262 words of memory out of 3000000
- 37858 multiletter control sequences out of 15000+200000
+ 34358 strings out of 427832
+ 622778 string characters out of 3152415
+ 830256 words of memory out of 3000000
+ 37859 multiletter control sequences out of 15000+200000
  16504 words of font info for 129 fonts, out of 3000000 for 9000
  1328 hyphenation exceptions out of 8191
  58i,17n,74p,10407b,1228s stack positions out of 5000i,500n,10000p,200000b,50000s
