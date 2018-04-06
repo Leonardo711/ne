@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{网络中的增量图表征算法}
 \section{引言}
-	社交网络的蓬勃发展使得信息网络研究领域面临越来越多的机遇和挑战。传统的网络特征的表示方法都是以邻接矩阵、拉普拉斯矩阵等离散型或者以中心度、出入度等人工规则来表达，然而在社交网络中随着网络节点的增加，这些表达方法的复杂度和有效性都会出现比较大的问题。近年来机器学习、人工智能的飞速发展，复杂信息网络也因此受益，对网络的表征学习吸引了越来越多的研究兴趣。类似于自然语言中的词向量表征的发展，单词的词频或逆文档频率(TF-IDF)等人工规则表征对于一个单词的描述太过简略，词向量表征则将单词映射成一个向量，向量之间可以计算相似度、并进行加减等操作，对于词的描述在数学意义上更加丰富，图表征学习也是需要从对网络的离散型或人工规则型表达发展出连续性且具有更丰富表征意义的向量表示算法。对于图表征得到的节点表征向量矩阵,需要应用于后续的机器学习任务，不同的机器学习任务对应不同的图挖掘问题，比如对节点向量进行聚类学习，相当于图挖掘领域的社区发现过程；对网络中连边进行分类任务，相当于图挖掘领域的链路预测任务。另外，图表征向量矩阵可用于计算相似度、节点分类、可视化、节点推荐等任务。
+	社交网络的蓬勃发展使得信息网络研究领域面临越来越多的机遇和挑战。传统的网络特征的表示方法都是以邻接矩阵、拉普拉斯矩阵等离散型或者以中心度、出入度等人工规则来表达，然而在社交网络中随着网络节点的增加，这些表达方法的复杂度和有效性都会出现比较大的问题。近年来机器学习、人工智能的飞速发展，包含复杂信息的网络型数据方面的研究也因此受益，对网络的表征学习吸引了越来越多的研究兴趣。类似于自然语言中的词向量表征的发展，单词的词频或逆文档频率(TF-IDF)等人工规则表征对于一个单词的描述太过简略，词向量表征则将单词映射成一个向量，向量之间可以计算相似度、并进行加减等操作，对于词的描述在数学意义上更加丰富，图表征学习也是需要从对网络的离散型或人工规则型表达发展出连续性且具有更丰富表征意义的向量表示算法。对于图表征得到的节点表征向量矩阵,需要应用于后续的机器学习任务，不同的机器学习任务对应不同的图挖掘问题，比如对节点向量进行聚类学习，相当于图挖掘领域的社区发现过程；对网络中连边进行分类任务，相当于图挖掘领域的链路预测任务。另外，图表征向量矩阵可用于计算相似度、节点分类、可视化、节点推荐等任务。
 	
 	本章将提出一种基于高阶接近度的图表征算法，并通过分析不同增量场景的模型变化，提出在增量场景下对应的表征算法。
 	
@@ -49,17 +49,18 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 在图表征学习中，最早的方法借鉴与流形学习(manifold learning)的算法，其中Belkin和Niyogi提出的拉普拉斯特征映射是流形学习中的一种典型算法，该算法假设表征映射后得到的表征向量需要保证原网络中一阶接近度，也就是需要保证网络中互为邻居的节点对连边权重越大，那么在表征向量空间就应该保证越接近，也即优化如下问题：
 \begin{equation}\label{laplacian_st}
 \begin{aligned}
-\min_{X^TDX=I} \phi(X) &= \frac{1}{2}\sum_{i,j}|X_i - X_j|^2A_{ij} \\
-&= \frac{1}{2}(\sum_{i,j}(x_i^2+x_j^2-2x_ix_j) A_{ij}) \\
-&=\frac{1}{2} (\sum_ix_i^2D_{ii} +\sum_j x_j^2 D_{jj} - 2\sum_{i,j}x_i x_j A_{ij}) \\
-&= tr(X^TLX)
+\min_{\textbf{X}^T\textbf{D}\textbf{X}=\textbf{I}} \Phi(\textbf{X}) &= \frac{1}{2}\sum_{i,j}|\textbf{X}_i - \textbf{X}_j|^2\textbf{A}_{ij} \\
+&= \frac{1}{2}(\sum_{i,j}(\textbf{x}_i^2+\textbf{x}_j^2-2\textbf{x}_i\textbf{x}_j) \textbf{A}_{ij}) \\
+&=\frac{1}{2} (\sum_i\textbf{x}_i^2\textbf{D}_{ii} +\sum_j \textbf{x}_j^2 \textbf{D}_{jj} - 2\sum_{i,j}\textbf{x}_i \textbf{x}_j \textbf{A}_{ij}) \\
+&= tr(\textbf{X}^T\textbf{L}\textbf{X})
 \end{aligned}
 \end{equation}
-其中$X$为表征向量矩阵，$A$为图的邻接矩阵，$D$为对角元素为节点度的对角阵，$L$为拉普拉斯矩阵。对式(\ref{laplacian_st}),根据谱图理论\cite{chung1997spectral}可以通过拉普拉斯算子的最值特征向量来进行逼近，上述问题可以转化为(推导过程如式(\ref{laplacian_reduce}))：
+
+其中$\textbf{}$为表征向量矩阵，$\textbf{A}$为图的邻接矩阵，$\textbf{D}$为对角元素为节点度的对角阵，$\textbf{L}$为拉普拉斯矩阵。对式(\ref{laplacian_st}),根据谱图理论\cite{chung1997spectral}可以通过拉普拉斯算子的最值特征向量来进行逼近，上述问题可以转化为(推导过程如式(\ref{laplacian_reduce}))：
 \begin{equation}
-\max_{X^TX = I} tr(X^TWX)
+\max_{\textbf{U}^T\textbf{U} = \textbf{I}} tr(\textbf{U}^T\textbf{WU})
 \end{equation}
-其中$W = D^{-\frac{1}{2}}AD^{-\frac{1}{2}} $。为得到图表征向量就转变成求$W$矩阵的前$k$大的特征值所对应的特征向量。
+其中$W = \textbf{D}^{-\frac{1}{2}}\textbf{AD}^{-\frac{1}{2}} $。为得到图表征向量就转变成求$W$矩阵的前$k$大的特征值所对应的特征向量。
 
 拉普拉斯特征映射假设中只考虑到保留一阶接近度，对于图表征来说，一阶接近度所表征的信息是远远不够的，因此需要引进更高阶的接近度来表征向量，比如LINE算法引入了二阶接近度；DeepWalk算法引进了$l$(游走半径)阶接近度，对比实验也验证了在保留高阶接近度的算法中后续的节点分类等机器学习任务效果更好。
 
@@ -67,13 +68,13 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 在这一部分，主要集中在无向图中的图表征过程，因此在保证得到节点的表征向量的同时，对称性也在考虑之列。基于对称性这个基本假设，提出基于拉普拉斯特征映射改进的目标函数，用来保留高阶接近度：
 \begin{equation}\label{high_order_condition}
 %\begin{aligned}
-	\min_{X^TD'X=I} \phi(X) = \frac{1}{2}\sum_{i,j}|X_i - X_j|^2S_{ij} 
+	\min_{\textbf{X}^T\textbf{D}'\textbf{X}=\textbf{I}} \Phi(\textbf{X}) = \frac{1}{2}\sum_{i,j}|\textbf{X}_i - \textbf{X}_j|^2\textbf{S}_{ij} 
 %	&= \frac{1}{2}(\sum_{i,j}(y_i^2+y_j^2-2y_iy_j) S_{ij}) \\
 %	&=\frac{1}{2} (\sum_iy_i^2D'_{ii} +\sum_j y_j^2 D'_{jj} - 2\sum_{i,j}y_i y_j S_{ij}) \\
 %	&= tr(X^T(D'-S)X)
 %\end{aligned}
 \end{equation}
-其中约束条件中的$D'$为区别于$S$矩阵为邻接矩阵时对应的对角矩阵$D$，根据不同的$S$矩阵进调整。$S$矩阵是通过保留高阶接近度的计算方法得到的，比如共同邻居(Common Neighbors,CN)\cite{newman2001clustering}、Adamic-Adar系数(AA)\cite{adamic2003friends}、资源分配系数(Resource Allocation,RA)\cite{zhou2009predicting}、Jaccard系数、Katz系数、个性化Pagerank(Personalized Pagerank)\cite{wang2015link}等方式，后文将称$S$矩阵为\textbf{相似度矩阵$S$}。下面将重点介绍前三种计算方法。
+其中约束条件中的$\textbf{D}'$为区别于$\textbf{S}$矩阵为邻接矩阵时对应的对角矩阵$\textbf{D}$，根据不同的$\textbf{S}$矩阵进调整。$\textbf{S}$矩阵是通过保留高阶接近度的计算方法得到的，比如共同邻居(Common Neighbors,CN)\cite{newman2001clustering}、Adamic-Adar系数(AA)\cite{adamic2003friends}、资源分配系数(Resource Allocation,RA)\cite{zhou2009predicting}、Jaccard系数、Katz系数、个性化Pagerank(Personalized Pagerank)\cite{wang2015link}等方式，后文将称$\textbf{S}$矩阵为\textbf{相似度矩阵$\textbf{S}$}。下面将重点介绍前三种计算方法。
 
 \definition{\textbf{共同邻居}:}
 共同邻居计算方法是目前用来衡量节点接近度中使用最广泛的之一，因为这种计算非常简单，节点对$i$,$j$之间的共同邻居值就是跟$i$,$j$都有直接连边的节点数，也即：
