@@ -74,7 +74,7 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 %	&= tr(X^T(D'-S)X)
 %\end{aligned}
 \end{equation}
-其中约束条件中的$\textbf{D}'$为区别于$\textbf{S}$矩阵为邻接矩阵时对应的对角矩阵$\textbf{D}$，根据不同的$\textbf{S}$矩阵进调整。$\textbf{S}$矩阵是通过保留高阶接近度的计算方法得到的，比如共同邻居(Common Neighbors,CN)\cite{newman2001clustering}、Adamic-Adar系数(AA)\cite{adamic2003friends}、资源分配系数(Resource Allocation,RA)\cite{zhou2009predicting}、Jaccard系数、Katz系数、个性化Pagerank(Personalized Pagerank)\cite{wang2015link}等方式，后文将称$\textbf{S}$矩阵为\textbf{相似度矩阵$\textbf{S}$}。下面将重点介绍前三种计算方法。
+其中约束条件中的$\textbf{D}'$为区别于$\textbf{S}$矩阵为邻接矩阵时对应的对角矩阵$\textbf{D}$，根据不同的$\textbf{S}$矩阵进调整。$\textbf{S}$矩阵是通过保留高阶接近度的计算方法得到的，比如共同邻居(Common Neighbors,CN)\cite{newman2001clustering}、Adamic-Adar系数(AA)\cite{adamic2003friends}、资源分配系数(Resource Allocation,RA)\cite{zhou2009predicting}、Jaccard系数、Katz系数、个性化Pagerank(Personalized Pagerank)\cite{wang2015link}等方式，后文将称$\textbf{S}$矩阵为\textbf{相似度矩阵$\textbf{S} $}。下面将重点介绍前三种计算方法。
 
 \definition{\textbf{共同邻居}:}
 共同邻居计算方法是目前用来衡量节点接近度中使用最广泛的之一，因为这种计算非常简单，节点对$i$,$j$之间的共同邻居值就是跟$i$,$j$都有直接连边的节点数，也即：
