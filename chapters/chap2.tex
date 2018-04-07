@@ -84,7 +84,7 @@ f_G: \textbf{A}\rightarrow R^{|V| \times d} \qquad s.t.\quad d<<|V|
 \begin{equation}
 \min_{\textbf{X}^T\textbf{D}\textbf{X}=\textbf{I}} \quad tr(\textbf{X}^T\textbf{L}\textbf{X})
 \end{equation}
-对约束条件进行利用，优化表达式，令$X=\textbf{D}^{-\frac{1}{2}}\textbf{U}$，其中$\textbf{U}^T\textbf{U} = \textbf{I}$，代入约束条件中可证明正确性。于是原来的优化问题转化成如下的带约束优化的优化问题：
+对约束条件进行利用，优化表达式，令$\textbf{X}=\textbf{D}^{-\frac{1}{2}}\textbf{U}$，其中$\textbf{U}^T\textbf{U} = \textbf{I}$，代入约束条件中可证明正确性。于是原来的优化问题转化成如下的带约束优化的优化问题：
 \begin{equation}\label{laplacian_reduce}
 \begin{aligned}
 \min_{\textbf{U}^T\textbf{U} = \textbf{I}} &\quad tr(\textbf{U}^T\textbf{D}^{-\frac{1}{2}}\textbf{L}\textbf{D}^{-\frac{1}{2}}\textbf{U}) \\
@@ -159,17 +159,17 @@ DeepWalk算法通过统计，论证网络的无标度特性与语料库中单词
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %---------------------------------------     属性网络图表征算法     ----------------------------------------%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{属性网络图表征}
+\section{属性网络图表征算法}
 基于结构的图表征算法在很多应用都表现出较好的性能，比如文本分类、链路预测等，但是真实应用场景下的网络中，节点往往包含着丰富的属性信息。比如在论文合作网络中，除了连接紧密或者处于相同社区的研究人员会合作，在研究内容上一致或接近的研究人员也比较有可能会产生合作，也就是说，合作网络中研究人员的研究内容属性会影响链路预测的结果；对于类似维基百科的富文本网络，每个节点代表一篇文章，这些文章的内容、主题都可以作为描述这个节点的特征，而成为表征向量的一部分。比较朴素的方法是将结构表征向量和节点属性特征直接并起来作为新的表征向量，这种方式没有利用好结构和属性特征之间的联系，在\cite{li2017attributed}中则采用相对优化的投影融合的方式进行结合。更加有明显结合意义的方法是在图表征的学习框架中嵌入节点属性信息同时进行优化学习。下面主要介绍其中一种算法TADW(Text-Associated DeepWalk)算法，该算法解决的问题是有大量文本信息的图表征问题。
 
 \subsection{TADW算法}
 TADW算法是基于DeepWalk算法的改进方法，首先文中先提出并证明了DeepWalk算法与特定矩阵分解是等价的：设矩阵$\textbf{M}\in R^{|V|\times |V|}$，其中$\textbf{M}_{ij}$用来表示在固定游走步长时从节点$i$到节点$j$的对数平均概率，对矩阵$\textbf{M}$进行正则化低秩矩阵分解\cite{yu2014large}，得到矩阵$\textbf{W}^T \in R^{|V| \times k}$和矩阵$\textbf{H} \in R^{k\times |V|}$。也即优化如下目标函数：
 \begin{equation}
-	\min_{\textbf{W},\textbf{H}} \sum(\textbf{M}_{ij}-(\textbf{W}^TH)_{ij})^2 +\frac{\lambda}{2}(|\textbf{W}|^2+|\textbf{H}|^2)
+	\min_{\textbf{W},\textbf{H}} \sum(\textbf{M}_{ij}-(\textbf{W}^T\textbf{H})_{ij})^2 +\frac{\lambda}{2}(|\textbf{W}|^2+|\textbf{H}|^2)
 \end{equation}
 其中$\lambda$为正则项系数；低秩矩阵分解仅仅基于矩阵$\textbf{M}$是低秩矩阵的假设，如果在矩阵中有附加特征，那么也是可以通过归纳矩阵补全(inductive matrix completion)\cite{natarajan2014inductive}来利用这些附加特征。
 
-在基于DeepWalk的矩阵分解形式，作者提出结合节点内容信息的方法TADW算法。在该算法中，作者将DeepWalk中的对数平均概率矩阵$\textbf{M}$进行简化，令$M = (\textbf{A}+\textbf{A}^2)/2$,并且修改DeepWalk中的$\textbf{M}$矩阵的分解目标，分解成三个矩阵$\textbf{W}^T \in R^{|V| \times k}$、矩阵$\textbf{H} \in R^{k\times f_t}$和矩阵$\textbf{T}\in R^f_t\times |V|$,其中矩阵$\textbf{T}$是固定的节点文本特征，通过TF-IDF(Term  Frequency-Inverse Document Frequency)计算生成，并可以通过奇异值分解(SVD)进行降维,$f_t$为文本特征维数，其目标函数为：
+在基于DeepWalk的矩阵分解形式，作者提出结合节点内容信息的方法TADW算法。在该算法中，作者将DeepWalk中的对数平均概率矩阵$\textbf{M}$进行简化，令$\textbf{M} = (\textbf{A}+\textbf{A}^2)/2$,并且修改DeepWalk中的$\textbf{M}$矩阵的分解目标，分解成三个矩阵$\textbf{W}^T \in R^{|V| \times k}$、矩阵$\textbf{H} \in R^{k\times f_t}$和矩阵$\textbf{T}\in R^f_t\times |V|$,其中矩阵$\textbf{T}$是固定的节点文本特征，通过TF-IDF(Term  Frequency-Inverse Document Frequency)计算生成，并可以通过奇异值分解(SVD)进行降维,$f_t$为文本特征维数，其目标函数为：
 \begin{equation}
 	\min_{\textbf{W},\textbf{H}} |\textbf{M}-\textbf{W}^T\textbf{H}\textbf{T}|^2 +\frac{\lambda}{2}(|\textbf{W}|^2+|\textbf{H}|^2)
 \end{equation}

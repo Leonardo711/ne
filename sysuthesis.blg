@@ -21,45 +21,45 @@ Warning--there's a publisher but no address in chung1997spectral
 Warning--empty journal in stewart1990matrix
 Warning--empty journal in asucheetah
 Warning--there's a publisher but no address in golub2012matrix
-You've used 56 entries,
+You've used 55 entries,
             2299 wiz_defined-function locations,
-            868 strings with 13926 characters,
-and the built_in function-call counts, 28700 in all, are:
-= -- 3009
-> -- 672
-< -- 29
-+ -- 312
-- -- 156
-* -- 2076
-:= -- 3712
-add.period$ -- 163
-call.type$ -- 56
-change.case$ -- 54
+            863 strings with 13657 characters,
+and the built_in function-call counts, 28086 in all, are:
+= -- 2942
+> -- 655
+< -- 28
++ -- 304
+- -- 152
+* -- 2036
+:= -- 3633
+add.period$ -- 159
+call.type$ -- 55
+change.case$ -- 53
 chr.to.int$ -- 0
-cite$ -- 64
-duplicate$ -- 1982
-empty$ -- 2907
-format.name$ -- 204
-if$ -- 6688
+cite$ -- 63
+duplicate$ -- 1942
+empty$ -- 2849
+format.name$ -- 199
+if$ -- 6540
 int.to.chr$ -- 0
-int.to.str$ -- 56
-missing$ -- 58
-newline$ -- 365
-num.names$ -- 56
-pop$ -- 282
+int.to.str$ -- 55
+missing$ -- 57
+newline$ -- 358
+num.names$ -- 55
+pop$ -- 277
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 650
+skip$ -- 631
 stack$ -- 0
-substring$ -- 3735
-swap$ -- 286
-text.length$ -- 29
+substring$ -- 3663
+swap$ -- 276
+text.length$ -- 28
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 8
-while$ -- 327
-width$ -- 58
-write$ -- 705
+while$ -- 319
+width$ -- 57
+write$ -- 691
 (There was 1 error message)

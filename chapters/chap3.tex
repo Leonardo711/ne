@@ -56,7 +56,7 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 \end{aligned}
 \end{equation}
 
-其中$\textbf{}$为表征向量矩阵，$\textbf{A}$为图的邻接矩阵，$\textbf{D}$为对角元素为节点度的对角阵，$\textbf{L}$为拉普拉斯矩阵。对式(\ref{laplacian_st}),根据谱图理论\cite{chung1997spectral}可以通过拉普拉斯算子的最值特征向量来进行逼近，上述问题可以转化为(推导过程如式(\ref{laplacian_reduce}))：
+其中$\textbf{X}$为表征向量矩阵，$\textbf{A}$为图的邻接矩阵，$\textbf{D}$为对角元素为节点度的对角阵，$\textbf{L}$为拉普拉斯矩阵。对式(\ref{laplacian_st}),根据谱图理论\cite{chung1997spectral}可以通过拉普拉斯算子的最小特征值对应的特征向量来进行逼近，上述问题可以转化为(推导过程如式(\ref{laplacian_reduce}))：
 \begin{equation}
 \max_{\textbf{U}^T\textbf{U} = \textbf{I}} tr(\textbf{U}^T\textbf{WU})
 \end{equation}
@@ -77,26 +77,26 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 其中约束条件中的$\textbf{D}'$为区别于$\textbf{S}$矩阵为邻接矩阵时对应的对角矩阵$\textbf{D}$，根据不同的$\textbf{S}$矩阵进调整。$\textbf{S}$矩阵是通过保留高阶接近度的计算方法得到的，比如共同邻居(Common Neighbors,CN)\cite{newman2001clustering}、Adamic-Adar系数(AA)\cite{adamic2003friends}、资源分配系数(Resource Allocation,RA)\cite{zhou2009predicting}、Jaccard系数、Katz系数、个性化Pagerank(Personalized Pagerank)\cite{wang2015link}等方式，后文将称$\textbf{S}$矩阵为\textbf{相似度矩阵$\textbf{S} $}。下面将重点介绍前三种计算方法。
 
 \definition{\textbf{共同邻居}:}
-共同邻居计算方法是目前用来衡量节点接近度中使用最广泛的之一，因为这种计算非常简单，节点对$i$,$j$之间的共同邻居值就是跟$i$,$j$都有直接连边的节点数，也即：
+共同邻居计算方法是目前用来衡量节点接近度中使用最广泛的方法之一，因为这种计算非常简单，节点对$i$,$j$之间的共同邻居值就是跟$i$,$j$都有直接连边的节点数，也即：
 \begin{equation}
 	CN(i,j) = |N(i) \cap N(j)|
 \end{equation}
 其中$N(i)$表示节点$i$的邻居节点集合，$|\cdot|$表示对集合计数。将共同邻居这个计算方法推广至矩阵形式，可以得到用来保留高阶接近度的相似度矩阵$S_{CN}$:
 \begin{equation}
-	S_{CN}(A) = A^2
+	S_{CN}(\textbf{A}) = \textbf{A}^2
 \end{equation}
-其中$A$为无向网络的邻接矩阵。
-\definition{\textbf{Adamic-Adar系数}:}Adamic-Adar系数最先是由Adamic和Adar提出来用来计算两个网页之间的相似度的，后来被广泛应用与社交网络分析之中。Adamic-Adar系数的计算方法类似于共同邻居，不同的是对不同的共同邻居采用不同的权重，该系数假定度较高的节点在共同邻居中所占权重较低，权重值为对数节点度的倒数，也即：
+其中$\textbf{A}$为无向网络的邻接矩阵。
+\definition{\textbf{Adamic-Adar系数}:}Adamic-Adar系数最先是由Adamic和Adar提出来用于计算两个网页之间的相似度，后来被广泛应用与社交网络分析之中。Adamic-Adar系数的计算方法类似于共同邻居，不同的是对不同的共同邻居采用不同的权重，该系数假定度较高的节点在共同邻居中所占权重较低，权重值为对数节点度的倒数，也即：
 \begin{equation}
 	AA(i,j) = \sum_{u \in N(i)\cap N(j)} \frac{1}{\log(|N(u)|)}
 \end{equation}
 其中$|N(u)|$也称为节点$u$的度。同样地，将Adamic-Adar系数计算方法推广至矩阵形式，在不考虑对角线元素的情况下，可以得到对应用来保留高阶接近度的相似度矩阵$S_{AA}$:
 \begin{equation}
-	S_{AA}(A) = A \cdot M \cdot A
+	S_{AA}(\textbf{A}) = \textbf{A} \cdot \textbf{M} \cdot \textbf{A}
 \end{equation}
-其中$M$为对角矩阵，且有：
+其中$\textbf{M}$为对角矩阵，且有：
 \begin{equation}
-M_{ii} = 1/\log(\sum_j{A_{ij}})
+\textbf{M}_{ii} = 1/\log(\sum_j{\textbf{A}_{ij}})
 \end{equation}
 
 \definition{\textbf{资源分配系数}:}资源分配系数最早是基于物理过程中的资源分配得来的一个计算法方法，过程类似于Adamic-Adar系数的计算方法，同样是给度较高的节点惩罚权重，资源分配系数采取的权重是节点度的倒数，因此可以看出来资源分配系数对度高的节点惩罚相较之下比较重，度处在平均水平的节点两中计算方法的惩罚权重相当。资源分配系数的计算方法如下：
@@ -105,11 +105,11 @@ M_{ii} = 1/\log(\sum_j{A_{ij}})
 \end{equation}
 同样地，在不考虑对角线元素的情况下，可以将资源分配系数推广至矩阵形式，得到矩阵$S_{RA}$:
 \begin{equation}
-	S_{RA}(A) = A\cdot K \cdot A
+	S_{RA}(\textbf{A}) = \textbf{A}\cdot \textbf{K} \cdot \textbf{A}
 \end{equation}
 其中$K$为对角矩阵，且有：
 \begin{equation}
-	K_{ii} = 1/\sum_jA_{ij}
+	\textbf{K}_{ii} = 1/\sum_j\textbf{A}_{ij}
 \end{equation} 
 
 根据以上三种系数的介绍和定义\ref{first_order}和定义\ref{second_order}中介绍的接近度概念，在共同邻居的计算方法中引入了二阶接近度，也即二度邻居的信息，在Adamic-Adar系数和资源分配系数中，不仅计算了共同邻居，还对共同邻居的度(邻居总数)进行了计算和处理，也即处理了高于二阶接近度的高阶接近度信息。为方便后文进行推导，可以将三种相似度矩阵$\textbf{S}$计算方法表达成统一的形式：
@@ -131,24 +131,24 @@ M_{ii} = 1/\log(\sum_j{A_{ij}})
 
 考虑式\ref{high_order_condition}，当采用不同的相似度矩阵$S$时，$D'$满足：
 \begin{equation}
-D'_{ii} = \sum_j{S_{ij}}
+\textbf{D}'_{ii} = \sum_j{\textbf{S}_{ij}}
 \end{equation}
 于是同式(\ref{laplacian_reduce})推导，则原问题变成：
 \begin{equation}\label{decomp}
-\max_{X^TX = I} tr(X^TWX)
+\max_{\textbf{X}^T\textbf{X} = \textbf{I}} tr(\textbf{X}^T\textbf{WX})
 \end{equation}
-其中$W = D^{\prime-\frac{1}{2}}SD^{\prime-\frac{1}{2}}$,上述问题转化为求矩阵$W$的特征值问题，也即对矩阵$W$进行特征值分解：
+其中$\textbf{W} = \textbf{D}^{\prime-\frac{1}{2}}\textbf{SD}^{\prime-\frac{1}{2}}$,上述问题转化为求矩阵$\textbf{W}$的特征值问题，也即对矩阵$\textbf{W}$进行特征值分解：
 \begin{equation}\label{evol}
-	W = X^T \Lambda X 
+	\textbf{W} = \textbf{X}^T \Lambda \textbf{X} 
 \end{equation}
-其中$\Lambda$为对角矩阵，对角线元素为矩阵$W$的特征值，$X$为正交矩阵，也即表征向量矩阵。对于式(\ref{decomp})的最大值问题相当于求解$W$最接近特征值分解形式，也即矩阵$X$为$W$前$k$个特征值对应的特征向量组合而成的矩阵。
+其中$\Lambda$为对角矩阵，对角线元素为矩阵$\textbf{W}$的特征值，$\textbf{X}$为正交矩阵，也即表征向量矩阵。对于式(\ref{decomp})的最大值问题相当于求解$\textbf{W}$最接近特征值分解形式，也即矩阵$\textbf{X}$为$\textbf{W}$前$k$个特征值对应的特征向量组合而成的矩阵。
 
 \subsection{HLE算法描述}
-	给定图数据$G = (E,V)$和图表征向量维数$k$，其中图$G$以邻接矩阵$A\in R^{|V|\times |V|}$表示，HLE算法将得到图$G$的向量表征$X\in |V|\times k$。
+	给定图数据$G = (E,V)$和图表征向量维数$k$，其中图$G$以邻接矩阵$\textbf{A}\in R^{|V|\times |V|}$表示，HLE算法将得到图$G$的向量表征$\textbf{X}\in R^{|V|\times k} $。
 	
-	在算法开始时，根据相似度准则的选择，令相似度矩阵$S$分别为共同邻居$S_{Cn}$、Adamic-Adar系数$S_{AA}$或资源分配系数$S_{RA}$中的一个。根据$S$矩阵计算出对应的对角矩阵$D\prime$,使得$D'_{ii} = \sum_j S_{ij}$。
+	在算法开始时，根据相似度准则的选择，令相似度矩阵$\textbf{S}$分别为共同邻居$\textbf{S}_{Cn}$、Adamic-Adar系数$\textbf{S}_{AA}$或资源分配系数$\textbf{S}_{RA}$中的一个。根据$\textbf{S}$矩阵计算出对应的对角矩阵$\textbf{D}\prime$,使得$\textbf{D}'_{ii} = \sum_j \textbf{S}_{ij}$。
 
-	进一步计算矩阵$W$，使得$W=D^{\prime-\frac{1}{2}}SD^{\prime-\frac{1}{2}}$，对W矩阵进行特征值分解得到前k个最大特征值对应的特征列向量$\{X_1,X_2,\cdots,X_k\}$,组合成图表征向量矩阵$X$。
+	进一步计算矩阵$W$，使得$\textbf{W}=\textbf{D}^{\prime-\frac{1}{2}}\textbf{SD}^{\prime-\frac{1}{2}}$，对W矩阵进行特征值分解得到前k个最大特征值对应的特征列向量$\{\textbf{X}_1,\textbf{X}_2,\cdots,\textbf{X}_k\}$,组合成图表征向量矩阵$\textbf{X}$。
 	
 	HLE算法中根据不同的接近度要求可以选择不同的相似度计算方法，其中共同邻居保留二阶接近度，Adamic-Adar系数和资源分配系数保留网络的三阶接近度。
 
@@ -168,11 +168,11 @@ D'_{ii} = \sum_j{S_{ij}}
 				\Statex $\textbf{X}$ :表征向量矩阵
 				\Statex $\Lambda$:特征值对角矩阵
 				\Statex
-				\State $\mathcal{S} \leftarrow S_{CN}(A) /S_{AA}(A) / S_{RA}(A)$
-				\State $D'_{ii} = \sum_j S_{ij}$
-				\State $W \leftarrow  D^{\prime-\frac{1}{2}}SD^{\prime-\frac{1}{2}}$
-				\State 通过特征值分解得到$W$前k个特征向量，组合成矩阵 $\textbf{X}$以及对应特征值组成的对角矩阵$\Lambda$
-				\State 返回 $\textbf{X}$
+				\State $\mathcal{S} \leftarrow S_{CN}(\textbf{A}) /S_{AA}(\textbf{A}) / S_{RA}(\textbf{A})$
+				\State $\textbf{D}'_{ii} = \sum_j \textbf{S}_{ij}$
+				\State $\textbf{W} \leftarrow  \textbf{D}^{\prime-\frac{1}{2}}\textbf{SD}^{\prime-\frac{1}{2}}$
+				\State 通过特征值分解得到$\textbf{W}$前k个特征向量，组合成矩阵 $\textbf{X}$以及对应特征值组成的对角矩阵$\Lambda$
+				\State 返回 $\textbf{X}$， $\Lambda$
 			\end{algorithmic}
 		\end{algorithm}
 	\end{minipage}

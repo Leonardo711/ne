@@ -135,15 +135,6 @@ Singh A~P, Gordon G~J.
 \newblock  650--658
 \thudot
 
-\bibitem{zhu2007combining}
-Zhu S, Yu K, Chi Y, et~al.
-\newblock Combining content and link for classification using matrix
-  factorization.
-\newblock  Proceedings of the 30th annual international ACM SIGIR conference on
-  Research and development in information retrieval. ACM, 2007.
-\newblock  487--494
-\thudot
-
 \bibitem{qiu2017network}
 Qiu J, Dong Y, Ma H, et~al.
 \newblock Network embedding as matrix factorization: Unifyingdeepwalk, line,
@@ -203,6 +194,18 @@ Hazan E, Agarwal A, Kale S.
 \newblock Machine Learning, 2007, 69(2-3):169--192
 \thudot
 
+\bibitem{langford2009sparse}
+Langford J, Li L, Zhang T.
+\newblock Sparse online learning via truncated gradient.
+\newblock Journal of Machine Learning Research, 2009, 10(Mar):777--801
+\thudot
+
+\bibitem{duchi2009efficient}
+Duchi J, Singer Y.
+\newblock Efficient online and batch learning using forward backward splitting.
+\newblock Journal of Machine Learning Research, 2009, 10(Dec):2899--2934
+\thudot
+
 \bibitem{xiao2010dual}
 Xiao L.
 \newblock Dual averaging methods for regularized stochastic learning and online
@@ -217,18 +220,6 @@ McMahan B.
 \newblock  Proceedings of the Fourteenth International Conference on Artificial
   Intelligence and Statistics, 2011.
 \newblock  525--533
-\thudot
-
-\bibitem{langford2009sparse}
-Langford J, Li L, Zhang T.
-\newblock Sparse online learning via truncated gradient.
-\newblock Journal of Machine Learning Research, 2009, 10(Mar):777--801
-\thudot
-
-\bibitem{duchi2009efficient}
-Duchi J, Singer Y.
-\newblock Efficient online and batch learning using forward backward splitting.
-\newblock Journal of Machine Learning Research, 2009, 10(Dec):2899--2934
 \thudot
 
 \bibitem{syed1999incremental}
