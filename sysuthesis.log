@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2018.3.11)  7 APR 2018 16:13
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2018.3.11)  8 APR 2018 15:28
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2061,7 +2061,10 @@ Class scrbook Warning: \float@addtolists detected!
 (scrbook)              deprecated \float@addtolist interface .
 
 File: figures/social_media_stat.png Graphic file (type QTm)
-<use  "figures/social_media_stat.png" > [1
+<use  "figures/social_media_stat.png" >
+Underfull \vbox (badness 3977) has occurred while \output is active []
+
+ [1
 
 
 
@@ -2069,13 +2072,13 @@ File: figures/social_media_stat.png Graphic file (type QTm)
 
 
 ]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 6775) has occurred while \output is active []
 
  [2]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 7415) has occurred while \output is active []
 
  [4]
 Underfull \vbox (badness 10000) has occurred while \output is active []
@@ -2252,7 +2255,7 @@ File: figures/inc_sample.png Graphic file (type QTm)
 [53]
 File: figures/sample_split.png Graphic file (type QTm)
  <use  "figures/sample_split.png" >
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \vbox (badness 5519) has occurred while \output is active []
 
  [54]
 
@@ -2333,10 +2336,10 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 180.
  ) 
 Here is how much of TeX's memory you used:
- 34391 strings out of 493005
- 631836 string characters out of 6134596
- 831371 words of memory out of 5000000
- 37863 multiletter control sequences out of 15000+600000
+ 34375 strings out of 493005
+ 630866 string characters out of 6134596
+ 833352 words of memory out of 5000000
+ 37847 multiletter control sequences out of 15000+600000
  16504 words of font info for 129 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  58i,17n,74p,10405b,1244s stack positions out of 5000i,500n,10000p,200000b,80000s
