@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2018.3.11)  8 APR 2018 15:28
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2018.3.11)  8 APR 2018 16:45
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2124,18 +2124,12 @@ File: figures/deepwalk2.png Graphic file (type QTm)
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [15]
-Underfull \vbox (badness 4001) has occurred while \output is active []
-
- [16]
+[16]
 File: figures/tadw.png Graphic file (type QTm)
-
-<use  "figures/tadw.png" >
+ <use  "figures/tadw.png" >
 File: figures/incremental_struct.png Graphic file (type QTm)
- <use  "figures/incremental_struct.png" > [17]
-Underfull \vbox (badness 7888) has occurred while \output is active []
-
- [18])
-[19]
+ <use  "figures/incremental_struct.png" >
+[17] [18]) [19]
 \openout2 = `chapters/chap3.aux'.
 
  (./chapters/chap3.tex [20
@@ -2234,19 +2228,19 @@ LaTeX Warning: No positions in optional float specifier.
 [48] [49] [50] [51]
 File: figures/link_prediction_split.png Graphic file (type QTm)
  <use  "figures/link_prediction_split.png" >
-LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 174.
+LaTeX Font Info:    Calculating math sizes for size <10.5> on input line 175.
 
 
 LaTeX Font Warning: Font shape `OML/cmm/m/it' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 174.
+(Font)              size <10.95> substituted on input line 175.
 
 
 LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 174.
+(Font)              size <10.95> substituted on input line 175.
 
 
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
-(Font)              size <10.95> substituted on input line 174.
+(Font)              size <10.95> substituted on input line 175.
 
 File: figures/link_predict_frame.png Graphic file (type QTm)
 <use  "figures/link_predict_frame.png" > [52]
@@ -2260,16 +2254,16 @@ Underfull \vbox (badness 5519) has occurred while \output is active []
  [54]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 232.
+               Default added (so using `htbp') on input line 233.
 
 [55]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 254.
+               Default added (so using `htbp') on input line 255.
 
 File: figures/off_vs_on.png Graphic file (type QTm)
 <use  "figures/off_vs_on.png" >
-Overfull \hbox (20.2013pt too wide) in paragraph at lines 277--278
+Overfull \hbox (20.2013pt too wide) in paragraph at lines 278--279
  [][] 
  []
 
@@ -2281,7 +2275,7 @@ Underfull \vbox (badness 1917) has occurred while \output is active []
 File: figures/runtime.png Graphic file (type QTm)
 
 <use  "figures/runtime.png" >
-Overfull \hbox (20.2013pt too wide) in paragraph at lines 295--296
+Overfull \hbox (20.2013pt too wide) in paragraph at lines 296--297
  [][] 
  []
 

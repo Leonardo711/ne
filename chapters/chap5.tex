@@ -133,7 +133,8 @@ F1micro = \frac{2\times microP\times microR}{microP+microR}
 	\item LINE算法：通过保留一阶接近度和二阶接近度进行图表征的算法，通过负采样优化计算。
 	\item Node2Vec算法：借用自然语言处理中的Word2vec思想，通过随机游走生成节点语料库，从而对图进行表征学习。
 	\item CCA算法\cite{hardoon2004canonical}:将原始网络结构和原始属性特征融合进行降维作为节点分类任务的输入。
-	\item AANE算法\cite{huang2017label}\footnote{https://github.com/xhuang31/AANE\_python}：将网络结构特征和属性特征同时进行优化，得到属性网络表征作为后续学习任务的输入。
+	\item TADW算法\cite{yang2015network}%\footnote{https://github.com/xhuang31/AANE\_python}
+	：将网络结构特征和属性特征同时进行优化，得到属性网络表征作为后续学习任务的输入。
 	\item HLE算法：本文提出的基于高阶接近度的拉普拉斯特征映射算法。
 	\item SR1算法：本文提出的基于属性相似度的表征算法。
 	\item SR算法：本文提出的SR1优化算法。
@@ -153,7 +154,7 @@ F1micro = \frac{2\times microP\times microR}{microP+microR}
 		~ &  HLE算法	\\ \hline
 		属性表征 & SR1算法 \\ \hline
 		\multirow{3}*{属性网络表征} & CCA算法 \\ \cline{2-2}
-		~ & AANE算法 \\ \cline{2-2}
+		~ & TADW算法 \\ \cline{2-2}
 		~ & SR算法 \\ \cline{2-2}
 		~ & HLE+SR算法 \\ \hline
 	\end{tabular}
@@ -178,14 +179,14 @@ F1micro = \frac{2\times microP\times microR}{microP+microR}
 
 {\textbf{衡量指标1：分类准确率}} ：准确率的定义是对于给定的测试样本集，分类模型预测类别正确的样本占总样本的比例，从损失函数的角度来讲，就是模型损失函数为0-1阶梯函数时测试集上的损失值。
 
-\textbf{衡量指标2：AUC}：AUC(Area under ROC curve)，意思就是ROC(Receiver Operating Characteristic)曲线下的面积，ROC曲线是以真正例率(True Positive Rate,简称TPR)和假正例率(False Positive Rate, FPR)画出的曲线，其中以FPR为横轴，TPR为纵轴，根据混淆矩阵中的定义有：
+\textbf{衡量指标2：AUC}：AUC(Area under ROC curve)，意思就是ROC(Receiver Operating Characteristic)曲线下的面积，ROC曲线是以FPR为横轴，TPR为纵轴的坐标中画出的曲线，关于FPR和TPR可以根据混淆矩阵定义：
 \begin{equation}
 	TPR = \frac{\#TP}{\#TP+\#FN}
 \end{equation}
 \begin{equation}
 FPR = \frac{\#FP}{\#TN+\#FP}
 \end{equation}
-ROC曲线将样本按照预测概率从大到小排序，从第一个样本依次设置分类阈值为其预测值，并以此对所有样本判定预测的正负值，进一步计算出一组TPR和FPR值，以此循环可以得到一系列的值形成ROC曲线，AUC则是ROC曲线下的面积，AUC评价方法关注的是预测样本概率的排序质量。同样的，在这一部分增量学习算法主要跟对应的离线算法进行准确性对比，链路预测的实验过程图\ref{fig:link_prediction_process}所示：
+ROC曲线将样本按照预测概率从大到小排序，从第一个样本依次设置分类阈值为其预测值，并以此对所有样本判定预测的正负值，进一步计算出一组TPR和FPR值，以此循环可以得到一系列的值形成ROC曲线，AUC表示ROC曲线与横轴FRP围成的面积大小，AUC评价方法关注的是预测样本概率的排序质量。同样的，在这一部分增量学习算法主要跟对应的离线算法进行准确性对比，链路预测的实验过程图\ref{fig:link_prediction_process}所示：
 \begin{figure}
 	\centering
 	\includegraphics[width=6in]{figures/link_predict_frame}
@@ -243,7 +244,7 @@ ROC曲线将样本按照预测概率从大到小排序，从第一个样本依�
 		HLE      & \textbf{69.31}  & 70.35          & \textbf{63.57} & \textbf{62.86} & 62.12 & \textbf{61.76}          & \textbf{81.26} & \textbf{80.28} \\ \hline\hline
 		SR1      & 80.26           & 79.85          & 75.69          & 76.12          & 37.13          & 36.65          & 64.23          & 66.16          \\ \hline\hline
 		CCA      & 48.53           & 47.69          & 26.02          & 27.31          & 35.24          & 36.42          & 51.12          & 52.11          \\ \hline
-		AANE     & 84.95           & 84.99          & 85.51          & 84.63 & 65.32          & 62.09          & 88.58          & \textbf{88.41} \\ \hline
+		TADW     & 84.95           & 84.99          & 85.51          & 84.63 & 65.32          & 62.09          & 88.58          & \textbf{88.41} \\ \hline
 		SR       & 50.36           & 51.45          & 28.16          & 27.78          & 23.45          & 22.67          & 52.13          & 53.42          \\ \hline
 		HLE+SR   & \textbf{85.12}  & \textbf{85.33} & \textbf{85.79} & \textbf{85.31}          & \textbf{66.12} & \textbf{63.15} & \textbf{88.76} & 87.16          \\ \hline
 	\end{tabular}
@@ -265,7 +266,7 @@ ROC曲线将样本按照预测概率从大到小排序，从第一个样本依�
 		HLE      & 79.86           & \textbf{50.07} & \textbf{77.45} & \textbf{53.12} & 76.25          & \textbf{67.10} & \textbf{97.89} & \textbf{56.67}          \\ \hline\hline
 		SR1      & 22.35           & 11.43          & 29.42          & 18.63          & 27.86          & 11.13          & 12.57          & 9.68           \\ \hline\hline
 		CCA      & 23.64           & 15.74          & 27.74          & 19.46          & 18.45          & 13.15          & 27.45          & 19.37          \\ \hline
-		AANE     & 53.63           & 44.52          & 54.96          & 51.13 & 78.45          & 51.96          & 81.56 & 32.16          \\ \hline
+		TADW     & 53.63           & 44.52          & 54.96          & 51.13 & 78.45          & 51.96          & 81.56 & 32.16          \\ \hline
 		SR       & 36.56           & 29.75          & 47.14          & 49.67          & 79.36          & 49.92          & 75.12          & 28.17          \\ \hline
 		HLE+SR   & \textbf{81.98}  & \textbf{53.39} & \textbf{79.17} & \textbf{54.17}          & \textbf{80.44} & \textbf{72.25} & \textbf{94.31}          & \textbf{54.43} \\ \hline
 	\end{tabular}

@@ -46,7 +46,7 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \section{静态场景下的图表征算法}
-在图表征学习中，最早的方法借鉴与流形学习(manifold learning)的算法，其中Belkin和Niyogi提出的拉普拉斯特征映射是流形学习中的一种典型算法，该算法假设表征映射后得到的表征向量需要保证原网络中一阶接近度，也就是需要保证网络中互为邻居的节点对连边权重越大，那么在表征向量空间就应该保证越接近，也即优化如下问题：
+在图表征学习中，最早的方法借鉴于流形学习(manifold learning)的算法，其中Belkin和Niyogi提出的拉普拉斯特征映射是流形学习中的一种典型算法，该算法假设表征映射后得到的表征向量需要保证原网络中一阶接近度，也就是需要保证网络中互为邻居的节点对连边权重越大，那么在表征向量空间就应该保证越接近，也即优化如下问题：
 \begin{equation}\label{laplacian_st}
 \begin{aligned}
 \min_{\textbf{X}^T\textbf{D}\textbf{X}=\textbf{I}} \Phi(\textbf{X}) &= \frac{1}{2}\sum_{i,j}|\textbf{X}_i - \textbf{X}_j|^2\textbf{A}_{ij} \\
