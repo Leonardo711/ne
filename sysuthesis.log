@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2018.3.11)  8 APR 2018 16:45
+This is XeTeX, Version 3.14159265-2.6-0.99998 (TeX Live 2017) (preloaded format=xelatex 2018.3.11)  10 APR 2018 14:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2016,26 +2016,26 @@ Package tocbasic Info: Using my definition of `\numberline' on input line 26.
 Package tocbasic Info: Using my definition of `\numberline' on input line 27.
 Package tocbasic Info: Using my definition of `\numberline' on input line 28.
 Package tocbasic Info: Using my definition of `\numberline' on input line 31.
-Package tocbasic Info: Using my definition of `\numberline' on input line 34.
-Package tocbasic Info: Using my definition of `\numberline' on input line 35.
+Package tocbasic Info: Using my definition of `\numberline' on input line 36.
 Package tocbasic Info: Using my definition of `\numberline' on input line 37.
-Package tocbasic Info: Using my definition of `\numberline' on input line 38.
 Package tocbasic Info: Using my definition of `\numberline' on input line 39.
-Package tocbasic Info: Using my definition of `\numberline' on input line 45.
+Package tocbasic Info: Using my definition of `\numberline' on input line 40.
+Package tocbasic Info: Using my definition of `\numberline' on input line 41.
 Package tocbasic Info: Using my definition of `\numberline' on input line 47.
 Package tocbasic Info: Using my definition of `\numberline' on input line 49.
+Package tocbasic Info: Using my definition of `\numberline' on input line 51.
  [5
 
 
 
 
 ]
-Package tocbasic Info: Using my definition of `\numberline' on input line 50.
-Package tocbasic Info: Using my definition of `\numberline' on input line 51.
-Package tocbasic Info: Using my definition of `\numberline' on input line 57.
-Package tocbasic Info: Using my definition of `\numberline' on input line 60.
+Package tocbasic Info: Using my definition of `\numberline' on input line 52.
+Package tocbasic Info: Using my definition of `\numberline' on input line 53.
+Package tocbasic Info: Using my definition of `\numberline' on input line 59.
 Package tocbasic Info: Using my definition of `\numberline' on input line 62.
-Package tocbasic Info: Using my definition of `\numberline' on input line 63.
+Package tocbasic Info: Using my definition of `\numberline' on input line 64.
+Package tocbasic Info: Using my definition of `\numberline' on input line 65.
 )
 \tf@toc=\write6
 \openout6 = `sysuthesis.toc'.
@@ -2242,49 +2242,53 @@ LaTeX Font Warning: Font shape `OMS/cmsy/m/n' in size <10.5> not available
 LaTeX Font Warning: Font shape `OT1/cmr/m/n' in size <10.5> not available
 (Font)              size <10.95> substituted on input line 175.
 
+[52]
 File: figures/link_predict_frame.png Graphic file (type QTm)
-<use  "figures/link_predict_frame.png" > [52]
+ <use  "figures/link_predict_frame.png" >
+Underfull \vbox (badness 4726) has occurred while \output is active []
+
+ [53]
 File: figures/inc_sample.png Graphic file (type QTm)
- <use  "figures/inc_sample.png" >
-[53]
+
+<use  "figures/inc_sample.png" >
 File: figures/sample_split.png Graphic file (type QTm)
- <use  "figures/sample_split.png" >
-Underfull \vbox (badness 5519) has occurred while \output is active []
-
- [54]
+ <use  "figures/sample_split.png" > [54]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 233.
+               Default added (so using `htbp') on input line 235.
 
-[55]
+
+Underfull \vbox (badness 3428) has occurred while \output is active []
+
+ [55]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `htbp') on input line 255.
+               Default added (so using `htbp') on input line 257.
 
 File: figures/off_vs_on.png Graphic file (type QTm)
 <use  "figures/off_vs_on.png" >
-Overfull \hbox (20.2013pt too wide) in paragraph at lines 278--279
+Overfull \hbox (20.2013pt too wide) in paragraph at lines 280--281
  [][] 
  []
 
+[56]
 File: figures/parameter_analysis.png Graphic file (type QTm)
-<use  "figures/parameter_analysis.png" >
-Underfull \vbox (badness 1917) has occurred while \output is active []
-
- [56]
+ <use  "figures/parameter_analysis.png" >
 File: figures/runtime.png Graphic file (type QTm)
-
-<use  "figures/runtime.png" >
-Overfull \hbox (20.2013pt too wide) in paragraph at lines 296--297
+ <use  "figures/runtime.png" >
+Overfull \hbox (20.2013pt too wide) in paragraph at lines 298--299
  [][] 
  []
 
 File: figures/demension_speedup.png Graphic file (type QTm)
-<use  "figures/demension_speedup.png" > [57] [58]) [59]
+<use  "figures/demension_speedup.png" >
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [57]
+[58]) [59]
 \openout2 = `chapters/chap6.aux'.
 
- (./chapters/chap6.tex
-[60
+ (./chapters/chap6.tex [60
 
 
 
@@ -2330,12 +2334,12 @@ LaTeX Warning: There were multiply-defined labels.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 180.
  ) 
 Here is how much of TeX's memory you used:
- 34375 strings out of 493005
- 630866 string characters out of 6134596
- 833352 words of memory out of 5000000
- 37847 multiletter control sequences out of 15000+600000
+ 34365 strings out of 493005
+ 630259 string characters out of 6134596
+ 833360 words of memory out of 5000000
+ 37837 multiletter control sequences out of 15000+600000
  16504 words of font info for 129 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 58i,17n,74p,10405b,1244s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 58i,17n,74p,10405b,1247s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 Output written on sysuthesis.pdf (79 pages).

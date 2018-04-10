@@ -3,7 +3,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \chapter{网络中的增量图表征算法}
 \section{引言}
-	社交网络的蓬勃发展使得信息网络研究领域面临越来越多的机遇和挑战。传统的网络特征的表示方法都是以邻接矩阵、拉普拉斯矩阵等离散型或者以中心度、出入度等人工规则来表达，然而在社交网络中随着网络节点的增加，这些表达方法的复杂度和有效性都会出现比较大的问题。近年来机器学习、人工智能的飞速发展，包含复杂信息的网络型数据方面的研究也因此受益，对网络的表征学习吸引了越来越多的研究兴趣。类似于自然语言中的词向量表征的发展，单词的词频或逆文档频率(TF-IDF)等人工规则表征对于一个单词的描述太过简略，词向量表征则将单词映射成一个向量，向量之间可以计算相似度、并进行加减等操作，对于词的描述在数学意义上更加丰富，图表征学习也是需要从对网络的离散型或人工规则型表达发展出连续性且具有更丰富表征意义的向量表示算法。对于图表征得到的节点表征向量矩阵,需要应用于后续的机器学习任务，不同的机器学习任务对应不同的图挖掘问题，比如对节点向量进行聚类学习，相当于图挖掘领域的社区发现过程；对网络中连边进行分类任务，相当于图挖掘领域的链路预测任务。另外，图表征向量矩阵可用于计算相似度、节点分类、可视化、节点推荐等任务。
+	社交网络的蓬勃发展使得信息网络研究领域面临越来越多的机遇和挑战。传统的网络特征的表示方法都是以邻接矩阵、拉普拉斯矩阵等离散型或者以中心度、出入度等人工规则来表达，然而在社交网络中随着网络节点的增加，这些表达方法的复杂度和有效性都会出现比较大的问题。近年来机器学习、人工智能的飞速发展，包含复杂信息的网络型数据方面的研究也因此受益，对网络的表征学习引起了越来越多研究学者的关注。类似于自然语言中的词向量表征的发展，单词的词频或逆文档频率(TF-IDF)等人工规则表征对于一个单词的描述太过简略，词向量表征则将单词映射成一个向量，向量之间可以计算相似度、并进行加减等操作，对于词的描述在数学意义上更加丰富，图表征学习也是需要从对网络的离散型或人工规则型表达发展出连续性且具有更丰富表征意义的向量表示算法。对于图表征得到的节点表征向量矩阵,需要应用于后续的机器学习任务，不同的机器学习任务对应不同的图挖掘问题，比如对节点向量进行聚类学习，相当于图挖掘领域的社区发现过程；对网络中连边进行分类任务，相当于图挖掘领域的链路预测任务。另外，图表征向量矩阵可用于计算相似度、节点分类、可视化、节点推荐等任务。
 	
 	本章将提出一种基于高阶接近度的图表征算法，并通过分析不同增量场景的模型变化，提出在增量场景下对应的表征算法。
 	
@@ -36,7 +36,7 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 \begin{itemize}
 	\item \textbf{问题1}：静态场景下的图表征算法。给定网络的邻接矩阵$\textbf{A}^{(t)}$,对于所有节点学习网络的表征向量矩阵$\textbf{X}^{(t)}$。
 	\item \textbf{问题2}: 增量场景下的图表征算法。给定网络某时刻$t+1$的邻接矩阵$\textbf{A}^{(t+1)}$，
-		和上一时刻的表征向量$\textbf{X}^{(t)}$，对于所有节点学习网络的表征向量矩阵$\textbf{X}^{(t+1)}$
+		和上一时刻的表征向量$\textbf{X}^{(t)}$，对于所有节点学习网络的表征向量矩阵$\textbf{X}^{(t+1)}$。
 \end{itemize}
 
 下面章节将就这两个问题展开讨论分析。
@@ -354,8 +354,8 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 	\end{minipage}
 \end{figure}
 
-
-\remark 关于$\Delta\textbf{W}$的优化求解：在\textbf{算法3.2}中，输入之一的$\Delta\textbf{W}$不是直接变量，网络增量的直接变量是$\Delta\textbf{A}$， 也即邻接矩阵$\textbf{A}$的变化量，下面提供一种对$\Delta\textbf{W}$进行优化求解的思路，相似度计算法则取为共同邻居，即令$S=S_{CN}$。直观的方法是直接计算时刻$t+1$变化后的矩阵$\textbf{W}^{(t+1)}$再与$\textbf{W}^{(t)}$相减得到变化量，但是直接计算的复杂度比较高，考虑到邻接矩阵的稀疏性，变化量$\Delta\textbf{W}$的计算可以简化为方便表述，下面以$\textbf{W}$代替$\textbf{W}^{(t)}$，且没有上标表明时刻的变量皆为时刻$t$对应的变量。根据式(\ref{decomp})的推论，对于时刻$t$有：
+\subsubsection{算法讨论}
+ 关于$\Delta\textbf{W}$的优化求解：在\textbf{算法3.2}中，输入之一的$\Delta\textbf{W}$不是直接变量，网络增量的直接变量是$\Delta\textbf{A}$， 也即邻接矩阵$\textbf{A}$的变化量，下面提供一种对$\Delta\textbf{W}$进行优化求解的思路，相似度计算法则取为共同邻居，即令$S=S_{CN}$。直观的方法是直接计算时刻$t+1$变化后的矩阵$\textbf{W}^{(t+1)}$再与$\textbf{W}^{(t)}$相减得到变化量，但是直接计算的复杂度比较高，考虑到邻接矩阵的稀疏性，变化量$\Delta\textbf{W}$的计算可以简化为方便表述，下面以$\textbf{W}$代替$\textbf{W}^{(t)}$，且没有上标表明时刻的变量皆为时刻$t$对应的变量。根据式(\ref{decomp})的推论，对于时刻$t$有：
 
 \begin{equation}\label{defin:delta_w}
 \begin{aligned}
@@ -450,7 +450,7 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 	\textbf{D}^{\prime-\frac{1}{2}}\Delta\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}}+
 	\Delta\textbf{D}^{\prime-\frac{1}{2}}\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}}
 \end{equation}
-在上式中一阶增量$\Delta\textbf{S}_{CN}$和$\Delta\textbf{D}^{\prime-\frac{1}{2}}$中只有个别元素非零，且因$\Delta\textbf{D}^{\prime-\frac{1}{2}}$为对角矩阵，因此可以通过上式充分简化$\Delta\textbf{W}$的计算。直接计算$t+1$时刻的\textbf{W}矩阵的计算复杂度为$\mathcal{O}(|V|^2)$，再与$t$时刻的矩阵相减得到$\Delta\textbf{W}$,上式中对$\Delta\textbf{W}$的计算复杂度降到了$\mathcal{O}(|V|)$，效率大大提高。
+在上式中一阶增量$\Delta\textbf{S}_{CN}$和$\Delta\textbf{D}^{\prime-\frac{1}{2}}$中只有个别元素非零，且因$\Delta\textbf{D}^{\prime-\frac{1}{2}}$为对角矩阵，因此可以通过上式充分简化$\Delta\textbf{W}$的计算。直接计算$t+1$时刻的\textbf{W}矩阵的计算复杂度为$\mathcal{O}(|E|d)$，其中d为节点平均度，再与$t$时刻的矩阵相减得到$\Delta\textbf{W}$,上式中对$\Delta\textbf{W}$的计算复杂度降到了$\mathcal{O}(|V|)$，效率大大提高。
 \begin{figure}[htbp]
 	\centering
 	\includegraphics[width=6in]{figures/incremental_network_embedding}
@@ -500,7 +500,9 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 	\end{minipage}
 \end{figure}
 在节点出现新增情况时，矩阵\textbf{W}相对上一个时刻进行了增广。在\textbf{算法3.3}中第一行，$\Delta\textbf{W}$在进行特征值分解的时候，应采用取前$m$个特征值对应的特征向量，在保证精度的同时降低计算复杂度，比如只对$\Delta\textbf{W}$只取一维特征向量，也即主特征值对应的特征向量，则可以利用幂法及其加速方法来求解来降低复杂度。 
-\remark{\textbf{$\Delta\textbf{W}$}特征分解维度的讨论}前文的讨论中，通过QR分解进行增量表征的过程中需要假设$\Delta\textbf{W}$与$\textbf{W}$中特征向量线性无关，在实际情况中这一点得不到保证,下面对这一点进行讨论。
+
+\subsubsection{算法讨论}
+\textbf{$\Delta\textbf{W}$}特征分解维度的讨论：前文的讨论中，通过QR分解进行增量表征的过程中需要假设$\Delta\textbf{W}$与$\textbf{W}$中特征向量线性无关，在实际情况中这一点得不到保证,下面对这一点进行讨论。
 
 假设$\textbf{W}$的特征向量矩阵为$\textbf{X}^{(t)T}=\begin{bmatrix} \textbf{X}^{(t)T}_1 | & \textbf{X}^{(t)T}_2 | & \cdots | & \textbf{X}^{(t)T}_k \end{bmatrix}$,$\Delta\textbf{W}$的特征向量矩阵为$\textbf{Y}^{T}=\begin{bmatrix} \textbf{Y}^T_1 | & \textbf{Y}^T_2 | & \cdots | & \textbf{Y}^T_m \end{bmatrix}$，其中有$\textbf{Y}^T_1 = \sum_{i=1}^{k} \alpha_i \textbf{X}^{(t)T}_i $,则有：
 \begin{equation}\label{time_t1}
@@ -522,9 +524,9 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 \section{算法分析}
 这一部分将对上述两个算法的计算复杂度进行分析。
 \begin{itemize}
-	\item HLE算法是离线算法，在计算复杂度方面，通过邻接矩阵\textbf{A}计算得到相似度矩阵\textbf{S}的计算复杂度为$\mathcal{O}(|V|^2)$, 计算矩阵\textbf{W}的计算复杂度为$\mathcal{O}(|V|)$，对矩阵$\textbf{W}$进行特征值分解的复杂度为$\mathcal{O}(|E|k^2)$，其中$k$为表征向量的维数，因此HLE算法的复杂度为$\mathcal{O}(|V|^2)$。
+	\item HLE算法是离线算法，在计算复杂度方面，通过邻接矩阵\textbf{A}计算得到相似度矩阵\textbf{S}的计算复杂度为$\mathcal{O}(|E|d)$，其中$d$为节点平均度。 计算矩阵\textbf{W}的计算复杂度为$\mathcal{O}(|V|)$，对矩阵$\textbf{W}$进行特征值分解的复杂度为$\mathcal{O}(|E|dk^2)$，其中$k$为表征向量的维数，因此HLE算法的复杂度为$\mathcal{O}(|E|dk^2)$。
 	\item
-	iHLE算法是增量算法，在\textbf{算法3.3}中，计算矩阵$\Delta\textbf{W}$的计算复杂度如前文中所讨论可以降低为$\mathcal{O}(|V|)$，对矩阵$\Delta\textbf{W}$进行特征值分解的复杂度为$\mathcal{O}(|V|)$, 增量QR分解复杂度为$\mathcal{O}(|V|)$，对矩阵\textbf{M}的特征分解的复杂度为$\mathcal{O}(1)$,因此iHLE算法的复杂度为$\mathcal{O}(|V|)$。
+	iHLE算法是增量算法，在\textbf{算法3.3}中，计算矩阵$\Delta\textbf{W}$的计算复杂度如前文中所讨论可以降低为$\mathcal{O}(|V|)$，其中$m$为其特征分解的维数，对矩阵$\Delta\textbf{W}$进行特征值分解的复杂度为$\mathcal{O}(|E|)$, 增量QR分解复杂度为$\mathcal{O}(|V|(m+k))$，对矩阵\textbf{M}的特征分解的复杂度为$\mathcal{O}(k^3)$，因此iHLE算法的复杂度为$\mathcal{O}(|V|(m+k))$。
 \end{itemize}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

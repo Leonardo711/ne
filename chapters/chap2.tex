@@ -64,8 +64,8 @@ f_G: \textbf{A}\rightarrow R^{|V| \times d} \qquad s.t.\quad d<<|V|
 		$\textbf{D}$ & 对角线元素为节点度的对角矩阵\\ \hline
 		$\textbf{L}$ & 网络的拉普拉斯矩阵，$\textbf{L}=\textbf{D}-\textbf{W}$ \\ \hline
 		$\textbf{S}$ & 网络节点的相似度矩阵 \\ \hline
-		$\textbf{B}^T$ & 某个矩阵B的转置 \\ \hline
-		$tr(\textbf{B})$ & 某个矩阵B的迹 \\ \hline
+		$\textbf{B}^T$ & 矩阵B的转置 \\ \hline
+		$tr(\textbf{B})$ & 矩阵B的迹 \\ \hline
 		$\textbf{I}$ & 单位矩阵 \\ \hline
 	\end{tabular}
 \end{table}
@@ -107,7 +107,7 @@ f_G: \textbf{A}\rightarrow R^{|V| \times d} \qquad s.t.\quad d<<|V|
  \begin{equation}
  p_1(i,j) = \frac{1}{1+exp(-\textbf{X}_i^T \cdot \textbf{X}_j)}
  \end{equation}
- 将联合概率推至网络整体，得到整个网络中所有有连边的节点对之间的联合概率集合$p_1(\cdot,\cdot)$。根据之前的定义，一阶接近度为网络中连边的权重,作者在这里首先将连边权重进行规范化，即令$\textbf{A}_{ij} =\textbf{A}_{ij}/\sum_{i,j}\textbf{A}_{ij} $，规范化后的连边权重作为一阶接近度，并将对应值记为经验联合概率$\hat{p}_1(\cdot,\cdot)$。该算法中假设联合概率集合$p_1(\cdot,\cdot)$应尽量接近于一阶接近度$\hat{p}_1(\cdot,\cdot)$，为衡量两个集合$p_1(\cdot, \cdot)$和$\hat{p}_1(\cdot,\cdot)$的接近程度，文中引入KL散度来衡量距离。因此为保留一阶接近度设计的目标函数为：
+ 将联合概率推至网络整体，得到整个网络中所有有连边的节点对之间的联合概率集合$p_1(\cdot,\cdot)$。根据之前的定义，一阶接近度为网络中连边的权重，论文在这里首先将连边权重进行规范化，即令$\textbf{A}_{ij} =\textbf{A}_{ij}/\sum_{i,j}\textbf{A}_{ij} $，规范化后的连边权重作为一阶接近度，并将对应值记为经验联合概率$\hat{p}_1(\cdot,\cdot)$。该算法中假设联合概率集合$p_1(\cdot,\cdot)$应尽量接近于一阶接近度$\hat{p}_1(\cdot,\cdot)$，为衡量两个集合$p_1(\cdot, \cdot)$和$\hat{p}_1(\cdot,\cdot)$的接近程度，文中引入KL散度来衡量距离。因此为保留一阶接近度设计的目标函数为：
  \begin{equation}
  	\min KL(\hat{p}_1(\cdot, \cdot),p_1(\cdot,\cdot))
  \end{equation}
@@ -155,7 +155,7 @@ DeepWalk算法通过统计单词出现频次和网络节点访问次数，论证
 	\caption{DeepWalk的算法流程}\label{img2.5}
 \end{figure}
 
-通过对比DeepWalk，LINE，LE的算法思想，可以看出基于随机游走的DeepWalk保留了网络中的高阶接近度，当序列长度为$2l+1$时，即保留网络中$1-l$阶接近度，而且有不错的时间效率。
+通过对比DeepWalk，LINE，LE的算法思想，可以看出基于随机游走的DeepWalk保留了网络中的高阶接近度，当序列长度为$2l+1$时，即保留网络中$1\mbox{-}l$阶接近度，而且有不错的时间效率。
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %---------------------------------------     属性网络图表征算法     ----------------------------------------%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
