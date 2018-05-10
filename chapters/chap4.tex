@@ -65,27 +65,27 @@ Sim_{kl}(H_i, H_j)=\left\{
 
 不同于节点邻接矩阵或其他相似度矩阵，属性特征的相似度矩阵中并非稀疏矩阵，矩阵中大部分为非零元素，在此提出一种基于图分解的方式进行属性表征学习。
 \subsection{基于图分解的相似度表征学习}
-图分解(Graph Factorization)\cite{ahmed2013distributed}是ahmed等在2013提出的一种在分布式场景下的图表征方法，用于在大网络中快速有效的计算节点向量表征。在图分解中为了设计的灵活性直接采用表征向量的点积用来表征节点的接近度，也即对于连边$A_{ij}$通过表征向量点积来表征$<X_i, X_j>$，另外为了保证在数据量比较小的时候，模型仍保持较好效果，因此在目标函数中引入了正则项进行优化，模型的目标函数如下：
+图分解(Graph Factorization)\cite{ahmed2013distributed}是ahmed等在2013提出的一种在分布式场景下的图表征方法，用于在大网络中快速有效的计算节点向量表征。在图分解中为了设计的灵活性直接采用表征向量的点积用来表征节点的接近度，也即对于连边$\textbf{A}_{ij}$通过表征向量点积来表征$<\textbf{X}_i, \textbf{X}_j>$，另外为了保证在数据量比较小的时候，模型仍保持较好效果，因此在目标函数中引入了正则项进行优化，模型的目标函数如下：
 \begin{equation}
-	\min \quad f(A, X)=\frac{1}{2} \sum_{(i,j)\in E}(A_{ij}-<X_i, X_j>)^2+\frac{\lambda}{2}\sum_i|X|^2
+	\min \quad f(\textbf{A}, \textbf{X})=\frac{1}{2} \sum_{(i,j)\in E}(\textbf{A}_{ij}-<\textbf{X}_i, \textbf{X}_j>)^2+\frac{\lambda}{2}\sum_i\Vert\textbf{X}\Vert^2
 \end{equation}
 对上述目标函数求极值，采用梯度下降的方式。函数$f$对于$X_i$的梯度计算为：
 \begin{equation}
-\frac{\partial f}{\partial X_i} = -\sum_{j\in N(i)} (A_{ij}-<X_i,X_j>)X_j+\lambda X_i
+\frac{\partial f}{\partial \textbf{X}_i} = -\sum_{j\in N(i)} (\textbf{A}_{ij}-<\textbf{X}_i,\textbf{X}_j>)\textbf{X}_j+\lambda \textbf{X}_i
 \end{equation}
 因此对于网络中任意一条两边$(i,j)\in E$，上式值等于：
 \begin{equation}
-	-(A_{ij}-<X_i, X_j>)X_j - \lambda X_i
+	-(\textbf{A}_{ij}-<\textbf{X}_i, \textbf{X}_j>)X_j - \lambda \textbf{X}_i
 \end{equation}
-进一步对任意$X_i$，则可以通过梯度下降公式进行更新：
+进一步对任意$\textbf{X}_i$，则可以通过梯度下降公式进行更新：
 \begin{equation}
-	X_i = X_i + \eta [(A_{ij}-<X_i, X_j>)X_j - \lambda X_i]
+	\textbf{X}_i = \textbf{X}_i + \eta [(\textbf{A}_{ij}-<\textbf{X}_i, \textbf{X}_j>)\textbf{X}_j - \lambda \textbf{X}_i]
 \end{equation}
 其中$\eta$为迭代中设置的步长。在图分解算法中邻接矩阵$A$通常不是半正定矩阵，即使节点表征向量维度为$|V|$，损失函数也不会降到0。通过对图分解算法的计算复杂度分析可以发现，算法对网络中连边进行遍历来进行迭代优化，计算复杂度为$\mathcal{O}(|V|)$。
 
 于是，在属性网络中，基于图分解的相似度表征算法转化为利用节点表征向量的点积来描述节点之间属性的相似度。对于节点$i$，记属性表征后的节点属性表征向量为$\textbf{X}_i^H$，通过节点属性计算的相似度矩阵为$\textbf{S}^H$，则相似度表征算法的优化函数为：
 \begin{equation}
-\min \quad f(\textbf{S}^H, \textbf{X}^H)=\frac{1}{2} \sum_{i\ne j}(\textbf{S}^H_{ij}-<\textbf{X}^H_i, \textbf{X}^H_j>)^2+\frac{\lambda}{2}\sum_i|\textbf{X}^H|^2
+\min \quad f(\textbf{S}^H, \textbf{X}^H)=\frac{1}{2} \sum_{i\ne j}(\textbf{S}^H_{ij}-<\textbf{X}^H_i, \textbf{X}^H_j>)^2+\frac{\lambda}{2}\sum_i\Vert\textbf{X}^H\Vert^2
 \end{equation}
 同样采取梯度下降进行优化求解，对于任意$i\ne j$，迭代更新公式为：
 \begin{equation}

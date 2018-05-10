@@ -351,13 +351,36 @@
   \end{center}
   \vspace*{1.8cm}
   
-  {\sihao\kai
+%  {\sihao\kai
+%  \begin{center}
+%    \begin{tabular}{rc}
+%      \makebox[5em][s]{\authorpre} ：&\underline{\hspace{1.77cm}\@author\hspace{1.77cm}}\medskip\\
+%      \makebox[5em][s]{\advisorpre} ：&\underline{\hspace{.95cm}\@advisorname\,\,\@advisortitle\hspace{.95cm}}\medskip\\
+%      \makebox[5em][s]{\majornamepre} ：&\underline{\hspace{.53cm}\@major\hspace{.53cm}}\medskip\\
+%      \makebox[5em][s]{\schoolnamepre} ：&\underline{\hspace{.05cm}\@school\hspace{.05cm}}\medskip\\
+%      & \\
+      
+%      \committeechairpre ：&\underline{\hspace{5cm}}\medskip\\
+%      \committeemempre ：&\underline{\hspace{5cm}}\\
+%                        &\underline{\hspace{5cm}}\\
+%                       &\underline{\hspace{5cm}}\\
+ %                       &\underline{\hspace{5cm}}\medskip\\
+%                        &\underline{\hspace{5cm}}\medskip\\
+%    \end{tabular}
+%  \end{center}  
+%  }
+
+{\sihao\kai
   \begin{center}
     \begin{tabular}{rc}
-      \makebox[5em][s]{\authorpre} ：&\underline{\hspace{1.77cm}\@author\hspace{1.77cm}}\medskip\\
-      \makebox[5em][s]{\advisorpre} ：&\underline{\hspace{.95cm}\@advisorname\,\,\@advisortitle\hspace{.95cm}}\medskip\\
-      \makebox[5em][s]{\majornamepre} ：&\underline{\hspace{.53cm}\@major\hspace{.53cm}}\medskip\\
-      \makebox[5em][s]{\schoolnamepre} ：&\underline{\hspace{.05cm}\@school\hspace{.05cm}}\medskip\\
+      %\makebox[5em][s]{\authorpre} ：&\underline{\hspace{1.77cm}\@author\hspace{1.77cm}}\medskip\\
+      %\makebox[5em][s]{\advisorpre} ：&\underline{\hspace{.95cm}\@advisorname\,\,\@advisortitle\hspace{.95cm}}\medskip\\
+      %\makebox[5em][s]{\majornamepre} ：&\underline{\hspace{.53cm}\@major\hspace{.53cm}}\medskip\\
+      %\makebox[5em][s]{\schoolnamepre} ：&\underline{\hspace{.05cm}\@school\hspace{.05cm}}\medskip\\
+      \makebox[5em][s]{\authorpre} ：&\underline{\hspace{3cm}\@author\hspace{3cm}}\medskip\\
+      \makebox[5em][s]{\advisorpre} ：&\underline{\hspace{3cm}\@advisorname\,\,\@advisortitle\hspace{3cm}}\medskip\\
+      \makebox[5em][s]{\majornamepre} ：&\underline{\hspace{3cm}\@major\hspace{3cm}}\medskip\\
+      \makebox[5em][s]{\schoolnamepre} ：&\underline{\hspace{3cm}\@school\hspace{3cm}}\medskip\\
       & \\
       
       \committeechairpre ：&\underline{\hspace{5cm}}\medskip\\
@@ -369,6 +392,7 @@
     \end{tabular}
   \end{center}  
   }
+
   
   \vspace{0.48cm}
   \begin{center}

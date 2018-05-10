@@ -24,42 +24,42 @@ Warning--there's a publisher but no address in golub2012matrix
 You've used 55 entries,
             2299 wiz_defined-function locations,
             863 strings with 13657 characters,
-and the built_in function-call counts, 28086 in all, are:
-= -- 2942
-> -- 655
+and the built_in function-call counts, 29279 in all, are:
+= -- 3053
+> -- 711
 < -- 28
-+ -- 304
-- -- 152
-* -- 2036
-:= -- 3633
++ -- 332
+- -- 166
+* -- 2161
+:= -- 3754
 add.period$ -- 159
 call.type$ -- 55
 change.case$ -- 53
 chr.to.int$ -- 0
 cite$ -- 63
-duplicate$ -- 1942
-empty$ -- 2849
-format.name$ -- 199
-if$ -- 6540
+duplicate$ -- 2039
+empty$ -- 2960
+format.name$ -- 213
+if$ -- 6804
 int.to.chr$ -- 0
 int.to.str$ -- 55
 missing$ -- 57
 newline$ -- 358
 num.names$ -- 55
-pop$ -- 277
+pop$ -- 339
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 631
+skip$ -- 613
 stack$ -- 0
-substring$ -- 3663
+substring$ -- 3857
 swap$ -- 276
 text.length$ -- 28
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 8
-while$ -- 319
+while$ -- 333
 width$ -- 57
 write$ -- 691
 (There was 1 error message)

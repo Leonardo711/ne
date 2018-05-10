@@ -86,7 +86,7 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 	S_{CN}(\textbf{A}) = \textbf{A}^2
 \end{equation}
 其中$\textbf{A}$为无向网络的邻接矩阵。
-\definition{\textbf{Adamic-Adar系数}:}Adamic-Adar系数最先是由Adamic和Adar提出来用于计算两个网页之间的相似度，后来被广泛应用与社交网络分析之中。Adamic-Adar系数的计算方法类似于共同邻居，不同的是对不同的共同邻居采用不同的权重，该系数假定度较高的节点在共同邻居中所占权重较低，权重值为对数节点度的倒数，也即：
+\definition{\textbf{Adamic-Adar系数}:}Adamic-Adar系数最先是由Adamic和Adar提出来用于计算两个网页之间的相似度，后来被广泛应用于社交网络分析之中。Adamic-Adar系数的计算方法类似于共同邻居，不同的是对不同的共同邻居采用不同的权重，该系数假定度较高的节点在共同邻居中所占权重较低，权重值为对数节点度的倒数，也即：
 \begin{equation}
 	AA(i,j) = \sum_{u \in N(i)\cap N(j)} \frac{1}{\log(|N(u)|)}
 \end{equation}
@@ -99,7 +99,7 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 \textbf{M}_{ii} = 1/\log(\sum_j{\textbf{A}_{ij}})
 \end{equation}
 
-\definition{\textbf{资源分配系数}:}资源分配系数最早是基于物理过程中的资源分配得来的一个计算法方法，过程类似于Adamic-Adar系数的计算方法，同样是给度较高的节点惩罚权重，资源分配系数采取的权重是节点度的倒数，因此可以看出来资源分配系数对度高的节点惩罚相较之下比较重，度处在平均水平的节点两中计算方法的惩罚权重相当。资源分配系数的计算方法如下：
+\definition{\textbf{资源分配系数}:}资源分配系数最早是基于物理过程中的资源分配得来的一个计算法方法，过程类似于Adamic-Adar系数的计算方法，同样是给度较高的节点惩罚权重，资源分配系数采取的权重是节点度的倒数，因此可以看出来资源分配系数对度高的节点惩罚相较之下比较重，度处在平均水平的节点两种计算方法的惩罚权重相当。资源分配系数的计算方法如下：
 \begin{equation}
 	RA(i,j) =  \sum_{u \in N(i)\cap N(j)} \frac{1}{|N(u)|}
 \end{equation}
@@ -139,14 +139,14 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 \end{equation}
 其中$\textbf{W} = \textbf{D}^{\prime-\frac{1}{2}}\textbf{SD}^{\prime-\frac{1}{2}}$,上述问题转化为求矩阵$\textbf{W}$的特征值问题，也即对矩阵$\textbf{W}$进行特征值分解：
 \begin{equation}\label{evol}
-	\textbf{W} = \textbf{X}^T \Lambda \textbf{X} 
+	\textbf{W} = \textbf{X}^T \bm{\Lambda} \textbf{X} 
 \end{equation}
-其中$\Lambda$为对角矩阵，对角线元素为矩阵$\textbf{W}$的特征值，$\textbf{X}$为正交矩阵，也即表征向量矩阵。对于式(\ref{decomp})的最大值问题相当于求解$\textbf{W}$最接近特征值分解形式，也即矩阵$\textbf{X}$为$\textbf{W}$前$k$个特征值对应的特征向量组合而成的矩阵。
+其中$\bm{\Lambda}$为对角矩阵，对角线元素为矩阵$\textbf{W}$的特征值，$\textbf{X}$为正交矩阵，也即表征向量矩阵。对于式(\ref{decomp})的最大值问题相当于求解$\textbf{W}$最接近特征值分解形式，也即矩阵$\textbf{X}$为$\textbf{W}$前$k$个特征值对应的特征向量组合而成的矩阵。
 
 \subsection{HLE算法描述}
 	给定图数据$G = (E,V)$和图表征向量维数$k$，其中图$G$以邻接矩阵$\textbf{A}\in R^{|V|\times |V|}$表示，HLE算法将得到图$G$的向量表征$\textbf{X}\in R^{|V|\times k} $。
 	
-	在算法开始时，根据相似度准则的选择，令相似度矩阵$\textbf{S}$分别为共同邻居$\textbf{S}_{Cn}$、Adamic-Adar系数$\textbf{S}_{AA}$或资源分配系数$\textbf{S}_{RA}$中的一个。根据$\textbf{S}$矩阵计算出对应的对角矩阵$\textbf{D}\prime$,使得$\textbf{D}'_{ii} = \sum_j \textbf{S}_{ij}$。
+	在算法开始时，根据相似度准则的选择，令相似度矩阵$\textbf{S}$分别为共同邻居$\textbf{S}_{CN}$、Adamic-Adar系数$\textbf{S}_{AA}$或资源分配系数$\textbf{S}_{RA}$中的一个。根据$\textbf{S}$矩阵计算出对应的对角矩阵$\textbf{D}\prime$,使得$\textbf{D}'_{ii} = \sum_j \textbf{S}_{ij}$。
 
 	进一步计算矩阵$W$，使得$\textbf{W}=\textbf{D}^{\prime-\frac{1}{2}}\textbf{SD}^{\prime-\frac{1}{2}}$，对W矩阵进行特征值分解得到前k个最大特征值对应的特征列向量$\{\textbf{X}_1,\textbf{X}_2,\cdots,\textbf{X}_k\}$,组合成图表征向量矩阵$\textbf{X}$。
 	
@@ -166,13 +166,13 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 				\Statex $k$ : 表征向量维数
 				\Ensure
 				\Statex $\textbf{X}$ :表征向量矩阵
-				\Statex $\Lambda$:特征值对角矩阵
+				\Statex $\bm{\Lambda}$:特征值对角矩阵
 				\Statex
 				\State $\mathcal{S} \leftarrow S_{CN}(\textbf{A}) /S_{AA}(\textbf{A}) / S_{RA}(\textbf{A})$
 				\State $\textbf{D}'_{ii} = \sum_j \textbf{S}_{ij}$
 				\State $\textbf{W} \leftarrow  \textbf{D}^{\prime-\frac{1}{2}}\textbf{SD}^{\prime-\frac{1}{2}}$
-				\State 通过特征值分解得到$\textbf{W}$前k个特征向量，组合成矩阵 $\textbf{X}$以及对应特征值组成的对角矩阵$\Lambda$
-				\State 返回 $\textbf{X}$， $\Lambda$
+				\State 通过特征值分解得到$\textbf{W}$前k个特征向量，组合成矩阵 $\textbf{X}$以及对应特征值组成的对角矩阵$\bm{\Lambda}$
+				\State 返回 $\textbf{X}$， $\bm{\Lambda}$
 			\end{algorithmic}
 		\end{algorithm}
 	\end{minipage}
@@ -192,7 +192,7 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 \subsection{节点不变}
 本文的研究对象是无向网络，根据式(\ref{evol}),在时刻$t$网络表征学习相当对矩阵$\textbf{W}^{(t)}$进行特征值分解，也即：
 \begin{equation}
-	\textbf{W}^{(t)} = \textbf{X}^{(t)T} \Lambda^{(t)} \textbf{X} ^{(t)}
+	\textbf{W}^{(t)} = \textbf{X}^{(t)T} \bm{\Lambda}^{(t)} \textbf{X} ^{(t)}
 \end{equation}
 其中$\textbf{X} ^{(t)}$为时刻$t$是网络的表征向量，其中$\textbf{W}^{(t)} = \textbf{D}^{\prime(t)-\frac{1}{2}}\textbf{S}^{(t)}\textbf{D}^{\prime(t)-\frac{1}{2}}$；在网络节点不变的情况下，根据矩阵摄动理论\cite{stewart1990matrix}，用$\Delta\textbf{W}$表示时刻$t$到时刻$t+1$网络变化引起的矩阵$\textbf{W}$的变化，则有
 \begin{equation}
@@ -205,23 +205,23 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 其中矩阵$\textbf{Z}$为对角矩阵，$\textbf{Y}$为$\Delta\textbf{W}$的特征向量矩阵，根据网络变化的定义，变化后的矩阵等于变化前的矩阵加上变量，即：
 \begin{equation}\label{time_t1}
 \begin{aligned}
-\textbf{W}^{(t+1)} &= \textbf{X}^{(t+1)T} \Lambda^{(t+1)} \textbf{X} ^{(t+1)} \\
+\textbf{W}^{(t+1)} &= \textbf{X}^{(t+1)T} \bm{\Lambda}^{(t+1)} \textbf{X} ^{(t+1)} \\
  &= \textbf{W}^{(t)} + \Delta \textbf{W} \\
-&= \textbf{X}^{(t)T} \Lambda^{(t)} \textbf{X} ^{(t)} +  \textbf{Y}^{T} \textbf{Z}  \textbf{Y} \\
+&= \textbf{X}^{(t)T}\bm{\Lambda}^{(t)} \textbf{X} ^{(t)} +  \textbf{Y}^{T} \textbf{Z}  \textbf{Y} \\
 &= \begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix}
-   \begin{bmatrix}  \Lambda^{(t)} & \textbf{0}\\
+   \begin{bmatrix}  \bm{\Lambda}^{(t)} & \textbf{0}\\
    \textbf{0} & \textbf{Z}
    \end{bmatrix}
    \begin{bmatrix} \textbf{X}^{(t)} \\ \textbf{Y}\end{bmatrix} \\
 &= \tilde{\textbf{X}}^{(t)T} 
-\begin{bmatrix}  \Lambda^{(t)} & \textbf{0}\\
+\begin{bmatrix}  \bm{\Lambda}^{(t)} & \textbf{0}\\
 \textbf{0} & \textbf{Z}
 \end{bmatrix}
 \tilde{\textbf{X}}^{(t)}
 \end{aligned}
 \end{equation}
 其中为方便表述，记$ \tilde{\textbf{X}}^{(t)T}= \begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix}$。通过矩阵特征值分解的特性可知，矩阵$\textbf{X}^{(t)T}$为正交矩阵，那么对于时刻$t$所对应的表征向量矩阵$\textbf{X}^{(t+1)T}$也应是正交矩阵，为此需引入QR分解。
-\definition{\textbf{QR分解}}：QR分解是线性代数中常用的矩阵分解方法，将矩阵$\textbf{A}$分解成两个矩阵的乘积，一个是正交矩阵$\text{Q}$，也即$\textbf{Q}^T\textbf{Q} = \textbf{I}$，一个是上三角矩阵$\textbf{R}$,也即当$i>j$时，有$\textbf{R}_{ij} =0$，当矩阵$\textbf{A}$为非奇异矩阵时，QR分解是唯一的，也即：
+\definition{\textbf{QR分解}}：QR分解是线性代数中常用的矩阵分解方法，将矩阵$\textbf{A}$分解成两个矩阵的乘积，一个是正交矩阵$\textbf{Q}$，也即$\textbf{Q}^T\textbf{Q} = \textbf{I}$，一个是上三角矩阵$\textbf{R}$,也即当$i>j$时，有$\textbf{R}_{ij} =0$，当矩阵$\textbf{A}$为非奇异矩阵时，QR分解是唯一的，也即：
 \begin{equation}
 	\textbf{A} = \textbf{Q} \textbf{R}
 \end{equation}
@@ -278,15 +278,15 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 进一步地将式(\ref{delta})代入式(\ref{time_t1})中，则原问题转换成：
 \begin{equation}\label{time_t2}
 	\begin{aligned}
-	\textbf{W}^{(t+1)} &= \textbf{X}^{(t+1)T} \Lambda^{(t+1)} \textbf{X} ^{(t+1)} \\
+	\textbf{W}^{(t+1)} &= \textbf{X}^{(t+1)T} \bm{\Lambda}^{(t+1)} \textbf{X} ^{(t+1)} \\
 	&= \tilde{\textbf{X}}^{(t)T} 
-	\begin{bmatrix}  \Lambda^{(t)} & \textbf{0}\\
+	\begin{bmatrix}  \bm{\Lambda}^{(t)} & \textbf{0}\\
 	\textbf{0} & \textbf{Z}
 	\end{bmatrix}
 	\tilde{\textbf{X}}^{(t)} \\
 	&= \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix}\begin{bmatrix} \textbf{I} & \textbf{R}_1 \\
 	0 & \textbf{R}_2 \end{bmatrix}
-	\begin{bmatrix}  \Lambda^{(t)} & \textbf{0}\\
+	\begin{bmatrix}  \bm{\Lambda}^{(t)} & \textbf{0}\\
 	\textbf{0} & \textbf{Z} \end{bmatrix}
 	\begin{bmatrix} \textbf{I} & \textbf{R}_1 \\
 	0 & \textbf{R}_2 \end{bmatrix} ^T
@@ -297,22 +297,22 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 \end{equation}
 其中$\textbf{M}=\begin{bmatrix} \textbf{I} & \textbf{R}_1 \\
 0 & \textbf{R}_2 \end{bmatrix}
-\begin{bmatrix}  \Lambda^{(t)} & \textbf{0}\\
+\begin{bmatrix} \bm{\Lambda}^{(t)} & \textbf{0}\\
 \textbf{0} & \textbf{Z} \end{bmatrix}
 \begin{bmatrix} \textbf{I} & \textbf{R}_1 \\
 0 & \textbf{R}_2 \end{bmatrix} ^T$。
 
 注意到矩阵$\textbf{M}$不是对角矩阵，对于矩阵$\textbf{W}^{(t+1)}$的特征值分解结果要求对角矩阵，因此对矩阵$\textbf{M}$进行特征值分解，则有：
 \begin{equation}
-	\textbf{M} =\textbf{V}^T \Lambda^{(t+1)} \textbf{V}
+	\textbf{M} =\textbf{V}^T \bm{\Lambda}^{(t+1)} \textbf{V}
 \end{equation}
 则式(\ref{time_t2})进一步转化成：
 \begin{equation}
 \begin{aligned}
-\textbf{W}^{(t+1)} &= \textbf{X}^{(t+1)T} \Lambda^{(t+1)} \textbf{X} ^{(t+1)} \\
+\textbf{W}^{(t+1)} &= \textbf{X}^{(t+1)T} \bm{\Lambda}^{(t+1)} \textbf{X} ^{(t+1)} \\
 &= \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix}
 \textbf{M} \begin{bmatrix} \textbf{X}^{(t)} \\ \Delta\textbf{Q} \end{bmatrix} \\
-&= \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{V}^T \Lambda^{(t+1)} \textbf{V}
+&= \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{V}^T \bm{\Lambda}^{(t+1)} \textbf{V}
 \begin{bmatrix} \textbf{X}^{(t)} \\ \Delta\textbf{Q} \end{bmatrix}
 \end{aligned}
 \end{equation}
@@ -320,9 +320,9 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 
 \textbf{综上所述}，节点数不变的情况下的增量图表征方法\textbf{iHLE-nn}的流程如下：
 
-在离线模型阶段训练HLE模型时选定相似度矩阵$\textbf{S}$的计算方法，并得到$\textbf{W}^{(t)} = \textbf{X}^{(t)T} \Lambda^{(t)} \textbf{X} ^{(t)}$；根据网络变化，计算从时刻$t$到时刻$t+1$之间矩阵$\textbf{W}$的变化量$\Delta\textbf{W}$，对矩阵$\Delta\textbf{W}$进行特征值分解得到$\Delta\textbf{W} =  \textbf{Y}^{T} \textbf{Z}  \textbf{Y}$，进一步对$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix}$进行式(\ref{delta})中所示的QR分解,得到$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix} = \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{R}$，再对矩阵$\textbf{M} = \textbf{R}\begin{bmatrix}  \Lambda^{(t)} & \textbf{0}\\
+在离线模型阶段训练HLE模型时选定相似度矩阵$\textbf{S}$的计算方法，并得到$\textbf{W}^{(t)} = \textbf{X}^{(t)T} \bm{\Lambda}^{(t)} \textbf{X} ^{(t)}$；根据网络变化，计算从时刻$t$到时刻$t+1$之间矩阵$\textbf{W}$的变化量$\Delta\textbf{W}$，对矩阵$\Delta\textbf{W}$进行特征值分解得到$\Delta\textbf{W} =  \textbf{Y}^{T} \textbf{Z}  \textbf{Y}$，进一步对$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix}$进行式(\ref{delta})中所示的QR分解,得到$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix} = \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{R}$，再对矩阵$\textbf{M} = \textbf{R}\begin{bmatrix}  \bm{\Lambda}^{(t)} & \textbf{0}\\
 \textbf{0} & \textbf{Z} \end{bmatrix}
-\textbf{R}^T$进行特征值分解，得到$\textbf{M} =\textbf{V}^T \Lambda^{(t+1)} \textbf{V}$
+\textbf{R}^T$进行特征值分解，得到$\textbf{M} =\textbf{V}^T \bm{\Lambda}^{(t+1)} \textbf{V}$
 ,则得到时刻$t+1$的网络表征向量矩阵为$\begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{V}^T$，具体算法流程见\textbf{算法3.2}。%\ref{iHLE_nn}。
 
 \begin{figure}[htb]
@@ -333,22 +333,22 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 			\caption{iHLE-nn算法}
 			\begin{algorithmic}[1]
 				\Require
-				\Statex $\textbf{X} ^{(t)},\Lambda^{(t)}$ :网络在时刻$t$的网络表征结果和特征值对角矩阵
+				\Statex $\textbf{X} ^{(t)},\bm{\Lambda}^{(t)}$ :网络在时刻$t$的网络表征结果和特征值对角矩阵
 				\Statex $\Delta\textbf{W}$ :网络从时刻$t$到$t+1$的矩阵$\textbf{W}$的变化量
 				\Statex $k$ : 表征向量维数
 				\Statex $m$ : 变化量$\Delta\textbf{W}$的特征分解维数
 				\Ensure
 				\Statex $\textbf{X}^{(t+1)T}$ :时刻$t+1$的网络表征向量矩阵
-				\Statex $\Lambda^{(t+1)}$:时刻$t+1$网络对应的特征值对角矩阵
+				\Statex $\bm{\Lambda}^{(t+1)}$:时刻$t+1$网络对应的特征值对角矩阵
 				\Statex
 				\State 对$\Delta\textbf{W}$特征值分解，$\Delta\textbf{W} =  \textbf{Y}^{T} \textbf{Z}  \textbf{Y}$，取前m个特征向量
 				\State 对$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix}$进行QR分解，$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix} = \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{R}$
-				\State 令$\textbf{M} = \textbf{R}\begin{bmatrix}  \Lambda^{(t)} & \textbf{0};
+				\State 令$\textbf{M} = \textbf{R}\begin{bmatrix}  \bm{\Lambda}^{(t)} & \textbf{0};
 				\textbf{0} & \textbf{Z} \end{bmatrix}
 				\textbf{R}^T$
-				\State 对$\textbf{M}$进行特征值分解，取前k个特征值对应的特征向量;$\textbf{M} =\textbf{V}^T \Lambda^{(t+1)} \textbf{V}$
+				\State 对$\textbf{M}$进行特征值分解，取前k个特征值对应的特征向量;$\textbf{M} =\textbf{V}^T \bm{\Lambda}^{(t+1)} \textbf{V}$
 				\State $\textbf{X}^{(t+1)T} = \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{V}^T$
-				\State 返回 $\textbf{X}^{(t+1)T}, \Lambda^{(t+1)}$
+				\State 返回 $\textbf{X}^{(t+1)T}, \bm{\Lambda}^{(t+1)}$
 			\end{algorithmic}
 		\end{algorithm}
 	\end{minipage}
@@ -415,10 +415,10 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 	\begin{equation}
 		\Delta\textbf{D}'_{kk}=\left\{
 		\begin{array}{ccl}
-		1       &      & k\in N(i)\setminus N(j)\quad or\quad  k\in N(j)\setminus N(i)\\
-		2     &      & k\in N(j) \cap N(i)\\
-		|N(i)|     &      & k=j\\
-		|N(j)|       &      & k=i 
+		1 ,      &      & k\in N(i)\setminus N(j)\quad or\quad  k\in N(j)\setminus N(i)\\
+		2 ,    &      & k\in N(j) \cap N(i)\\
+		|N(i)|,     &      & k=j\\
+		|N(j)| ,      &      & k=i 
 		\end{array} \right.
 	\end{equation}
 \end{lemma}
@@ -444,7 +444,7 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 	&+\Delta\textbf{D}^{\prime-\frac{1}{2}}\Delta\textbf{S}_{CN}\Delta\textbf{D}^{\prime-\frac{1}{2}}
 	\end{aligned}
 \end{equation}
-根据矩阵计算理论\cite{golub2012matrix}，去掉上式中对实际结果影响较小的高阶增量项，同时考虑到式(\ref{defin:delta_w})中矩阵$\textbf{W}= \textbf{D}^{\prime-\frac{1}{2}}\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}}$，则对于$\Delta\textbf{W}$有：
+根据矩阵计算理论\cite{golub2012matrix}，去掉上式中对实际结果和计算量影响较小的高阶增量项，同时考虑到式(\ref{defin:delta_w})中矩阵$\textbf{W}= \textbf{D}^{\prime-\frac{1}{2}}\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}}$，则对于$\Delta\textbf{W}$有：
 \begin{equation}
 	\Delta\textbf{W}= \textbf{D}^{\prime-\frac{1}{2}}\textbf{S}_{CN}\Delta\textbf{D}^{\prime-\frac{1}{2}}+
 	\textbf{D}^{\prime-\frac{1}{2}}\Delta\textbf{S}_{CN}\textbf{D}^{\prime-\frac{1}{2}}+
@@ -478,23 +478,23 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 			\caption{iHLE-na算法}
 			\begin{algorithmic}[1]
 				\Require
-				\Statex $\textbf{X} ^{(t)},\Lambda^{(t)}$ :网络在时刻$t$的网络表征结果和特征值对角矩阵
+				\Statex $\textbf{X} ^{(t)},\bm{\Lambda}^{(t)}$ :网络在时刻$t$的网络表征结果和特征值对角矩阵
 				\Statex $\Delta\textbf{W}$ :网络从时刻$t$到$t+1$的矩阵$\textbf{W}$的变化量
 				\Statex $k$ : 表征向量维数
 				\Statex $m$ : 变化量$\Delta\textbf{W}$的特征分解维数
 				\Ensure
 				\Statex $\textbf{X}^{(t+1)T}$ :时刻$t+1$的网络表征向量矩阵
-				\Statex $\Lambda^{(t+1)}$:时刻$t+1$网络对应的特征值对角矩阵
+				\Statex $\bm{\Lambda}^{(t+1)}$:时刻$t+1$网络对应的特征值对角矩阵
 				\Statex
 				\State 对$\Delta\textbf{W}$特征值分解，$\Delta\textbf{W} =  \textbf{Y}^{T} \textbf{Z}  \textbf{Y}$，取前m个特征向量
 				\State 对$ \textbf{X}^{(t)T}$进行补0增广，增加一行0。
 				\State 对$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix}$进行QR分解，$\begin{bmatrix} \textbf{X}^{(t)T} & \textbf{Y}^{T}\end{bmatrix} = \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{R}$
-				\State 令$\textbf{M} = \textbf{R}\begin{bmatrix}  \Lambda^{(t)} & \textbf{0};
+				\State 令$\textbf{M} = \textbf{R}\begin{bmatrix}  \bm{\Lambda}^{(t)} & \textbf{0};
 				\textbf{0} & \textbf{Z} \end{bmatrix}
 				\textbf{R}^T$
-				\State 对$\textbf{M}$进行特征值分解，取前k个特征值对应的特征向量;$\textbf{M} =\textbf{V}^T \Lambda^{(t+1)} \textbf{V}$
+				\State 对$\textbf{M}$进行特征值分解，取前k个特征值对应的特征向量;$\textbf{M} =\textbf{V}^T \bm{\Lambda}^{(t+1)} \textbf{V}$
 				\State $\textbf{X}^{(t+1)T} = \begin{bmatrix} \textbf{X}^{(t)T} & \Delta\textbf{Q}^{T} \end{bmatrix} \textbf{V}^T$
-				\State 返回 $\textbf{X}^{(t+1)T}, \Lambda^{(t+1)}$
+				\State 返回 $\textbf{X}^{(t+1)T}, \bm{\Lambda}^{(t+1)}$
 			\end{algorithmic}
 		\end{algorithm}
 	\end{minipage}
@@ -507,20 +507,20 @@ f_G: \textbf{A} \rightarrow \textbf{X} \in R^{|V| \times k} \qquad s.t.\quad k<<
 假设$\textbf{W}$的特征向量矩阵为$\textbf{X}^{(t)T}=\begin{bmatrix} \textbf{X}^{(t)T}_1 | & \textbf{X}^{(t)T}_2 | & \cdots | & \textbf{X}^{(t)T}_k \end{bmatrix}$,$\Delta\textbf{W}$的特征向量矩阵为$\textbf{Y}^{T}=\begin{bmatrix} \textbf{Y}^T_1 | & \textbf{Y}^T_2 | & \cdots | & \textbf{Y}^T_m \end{bmatrix}$，其中有$\textbf{Y}^T_1 = \sum_{i=1}^{k} \alpha_i \textbf{X}^{(t)T}_i $,则有：
 \begin{equation}\label{time_t1}
 \begin{aligned}
-\textbf{W}^{(t+1)} &= \textbf{X}^{(t+1)T} \Lambda^{(t+1)} \textbf{X} ^{(t+1)} \\
+\textbf{W}^{(t+1)} &= \textbf{X}^{(t+1)T} \bm{\Lambda}^{(t+1)} \textbf{X} ^{(t+1)} \\
 &= \textbf{W}^{(t)} + \Delta \textbf{W} \\
-&= \textbf{X}^{(t)T} \Lambda^{(t)} \textbf{X} ^{(t)} +  \textbf{Y}^{T} \textbf{Z}  \textbf{Y} \\
-&= \sum_{i=1}^{k}\textbf{X}^{(t)T}_i \Lambda_i  \textbf{X}^{(t)}_i + (\sum_{i=1}^{k} \alpha_i \textbf{X}^{(t)T}_i) Z_1 (\sum_{i=1}^{k} \alpha_i \textbf{X}^{(t)T}_i)^T +\sum_{i=2}^{m}\textbf{Y}^{T}_i Z_i  \textbf{Y}_i \\
-&= \sum_{i=1}^{k}\textbf{X}^{(t)T}_i (\Lambda_i+\alpha_i^2)  \textbf{X}^{(t)}_i +
+&= \textbf{X}^{(t)T} \bm{\Lambda}^{(t)} \textbf{X} ^{(t)} +  \textbf{Y}^{T} \textbf{Z}  \textbf{Y} \\
+&= \sum_{i=1}^{k}\textbf{X}^{(t)T}_i \bm{\Lambda}_i  \textbf{X}^{(t)}_i + (\sum_{i=1}^{k} \alpha_i \textbf{X}^{(t)T}_i) Z_1 (\sum_{i=1}^{k} \alpha_i \textbf{X}^{(t)T}_i)^T +\sum_{i=2}^{m}\textbf{Y}^{T}_i Z_i  \textbf{Y}_i \\
+&= \sum_{i=1}^{k}\textbf{X}^{(t)T}_i (\bm{\Lambda}_i+\alpha_i^2)  \textbf{X}^{(t)}_i +
 \sum_{i=2}^{m}\textbf{Y}^{T}_i Z_i  \textbf{Y}_i \\
 &= \begin{bmatrix} \textbf{X}^{(t)T} & \tilde{\textbf{Y}^{T}}\end{bmatrix}
-\begin{bmatrix}  \tilde{\Lambda^{(t)}} & \textbf{0}\\
+\begin{bmatrix}  \tilde{\bm{\Lambda}^{(t)}} & \textbf{0}\\
 \textbf{0} & \tilde{\textbf{Z}}
 \end{bmatrix}
 \begin{bmatrix} \textbf{X}^{(t)} \\ \tilde{\textbf{Y}}\end{bmatrix}
 \end{aligned}
 \end{equation}
-其中$\tilde{\textbf{Y}} =\begin{bmatrix}  \textbf{Y}^T_2 | & \cdots | & \textbf{Y}^T_m \end{bmatrix}$, $\tilde{\Lambda^{(t)}}_i = \Lambda^{(t)}_i+\alpha_i^2$，于是可以转化为原假设中特征向量非线性相关的情况。
+其中$\tilde{\textbf{Y}} =\begin{bmatrix}  \textbf{Y}^T_2 | & \cdots | & \textbf{Y}^T_m \end{bmatrix}$, $\tilde{\bm{\Lambda}^{(t)}}_i = \bm{\Lambda}^{(t)}_i+\alpha_i^2$，于是可以转化为原假设中特征向量非线性相关的情况。
 \section{算法分析}
 这一部分将对上述两个算法的计算复杂度进行分析。
 \begin{itemize}

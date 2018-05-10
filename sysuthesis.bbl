@@ -7,7 +7,7 @@ Bellman R~E.
 \thudot
 
 \bibitem{chang2015heterogeneous}
-Chang S, Han W, Tang J, et~al.
+Chang S, Han W, Tang J, Qi G~J, Aggarwal C~C, Huang T~S.
 \newblock Heterogeneous network embedding via deep architectures.
 \newblock  Proceedings of the 21th ACM SIGKDD International Conference on
   Knowledge Discovery and Data Mining. ACM, 2015.
@@ -90,7 +90,7 @@ Belkin M, Niyogi P.
 \thudot
 
 \bibitem{mikolov2013efficient}
-Mikolov T, Chen K, Corrado G, et~al.
+Mikolov T, Chen K, Corrado G, Dean J.
 \newblock Efficient estimation of word representations in vector space.
 \newblock arXiv preprint arXiv:1301.3781, 2013.
 \thudot
@@ -104,7 +104,7 @@ Perozzi B, Al-Rfou R, Skiena S.
 \thudot
 
 \bibitem{tang2015line}
-Tang J, Qu M, Wang M, et~al.
+Tang J, Qu M, Wang M, Zhang M, Yan J, Mei Q.
 \newblock Line: Large-scale information network embedding.
 \newblock  Proceedings of the 24th International Conference on World Wide Web.
   International World Wide Web Conferences Steering Committee, 2015.
@@ -120,7 +120,7 @@ Grover A, Leskovec J.
 \thudot
 
 \bibitem{ahmed2013distributed}
-Ahmed A, Shervashidze N, Narayanamurthy S, et~al.
+Ahmed A, Shervashidze N, Narayanamurthy S, Josifovski V, Smola A~J.
 \newblock Distributed large-scale natural graph factorization.
 \newblock  Proceedings of the 22nd international conference on World Wide Web.
   ACM, 2013.
@@ -136,7 +136,7 @@ Singh A~P, Gordon G~J.
 \thudot
 
 \bibitem{qiu2017network}
-Qiu J, Dong Y, Ma H, et~al.
+Qiu J, Dong Y, Ma H, Li J, Wang K, Tang J.
 \newblock Network embedding as matrix factorization: Unifyingdeepwalk, line,
   pte, and node2vec.
 \newblock arXiv preprint arXiv:1710.02971, 2017.
@@ -152,7 +152,7 @@ Tang J, Qu M, Mei Q.
 \thudot
 
 \bibitem{yang2015network}
-Yang C, Liu Z, Zhao D, et~al.
+Yang C, Liu Z, Zhao D, Sun M, Chang E~Y.
 \newblock Network representation learning with rich text information.
 \newblock  IJCAI, 2015.
 \newblock  2111--2117
@@ -167,7 +167,7 @@ Huang X, Li J, Hu X.
 \thudot
 
 \bibitem{zhang2016collective}
-Zhang D, Yin J, Zhu X, et~al.
+Zhang D, Yin J, Zhu X, Zhang C.
 \newblock Collective classification via discriminative matrix factorization on
   sparsely labeled networks.
 \newblock  Proceedings of the 25th ACM International on Conference on
@@ -183,7 +183,7 @@ Coppock H, Freund J.
 \thudot
 
 \bibitem{zhong2017survey}
-ZHONG J, LIU Z, ZENG Y, et~al.
+ZHONG J, LIU Z, ZENG Y, CUI L, JI Z.
 \newblock A survey on incremental learning.
 \newblock 2017.
 \thudot
@@ -223,7 +223,7 @@ McMahan B.
 \thudot
 
 \bibitem{syed1999incremental}
-Syed N~A, Huan S, Kah L, et~al.
+Syed N~A, Huan S, Kah L, Sung K.
 \newblock Incremental learning with support vector machines.
 \newblock 1999.
 \thudot
@@ -245,7 +245,7 @@ Kivinen J, Smola A~J, Williamson R~C.
 \thudot
 
 \bibitem{li2017attributed}
-Li J, Dani H, Hu X, et~al.
+Li J, Dani H, Hu X, Tang J, Chang Y, Liu H.
 \newblock Attributed network embedding for learning in a dynamic environment.
 \newblock  Proceedings of the 2017 ACM on Conference on Information and
   Knowledge Management. ACM, 2017.
@@ -272,7 +272,7 @@ Liben-Nowell D, Kleinberg J.
 \thudot
 
 \bibitem{mikolov2013distributed}
-Mikolov T, Sutskever I, Chen K, et~al.
+Mikolov T, Sutskever I, Chen K, Corrado G~S, Dean J.
 \newblock Distributed representations of words and phrases and their
   compositionality.
 \newblock  Advances in neural information processing systems, 2013.
@@ -280,7 +280,7 @@ Mikolov T, Sutskever I, Chen K, et~al.
 \thudot
 
 \bibitem{ou2016asymmetric}
-Ou M, Cui P, Pei J, et~al.
+Ou M, Cui P, Pei J, Zhang Z, Zhu W.
 \newblock Asymmetric transitivity preserving graph embedding.
 \newblock  Proceedings of the 22nd ACM SIGKDD international conference on
   Knowledge discovery and data mining. ACM, 2016.
@@ -288,13 +288,13 @@ Ou M, Cui P, Pei J, et~al.
 \thudot
 
 \bibitem{page1999pagerank}
-Page L, Brin S, Motwani R, et~al.
+Page L, Brin S, Motwani R, Winograd T.
 \newblock The pagerank citation ranking: Bringing order to the web.
 \newblock Technical report, Stanford InfoLab, 1999
 \thudot
 
 \bibitem{yu2014large}
-Yu H~F, Jain P, Kar P, et~al.
+Yu H~F, Jain P, Kar P, Dhillon I.
 \newblock Large-scale multi-label learning with missing labels.
 \newblock  International conference on machine learning, 2014.
 \newblock  593--601
@@ -341,13 +341,13 @@ Zhou T, L{\"u} L, Zhang Y~C.
 \thudot
 
 \bibitem{wang2015link}
-Wang P, Xu B, Wu Y, et~al.
+Wang P, Xu B, Wu Y, Zhou X.
 \newblock Link prediction in social networks: the state-of-the-art.
 \newblock Science China Information Sciences, 2015, 58(1):1--38
 \thudot
 
 \bibitem{chi2007evolutionary}
-Chi Y, Song X, Zhou D, et~al.
+Chi Y, Song X, Zhou D, Hino K, Tseng B~L.
 \newblock Evolutionary spectral clustering by incorporating temporal
   smoothness.
 \newblock  Proceedings of the 13th ACM SIGKDD international conference on
