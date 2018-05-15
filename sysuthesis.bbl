@@ -1,390 +1,406 @@
 \begin{thebibliography}{10}
+\providecommand{\bibauthor}[1]{#1}
+\providecommand{\bibeditor}[1]{#1}
+\providecommand{\bibtranslator}[1]{#1}
+\providecommand{\bibtitle}[1]{#1}
+\providecommand{\bibbooktitle}[1]{#1}
+\providecommand{\bibjournal}[1]{#1}
+\providecommand{\bibmark}[1]{#1}
+\providecommand{\bibcountry}[1]{#1}
+\providecommand{\bibpatentid}[1]{#1}
+\providecommand{\bibedition}[1]{#1}
+\providecommand{\biborganization}[1]{#1}
+\providecommand{\bibaddress}[1]{#1}
+\providecommand{\bibpublisher}[1]{#1}
+\providecommand{\bibinstitution}[1]{#1}
+\providecommand{\bibschool}[1]{#1}
+\providecommand{\bibvolume}[1]{#1}
+\providecommand{\bibnumber}[1]{#1}
+\providecommand{\bibversion}[1]{#1}
+\providecommand{\bibpages}[1]{#1}
+\providecommand{\bibmodifydate}[1]{#1}
+\providecommand{\bibcitedate}[1]{#1}
+\providecommand{\bibyear}[1]{#1}
+\providecommand{\bibdate}[1]{#1}
+\providecommand{\biburl}[1]{\newline\url{#1}}
 
 \bibitem{bellman2015adaptive}
-Bellman R~E.
-\newblock Adaptive control processes: a guided tour.
-\newblock Princeton university press, 2015
-\thudot
+\bibauthor{\textup{Bellman} R~E}\@. \bibbooktitle{Adaptive control processes: a
+  guided tour}\bibmark{[M]}\@. \bibaddress{}\thinspace{}\textnormal{:
+  }\bibpublisher{Princeton university press}\@, \bibyear{2015}\@.
 
 \bibitem{chang2015heterogeneous}
-Chang S, Han W, Tang J, Qi G~J, Aggarwal C~C, Huang T~S.
-\newblock Heterogeneous network embedding via deep architectures.
-\newblock  Proceedings of the 21th ACM SIGKDD International Conference on
-  Knowledge Discovery and Data Mining. ACM, 2015.
-\newblock  119--128
-\thudot
+\bibauthor{\textup{Chang} S\@, \textup{Han} W\@, \textup{Tang} J, et~al}\@.
+  \bibtitle{Heterogeneous network embedding via deep
+  architectures}\bibmark{[C]} //\thinspace{}\bibbooktitle{Proceedings of the
+  21th ACM SIGKDD International Conference on Knowledge Discovery and Data
+  Mining}\@. \bibyear{2015}\thinspace{}\textnormal{:
+  }\bibpages{119\thinspace{}\textnormal{--}\thinspace{}128}\@.
 
 \bibitem{weiss2009spectral}
-Weiss Y, Torralba A, Fergus R.
-\newblock Spectral hashing.
-\newblock  Advances in neural information processing systems, 2009.
-\newblock  1753--1760
-\thudot
+\bibauthor{\textup{Weiss} Y\@, \textup{Torralba} A\@, \textup{Fergus} R}\@.
+  \bibtitle{Spectral hashing}\bibmark{[C]} //\thinspace{}\bibbooktitle{Advances
+  in neural information processing systems}\@.
+  \bibyear{2009}\thinspace{}\textnormal{:
+  }\bibpages{1753\thinspace{}\textnormal{--}\thinspace{}1760}\@.
 
 \bibitem{krizhevsky2012imagenet}
-Krizhevsky A, Sutskever I, Hinton G~E.
-\newblock Imagenet classification with deep convolutional neural networks.
-\newblock  Advances in neural information processing systems, 2012.
-\newblock  1097--1105
-\thudot
+\bibauthor{\textup{Krizhevsky} A\@, \textup{Sutskever} I\@, \textup{Hinton}
+  G~E}\@. \bibtitle{Imagenet classification with deep convolutional neural
+  networks}\bibmark{[C]} //\thinspace{}\bibbooktitle{Advances in neural
+  information processing systems}\@. \bibyear{2012}\thinspace{}\textnormal{:
+  }\bibpages{1097\thinspace{}\textnormal{--}\thinspace{}1105}\@.
 
 \bibitem{ng2002spectral}
-Ng A~Y, Jordan M~I, Weiss Y.
-\newblock On spectral clustering: Analysis and an algorithm.
-\newblock  Advances in neural information processing systems, 2002.
-\newblock  849--856
-\thudot
+\bibauthor{\textup{Ng} A~Y\@, \textup{Jordan} M~I\@, \textup{Weiss} Y}\@.
+  \bibtitle{On spectral clustering: Analysis and an algorithm}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Advances in neural information processing
+  systems}\@. \bibyear{2002}\thinspace{}\textnormal{:
+  }\bibpages{849\thinspace{}\textnormal{--}\thinspace{}856}\@.
 
 \bibitem{aggarwal2014evolutionary}
-Aggarwal C, Subbian K.
-\newblock Evolutionary network analysis: A survey.
-\newblock ACM Computing Surveys (CSUR), 2014, 47(1):10
-\thudot
+\bibauthor{\textup{Aggarwal} C\@, \textup{Subbian} K}\@. \bibtitle{Evolutionary
+  network analysis: A survey}\bibmark{[J]}\@. \bibjournal{ACM Computing Surveys
+  (CSUR)}\@, \bibyear{2014}\@,
+  \bibvolume{47}\bibnumber{(1)}\thinspace{}\textnormal{: }\bibpages{10}\@.
 
 \bibitem{zhao2011gsketch}
-Zhao P, Aggarwal C~C, Wang M.
-\newblock gsketch: on query estimation in graph streams.
-\newblock Proceedings of the VLDB Endowment, 2011, 5(3):193--204
-\thudot
+\bibauthor{\textup{Zhao} P\@, \textup{Aggarwal} C~C\@, \textup{Wang} M}\@.
+  \bibtitle{gSketch: on query estimation in graph streams}\bibmark{[J]}\@.
+  \bibjournal{Proceedings of the VLDB Endowment}\@, \bibyear{2011}\@,
+  \bibvolume{5}\bibnumber{(3)}\thinspace{}\textnormal{:
+  }\bibpages{193\thinspace{}\textnormal{--}\thinspace{}204}\@.
 
 \bibitem{le2012linked}
-Le-Phuoc D, Parreira J~X, Hauswirth M.
-\newblock Linked stream data processing.
-\newblock  Reasoning Web International Summer School. Springer, 2012.
-\newblock  245--289
-\thudot
+\bibauthor{\textup{Le-Phuoc} D\@, \textup{Parreira} J~X\@, \textup{Hauswirth}
+  M}\@. \bibtitle{Linked stream data processing}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Reasoning Web International Summer School}\@.
+  \bibyear{2012}\thinspace{}\textnormal{:
+  }\bibpages{245\thinspace{}\textnormal{--}\thinspace{}289}\@.
 
 \bibitem{leskovec2010empirical}
-Leskovec J, Lang K~J, Mahoney M.
-\newblock Empirical comparison of algorithms for network community detection.
-\newblock  Proceedings of the 19th international conference on World wide web.
-  ACM, 2010.
-\newblock  631--640
-\thudot
+\bibauthor{\textup{Leskovec} J\@, \textup{Lang} K~J\@, \textup{Mahoney} M}\@.
+  \bibtitle{Empirical comparison of algorithms for network community
+  detection}\bibmark{[C]} //\thinspace{}\bibbooktitle{Proceedings of the 19th
+  international conference on World wide web}\@.
+  \bibyear{2010}\thinspace{}\textnormal{:
+  }\bibpages{631\thinspace{}\textnormal{--}\thinspace{}640}\@.
 
 \bibitem{shi2000normalized}
-Shi J, Malik J.
-\newblock Normalized cuts and image segmentation.
-\newblock IEEE Transactions on pattern analysis and machine intelligence, 2000,
-  22(8):888--905
-\thudot
+\bibauthor{\textup{Shi} J\@, \textup{Malik} J}\@. \bibtitle{Normalized cuts and
+  image segmentation}\bibmark{[J]}\@. \bibjournal{IEEE Transactions on pattern
+  analysis and machine intelligence}\@, \bibyear{2000}\@,
+  \bibvolume{22}\bibnumber{(8)}\thinspace{}\textnormal{:
+  }\bibpages{888\thinspace{}\textnormal{--}\thinspace{}905}\@.
 
 \bibitem{roweis2000nonlinear}
-Roweis S~T, Saul L~K.
-\newblock Nonlinear dimensionality reduction by locally linear embedding.
-\newblock science, 2000, 290(5500):2323--2326
-\thudot
+\bibauthor{\textup{Roweis} S~T\@, \textup{Saul} L~K}\@. \bibtitle{Nonlinear
+  dimensionality reduction by locally linear embedding}\bibmark{[J]}\@.
+  \bibjournal{science}\@, \bibyear{2000}\@,
+  \bibvolume{290}\bibnumber{(5500)}\thinspace{}\textnormal{:
+  }\bibpages{2323\thinspace{}\textnormal{--}\thinspace{}2326}\@.
 
 \bibitem{tenenbaum2000global}
-Tenenbaum J~B, De~Silva V, Langford J~C.
-\newblock A global geometric framework for nonlinear dimensionality reduction.
-\newblock science, 2000, 290(5500):2319--2323
-\thudot
+\bibauthor{\textup{Tenenbaum} J~B\@, \textup{De~Silva} V\@, \textup{Langford}
+  J~C}\@. \bibtitle{A global geometric framework for nonlinear dimensionality
+  reduction}\bibmark{[J]}\@. \bibjournal{science}\@, \bibyear{2000}\@,
+  \bibvolume{290}\bibnumber{(5500)}\thinspace{}\textnormal{:
+  }\bibpages{2319\thinspace{}\textnormal{--}\thinspace{}2323}\@.
 
 \bibitem{belkin2002laplacian}
-Belkin M, Niyogi P.
-\newblock Laplacian eigenmaps and spectral techniques for embedding and
-  clustering.
-\newblock  Advances in neural information processing systems, 2002.
-\newblock  585--591
-\thudot
+\bibauthor{\textup{Belkin} M\@, \textup{Niyogi} P}\@. \bibtitle{Laplacian
+  eigenmaps and spectral techniques for embedding and clustering}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Advances in neural information processing
+  systems}\@. \bibyear{2002}\thinspace{}\textnormal{:
+  }\bibpages{585\thinspace{}\textnormal{--}\thinspace{}591}\@.
 
 \bibitem{mikolov2013efficient}
-Mikolov T, Chen K, Corrado G, Dean J.
-\newblock Efficient estimation of word representations in vector space.
-\newblock arXiv preprint arXiv:1301.3781, 2013.
-\thudot
+\bibauthor{\textup{Mikolov} T\@, \textup{Chen} K\@, \textup{Corrado} G,
+  et~al}\@. \bibtitle{Efficient estimation of word representations in vector
+  space}\bibmark{[J]}\@. \bibjournal{arXiv preprint arXiv:1301.3781}\@,
+  \bibyear{2013}\@.
 
 \bibitem{perozzi2014deepwalk}
-Perozzi B, Al-Rfou R, Skiena S.
-\newblock Deepwalk: Online learning of social representations.
-\newblock  Proceedings of the 20th ACM SIGKDD international conference on
-  Knowledge discovery and data mining. ACM, 2014.
-\newblock  701--710
-\thudot
+\bibauthor{\textup{Perozzi} B\@, \textup{Al-Rfou} R\@, \textup{Skiena} S}\@.
+  \bibtitle{Deepwalk: Online learning of social representations}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Proceedings of the 20th ACM SIGKDD international
+  conference on Knowledge discovery and data mining}\@.
+  \bibyear{2014}\thinspace{}\textnormal{:
+  }\bibpages{701\thinspace{}\textnormal{--}\thinspace{}710}\@.
 
 \bibitem{tang2015line}
-Tang J, Qu M, Wang M, Zhang M, Yan J, Mei Q.
-\newblock Line: Large-scale information network embedding.
-\newblock  Proceedings of the 24th International Conference on World Wide Web.
-  International World Wide Web Conferences Steering Committee, 2015.
-\newblock  1067--1077
-\thudot
+\bibauthor{\textup{Tang} J\@, \textup{Qu} M\@, \textup{Wang} M, et~al}\@.
+  \bibtitle{Line: Large-scale information network embedding}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Proceedings of the 24th International Conference
+  on World Wide Web}\@. \bibyear{2015}\thinspace{}\textnormal{:
+  }\bibpages{1067\thinspace{}\textnormal{--}\thinspace{}1077}\@.
 
 \bibitem{grover2016node2vec}
-Grover A, Leskovec J.
-\newblock node2vec: Scalable feature learning for networks.
-\newblock  Proceedings of the 22nd ACM SIGKDD international conference on
-  Knowledge discovery and data mining. ACM, 2016.
-\newblock  855--864
-\thudot
+\bibauthor{\textup{Grover} A\@, \textup{Leskovec} J}\@. \bibtitle{node2vec:
+  Scalable feature learning for networks}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Proceedings of the 22nd ACM SIGKDD international
+  conference on Knowledge discovery and data mining}\@.
+  \bibyear{2016}\thinspace{}\textnormal{:
+  }\bibpages{855\thinspace{}\textnormal{--}\thinspace{}864}\@.
 
 \bibitem{ahmed2013distributed}
-Ahmed A, Shervashidze N, Narayanamurthy S, Josifovski V, Smola A~J.
-\newblock Distributed large-scale natural graph factorization.
-\newblock  Proceedings of the 22nd international conference on World Wide Web.
-  ACM, 2013.
-\newblock  37--48
-\thudot
+\bibauthor{\textup{Ahmed} A\@, \textup{Shervashidze} N\@,
+  \textup{Narayanamurthy} S, et~al}\@. \bibtitle{Distributed large-scale
+  natural graph factorization}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Proceedings of the 22nd international conference
+  on World Wide Web}\@. \bibyear{2013}\thinspace{}\textnormal{:
+  }\bibpages{37\thinspace{}\textnormal{--}\thinspace{}48}\@.
 
 \bibitem{singh2008relational}
-Singh A~P, Gordon G~J.
-\newblock Relational learning via collective matrix factorization.
-\newblock  Proceedings of the 14th ACM SIGKDD international conference on
-  Knowledge discovery and data mining. ACM, 2008.
-\newblock  650--658
-\thudot
+\bibauthor{\textup{Singh} A~P\@, \textup{Gordon} G~J}\@. \bibtitle{Relational
+  learning via collective matrix factorization}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Proceedings of the 14th ACM SIGKDD international
+  conference on Knowledge discovery and data mining}\@.
+  \bibyear{2008}\thinspace{}\textnormal{:
+  }\bibpages{650\thinspace{}\textnormal{--}\thinspace{}658}\@.
 
 \bibitem{qiu2017network}
-Qiu J, Dong Y, Ma H, Li J, Wang K, Tang J.
-\newblock Network embedding as matrix factorization: Unifyingdeepwalk, line,
-  pte, and node2vec.
-\newblock arXiv preprint arXiv:1710.02971, 2017.
-\thudot
+\bibauthor{\textup{Qiu} J\@, \textup{Dong} Y\@, \textup{Ma} H, et~al}\@.
+  \bibtitle{Network Embedding as Matrix Factorization: UnifyingDeepWalk, LINE,
+  PTE, and node2vec}\bibmark{[J]}\@. \bibjournal{arXiv preprint
+  arXiv:1710.02971}\@, \bibyear{2017}\@.
 
 \bibitem{tang2015pte}
-Tang J, Qu M, Mei Q.
-\newblock Pte: Predictive text embedding through large-scale heterogeneous text
-  networks.
-\newblock  Proceedings of the 21th ACM SIGKDD International Conference on
-  Knowledge Discovery and Data Mining. ACM, 2015.
-\newblock  1165--1174
-\thudot
+\bibauthor{\textup{Tang} J\@, \textup{Qu} M\@, \textup{Mei} Q}\@.
+  \bibtitle{Pte: Predictive text embedding through large-scale heterogeneous
+  text networks}\bibmark{[C]} //\thinspace{}\bibbooktitle{Proceedings of the
+  21th ACM SIGKDD International Conference on Knowledge Discovery and Data
+  Mining}\@. \bibyear{2015}\thinspace{}\textnormal{:
+  }\bibpages{1165\thinspace{}\textnormal{--}\thinspace{}1174}\@.
 
 \bibitem{yang2015network}
-Yang C, Liu Z, Zhao D, Sun M, Chang E~Y.
-\newblock Network representation learning with rich text information.
-\newblock  IJCAI, 2015.
-\newblock  2111--2117
-\thudot
+\bibauthor{\textup{Yang} C\@, \textup{Liu} Z\@, \textup{Zhao} D, et~al}\@.
+  \bibtitle{Network Representation Learning with Rich Text
+  Information.}\bibmark{[C]} //\thinspace{}\bibbooktitle{IJCAI}\@.
+  \bibyear{2015}\thinspace{}\textnormal{:
+  }\bibpages{2111\thinspace{}\textnormal{--}\thinspace{}2117}\@.
 
 \bibitem{huang2017accelerated}
-Huang X, Li J, Hu X.
-\newblock Accelerated attributed network embedding.
-\newblock  Proceedings of the 2017 SIAM International Conference on Data
-  Mining. SIAM, 2017.
-\newblock  633--641
-\thudot
+\bibauthor{\textup{Huang} X\@, \textup{Li} J\@, \textup{Hu} X}\@.
+  \bibtitle{Accelerated attributed network embedding}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Proceedings of the 2017 SIAM International
+  Conference on Data Mining}\@. \bibyear{2017}\thinspace{}\textnormal{:
+  }\bibpages{633\thinspace{}\textnormal{--}\thinspace{}641}\@.
 
 \bibitem{zhang2016collective}
-Zhang D, Yin J, Zhu X, Zhang C.
-\newblock Collective classification via discriminative matrix factorization on
-  sparsely labeled networks.
-\newblock  Proceedings of the 25th ACM International on Conference on
-  Information and Knowledge Management. ACM, 2016.
-\newblock  1563--1572
-\thudot
+\bibauthor{\textup{Zhang} D\@, \textup{Yin} J\@, \textup{Zhu} X, et~al}\@.
+  \bibtitle{Collective classification via discriminative matrix factorization
+  on sparsely labeled networks}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Proceedings of the 25th ACM International on
+  Conference on Information and Knowledge Management}\@.
+  \bibyear{2016}\thinspace{}\textnormal{:
+  }\bibpages{1563\thinspace{}\textnormal{--}\thinspace{}1572}\@.
 
 \bibitem{coppock1962all}
-Coppock H, Freund J.
-\newblock All-or-none versus incremental learning of errorless shock escapes by
-  the rat.
-\newblock Science, 1962, 135(3500):318--319
-\thudot
+\bibauthor{\textup{Coppock} H\@, \textup{Freund} J}\@. \bibtitle{All-or-none
+  versus incremental learning of errorless shock escapes by the
+  rat}\bibmark{[J]}\@. \bibjournal{Science}\@, \bibyear{1962}\@,
+  \bibvolume{135}\bibnumber{(3500)}\thinspace{}\textnormal{:
+  }\bibpages{318\thinspace{}\textnormal{--}\thinspace{}319}\@.
 
 \bibitem{zhong2017survey}
-ZHONG J, LIU Z, ZENG Y, CUI L, JI Z.
-\newblock A survey on incremental learning.
-\newblock 2017.
-\thudot
+\bibauthor{\textup{ZHONG} J\@, \textup{LIU} Z\@, \textup{ZENG} Y, et~al}\@.
+  \bibtitle{A Survey on Incremental Learning}\bibmark{[J]}\@, \bibyear{2017}\@.
 
 \bibitem{hazan2007logarithmic}
-Hazan E, Agarwal A, Kale S.
-\newblock Logarithmic regret algorithms for online convex optimization.
-\newblock Machine Learning, 2007, 69(2-3):169--192
-\thudot
+\bibauthor{\textup{Hazan} E\@, \textup{Agarwal} A\@, \textup{Kale} S}\@.
+  \bibtitle{Logarithmic regret algorithms for online convex
+  optimization}\bibmark{[J]}\@. \bibjournal{Machine Learning}\@,
+  \bibyear{2007}\@, \bibvolume{69}\bibnumber{(2-3)}\thinspace{}\textnormal{:
+  }\bibpages{169\thinspace{}\textnormal{--}\thinspace{}192}\@.
 
 \bibitem{langford2009sparse}
-Langford J, Li L, Zhang T.
-\newblock Sparse online learning via truncated gradient.
-\newblock Journal of Machine Learning Research, 2009, 10(Mar):777--801
-\thudot
+\bibauthor{\textup{Langford} J\@, \textup{Li} L\@, \textup{Zhang} T}\@.
+  \bibtitle{Sparse online learning via truncated gradient}\bibmark{[J]}\@.
+  \bibjournal{Journal of Machine Learning Research}\@, \bibyear{2009}\@,
+  \bibvolume{10}\bibnumber{(Mar)}\thinspace{}\textnormal{:
+  }\bibpages{777\thinspace{}\textnormal{--}\thinspace{}801}\@.
 
 \bibitem{duchi2009efficient}
-Duchi J, Singer Y.
-\newblock Efficient online and batch learning using forward backward splitting.
-\newblock Journal of Machine Learning Research, 2009, 10(Dec):2899--2934
-\thudot
+\bibauthor{\textup{Duchi} J\@, \textup{Singer} Y}\@. \bibtitle{Efficient online
+  and batch learning using forward backward splitting}\bibmark{[J]}\@.
+  \bibjournal{Journal of Machine Learning Research}\@, \bibyear{2009}\@,
+  \bibvolume{10}\bibnumber{(Dec)}\thinspace{}\textnormal{:
+  }\bibpages{2899\thinspace{}\textnormal{--}\thinspace{}2934}\@.
 
 \bibitem{xiao2010dual}
-Xiao L.
-\newblock Dual averaging methods for regularized stochastic learning and online
-  optimization.
-\newblock Journal of Machine Learning Research, 2010, 11(Oct):2543--2596
-\thudot
+\bibauthor{\textup{Xiao} L}\@. \bibtitle{Dual averaging methods for regularized
+  stochastic learning and online optimization}\bibmark{[J]}\@.
+  \bibjournal{Journal of Machine Learning Research}\@, \bibyear{2010}\@,
+  \bibvolume{11}\bibnumber{(Oct)}\thinspace{}\textnormal{:
+  }\bibpages{2543\thinspace{}\textnormal{--}\thinspace{}2596}\@.
 
 \bibitem{mcmahan2011follow}
-McMahan B.
-\newblock Follow-the-regularized-leader and mirror descent: Equivalence
-  theorems and l1 regularization.
-\newblock  Proceedings of the Fourteenth International Conference on Artificial
-  Intelligence and Statistics, 2011.
-\newblock  525--533
-\thudot
+\bibauthor{\textup{McMahan} B}\@. \bibtitle{Follow-the-regularized-leader and
+  mirror descent: Equivalence theorems and l1 regularization}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Proceedings of the Fourteenth International
+  Conference on Artificial Intelligence and Statistics}\@.
+  \bibyear{2011}\thinspace{}\textnormal{:
+  }\bibpages{525\thinspace{}\textnormal{--}\thinspace{}533}\@.
 
 \bibitem{syed1999incremental}
-Syed N~A, Huan S, Kah L, Sung K.
-\newblock Incremental learning with support vector machines.
-\newblock 1999.
-\thudot
+\bibauthor{\textup{Syed} N~A\@, \textup{Huan} S\@, \textup{Kah} L, et~al}\@.
+  \bibtitle{Incremental learning with support vector machines}\bibmark{[J]}\@,
+  \bibyear{1999}\@.
 
 \bibitem{ruping2001incremental}
-Ruping S.
-\newblock Incremental learning with support vector machines.
-\newblock  Data Mining, 2001. ICDM 2001, Proceedings IEEE International
-  Conference on. IEEE, 2001.
-\newblock  641--642
-\thudot
+\bibauthor{\textup{Ruping} S}\@. \bibtitle{Incremental learning with support
+  vector machines}\bibmark{[C]} //\thinspace{}\bibbooktitle{Data Mining, 2001.
+  ICDM 2001, Proceedings IEEE International Conference on}\@.
+  \bibyear{2001}\thinspace{}\textnormal{:
+  }\bibpages{641\thinspace{}\textnormal{--}\thinspace{}642}\@.
 
 \bibitem{kivinen2002large}
-Kivinen J, Smola A~J, Williamson R~C.
-\newblock Large margin classification for moving targets.
-\newblock  International Conference on Algorithmic Learning Theory. Springer,
-  2002.
-\newblock  113--127
-\thudot
+\bibauthor{\textup{Kivinen} J\@, \textup{Smola} A~J\@, \textup{Williamson}
+  R~C}\@. \bibtitle{Large margin classification for moving
+  targets}\bibmark{[C]} //\thinspace{}\bibbooktitle{International Conference on
+  Algorithmic Learning Theory}\@. \bibyear{2002}\thinspace{}\textnormal{:
+  }\bibpages{113\thinspace{}\textnormal{--}\thinspace{}127}\@.
 
 \bibitem{li2017attributed}
-Li J, Dani H, Hu X, Tang J, Chang Y, Liu H.
-\newblock Attributed network embedding for learning in a dynamic environment.
-\newblock  Proceedings of the 2017 ACM on Conference on Information and
-  Knowledge Management. ACM, 2017.
-\newblock  387--396
-\thudot
+\bibauthor{\textup{Li} J\@, \textup{Dani} H\@, \textup{Hu} X, et~al}\@.
+  \bibtitle{Attributed network embedding for learning in a dynamic
+  environment}\bibmark{[C]} //\thinspace{}\bibbooktitle{Proceedings of the 2017
+  ACM on Conference on Information and Knowledge Management}\@.
+  \bibyear{2017}\thinspace{}\textnormal{:
+  }\bibpages{387\thinspace{}\textnormal{--}\thinspace{}396}\@.
 
 \bibitem{jian2018toward}
-Jian L, Li J, Liu H.
-\newblock Toward online node classification on streaming networks.
-\newblock Data Mining and Knowledge Discovery, 2018, 32(1):231--257
-\thudot
+\bibauthor{\textup{Jian} L\@, \textup{Li} J\@, \textup{Liu} H}\@.
+  \bibtitle{Toward online node classification on streaming
+  networks}\bibmark{[J]}\@. \bibjournal{Data Mining and Knowledge Discovery}\@,
+  \bibyear{2018}\@, \bibvolume{32}\bibnumber{(1)}\thinspace{}\textnormal{:
+  }\bibpages{231\thinspace{}\textnormal{--}\thinspace{}257}\@.
 
 \bibitem{goyal2017graph}
-Goyal P, Ferrara E.
-\newblock Graph embedding techniques, applications, and performance: A survey.
-\newblock arXiv preprint arXiv:1705.02801, 2017.
-\thudot
+\bibauthor{\textup{Goyal} P\@, \textup{Ferrara} E}\@. \bibtitle{Graph embedding
+  techniques, applications, and performance: A survey}\bibmark{[J]}\@.
+  \bibjournal{arXiv preprint arXiv:1705.02801}\@, \bibyear{2017}\@.
 
 \bibitem{liben2007link}
-Liben-Nowell D, Kleinberg J.
-\newblock The link-prediction problem for social networks.
-\newblock journal of the Association for Information Science and Technology,
-  2007, 58(7):1019--1031
-\thudot
+\bibauthor{\textup{Liben-Nowell} D\@, \textup{Kleinberg} J}\@. \bibtitle{The
+  link-prediction problem for social networks}\bibmark{[J]}\@.
+  \bibjournal{journal of the Association for Information Science and
+  Technology}\@, \bibyear{2007}\@,
+  \bibvolume{58}\bibnumber{(7)}\thinspace{}\textnormal{:
+  }\bibpages{1019\thinspace{}\textnormal{--}\thinspace{}1031}\@.
 
 \bibitem{mikolov2013distributed}
-Mikolov T, Sutskever I, Chen K, Corrado G~S, Dean J.
-\newblock Distributed representations of words and phrases and their
-  compositionality.
-\newblock  Advances in neural information processing systems, 2013.
-\newblock  3111--3119
-\thudot
+\bibauthor{\textup{Mikolov} T\@, \textup{Sutskever} I\@, \textup{Chen} K,
+  et~al}\@. \bibtitle{Distributed representations of words and phrases and
+  their compositionality}\bibmark{[C]} //\thinspace{}\bibbooktitle{Advances in
+  neural information processing systems}\@.
+  \bibyear{2013}\thinspace{}\textnormal{:
+  }\bibpages{3111\thinspace{}\textnormal{--}\thinspace{}3119}\@.
 
 \bibitem{ou2016asymmetric}
-Ou M, Cui P, Pei J, Zhang Z, Zhu W.
-\newblock Asymmetric transitivity preserving graph embedding.
-\newblock  Proceedings of the 22nd ACM SIGKDD international conference on
-  Knowledge discovery and data mining. ACM, 2016.
-\newblock  1105--1114
-\thudot
+\bibauthor{\textup{Ou} M\@, \textup{Cui} P\@, \textup{Pei} J, et~al}\@.
+  \bibtitle{Asymmetric transitivity preserving graph embedding}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Proceedings of the 22nd ACM SIGKDD international
+  conference on Knowledge discovery and data mining}\@.
+  \bibyear{2016}\thinspace{}\textnormal{:
+  }\bibpages{1105\thinspace{}\textnormal{--}\thinspace{}1114}\@.
 
 \bibitem{page1999pagerank}
-Page L, Brin S, Motwani R, Winograd T.
-\newblock The pagerank citation ranking: Bringing order to the web.
-\newblock Technical report, Stanford InfoLab, 1999
-\thudot
+\bibauthor{\textup{Page} L\@, \textup{Brin} S\@, \textup{Motwani} R, et~al}\@.
+  \bibtitle{The PageRank citation ranking: Bringing order to the
+  web.}\bibmark{[R]}\@. \bibaddress{}\thinspace{}\textnormal{:
+  }\bibinstitution{Stanford InfoLab}\@, \bibyear{1999}\@.
 
 \bibitem{yu2014large}
-Yu H~F, Jain P, Kar P, Dhillon I.
-\newblock Large-scale multi-label learning with missing labels.
-\newblock  International conference on machine learning, 2014.
-\newblock  593--601
-\thudot
+\bibauthor{\textup{Yu} H-F\@, \textup{Jain} P\@, \textup{Kar} P, et~al}\@.
+  \bibtitle{Large-scale multi-label learning with missing labels}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{International conference on machine learning}\@.
+  \bibyear{2014}\thinspace{}\textnormal{:
+  }\bibpages{593\thinspace{}\textnormal{--}\thinspace{}601}\@.
 
 \bibitem{natarajan2014inductive}
-Natarajan N, Dhillon I~S.
-\newblock Inductive matrix completion for predicting gene--disease
-  associations.
-\newblock Bioinformatics, 2014, 30(12):i60--i68
-\thudot
+\bibauthor{\textup{Natarajan} N\@, \textup{Dhillon} I~S}\@. \bibtitle{Inductive
+  matrix completion for predicting gene--disease associations}\bibmark{[J]}\@.
+  \bibjournal{Bioinformatics}\@, \bibyear{2014}\@,
+  \bibvolume{30}\bibnumber{(12)}\thinspace{}\textnormal{:
+  }\bibpages{i60\thinspace{}\textnormal{--}\thinspace{}i68}\@.
 
 \bibitem{zinkevich2003online}
-Zinkevich M.
-\newblock Online convex programming and generalized infinitesimal gradient
-  ascent.
-\newblock  Proceedings of the 20th International Conference on Machine Learning
-  (ICML-03), 2003.
-\newblock  928--936
-\thudot
+\bibauthor{\textup{Zinkevich} M}\@. \bibtitle{Online convex programming and
+  generalized infinitesimal gradient ascent}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Proceedings of the 20th International Conference
+  on Machine Learning (ICML-03)}\@. \bibyear{2003}\thinspace{}\textnormal{:
+  }\bibpages{928\thinspace{}\textnormal{--}\thinspace{}936}\@.
 
 \bibitem{chung1997spectral}
-Chung F~R.
-\newblock Spectral graph theory.
-\newblock Number~92, American Mathematical Soc., 1997
-\thudot
+\bibauthor{\textup{Chung} F~R}\@. \bibbooktitle{Spectral graph
+  theory}\bibmark{[M]}\@. \bibaddress{}\thinspace{}\textnormal{:
+  }\bibpublisher{American Mathematical Soc.}\@, \bibyear{1997}\@.
 
 \bibitem{newman2001clustering}
-Newman M~E.
-\newblock Clustering and preferential attachment in growing networks.
-\newblock Physical review E, 2001, 64(2):025102
-\thudot
+\bibauthor{\textup{Newman} M~E}\@. \bibtitle{Clustering and preferential
+  attachment in growing networks}\bibmark{[J]}\@. \bibjournal{Physical review
+  E}\@, \bibyear{2001}\@,
+  \bibvolume{64}\bibnumber{(2)}\thinspace{}\textnormal{: }\bibpages{025102}\@.
 
 \bibitem{adamic2003friends}
-Adamic L~A, Adar E.
-\newblock Friends and neighbors on the web.
-\newblock Social networks, 2003, 25(3):211--230
-\thudot
+\bibauthor{\textup{Adamic} L~A\@, \textup{Adar} E}\@. \bibtitle{Friends and
+  neighbors on the web}\bibmark{[J]}\@. \bibjournal{Social networks}\@,
+  \bibyear{2003}\@, \bibvolume{25}\bibnumber{(3)}\thinspace{}\textnormal{:
+  }\bibpages{211\thinspace{}\textnormal{--}\thinspace{}230}\@.
 
 \bibitem{zhou2009predicting}
-Zhou T, L{\"u} L, Zhang Y~C.
-\newblock Predicting missing links via local information.
-\newblock The European Physical Journal B, 2009, 71(4):623--630
-\thudot
+\bibauthor{\textup{Zhou} T\@, \textup{L{\"u}} L\@, \textup{Zhang} Y-C}\@.
+  \bibtitle{Predicting missing links via local information}\bibmark{[J]}\@.
+  \bibjournal{The European Physical Journal B}\@, \bibyear{2009}\@,
+  \bibvolume{71}\bibnumber{(4)}\thinspace{}\textnormal{:
+  }\bibpages{623\thinspace{}\textnormal{--}\thinspace{}630}\@.
 
 \bibitem{wang2015link}
-Wang P, Xu B, Wu Y, Zhou X.
-\newblock Link prediction in social networks: the state-of-the-art.
-\newblock Science China Information Sciences, 2015, 58(1):1--38
-\thudot
+\bibauthor{\textup{Wang} P\@, \textup{Xu} B\@, \textup{Wu} Y, et~al}\@.
+  \bibtitle{Link prediction in social networks: the
+  state-of-the-art}\bibmark{[J]}\@. \bibjournal{Science China Information
+  Sciences}\@, \bibyear{2015}\@,
+  \bibvolume{58}\bibnumber{(1)}\thinspace{}\textnormal{:
+  }\bibpages{1\thinspace{}\textnormal{--}\thinspace{}38}\@.
 
 \bibitem{chi2007evolutionary}
-Chi Y, Song X, Zhou D, Hino K, Tseng B~L.
-\newblock Evolutionary spectral clustering by incorporating temporal
-  smoothness.
-\newblock  Proceedings of the 13th ACM SIGKDD international conference on
-  Knowledge discovery and data mining. ACM, 2007.
-\newblock  153--162
-\thudot
+\bibauthor{\textup{Chi} Y\@, \textup{Song} X\@, \textup{Zhou} D, et~al}\@.
+  \bibtitle{Evolutionary spectral clustering by incorporating temporal
+  smoothness}\bibmark{[C]} //\thinspace{}\bibbooktitle{Proceedings of the 13th
+  ACM SIGKDD international conference on Knowledge discovery and data
+  mining}\@. \bibyear{2007}\thinspace{}\textnormal{:
+  }\bibpages{153\thinspace{}\textnormal{--}\thinspace{}162}\@.
 
 \bibitem{stewart1990matrix}
-Stewart G~W.
-\newblock Matrix perturbation theory.
-\newblock 1990.
-\thudot
+\bibauthor{\textup{Stewart} G~W}\@. \bibtitle{Matrix perturbation
+  theory}\bibmark{[J]}\@, \bibyear{1990}\@.
 
 \bibitem{asucheetah}
-ASU H~T, Xiao Y, Fan W.
-\newblock Cheetah: Fast graph kernel tracking on dynamic graphs.
-\thudot
+\bibauthor{\textup{ASU} H~T\@, \textup{Xiao} Y\@, \textup{Fan} W}\@.
+  \bibtitle{Cheetah: Fast Graph Kernel Tracking on Dynamic
+  Graphs}\bibmark{[J]}\@, \@.
 
 \bibitem{golub2012matrix}
-Golub G~H, Van~Loan C~F.
-\newblock Matrix computations, volume~3.
-\newblock JHU Press, 2012
-\thudot
+\bibauthor{\textup{Golub} G~H\@, \textup{Van~Loan} C~F}\@. \bibbooktitle{Matrix
+  computations\thinspace{}\textnormal{: }Vol~3}\bibmark{[M]}\@.
+  \bibaddress{}\thinspace{}\textnormal{: }\bibpublisher{JHU Press}\@,
+  \bibyear{2012}\@.
 
 \bibitem{huang2017label}
-Huang X, Li J, Hu X.
-\newblock Label informed attributed network embedding.
-\newblock  Proceedings of the Tenth ACM International Conference on Web Search
-  and Data Mining. ACM, 2017.
-\newblock  731--739
-\thudot
+\bibauthor{\textup{Huang} X\@, \textup{Li} J\@, \textup{Hu} X}\@.
+  \bibtitle{Label informed attributed network embedding}\bibmark{[C]}
+  //\thinspace{}\bibbooktitle{Proceedings of the Tenth ACM International
+  Conference on Web Search and Data Mining}\@.
+  \bibyear{2017}\thinspace{}\textnormal{:
+  }\bibpages{731\thinspace{}\textnormal{--}\thinspace{}739}\@.
 
 \bibitem{hardoon2004canonical}
-Hardoon D~R, Szedmak S, Shawe-Taylor J.
-\newblock Canonical correlation analysis: An overview with application to
-  learning methods.
-\newblock Neural computation, 2004, 16(12):2639--2664
-\thudot
+\bibauthor{\textup{Hardoon} D~R\@, \textup{Szedmak} S\@, \textup{Shawe-Taylor}
+  J}\@. \bibtitle{Canonical correlation analysis: An overview with application
+  to learning methods}\bibmark{[J]}\@. \bibjournal{Neural computation}\@,
+  \bibyear{2004}\@, \bibvolume{16}\bibnumber{(12)}\thinspace{}\textnormal{:
+  }\bibpages{2639\thinspace{}\textnormal{--}\thinspace{}2664}\@.
 
 \end{thebibliography}

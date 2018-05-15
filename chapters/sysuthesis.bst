@@ -103,7 +103,7 @@ FUNCTION {cap.edition.en} 		{"~ed"}
 FUNCTION {cap.edition.zh} 		{"版"}
 FUNCTION {cap.anonymous.en} 	{"Anon"}
 FUNCTION {cap.anonymous.zh} 	{"佚名"}
-FUNCTION {cap.no.address.en} 	{""}
+FUNCTION {cap.no.address.en} 	{"[S.l.]"}
 FUNCTION {cap.no.address.zh} 	{"[出版地不详]"}
 FUNCTION {cap.no.publisher.en} 	{"[s.n.]"}
 FUNCTION {cap.no.publisher.zh} 	{"[出版者不详]"}
@@ -625,7 +625,7 @@ FUNCTION {format.names} {                         % String Entry::format_names(S
     remove.dots                                   %     tmp = remove_dots(tmp);
     "u" change.case$ 'firstname :=                %     firstname = change_case(tmp, "u");
     namelist nameindex "{ll}" format.name$        %     tmp = format_name(namelist, nameindex, "{ll}");
-    "\textup{" swap$ * "}" * 'lastname :=         %     lastname = change_case(tmp, "u");
+    "u" change.case$ 'lastname :=                 %     lastname = change_case(tmp, "u");
     jrname empty$ not {                           %     if (! empty(jrname)) {
       jrname * " " *                              %       result = result + jrname + " "
     } 'skip$ if$                                  %     }
