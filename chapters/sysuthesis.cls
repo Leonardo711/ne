@@ -161,7 +161,7 @@
 \newcommand{\xiaoliuhao}{\fontsize{6.5pt}{7.5pt}\selectfont}
 \newcommand{\qihao}{\fontsize{5.5pt}{6.5pt}\selectfont}
 \setlength{\parskip}{0pt}% 段距
-\newcommand{\mainlineskip}{1.5}% 主行距1.5
+\newcommand{\mainlineskip}{1.6667}% 主行距1.5
 %%%%%%Added by Chen Guangzhi 2016-01-08%%%%%%%%%%
 \titlespacing{\chapter}{0pt}{1.5ex plus .05ex minus .01ex}{4ex plus .04ex} %章上方空一行，章节题目之间空两行
 \titlespacing{\section}{0pt}{1.5ex plus .05ex minus .01ex}{2.6ex plus .04ex} %左起空2个(两个中文字24pt) 标题间距
@@ -333,6 +333,7 @@
 }
 %%%%%%%%%%%%%%%%%%%%中文封面%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \newcommand{\chinesecover}{  
+  \linespacing{1.5}
   \thispagestyle{empty}%
   \vspace*{20pt}
   \begin{center}
@@ -354,45 +355,24 @@
   {\sihao\kai
   \begin{center}
     \begin{tabular}{rc}
-      \makebox[5em][s]{\authorpre} ：&\underline{\hspace{1.77cm}\@author\hspace{1.77cm}}\medskip\\
-      \makebox[5em][s]{\advisorpre} ：&\underline{\hspace{.95cm}\@advisorname\,\,\@advisortitle\hspace{.95cm}}\medskip\\
-      \makebox[5em][s]{\majornamepre} ：&\underline{\hspace{.53cm}\@major\hspace{.53cm}}\medskip\\
-      \makebox[5em][s]{\schoolnamepre} ：&\underline{\hspace{.05cm}\@school\hspace{.05cm}}\medskip\\
+      %\makebox[5em][s]{\authorpre} ：&\underline{\hspace{1.77cm}\@author\hspace{1.77cm}}\medskip\\
+      %\makebox[5em][s]{\advisorpre} ：&\underline{\hspace{.95cm}\@advisorname\,\,\@advisortitle\hspace{.95cm}}\medskip\\
+      %\makebox[5em][s]{\majornamepre} ：&\underline{\hspace{.53cm}\@major\hspace{.53cm}}\medskip\\
+      %\makebox[5em][s]{\schoolnamepre} ：&\underline{\hspace{.05cm}\@school\hspace{.05cm}}\medskip\\
+      \makebox[5em][s]{\authorpre} ：&\underline{\hspace{3cm}\@author\hspace{3cm}}\medskip\\
+      \makebox[5em][s]{\advisorpre} ：&\underline{\hspace{3cm}\@advisorname\,\,\@advisortitle\hspace{3cm}}\medskip\\
+      \makebox[5em][s]{\majornamepre} ：&\underline{\hspace{3cm}\@major\hspace{3cm}}\medskip\\
+      \makebox[5em][s]{\schoolnamepre} ：&\underline{\hspace{3cm}\@school\hspace{3cm}}\medskip\\
       & \\
       
       \committeechairpre ：&\underline{\hspace{5cm}}\medskip\\
       \committeemempre ：&\underline{\hspace{5cm}}\\
                         &\underline{\hspace{5cm}}\\
-                       &\underline{\hspace{5cm}}\\
-                       &\underline{\hspace{5cm}}\medskip\\
-%                        &\underline{\hspace{5cm}}\medskip\\
+                        &\underline{\hspace{5cm}}\\
+                        &\underline{\hspace{5cm}}\medskip\\
     \end{tabular}
   \end{center}  
   }
-
-%{\sihao\kai
-  %\begin{center}
-    %\begin{tabular}{rc}
-      %\makebox[5em][s]{\authorpre} ：&\underline{\hspace{1.77cm}\@author\hspace{1.77cm}}\medskip\\
-      %\makebox[5em][s]{\advisorpre} ：&\underline{\hspace{.95cm}\@advisorname\,\,\@advisortitle\hspace{.95cm}}\medskip\\
-      %\makebox[5em][s]{\majornamepre} ：&\underline{\hspace{.53cm}\@major\hspace{.53cm}}\medskip\\
-      %\makebox[5em][s]{\schoolnamepre} ：&\underline{\hspace{.05cm}\@school\hspace{.05cm}}\medskip\\
-%      \makebox[5em][s]{\authorpre} ：&\underline{\hspace{3cm}\@author\hspace{3cm}}\medskip\\
- %     \makebox[5em][s]{\advisorpre} ：&\underline{\hspace{3cm}\@advisorname\,\,\@advisortitle\hspace{3cm}}\medskip\\
-%      \makebox[5em][s]{\majornamepre} ：&\underline{\hspace{3cm}\@major\hspace{3cm}}\medskip\\
- %     \makebox[5em][s]{\schoolnamepre} ：&\underline{\hspace{3cm}\@school\hspace{3cm}}\medskip\\
-%      & \\
-      
-%      \committeechairpre ：&\underline{\hspace{5cm}}\medskip\\
-  %    \committeemempre ：&\underline{\hspace{5cm}}\\
-  %                      &\underline{\hspace{5cm}}\\
-   %                     &\underline{\hspace{5cm}}\\
-     %                   &\underline{\hspace{5cm}}\medskip\\
-%                        &\underline{\hspace{5cm}}\medskip\\
-  %  \end{tabular}
-  %\end{center}  
-  %}
-
   
   \vspace{0.48cm}
   \begin{center}
@@ -406,6 +386,7 @@
   \fi
   %%%%%%%%%%%%%%%%%%%%%%%%%%%%
   \stcleardp
+  \linespacing{\mainlineskip}
 }
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
