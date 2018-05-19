@@ -27,7 +27,7 @@ Warning--Require year: asucheetah
 Warning--Require address: golub2012matrix
 You've used 55 entries,
             3110 wiz_defined-function locations,
-            1021 strings with 15380 characters,
+            1022 strings with 15450 characters,
 and the built_in function-call counts, 144566 in all, are:
 = -- 17338
 > -- 191
