@@ -12,7 +12,7 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
 Database file #1: refs.bib
-Repeated entry---line 512 of file refs.bib
+Repeated entry---line 509 of file refs.bib
  : @techreport{page1999pagerank
  :                             ,
 I'm skipping whatever remains of this entry
@@ -27,14 +27,14 @@ Warning--Require year: asucheetah
 Warning--Require address: golub2012matrix
 You've used 55 entries,
             3110 wiz_defined-function locations,
-            1022 strings with 15450 characters,
-and the built_in function-call counts, 144566 in all, are:
+            1019 strings with 15441 characters,
+and the built_in function-call counts, 144533 in all, are:
 = -- 17338
 > -- 191
 < -- 437
 + -- 14934
 - -- 670
-* -- 2873
+* -- 2855
 := -- 17296
 add.period$ -- 0
 call.type$ -- 55
@@ -44,7 +44,7 @@ cite$ -- 64
 duplicate$ -- 20701
 empty$ -- 4023
 format.name$ -- 544
-if$ -- 39412
+if$ -- 39415
 int.to.chr$ -- 0
 int.to.str$ -- 55
 missing$ -- 0
@@ -54,10 +54,10 @@ pop$ -- 1457
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 910
+skip$ -- 913
 stack$ -- 0
 substring$ -- 18376
-swap$ -- 2727
+swap$ -- 2709
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
@@ -65,5 +65,5 @@ type$ -- 0
 warning$ -- 9
 while$ -- 1335
 width$ -- 57
-write$ -- 718
+write$ -- 715
 (There was 1 error message)

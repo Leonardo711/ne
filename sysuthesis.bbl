@@ -218,21 +218,21 @@
 \bibauthor{\textup{Langford} J\@, \textup{Li} L\@, \textup{Zhang} T}\@.
   \bibtitle{Sparse online learning via truncated gradient}\bibmark{[J]}\@.
   \bibjournal{Journal of Machine Learning Research}\@, \bibyear{2009}\@,
-  \bibvolume{10}\bibnumber{(Mar)}\thinspace{}\textnormal{:
+  \bibvolume{10}\thinspace{}\textnormal{:
   }\bibpages{777\thinspace{}\textnormal{--}\thinspace{}801}\@.
 
 \bibitem{duchi2009efficient}
 \bibauthor{\textup{Duchi} J\@, \textup{Singer} Y}\@. \bibtitle{Efficient online
   and batch learning using forward backward splitting}\bibmark{[J]}\@.
   \bibjournal{Journal of Machine Learning Research}\@, \bibyear{2009}\@,
-  \bibvolume{10}\bibnumber{(Dec)}\thinspace{}\textnormal{:
+  \bibvolume{10}\thinspace{}\textnormal{:
   }\bibpages{2899\thinspace{}\textnormal{--}\thinspace{}2934}\@.
 
 \bibitem{xiao2010dual}
 \bibauthor{\textup{Xiao} L}\@. \bibtitle{Dual averaging methods for regularized
   stochastic learning and online optimization}\bibmark{[J]}\@.
   \bibjournal{Journal of Machine Learning Research}\@, \bibyear{2010}\@,
-  \bibvolume{11}\bibnumber{(Oct)}\thinspace{}\textnormal{:
+  \bibvolume{11}\thinspace{}\textnormal{:
   }\bibpages{2543\thinspace{}\textnormal{--}\thinspace{}2596}\@.
 
 \bibitem{mcmahan2011follow}
